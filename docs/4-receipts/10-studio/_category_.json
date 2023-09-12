@@ -1,6 +1,6 @@
 {
-  "label": "数据自动采集",
-  "position": 9,
+  "label": "coScene Studio",
+  "position": 10,
   "collapsible": true,
   "link": {
     "type": "generated-index"

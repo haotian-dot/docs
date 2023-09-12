@@ -1,5 +1,5 @@
 ---
-sidebar_position: 10
+sidebar_position: 11
 ---
 
 # Chrome 浏览器的下载与安装
@@ -28,7 +28,6 @@ sidebar_position: 10
 
 6. 若打开后仍为旧版 Chrome，则重启 Chrome 浏览器。
 
-
 ## Linux 系统安装 Chrome 浏览器
 
 1. 打开 [Chrome 浏览器下载页面](https://www.google.cn/chrome/)
@@ -43,6 +42,3 @@ sidebar_position: 10
 4. 若在安装过程中提示缺少依赖，执行：`sudo apt-get -f install`
 
 5. 启动 Chrome 浏览器：在搜索栏中搜索"g"，便会出现 chrome 的图标，点击打开。
-
-
-
