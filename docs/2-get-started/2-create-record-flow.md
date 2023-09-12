@@ -9,7 +9,7 @@ sidebar_position: 2
 
 ## 1. 创建记录
 
-进入项目后，点击「创建记录」，进入创建记录的流程。关于记录的详细操作指南，请参看[操作指南中关于记录的部分](../4-receipts/record/4-manage-records.md)。
+进入项目后，点击「创建记录」，进入创建记录的流程。关于记录的详细操作指南，请参看[操作指南中关于记录的部分](../4-receipts/4-record/4-manage-records.md)。
 
 <video src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/docs/2-get-started/create-new-record.mp4" controls="controls" width="700" height="400"></video>
 
@@ -24,7 +24,7 @@ sidebar_position: 2
 <video src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/docs/2-get-started/upload-files.mp4" controls="controls" width="700" height="400"></video>
 
 在文件上传成功之后，我们就可以在文件列表中看到刚刚上传的文件了。除了基本的文件尺寸等信息外，你可能也注意到了一些数据版本和历史的信息，
-你可以在[操作指南中关于记录的部分](../4-receipts/record/4-manage-records.md)
+你可以在[操作指南中关于记录的部分](../4-receipts/4-record/4-manage-records.md)
 和[数据模型中关于记录的部分](../3-concepts/1-data-models.md#记录-record)中找到更多关于数据版本和历史的信息。
 
 <br />
@@ -37,4 +37,4 @@ sidebar_position: 2
 
 <br />
 
-🎉🎉 恭喜，你刚刚在刻行平台上传并可视化了你的第一个数据。你可以在可视化页面中进行自由的探索，关于可视化页面的详细说明，请参见[操作指南中关于可视化的部分](../4-receipts/viz/1-about-viz.md)。
+🎉🎉 恭喜，你刚刚在刻行平台上传并可视化了你的第一个数据。你可以在可视化页面中进行自由的探索，关于可视化页面的详细说明，请参见[操作指南中关于可视化的部分](../4-receipts/6-viz/1-about-viz.md)。

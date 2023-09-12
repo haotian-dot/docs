@@ -8,12 +8,12 @@ sidebar_position: 3
 
 ## 1. 准备配置文件
 
-配置文件为一个名称为 cos.yaml 或 cos.yml 的文件，其具体格式与规则请参见 [配置文件格式与样例](../regression/yaml-sample.md)。
+配置文件为一个名称为 cos.yaml 或 cos.yml 的文件，其具体格式与规则请参见 [配置文件格式与样例](../8-regression/yaml-sample.md)。
 
 <br />
 
 ## 2. 上传与编辑配置文件
-  
+
 在项目中的「批量测试-测试套件管理」页面，你可以直接从本地选择配置文件上传或者在线编写配置文件：
 
 ![config-management-1](../img/upload-config.png)
