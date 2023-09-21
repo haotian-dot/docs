@@ -9,7 +9,7 @@ id: changelog
 
 ### 【新增】
 
-- 新增「Jira 集成」功能：支持将任务作为故障同步到 Jira 中，详情参见文档：[Jira 集成](../../docs/4-receipts/10-integration/1-jira-integration.md)
+- 新增「Jira 集成」功能：支持将任务作为故障同步到 Jira 中
 - 新增「测试包保留时长」功能：在管理项目-设置页面，支持对批量测试中的测试包进行定期删除
 
 ### 【改变】
