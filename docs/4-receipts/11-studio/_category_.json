@@ -1,6 +1,6 @@
 {
   "label": "coScene Studio",
-  "position": 10,
+  "position": 11,
   "collapsible": true,
   "link": {
     "type": "generated-index"
