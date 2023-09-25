@@ -19,6 +19,11 @@ const config = {
   },
   themes: ['@docusaurus/theme-mermaid'],
 
+  i18n: {
+    // defaultLocale: 'en',
+    localeS: ['zh', 'en'],
+  },
+
   scripts: [{ src: 'https://plausible.io/js/script.js', defer: true, 'data-domain': 'docs.coscene.cn' }],
 
   // GitHub pages deployment config.
@@ -91,10 +96,10 @@ const config = {
             label: '文档',
           },
           { to: '/changelog', label: '更新历史', position: 'left' },
-          // {
-          //   type: 'localeDropdown',
-          //   position: 'right',
-          // },
+          {
+            type: 'localeDropdown',
+            position: 'right',
+          },
           { href: 'https://www.coscene.cn', label: '官方网站', position: 'right' },
           { href: 'https://github.com/coscene-io', label: 'GitHub', position: 'right' },
         ],

@@ -1,0 +1,26 @@
+{
+  "title": {
+    "message": "coScene",
+    "description": "The title in the navbar"
+  },
+  "logo.alt": {
+    "message": "coScene Logo",
+    "description": "The alt text of navbar logo"
+  },
+  "item.label.文档": {
+    "message": "Documentation",
+    "description": "Navbar item with label documentation"
+  },
+  "item.label.更新历史": {
+    "message": "Changelog",
+    "description": "Navbar item with label changelog"
+  },
+  "item.label.官方网站": {
+    "message": "Homepage",
+    "description": "Navbar item with label official website"
+  },
+  "item.label.GitHub": {
+    "message": "GitHub",
+    "description": "Navbar item with label GitHub"
+  }
+}

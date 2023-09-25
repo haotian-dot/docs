@@ -1,0 +1,8 @@
+{
+  "label": "设备操作",
+  "position": 3,
+  "collapsible": true,
+  "link": {
+    "type": "generated-index"
+  }
+}

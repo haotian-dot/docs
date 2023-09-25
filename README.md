@@ -22,4 +22,12 @@ If you have anything, you can open an issue or reach out to contact@coscene.io
 
 ## How to contribute
 
+### i18n
+
+TL;DR Write the original document in the `/docs` folder, copy it to `i18n/en/docusaurus-plugin-content-docs/current` and do the proper translation.
+
+Other pages, templates, and components, please refer to [docusaurus's i18n guide] https://docusaurus.io/docs/i18n/introduction
+
+### Everything else
+
 See [contribute guide](https://docs.coscene.cn/docs/contribute)

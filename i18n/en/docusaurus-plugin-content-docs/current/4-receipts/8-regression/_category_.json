@@ -1,0 +1,8 @@
+{
+  "label": "批量测试",
+  "position": 8,
+  "collapsible": true,
+  "link": {
+    "type": "generated-index"
+  }
+}
