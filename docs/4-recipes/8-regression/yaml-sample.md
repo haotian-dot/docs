@@ -46,7 +46,7 @@ jobs:
 
 <br />
 
-## 定义多个测试套件(#define-multiple-jobs)
+## 定义多个测试套件 {#define-multiple-jobs}
 
 一个批量测试由一个或多个测试套件组成，这些测试套件可以并行测试
 
@@ -60,7 +60,7 @@ jobs:
 
 <br />
 
-## 利用标签调用记录(#query-records-by-labels)
+## 利用标签调用记录 {#query-records-by-labels}
 
 设置关联记录所用的标签：每个测试用例会使用其关联记录作为测试数据，关联记录为标签符合 labels 条件的记录
 
@@ -100,7 +100,7 @@ records:
 
 <br />
 
-## 指定资源大小(#specify-resources)
+## 指定资源大小 {#specify-resources}
 
 批量测试默认提供的资源大小为 1 核 2 G，可以在参数列表中手动指定大小。
 
@@ -120,7 +120,7 @@ parameters:
 
 <br />
 
-## 自动触发测试(#auto-triggering)
+## 自动触发测试 {#auto-triggering}
 
 设置自动触发测试的条件，目前支持：上传的测试包「种类」或「标签」符合预设条件时，自动触发批量测试
 
@@ -157,7 +157,7 @@ on:
 
 <br />
 
-## 输出测试结果文件(#save-artifacts)
+## 输出测试结果文件 {#save-artifacts}
 
 在配置文件的 「script 」字段中，使用 `pytest --junitxml=path` 命令在 `path` 处创建一个 XML 格式的文件作为结果文件，示例如下：
 
@@ -176,7 +176,7 @@ jobs:
 
 <br />
 
-## 输出影子模式文件(#generate-shadow-mode)
+## 输出影子模式文件 {#generate-shadow-mode}
 
 在配置文件的 「script」字段中，使用命令将文件输出至 `/cos/outputs` 目录下作为测试输出，示例如下：
 
@@ -195,7 +195,7 @@ jobs:
 
 <br />
 
-## 管理多个测试(#manage-multiple-tests)
+## 管理多个测试 {#manage-multiple-tests}
 
 同一配置文件中可管理多个批量测试，使用`---`作为不同测试之间的分隔符，示例如下：
 
@@ -218,7 +218,7 @@ jobs:
 
 <br />
 
-## 消息通知(#notifications)
+## 消息通知 {#notifications}
 
 设置发送消息通知的模板：当批量测试运行完成后，发送消息到钉钉群，示例如下：
 
