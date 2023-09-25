@@ -2,21 +2,21 @@
 sidebar_position: 1
 ---
 
-# 通用
+# General
 
-因为产品的特性，我们经常会写中文，英文，和中英文混杂的内容，本文规定了一些常见的写作规范，以保证我们的文档的排版质量。
+Because of the nature of the product, we often write in Chinese, English, and a mixture of Chinese and English, this article provides some common writing specifications to ensure the quality of the layout of our documents.
 
-## 纯英文
+## Plain English
 
-使用英文字母和半角符号。
+Use English letters and half-width symbols.
 
-## 纯中文
+## Plain Mandarin
 
-使用汉字和全角符号。
+Use Chinese characters and full-width symbols.
 
-## 中英文混合
+## Mixed
 
-### 括号
+### Parentheses
 
 使用 "半角英文括号()"，而不是 "全角括号（）"。
 

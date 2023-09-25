@@ -8,7 +8,7 @@ After creating a project, you can create and manage records within the project. 
 
 ## 1. Create a Record
 
-After entering the project, click "Create Record" to start the record creation process. For a detailed operation guide on records, please refer to [the section about records in the operation guide](../4-receipts/4-record/4-manage-records.md).
+After entering the project, click "Create Record" to start the record creation process. For a detailed operation guide on records, please refer to [the section about records in the operation guide](../4-recipes/4-record/3-manage-records.md).
 
 <video src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/docs/2-get-started/create-new-record.mp4" controls="controls" width="700" height="400"></video>
 
@@ -22,7 +22,7 @@ The newly created record does not have any files yet. You can add files by uploa
 
 <video src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/docs/2-get-started/upload-files.mp4" controls="controls" width="700" height="400"></video>
 
-After the file has been successfully uploaded, we can see the uploaded file in the file list. In addition to basic information like file size, you might also notice some data version and history information. You can find more about data versions and history in [the section about records in the operation guide](../4-receipts/4-record/4-manage-records.md) and [the section about records in the data model](../3-concepts/1-data-models.md#record-record).
+After the file has been successfully uploaded, we can see the uploaded file in the file list. In addition to basic information like file size, you might also notice some data version and history information. You can find more about data versions and history in [the section about records in the operation guide](../4-recipes/4-record/3-manage-records.md) and [the section about records in the data model](../3-concepts/1-data-models.md#record-record).
 
 <br />
 
@@ -34,4 +34,4 @@ For robot data like ROS Bag, the coScene platform supports online visualization 
 
 <br />
 
-🎉🎉 Congratulations, you have just uploaded and visualized your first data on the coScene platform. You can freely explore the visualization page. For a detailed explanation about the visualization page, please refer to [the section about visualization in the operation guide](../4-receipts/6-viz/1-about-viz.md).
+🎉🎉 Congratulations, you have just uploaded and visualized your first data on the coScene platform. You can freely explore the visualization page. For a detailed explanation about the visualization page, please refer to [the section about visualization in the operation guide](../4-recipes/6-viz/1-about-viz.md).

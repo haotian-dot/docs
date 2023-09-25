@@ -2,15 +2,15 @@
 sidebar_position: 7
 ---
 
-# 如何贡献
+# How to Contribute
 
-本节将引导你了解如何向本网站贡献。
+This section will guide you on how to contribute to this website.
 
-## 网站特性
+## Website Features
 
 ### Mermaid Support
 
-[Mermaid 文档](https://docusaurus.io/docs/markdown-features/diagrams)
+[Mermaid Documentation](https://docusaurus.io/docs/markdown-features/diagrams)
 
 ````
 ```mermaid
@@ -42,19 +42,25 @@ sequenceDiagram
     Bob-->>John: Jolly good!
 ```
 
-## 文档编写
+## Documentation Writing
 
-如果你不熟悉 Markdown 语法，请先阅读 [Markdown 基本语法](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
+If you're unfamiliar with Markdown syntax, please first read [Basic Markdown Syntax](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
 
-1. 准备文档网站的开发环境
+1. Set up the development environment for the documentation website:
 
 ```
 git clone https://github.com/coscene-io/docs
 npm install
 ```
 
-2. 在任何支持 Markdown 的编辑器中编写完整的内容。例如，[VSCode](https://code.visualstudio.com/)，[Typora](https://typora.io/)，或[Notion](https://notion.so/)。
-3. 把你的文档加入到对应的文件夹中，具体的文件结构，请参看[文件结构说明](https://tutorial.docusaurus.io/docs/category/tutorial---basics)
-4. 使用 `npm run start` 来预览文档效果
-5. 如果一切顺利，提交 PR 到 Docs 仓库
-6. CI 会将改动自动部署到 `https://docs.coscene.cn`
+2. Write the complete content in any Markdown-supported editor. For example, [VSCode](https://code.visualstudio.com/), [Typora](https://typora.io/), or [Notion](https://notion.so/).
+3. Add your document to the corresponding folder. For the specific file structure, please refer to the [File Structure Guide](https://tutorial.docusaurus.io/docs/category/tutorial---basics).
+4. Use `npm run start` to preview the documentation.
+5. If everything goes well, submit a PR to the Docs repository.
+6. CI will automatically deploy the changes to `https://docs.coscene.cn`.
+
+```
+
+If you have more content or need further assistance, let me know!
+
+```

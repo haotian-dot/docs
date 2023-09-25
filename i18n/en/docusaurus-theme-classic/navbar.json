@@ -9,15 +9,15 @@
   },
   "item.label.文档": {
     "message": "Documentation",
-    "description": "Navbar item with label documentation"
+    "description": "Navbar item with label 文档"
   },
   "item.label.更新历史": {
     "message": "Changelog",
-    "description": "Navbar item with label changelog"
+    "description": "Navbar item with label 更新历史"
   },
   "item.label.官方网站": {
     "message": "Homepage",
-    "description": "Navbar item with label official website"
+    "description": "Navbar item with label 官方网站"
   },
   "item.label.GitHub": {
     "message": "GitHub",
