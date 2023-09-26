@@ -44,19 +44,19 @@ You can use the command line to run batch tests locally, following the instructi
 
 - Linux
 
-  \```
+  ```
   curl https://coscene-artifacts-production.oss-cn-hangzhou.aliyuncs.com/cos/linux/amd64/latest/cos -o cos
-  \```
+  ```
 
 - macOS
 
-  \```
+  ```
   curl https://coscene-artifacts-production.oss-cn-hangzhou.aliyuncs.com/cos/darwin/amd64/latest/cos -o cos
-  \```
+  ```
 
 2. Configure using the following commands:
 
-   \```
+   ```
 
    # Grant execute permission to cos
 
@@ -78,13 +78,13 @@ You can use the command line to run batch tests locally, following the instructi
    # Verify configuration
 
    cos config list
-   \```
+   ```
 
    Explanation of parameters:
 
    - Replace `${YOUR_DOMAIN}` in `endpoint` with the actual website address:
 
-     ![run-5](../img/cli-1.png)
+     ![cli-1](../img/cli-1.png)
 
    - Steps to obtain `${YOUR_TOKEN}` in `accessToken`:
 
@@ -104,7 +104,7 @@ You can use the command line to run batch tests locally, following the instructi
 
 You can refer to the following command examples to run batch tests:
 
-\```
+```
 
 # Use the latest test package to run all batch tests in the project
 
@@ -133,6 +133,6 @@ cos test run --bundle-category Gazebo
 # Upload bundle.zip and run batch tests
 
 cos test run -b bundle.zip
-\```
+```
 
  <br />

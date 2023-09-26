@@ -16,7 +16,7 @@ Create a new folder containing the dockerfile and related test code.
 
 - Sample dockerfile:
 
-\```
+```
 FROM ubuntu:latest
 
 RUN apt update -y
@@ -25,11 +25,11 @@ RUN apt install -y python3 unzip python-is-python3
 RUN apt install -y python3-pip
 RUN pip install pytest
 copy tests.py /tests.py
-\```
+```
 
 - Sample test code:
 
-\```
+```
 import os
 import subprocess
 import tempfile
@@ -38,7 +38,7 @@ BUNDLE_DIR = '/cos/bundles'
 DATA_DIR = '/cos/files'
 ARTEFACT_DIR = '/cos/artifacts'
 
-def \_\_count(word):
+def __count(word):
 with tempfile.TemporaryDirectory() as d:
 print(d)
 os.system('unzip %s/\*.zip -d %s' % (BUNDLE_DIR, d))
@@ -53,8 +53,8 @@ os.system('unzip %s/\*.zip -d %s' % (BUNDLE_DIR, d))
         return int(output)
 
 def test_romeo():
-assert \_\_count('romeo') > 0
-\```
+assert __count('romeo') > 0
+```
 
 - If you need to output graphic test reports in the final test results, please refer to the [Output Test Results](../8-regression/6-status-and-output.md#output-charts) section.
 
@@ -64,15 +64,15 @@ Once the image file is ready, open the terminal, navigate to the corresponding f
 
 - Linux:
 
-\```
+```
 docker build -f dockerfile -t cr.coscene.cn/coscene-lark/image:latest .
-\```
+```
 
 - macOS:
 
-\```
+```
 docker build -f dockerfile -t cr.coscene.cn/coscene-lark/image:latest --platform linux/amd64 .
-\```
+```
 
 <br />
 
@@ -80,9 +80,9 @@ docker build -f dockerfile -t cr.coscene.cn/coscene-lark/image:latest --platform
 
 Log in to the Coscene platform. In "My Settings - Security - Access Coscene Container Image Repository", click "Generate Access Command" to obtain access rights to the Coscene container image repository:
 
-![image-management-1](../img/generate-token.png)
+![generate-cr-token](../img/generate-cr-token.png)
 
-![image-management-2](../img/copy-cr-command.png)
+![login-cr](../img/login-cr.png)
 
 Copy the above command and execute it in the terminal to log in and push the image to the Coscene platform.
 

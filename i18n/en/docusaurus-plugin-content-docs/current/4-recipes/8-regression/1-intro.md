@@ -26,7 +26,7 @@ Users can upload and manage relevant images, test data, test suites, and test pa
 
 Click to enter the project's "Batch Testing" page and create a batch test according to the page prompts:
 
-![intro-1](../img/intro-1.png)
+![regression](../img/regression.png)
 
 The following step-by-step overview provides you with a basic process for using the batch testing feature:
 
@@ -40,11 +40,3 @@ The following step-by-step overview provides you with a basic process for using 
 For more detailed steps, please refer to the detailed explanations in the following chapters.
 
 <br />
-
-<br />
-
-:::success
-
-The batch testing feature is currently in rapid development and iteration. You can visit [Batch Testing - User Documentation](https://coscene0.feishu.cn/wiki/wikcnlpDwycH3hosPkuKqGdVkxf) to view the latest operational guide.
-
-:::

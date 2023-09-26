@@ -10,25 +10,31 @@ In coScene, there are two ways to upload files: **Local Upload and URL Upload**
 
 Users can drag and drop files or click the [Upload File] button within a record to upload local files to the record.
 
+![record-upload](../img/record-upload.png)
+
+![record-upload-file](../img/record-upload-file.png)
+
 ## URL File Upload
 
 Within a record, users can paste the file URL to import the remote file into the record.
 
 Step 1: On the "Record Details Page", click the dropdown button next to the [Upload File] button to expand [URL Upload].
 
+![record-upload](../img/record-upload.png)
+
 ![upload-file-by-url-1](../img/upload-file-by-url-1.png)
 
 Step 2: Click the [URL Upload] button and paste the link of the file you want to upload.
 
-<img alt="upload-file-by-url-2" src={require('../img/upload-file-by-url-2.png').default} width="600" />
+![upload-file-by-url-2](../img/upload-file-by-url-2.png)
 
 Step 3: After verifying the basic file information, click [Confirm] to import the file from the URL into the record.
 
-<img alt="upload-file-by-url-3" src={require('../img/upload-file-by-url-3.png').default} width="600" />
+![upload-file-by-url-3](../img/upload-file-by-url-3.png)
 
 ## File Visualization
 
-In the "File List", select a file and click the [View] button to redirect to the "Visualization Interface" for playback:
+In the "File List", click the file name to redirect to the "Visualization Interface" for playback:
 
 > Currently, only Rosbag files can be viewed.
 

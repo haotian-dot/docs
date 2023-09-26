@@ -12,7 +12,7 @@ In the "Workflow List", all workflows in the project are displayed, allowing you
 
 Click on "Workflow" in the left sidebar of the project to access the project's workflow page.
 
-<img alt="goto-workflow" src={require('../img/goto-workflow.png').default} width="180" />
+![goto-workflow](../img/goto-workflow.png)
 
 The left list displays the types of workflow templates. Click on the template type you want to view to expand the corresponding workflow list.
 
@@ -38,19 +38,15 @@ The top of the workflow details page displays basic information, including workf
 
 ### Step Logs and Information
 
-Once the workflow has finished running, the "Steps" tab of the workflow will list the execution steps of the workflow.
-
-![goto-step](../img/goto-step.png)
-
-Click on the step you want to view to display the workflow log for that step.
+Once the workflow has finished running, the "Steps" tab of the workflow will list the execution steps of the workflow. Click on the step you want to view to display the workflow log for that step.
 
 ![click-stepname](../img/click-stepname.png)
 
 In the workflow log search box, enter keywords to highlight the search results.
 
-<img alt="search-log" src={require('../img/search-log.png').default} width="700" />
+![search-log](../img/search-log.png)
 
-Click on "Basic Information" to view the main details of the step, including its name, ID, status, etc.
+Click on "StepDetail" to view the main details of the step, including its name, ID, status, etc.
 
 ![workflow-step-detail](../img/workflow-step-detail.png)
 
@@ -58,16 +54,10 @@ Click on "Basic Information" to view the main details of the step, including its
 
 **Switch to the "Input Record Version" tab of the workflow.**
 
-- The input record name and version are displayed. Click on the "Record Name" to jump to that record; click on the "Version Link" to jump to the corresponding record version.
+- The input record version is displayed. The list below displays information about the files included in the records input to the workflow.
 
   ![input-record-info](../img/input-record-info.png)
-
-- The list below displays information about the files included in the records input to the workflow.
-
-  ![input-record-file](../img/input-record-file.png)
 
 **Switch to the "Outputs" tab of the workflow.**
 
 - The output information is displayed.
-
-  ![workflow-output](../img/workflow-output.png)

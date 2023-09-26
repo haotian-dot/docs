@@ -37,6 +37,8 @@ If you wish to reuse or aggregate the collected data, you can copy a record from
 
   ![manage-record-5](../img/manage-record-5.png)
 
+  ![manage-record-6](../img/manage-record-6.png)
+
 ## Archive
 
 You can archive records to store low-activity data for others to view and reference.
@@ -54,39 +56,22 @@ You can archive records to store low-activity data for others to view and refere
 
   - Click on the [Records] page of the project, go to the [Active] record list.
 
-    ![image](https://user-images.githubusercontent.com/105594127/197426841-9e8dc9b8-78a2-4621-9b31-26bf54a16ec7.png)
+    ![pro-record](../img/pro-record.png)
 
-  - Hover over the record you wish to archive and click on the [···] on the right.
+  - Select the record you wish to archive and click [Archive] on the right.
 
-    ![image](https://user-images.githubusercontent.com/105594127/197426960-c6af70ee-5a53-4036-a6bf-f6572fce8dac.png)
-
-  - From the expanded [···] menu, click [Archive].
-
-    ![image](https://user-images.githubusercontent.com/105594127/197427024-47afe74b-bfdc-4f7b-aa70-55dfc3726c61.png)
-
-- From the "Record Details Page" operation:
-
-  - Click on the [Records] page of the project, go to the [Active] record list.
-
-    ![image](https://user-images.githubusercontent.com/105594127/197426858-266ae312-68e2-4fba-8e6f-086eb9ddc2c6.png)
-
-  - Click on the "record name" of the record you wish to archive, leading to the "Record Details" page.
-
-    ![image](https://user.com/105594127/197427212-a01aed19-a0d9-4f97-94c0-a8a9ae86809b.png)
-
-  - Click on the top-right [···]. From the expanded list, click [Archive].
-
-    ![image](https://user.com/105594127/197427355-daa3630b-97f4-4938-a4be-b78a46cca5e1.png)
+    ![record-archive](../img/record-archive.png)
 
 **Bulk Archive Records**
 
 - Click on the [Records] page of the project, go to the [Active] record list.
 
-  ![image](https://user.com/105594127/197426867-e4362779-fb48-4959-b747-be4663f6cd12.png)
+  ![pro-record](../img/pro-record.png)
 
-- Select the records you wish to archive, then click [Archive Records].
-  ![image](https://user.com/105594127/197427459-a01aed19-a0d9-4f97-94c0-a8a9ae86809b.png)
+- Select the records you wish to archive, then click [Archive Record].
 
+  ![records-archive](../img/records-archive.png)
+  
 ### Unarchiving Records
 
 > Once a record is unarchived, it is restored to a readable and writable state.
@@ -97,8 +82,18 @@ You can archive records to store low-activity data for others to view and refere
 
   - Click on the [Records] page of the project, go to the [Archived] record list.
 
-    ![image](https://user.com/105594127/197427564-8547fa2b-7c29-4b81-8a32-89786e3268af.png)
+    ![pro-record-archived](../img/pro-record-archived.png)
 
-  - Hover over the record you wish to unarchive and click on the [···] on the right.
+  - Select the record you wish to unarchive and click [Unarchive] on the right.
 
-    ![image](https://user.com/105594127/
+    ![record-unarchive](../img/record-unarchive.png)
+
+**Bulk Unarchive Records**
+
+- Click on the [Records] page of the project, go to the [Archived] record list.
+
+  ![pro-record-archived](../img/pro-record-archived.png)
+
+- Select the records you wish to unarchive, then click [Unarchived Record].
+  
+  ![records-unarchive](../img/records-unarchive.png)

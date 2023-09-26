@@ -20,11 +20,13 @@ Data collection rules define directories for monitored device logs, directories 
 
 Navigate to the "Devices" tab on the organization management page and click [Edit Data Collection Rules].
 
-![org-device-1](../img/org-device-1.png)
+![org-device](../img/org-device.png)
+
+![org-dev-rule](../img/org-dev-rule.png)
 
 Edit the data collection rules online, and click [Save Edits] after completing the configuration.
 
-![org-device-2](../img/org-device-2.png)
+![org-dev-rule-save](../img/org-dev-rule-save.png)
 
 <br />
 
@@ -145,7 +147,9 @@ The error code lookup table manages the correspondence between error codes and e
 
 In the organization management - Devices page, click [Error Code Lookup Table].
 
-![org-device-2](../img/org-device-3.png)
+![org-device](../img/org-device.png)
+
+![org-dev-code](../img/org-dev-code.png)
 
 Edit the error code lookup table online and click [Save] after completing the configuration.
 

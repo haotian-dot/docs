@@ -22,6 +22,8 @@ Navigate to the "Devices" tab on the organization management page.
 
 Click [Create Device], input the basic information, and then click [Confirm].
 
-![org-device-1](../img/create-device-o1.png)
+![org-4](../img/org-4.png)
+
+![org-5](../img/org-5.png)
 
 <br />

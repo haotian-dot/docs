@@ -18,24 +18,24 @@ You can <a href="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/doc
 
 1. Click to enter the "Batch Testing" - "Test Bundle Management" page:
 
-![bundle-management-1](../img/bundle-management.png)
+![goto-test-bundle-2](../img/goto-test-bundle-2.png)
 
 <br />
 
 2. Click on the top right "Upload Test Bundle":
 
-![bundle-management-2](../img/upload-bundle.png)
+![upload-test-bundle](../img/upload-test-bundle.png)
 
 <br />
 
-3. Click on the top right "Upload Test Bundle":
+3. Choose bundle:
 
-![bundle-management-3](../img/choose-bundle.png)
+![choose-bundle](../img/choose-bundle.png)
 
 <br />
 
 4. The "Status" column in the test bundle list shows "Active", which means the test bundle has been successfully uploaded:
 
-![bundle-management-4](../img/bundle-status.png)
+![bundle-status](../img/bundle-status.png)
 
 <br />
