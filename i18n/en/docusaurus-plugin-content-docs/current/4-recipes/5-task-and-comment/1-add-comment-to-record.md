@@ -4,43 +4,43 @@ sidebar_position: 1
 
 # Add Comments to Records
 
-用户在创建一条记录并完成数据的上传后，后续的数据处理与分析工作可能涉及到组织成员的共同协作。「评论」功能可以帮助组织成员针对一条记录对应的工作发布与获取相关消息，实现高效合作。
+After a user creates a record and completes the data upload, subsequent data processing and analysis may involve collaboration among organization members. The "comment" feature can help members post and retrieve relevant messages about a particular record, facilitating effective cooperation.
 
-查看本章节的内容以了解详细操作。
+Refer to this section for detailed instructions.
 
-## 添加与管理评论
+## Add and Manage Comments
 
-你可以在记录详情页的「评论&任务」模块查看与该记录相关的评论。
+You can view comments related to a record in the "Comments & Tasks" section of the record details page.
 
-观看以下视频以了解关于创建、编辑、删除评论等基本操作。
+Watch the video below to learn basic operations about creating, editing, and deleting comments.
 
 <video src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/docs/4-recipes/task/manage-a-comment.mp4" controls="controls" width="700" height="400"></video>
 
 <br />
 
-除了文字描述外，评论同时支持 @ 以提及其他用户、引用相关「一刻」与任务链接等，帮助你与其他成员共同合作，提高信息丰富度与准确度，从而实现高效工作。
+In addition to text descriptions, comments also support mentioning other users with @, referencing relevant "Moments" and task links, etc. This aids collaboration with other members, enriches and refines the information, and achieves efficient work.
 
-### 在评论中 @ 用户
+### Mentioning a User in Comments
 
-你可以在评论中 @ 组织内的其他用户；被 @ 的用户会在组织通信平台内收到提醒。
+You can mention other members of the organization in your comments; mentioned users will receive notifications within the organization's communication platform.
 
 <video src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/docs/4-recipes/task/at-user.mp4" controls="controls" width="700" height="400"></video>
 
 <br />
 
-### 在评论中引用「一刻」
+### Referencing a "Moment" in Comments
 
-你可以在评论内添加相关的「一刻」链接；组织成员可以点击链接直接跳转到可视化界面的标记关键帧，快速获取并结合有效信息处理工作。
+You can add links to relevant "Moments" within the comments; members can click on the link to directly jump to the marked keyframe in the visualization interface, quickly accessing and integrating effective information for work.
 
 <video src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/docs/4-recipes/task/add-moment-to-comment.mp4" controls="controls" width="700" height="400"></video>
 
 <br />
 
-### 在评论中引用任务
+### Referencing a Task in Comments
 
-关于「任务」，你可以在后续章节 [创建任务](../5-task-and-comment/2-create-a-task.md) 中了解更多。
+For more about "Tasks," you can refer to the following section: [Create a Task](../5-task-and-comment/2-create-a-task.md).
 
-你可以在评论内添加相关的任务链接；组织成员可以点击链接直接跳转到对应任务的详情页面。
+You can add links to relevant tasks within the comments; organization members can click the link to jump directly to the task details page.
 
 <video src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/docs/4-recipes/task/add-task-to-comment.mp4" controls="controls" width="700" height="400"></video>
 

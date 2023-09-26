@@ -4,57 +4,57 @@ sidebar_position: 3
 
 # Work on a Task
 
-## 查看任务
+## View Tasks
 
-在刻行主页的右侧「我的任务」中，你可以看到指派给你且未处理完成的任务列表；点击任务标题即可跳转至对应任务详情页面，查看任务信息并进行处理。
+On the main page of CoScene, on the right under "My Tasks," you can see a list of tasks assigned to you that are not yet completed. Clicking on the task title will redirect you to the task's details page, where you can view task information and take action.
 
 ![process-a-task-1](../img/process-a-task-1.png)
 
 <br />
 
-你也可以进入项目中，点击页面左侧栏中的「任务」，查看项目中所有的任务并进行操作。
+You can also go into a project and click on "Tasks" in the sidebar on the left to view and manage all tasks within the project.
 
 ![process-a-task-2](../img/process-a-task-2.png)
 
 <br />
 
-## 处理任务
+## Handle Tasks
 
-### 变更任务状态
+### Change Task Status
 
-一项任务有「待处理」、「处理中」、「已完成」三种状态；一项任务在创建时状态默认为「待处理」，组织成员可以根据任务实际进度变更任务状态。
+A task can have three statuses: "Pending," "In Progress," and "Completed." By default, when a task is created, its status is "Pending." Team members can change the task status based on its actual progress.
 
-你可以点击任务页面的「状态」修改任务状态。
+You can click on the task's "Status" on the task page to change its status.
 
 <video src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/docs/4-recipes/task/change-task-status.mp4" controls="controls" width="700" height="400"></video>
 
-当一项任务完成并变更状态至「已处理」后，将不会再出现在经办人首页的任务列表中。
+Once a task is completed and its status changes to "Processed," it will no longer appear in the task list on the assignee's homepage.
 
 <br />
 
-### 编辑任务信息
+### Edit Task Information
 
-你可以在任务详情页面，修改任务标题与描述。
+On the task details page, you can modify the task title and description.
 
 <video src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/docs/4-recipes/task/edit-task.mp4" controls="controls" width="700" height="400"></video>
 
 <br />
 
-### 流传任务至相关成员
+### Delegate Task to Relevant Members
 
-在当前经办人完成该任务属于自己工作范畴内的工作，或在其他状况下需要将当前任务指派给其他组织成员时，可以改变任务的「经办人」信息完成任务的流传
+Once the current assignee completes the part of the task within their scope of work, or in other situations where the task needs to be assigned to another team member, they can change the "Assignee" information to delegate the task.
 
-你可以通过改变「经办人」，将任务流转给其他相关用户；被指定为经办人的用户会收到提示。
+You can change the "Assignee" to delegate the task to another relevant user. The designated assignee will receive a notification.
 
 <video src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/docs/4-recipes/task/change-assignee.mp4" controls="controls" width="700" height="400"></video>
 
 <br />
 
-## 为任务添加评论
+## Add Comments to Tasks
 
-与记录类似，用户同样可以针对某项任务进行评论，获取与添加与任务相关的更多信息。
+Similar to records, users can also comment on a specific task to retrieve and add more information related to the task.
 
-你可以在任务的详情界面添加评论，@ 以提及其他用户，添加相关链接等信息以提高任务处理效率。
+You can add comments in the task details interface, mention other users, add relevant links, and other information to enhance task efficiency.
 
 <video src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/docs/4-recipes/task/add-comment-to-task.mp4" controls="controls" width="700" height="400"></video>
 
@@ -62,9 +62,9 @@ sidebar_position: 3
 
 <br />
 
-## 删除任务
+## Delete Task
 
-点击任务详情页面右上角的操作按钮，删除该任务：
+Click the action button in the top right corner of the task details page to delete the task:
 
 <video src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/docs/4-recipes/task/delete-task.mp4" controls="controls" width="700" height="400"></video>
 
@@ -72,7 +72,7 @@ sidebar_position: 3
 
 <br />
 
-你也可以在项目的「任务」列表中删除任务：
+You can also delete tasks from the "Tasks" list
 
 <video src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/docs/4-recipes/task/delete-task-in-list.mp4" controls="controls" width="700" height="400"></video>
 

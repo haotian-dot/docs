@@ -4,37 +4,37 @@ sidebar_position: 4
 
 # Test Bundle Management
 
-> 了解测试包文件内容示例，查看如何将测试包上传至刻行平台并进行相应版本管理。
+> Understand the sample content of the test bundle file, and see how to upload the test bundle to the CoScene platform and manage its versions.
 
-## 1. 准备测试包文件
+## 1. Prepare Test Bundle File
 
-测试代码文件为一个 .deb 格式的文件或 .zip / .tgz / .tar.gz 格式的压缩文件。
+The test code file is a .deb format file or a .zip / .tgz / .tar.gz format compressed file.
 
-你可以 <a href="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/docs/4-recipes/regression/count" download>点击此处下载</a> 示例测试包文件。
+You can <a href="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/docs/4-recipes/regression/count" download>click here to download</a> a sample test bundle file.
 
 <br />
 
-## 2. 上传测试包文件
+## 2. Upload Test Bundle File
 
-1. 点击进入「批量测试」-「测试包管理」页面：
+1. Click to enter the "Batch Testing" - "Test Bundle Management" page:
 
 ![bundle-management-1](../img/bundle-management.png)
 
 <br />
 
-2. 点击右上角「上传测试包」：
+2. Click on the top right "Upload Test Bundle":
 
 ![bundle-management-2](../img/upload-bundle.png)
 
 <br />
 
-3. 点击右上角「上传测试包」：
+3. Click on the top right "Upload Test Bundle":
 
 ![bundle-management-3](../img/choose-bundle.png)
 
 <br />
 
-4. 测试包列表「状态」栏显示「活跃」，即代表该测试包上传成功：
+4. The "Status" column in the test bundle list shows "Active", which means the test bundle has been successfully uploaded:
 
 ![bundle-management-4](../img/bundle-status.png)
 

@@ -2,139 +2,129 @@
 sidebar_position: 2
 ---
 
-# Configure Your Data Collection
+# Set Up Your Data Collection
 
-以设定场景为例，实现你的数据自动采集与诊断：
+Using a preset scenario as an example, let's achieve your automatic data collection and diagnosis:
 
-- 当设备 dev-A 的 log 中出现字段「error 1」时，上传 log 文件到记录中，并在字段出现的时间点创建一刻
+- When the "error 1" phrase appears in the log of the device 'dev-A', the log file will be uploaded to the record, and a moment will be created at the time this phrase appears.
 
-<br />
+## Prerequisites
 
-## 前提条件
-
-1. 请准备好一台设备
-
-2. 请创建名为 auto-upload 的项目，详情参见[创建项目](https://docs.coscene.cn/docs/get-started/create-project-flow#3-%E5%88%9B%E5%BB%BA%E9%A1%B9%E7%9B%AE)。
-
-3. 请确认你在刻行的组织角色为「管理员」。若不是管理员，请联系组织管理员更新你的组织角色。
-
+1. Ensure you have a device ready.
+2. Create a project named `auto-upload`. For more details, refer to [Creating a Project](https://docs.coscene.cn/docs/get-started/create-project-flow#3-%E5%88%9B%E5%BB%BA%E9%A1%B9%E7%9B%AE).
+3. Ensure your role in the CoScene organization is set to "Administrator". If you're not an administrator, contact your organizational admin to update your role.
    ![org-role](../img/org-role.png)
 
-<br />
+## Adding Rules to Your Project
 
-## 在项目中添加规则
-
-1. 进入 auto-upload 项目
-
+1. Navigate to the `auto-upload` project.
    ![pro-1](../img/pro-1.png)
-
-2. 在项目中，进入「管理项目-数采与诊断规则」页面，点击【添加规则组】
-
+2. Within the project, go to the 'Manage Project - Data Collection and Diagnosis Rules' page and click on "Add Rule Group".
    ![pro-rule-1](../img/pro-rule-1.png)
+3. Clear any default content in the rules section. Copy the following rule and paste it into the editor:
 
-3. 清空规则中的默认内容后，复制下述规则，粘贴在编辑器中
-
-   ```yaml
-   name: error 系列 # 规则组名称
+   ```
+   name: error series # Rule group name
 
    rules:
-     - when:
-         - has(msg.message, "error 1") # 规则触发条件：log 中包含字段 error 1
-       actions:
-         - upload(title="定位丢失 - error 1") # 创建名称为「定位丢失 - error 1」的记录，上传 log 文件到记录中
-         - create_moment(title="定位丢失") # 创建名称为「定位丢失」的一刻
+   - when:
+         - has(msg.message, "error 1") # Trigger condition: log contains the string "error 1"
+      actions:
+         - upload(title="Localization lost - error 1") # Create a record named "Localization lost - error 1" and upload the log file to this record
+         - create_moment(title="Localization lost") # Create a moment named "Localization lost"
 
-   enabled: true # 规则组状态：启用
+   enabled: true # Rule group status: enabled
 
-   version: v1 # 当前规则组版本只有 v1
+   version: v1 # The current rule group version is only v1
    ```
 
-   \*更多规则样式参见[规则的结构与示例](./4-rule-format.md)
+   \*For more rule styles, see [Structure and Examples of Rules](./4-rule-format.md).
 
-4. 点击【保存】按钮
+4. Click the "Save" button.
 
    ![pro-rule-4](../img/pro-rule-4.png)
 
 <br />
 
-## 配置数采设备信息
+## Configure Data Collection Device Information
 
-1. 进入组织管理页面的「设备」分页，点击【编辑数采规则】按钮
+1. Go to the "Devices" tab on the organization management page, and click the "Edit Data Collection Rules" button.
 
    ![org-device-1](../img/org-device-1.png)
 
-2. 清空规则中的默认内容后，复制下述规则，粘贴在编辑器中
+2. Clear the default content in the rules, then copy and paste the following rule into the editor:
 
-   ```yaml
+   ```
    mod:
-     name: 'default' # mod 名称，默认 default，定制版请联系刻行产品了解详细信息
+     name: 'default' # mod name, default is "default". For custom versions, please contact Coscene product for more details.
      conf:
-       enabled: true # 是否启用，默认为 true
-       base_dir: '/root/logs/' # 数据监听目录
+       enabled: true # Whether to enable, default is true.
+       base_dir: '/root/logs/' # Data monitoring directory.
 
-   event_code: # 错误码功能
-     enabled: false # 错误码白名单配置，默认 False
+   event_code: # Error code feature
+     enabled: false # Whitelist configuration for error codes, default is False.
+
    ```
 
-   \*更多配置参见[数采规则格式](https://docs.coscene.cn/docs/receipts/device/device-authorize#%E6%95%B0%E9%87%87%E8%A7%84%E5%88%99%E6%A0%BC%E5%BC%8F)
+   \*For more configurations, refer to [Data Collection Rule Format](https://docs.coscene.cn/docs/receipts/device/device-authorize#%E6%95%B0%E9%87%87%E8%A7%84%E5%88%99%E6%A0%BC%E5%BC%8F)
 
-3. 点击【保存编辑】按钮
+3. Click the "Save Changes" button.
 
    ![org-device-7](../img/org-device-7.png)
 
 <br />
 
-## 准入设备
+## Authorizing Device
 
-> 以 linux 设备为例，其他设备的注册方式参见[设备注册](https://docs.coscene.cn/docs/receipts/device/device-authorize#%E8%AE%BE%E5%A4%87%E6%B3%A8%E5%86%8C)
+> Using a Linux device as an example, for other device registration methods refer to [Device Registration](https://docs.coscene.cn/docs/receipts/device/device-authorize#%E8%AE%BE%E5%A4%87%E6%B3%A8%E5%86%8C)
 
 <br />
 
-1. 打开设备终端，执行以下命令并输入密码，进入 root
+1. Open the device terminal, execute the following command, enter the password to switch to root.
 
    ```
    sudo su
    ```
 
-2. 在设备终端，创建文件监听目录 `/root/logs`
+2. In terminal, create folders to be monitored `/root/logs`
 
    ```
    mkdir logs
    ```
 
-3. 在刻行平台，进入组织管理页面的「设备」分页
+3. In coScene Web, enter the Device tab in the Org management page
 
    ![org-device](../img/org-device.png)
 
-4. 复制安装命令，以 root 账户粘贴到设备终端
+4. Copy the installation command, and paste it to the terminal input as Root user
 
    ![org-device-copy-command](../img/org-device-copy-command.png)
 
-5. 在设备终端执行命令，查看日志
+5. Run the script, and checkout the system logs
 
    ```
     journalctl -fu cos
    ```
 
-   - 当日志中出现如下字段时，表示已安装完毕，设备正在等待管理员审核
+   - when you see the following logs, the installation is completed and wait to be permitted by the admins
 
      ![dev-install-1](../img/dev-install-1.png)
 
-6. 在组织管理页面的「设备」分页，找到需要审核的设备，点击【同意准入】
+6. In the device page of the Org settings page, find the to be permitted device, and click "Permit"
 
    ![org-device-authorize](../img/org-device-authorize.png)
 
 <br />
 
-## 在设备监听目录中写入文件
+## Write Files in the Device Monitoring Directory
 
-1. 确认设备已获取到数采与诊断规则
+1. Ensure the device has received the data collection and diagnostic rules:
 
-   - 当日志中出现如下字段时，表示已成功获取到规则
+   - When the following entry appears in the logs, it indicates that the rules have been successfully acquired:
 
      ![rule-log-1](../img/rule-log-1.png)
 
-2. <a href="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/docs/4-recipes/data-diagnosis/dev-A.log.zip" download>点击此处下载</a> 设备 dev-A 生成的 dev-A.log。其内容如下：
+2. <a href="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/docs/4-recipes/data-diagnosis/dev-A.log.zip" download>Click to download</a> the `dev-A.log` generated by device dev-A. Its contents are as follows:
 
    ```
    2023-09-01 11:28:47.000 INFO "Demo Log message 1"
@@ -159,37 +149,37 @@ sidebar_position: 2
    2023-09-01 11:29:06.000 INFO "Demo Log message 20"
    ```
 
-3. 在本机终端执行命令，将文件 dev-A.log 复制到设备端 `/root/logs/` 中
+3. In your terminal, execute the command to copy the file dev-A.log to the /root/logs/ directory on the device.
 
    ```
    scp Downloads/dev-A.log root@ubuntu:/root/logs
 
-   # 其中 Downloads/dev-A.log 为本机 dev-A.log 文件所在目录，root@ubuntu 为设备名称，二者需按实修改
+   # Where Downloads/dev-A.log is the directory where the dev-A.log file is located on the local machine, and root@ubuntu is the device name. Both need to be modified accordingly.
    ```
 
-4. log 数据上传
+4. Log Data Upload
 
-   - 当日志中出现如下字段时，表示 log 数据正在上传到刻行平台
+   - When the following entry appears in the logs, it indicates that the log data is being uploaded to the Coscene platform.
 
      ![rule-log-2](../img/rule-log-2.png)
 
 <br />
 
-## 查看创建的记录
+## View the Created Record
 
-1. 进入 auto-upload 项目
+1. Enter the `auto-upload` project.
 
    ![pro-1](../img/pro-1.png)
 
-2. 查看自动创建的记录
+2. View the automatically created record.
 
    ![auto-record-1](../img/auto-record-1.png)
 
-3. 查看记录中上传的数据
+3. Check the data uploaded in the record.
 
    ![auto-record-2](../img/auto-record-2.png)
 
-4. 查看在触发时间点创建的一刻
+4. View the moment created at the trigger time.
 
    ![auto-record-3](../img/auto-record-3.png)
 

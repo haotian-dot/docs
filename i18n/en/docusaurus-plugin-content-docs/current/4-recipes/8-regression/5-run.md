@@ -4,66 +4,70 @@ sidebar_position: 5
 
 # Run a Cloud Test
 
-> 了解如何运行批量测试，包括在网站上指定相关条件后触发、通过配置文件指定自动触发条件，以及使用命令行在本地运行批量测试等。
+> Learn how to execute batch tests, including triggering them on the website by specifying related conditions, automatically triggering through configuration files, and running batch tests locally using the command line.
 
-## 网页端运行批量测试
+## Running Batch Tests via Web Interface
 
-1. 在「批量测试」页面点击右上角「运行批量测试」：
+1. On the "Batch Tests" page, click the "Run Batch Test" button in the top right corner:
 
    ![run-1](../img/run-1.png)
 
-2. 选择测试包版本和需要执行的测试套件后，点击「确定」运行批量测试，会使用符合条件的关联记录作为测试数据执测试套件：
+2. After selecting the test package version and the test suites to be executed, click "Confirm" to run the batch tests. The associated records that meet the conditions will be used as test data to execute the test suites:
 
    ![run-2](../img/run-2.png)
 
 <br />
 
-## 自动触发批量测试
+## Automatically Trigger Batch Tests
 
-上传的测试包种类或标签符配置文件中的预设条件时，测试包完成上传后会自动触发批量测试，使用该测试包文件执行符合条件的全部测试套件。
+When the uploaded test package type or tag meets the preset conditions in the configuration file, the batch test will be automatically triggered upon completion of the test package upload. The full test suite that meets the conditions will be executed using that test package file.
 
-你可以在配置文件中的「on」字段对测试套件设置自动触发条件，具体格式与规则请参见 [配置文件格式与样例-自动触发测试](../8-regression/yaml-sample.md#自动触发测试)。
+You can set automatic trigger conditions for test suites in the "on" field of the configuration file. For the specific format and rules, please refer to [Configuration File Format and Sample - Automatic Test Triggering](../8-regression/9-yaml-sample.md#automatic-test-triggering).
 
-在「批量测试-测试套件管理」页面中，对于配置了自动触发条件的测试套件，其「关联触发条件」列会显示「查看触发条件」按钮：
+On the "Batch Tests - Test Suite Management" page, for test suites with automatic trigger conditions configured, the "Associated Trigger Conditions" column will display the "View Trigger Conditions" button:
 
 ![run-3](../img/auto-trigger-1.png)
 
-你可以点击「查看触发条件」按钮，查看该测试套件自动触发对应的测试包条件：
+You can click the "View Trigger Conditions" button to view the test package conditions that automatically trigger the test suite:
 
 ![run-4](../img/auto-trigger-2.png)
 
 <br />
 
-## 本地运行批量测试
+## Running Batch Tests Locally
 
-你可以使用命令行，按照以下说明在本地运行批量测试。
+You can use the command line to run batch tests locally, following the instructions below.
 
-### 下载与配置
+### Download and Configuration
 
-1. 输入命令以下载所需文件，各操作系统对应命令如下：
+1. Enter the command to download the required files. The corresponding commands for different operating systems are:
 
 - Linux
 
-  ```bash
+  \```
   curl https://coscene-artifacts-production.oss-cn-hangzhou.aliyuncs.com/cos/linux/amd64/latest/cos -o cos
-  ```
+  \```
 
 - macOS
 
-  ```bash
+  \```
   curl https://coscene-artifacts-production.oss-cn-hangzhou.aliyuncs.com/cos/darwin/amd64/latest/cos -o cos
-  ```
+  \```
 
-2. 通过以下命令进行配置：
+2. Configure using the following commands:
 
-   ```bash
-   # 给 cos 可执行权限
+   \```
+
+   # Grant execute permission to cos
+
    chmod +x cos
 
-   # 创建配置目录
+   # Create configuration directory
+
    mkdir $HOME/.cos
 
-   # 创建配置文件
+   # Create a configuration file
+
    cat << EOF > $HOME/.cos/config.yaml
    platform:
        endpoint: ${YOUR_DOMAIN}
@@ -71,17 +75,18 @@ sidebar_position: 5
        project: ${ORG_SLUG}/${PROJECT_SLUG}
    EOF
 
-   # 验证配置
+   # Verify configuration
+
    cos config list
-   ```
+   \```
 
-   其中各参数说明如下：
+   Explanation of parameters:
 
-   - `endpoint` 中 `${YOUR_DOMAIN}` 需替换成实际的网站地址：
+   - Replace `${YOUR_DOMAIN}` in `endpoint` with the actual website address:
 
      ![run-5](../img/cli-1.png)
 
-   - `accessToken` 中 `${YOUR_TOKEN}` 的获取步骤如下所示：
+   - Steps to obtain `${YOUR_TOKEN}` in `accessToken`:
 
      ![run-6](../img/cli-2.png)
 
@@ -89,37 +94,45 @@ sidebar_position: 5
 
      ![run-8](../img/cli-4.png)
 
-   - `project` 中 `ORG_SLUG` 和 `PROJECT_SLUG` 需根据实际替换：
+   - Replace `ORG_SLUG` and `PROJECT_SLUG` in `project` according to reality:
 
      ![run-9](../img/cli-5.png)
 
   <br />
     
-### 运行
+### Execution
 
-你可以参考以下命令示例运行批量测试：
+You can refer to the following command examples to run batch tests:
 
-```bash
-# 使用最新的测试包运行项目下所有批量测试
+\```
+
+# Use the latest test package to run all batch tests in the project
+
 cos test run
 
-# 只用本地的配置文件 cos.yaml 运行批量测试
+# Only use the local configuration file cos.yaml to run batch tests
+
 cos test run --test-config cos.yaml
 
-# 使用最新的测试包，对项目下名称为 gazebo 的测试套件运行批量测试
+# Use the latest test package to run the batch test named gazebo in the project
+
 cos test run -t gezebo
 
-# 使用指定的记录 定位采集数据 运行批量测试
+# Use the specified record "Positioning Collection Data" to run batch tests
+
 cos test run -r 定位采集数据
 
-# 使用标签为 v0.0.1 的测试包，对项目下所有测试套件运行批量测试
+# Use the test package with the tag v0.0.1 to run all test suites in the project
+
 cos test run --bundle-tag v0.0.1
 
-# 使用种类为 Gazebo 的测试包，对项目下所有测试套件运行批量测试
+# Use the test package of category Gazebo to run all test suites in the project
+
 cos test run --bundle-category Gazebo
 
-# 上传 bundle.zip 并运行批量测试
+# Upload bundle.zip and run batch tests
+
 cos test run -b bundle.zip
-```
+\```
 
  <br />

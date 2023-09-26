@@ -4,30 +4,30 @@ sidebar_position: 6
 
 # Configurations
 
-## 1. 上传路径中编辑文件
+## 1. Edit Files in Upload Path
 
-您对上传路径中的文件的移动、修改、删除等操作，对于已上传到云端的文件不会有任何影响。
+Any operations you perform on the files in the upload path, such as moving, modifying, or deleting, will not affect the files already uploaded to the cloud.
 
-## 2. 上传路径中编辑文件夹
+## 2. Edit Folders in Upload Path
 
-您可以对上传路径中的文件夹进行重命名、删除、更改内容等操作。
+You can rename, delete, or modify the content of folders in the upload path.
 
-- ### 重命名
+- ### Rename
 
-  您可以在指定的上传路径中选择要重命名的子文件夹，点击右键，选择「重新命名」，对子文件夹进行重命名:
+  Within the specified upload path, you can choose the subfolder you wish to rename, right-click, and select "Rename" to rename the subfolder:
 
   ![modify-1](../img/modify-1.png)
 
-  请注意若要重命名某一文件夹，请先关闭 coScene Studio，否则有可能出现「文件夹正在使用」警告，无法进行文件夹重命名。
+  Please note that if you want to rename a folder, you should first close coScene Studio. Otherwise, a "Folder is in use" warning might appear, preventing the folder from being renamed.
 
-- ### 删除
+- ### Delete
 
-  您可以删除指定的上传路径中的子文件夹。
+  You can delete subfolders within the specified upload path.
 
-- ### 更改内容
+- ### Modify Content
 
-  您可以在指定的上传路径及其子文件夹中增加、删除或编辑文件。
+  You can add, delete, or edit files within the specified upload path and its subfolders.
 
-- ### 其他情况
+- ### Other Situations
 
-  若您删除了上传路径，您会收到重新选择的提示。
+  If you delete the upload path, you will receive a prompt to select it again.

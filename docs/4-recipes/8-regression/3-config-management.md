@@ -8,7 +8,7 @@ sidebar_position: 3
 
 ## 1. 准备配置文件
 
-配置文件为一个名称为 cos.yaml 或 cos.yml 的文件，其具体格式与规则请参见 [配置文件格式与样例](../8-regression/yaml-sample.md)。
+配置文件为一个名称为 cos.yaml 或 cos.yml 的文件，其具体格式与规则请参见 [配置文件格式与样例](../8-regression/9-yaml-sample.md)。
 
 <br />
 

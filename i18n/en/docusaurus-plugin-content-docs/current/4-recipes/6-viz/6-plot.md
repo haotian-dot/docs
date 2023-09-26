@@ -4,28 +4,28 @@ sidebar_position: 6
 
 # Most Common Plots
 
-机器的常用参数能够在可视化界面中以图表的形式展示。本章节将介绍有关查看与绘制图表的相关操作。
+Machine's common parameters can be displayed in the visualization interface in the form of charts. This section will introduce operations related to viewing and drawing charts.
 
-## 查看机器的速度、电流和电压
+## View Machine's Speed, Current, and Voltage
 
-### 绘制下发速度曲线图
+### Draw the Commanded Speed Curve
 
 <video src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/docs/4-recipes/viz/Plot-setting-cmd-vel.mp4" controls="controls" width="700" height="400"></video>
 
-### 绘制实际速度曲线图
+### Draw the Actual Speed Curve
 
 <video src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/docs/4-recipes/viz/Plot-setting-imu-vel.mp4" controls="controls" width="700" height="400"></video>
 
-#### 全屏查看曲线图
+#### View the Curve in Full Screen
 
 <video src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/docs/4-recipes/viz/Plot-full-screen.mp4" controls="controls" width="700" height="400"></video>
 
-#### 重置曲线图
+#### Reset the Curve Display
 
 <video src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/docs/4-recipes/viz/Plot-reset-view.mp4" controls="controls" width="700" height="400"></video>
 
 <br />
 
-## 查看机器的充电状态
+## View Machine's Charging Status
 
 <video src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/docs/4-recipes/viz/Indicator-charge.mp4" controls="controls" width="700" height="400"></video>

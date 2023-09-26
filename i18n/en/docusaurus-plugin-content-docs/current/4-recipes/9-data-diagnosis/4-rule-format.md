@@ -4,18 +4,18 @@ sidebar_position: 4
 
 # Rule Configurations and Examples
 
-## 规则的使用前提
+## Prerequisites for Using Rules
 
-规则仅对特定格式的数据生效，即：包含消息、时间戳、主题、消息类型的流数据。
+Rules are effective only for data of a particular format, i.e., streaming data that includes a message, timestamp, topic, and message type.
 
-其中，支持的时间戳格式如下（[参考文档](https://www.w3schools.com/python/python_datetime.asp)）：
+The supported timestamp formats are as follows ([reference document](https://www.w3schools.com/python/python_datetime.asp)):
 
 <table>
     <tr>
-        <th>时间戳类型</th><th>时间戳格式</th><th>示例</th>
+        <th>Timestamp Types</th><th>Timestamp Formats</th><th>Examples</th>
     </tr>
     <tr>
-        <td rowspan="4">常规<p><i>*文件中的时间戳</i></p></td><td>%m%d %H:%M:%S.%f</td><td>0212 12:12:12.548513</td>
+        <td rowspan="4">General<p><i>*Timestamp in the file</i></p></td><td>%m%d %H:%M:%S.%f</td><td>0212 12:12:12.548513</td>
     </tr>
     <tr>
         <td>%b %d %H:%M:%S</td><td>Dec 12 12:12:12</td>
@@ -27,7 +27,7 @@ sidebar_position: 4
         <td>%H:%M:%S.%f</td><td>12:12:12.548513</td>
     </tr>
     <tr>
-        <td rowspan="3">特殊<p><i>*文件名/文件第一行中的时间戳</i></p><p><i>（用于文件中时间戳未全部包含年、月、日、时、分、秒的情况）</i></p></td><td>%Y-%m-%d %H:%M:%S</td><td>2023-02-12 12:12:12</td>
+        <td rowspan="3">Special<p><i>*Filename/Timestamp in the first line of the file content</i></p><p><i>(For cases where the timestamp in the file does not fully include year, month, day, hour, minute, and second.)</i></p></td><td>%Y-%m-%d %H:%M:%S</td><td>2023-02-12 12:12:12</td>
     </tr>
     <tr>
         <td>%Y/%m/%d %H:%M:%S</td><td>2023/02/12 12:12:12</td>
@@ -37,13 +37,11 @@ sidebar_position: 4
     </tr>
 </table>
 
-若有其他格式的时间戳，请联系刻行。
+For other timestamp formats, please contact CoScene.
 
-<br />
+## Basic Structure of Rules
 
-## 规则的基本结构
-
-数据采集与诊断规则的基本结构如下：
+The basic structure of data collection and diagnostic rules is as follows:
 
 ```yaml
 name: diagnosis rule
@@ -52,69 +50,65 @@ rules:
       - msg.somevalue > 10
       - msg.othervalue < 10
     actions:
-      - upload(before=5, extra_files=[...])
+      - upload()
       - create_moment('Value is not expected')
 enabled: true
 version: v1
 ```
 
-- **name：规则组名称**
-  - 自定义规则组名称，一个规则组中可包含多个规则
-- **when：规则触发条件**
-  - 定义日志中的关键事件，例如日志中包含某个字段
-  - when 中任何一个规则触发以下所有 action
-- **actions：规则触发后的操作**
-
-  - 定义是否触发上传数据、创建一刻、创建&指派任务等操作
-  - 以上任何条件会触发 所有 actions
-
-- **enabled：规则组是否启用**
-
-  - true 为启用，启用规则组时，设备或项目中的数据触发规则后会执行预定义的操作
-  - false 为禁用，禁用规则组后，设备及项目中的数据不再执行该规则组中的规则
-
-- **version：规则组版本**
-  - 规则组版本目前必须是 version: v1
+- **name: Rule Group Name**
+  - Custom rule group name; a rule group can contain multiple rules.
+- **when: Rule Trigger Conditions**
+  - Defines key events in the log, such as the log containing a certain field.
+  - Any condition in 'when' triggers all the following actions.
+- **actions: Actions After Rule is Triggered**
+  - Defines whether to trigger data uploads, create moments, create & assign tasks, etc.
+  - Any of the above conditions will trigger all actions.
+- **enabled: Whether the Rule Group is Enabled**
+  - 'true' means enabled. When the rule group is enabled, data in the device or project will trigger the rule and perform predefined actions.
+  - 'false' means disabled. When the rule group is disabled, data in the device and project no longer executes the rules in this rule group.
+- **version: Rule Group Version**
+  - The current rule group version must be 'version: v1'.
 
 <br />
 
-## 常用规则条件示例
+## Common Rule Usage Examples
 
-> 以下展示了部分典型的规则触发条件
+> Below are some examples of typical rule trigger conditions.
 
 ```yaml
-# 触发了某个错误码
+# Triggered a certain error code
 'Error code 123 happened' in log
 
-# 检查 x 方向的速度是否在 4~10 之间
+# Check if the speed in the x direction is between 4~10
 topic == '/velocity' and 4 < msg.linear.x < 10
 
-# 分析日志中的值并检查它是否在 4~10 之间
+# Analyze the value in the log and check if it's between 4~10
 4 < regex_search(log, 'X velocity is (\\d+)').group(1) < 10
 
-# 机器人返回充电桩 30 秒后没有开始充电
+# Robot did not start charging 30 seconds after returning to the charging station
 timeout(
   'Returned to base' in log,
   'charging state: CHARGING' in log,
   duration=30
 )
 
-# 命令没有在 10 秒内完成
+# The command did not complete within 10 seconds
 timeout(
   set_value('cmd_id', regex_search(log, 'Sending command id (\\d+)').group(1)),
   regex_search(log, 'Command (\\d+) finished').group(1) == get_value('cmd_id'),
   duration=10
 )
 
-# 如果温度在 60 秒内上升 5
-# 假设消息中存在字段 `value`
+# If the temperature rises by 5 within 60 seconds
+# Assuming there's a `value` field in the message
 topic == '/temp' and sequential(
   set_value('start_temp', msg.value),
   msg.value - get_value('start_temp') > 5,
   duration=60
 )
 
-# 检查初始化在 20 秒内完成
+# Check if initialization completes within 20 seconds
 timeout(
   'Initialization start' in log,
   # The three modules can finish init in any order
@@ -126,22 +120,22 @@ timeout(
   duration=20
 )
 
-# 检测到一个 topic 超过 20 秒未收到消息，
-# 例如，定位模块挂了
+# Detect if a topic hasn't received a message for more than 20 seconds,
+# e.g., the localization module is down
 timeout(
   topic == '/localization',
   topic == '/localization',
   duration=20
 )
 
-# 温度高于 40 的时间超过 60 秒
+# Temperature is above 40 for more than 60 seconds
 sustained(
   topic == '/temp',
   msg.value > 40,
   duration=60
 )
 
-# chassis 环路频繁超时：60 秒内超时次数大于 10 次
+# Chassis loop frequently times out: more than 10 timeouts within 60 seconds
 repeated(
   timeout(
     'Send chassis command' in log,
@@ -152,8 +146,8 @@ repeated(
   duration=60
 )
 
-# 触发错误，但如果发生以下情况，则忽略它们
-# 错误发生的时间间隔在 10 秒之内
+# Trigger error, but ignore it under the following conditions
+# The error occurred within a 10-second interval
 debounce(
   'Error 123' in log,
   duration=10
@@ -162,29 +156,29 @@ debounce(
 
 <br />
 
-## 常用规则操作示例
+## Common Rule Action Examples
 
-> 以下展示了部分典型的规则触发操作
+> The following shows some typical rule-triggered actions.
 
 ```yaml
-# 在刻行平台创建记录，在记录中上传触发了对应条件的文件
+# Create a record on the Kexing platform and upload files that triggered the corresponding conditions in the record.
 upload()
 
-# 创建名为“定位错误”的记录，记录的描述为“检测到定位异常，请前往查看”，记录的标签为“定位”、“紧急”
-# 同时在记录中上传对应文件
-upload(title="定位错误", description="检测到定位异常，请前往查看", labels=["定位","紧急"])
+# Create a record named "Localization Error", with the description "Localization anomaly detected, please check", and with labels "Localization" and "Urgent".
+# Also, upload the corresponding file in the record.
+upload(title="Localization Error", description="Localization anomaly detected, please check", labels=["Localization","Urgent"])
 
-# 创建名为“定位错误”的记录，在记录中上传对应文件，同时上传附加文件 /root/map.png
-upload(title="定位错误", extra_files=["/root/map.png"])
+# Create a record named "Localization Error", upload the corresponding file in the record, and also upload an additional file /root/map.png.
+upload(title="Localization Error", extra_files=["/root/map.png"])
 
-# 创建一刻（在规则条件被触发的时间点打标记），一刻名称为“定位错误”
-create_moment('定位错误')
+# Create a moment (mark at the time point when the rule condition is triggered), with the name "Localization Error".
+create_moment('Localization Error')
 
-# 创建名为“定位错误”的一刻，一刻的描述为“当前时刻定位错误”，持续时长为 3 秒
-create_moment(title="定位错误", description="当前时刻定位错误", duration=3)
+# Create a moment named "Localization Error", with the description "Localization error at this moment", and a duration of 3 seconds.
+create_moment(title="Localization Error", description="Localization error at this moment", duration=3)
 
-# 创建名为“定位错误”的一刻，同时创建一个任务
-create_moment(title="定位错误", create_task=True)
+# Create a moment named "Localization Error", and also create a task.
+create_moment(title="Localization Error", create_task=True)
 ```
 
 <br />

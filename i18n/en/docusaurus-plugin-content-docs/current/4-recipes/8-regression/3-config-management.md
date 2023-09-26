@@ -4,39 +4,39 @@ sidebar_position: 3
 
 # Configuration Management
 
-> 了解配置文件的编写与上传/编辑，以及查看解析出的测试套件信息。
+> Learn about writing, uploading/editing configuration files, and viewing parsed test suite information.
 
-## 1. 准备配置文件
+## 1. Prepare Configuration File
 
-配置文件为一个名称为 cos.yaml 或 cos.yml 的文件，其具体格式与规则请参见 [配置文件格式与样例](../8-regression/yaml-sample.md)。
+The configuration file is named either `cos.yaml` or `cos.yml`. For its specific format and rules, please refer to [Configuration File Format and Samples](../8-regression/9-yaml-sample.md).
 
 <br />
 
-## 2. 上传与编辑配置文件
+## 2. Upload and Edit Configuration File
 
-在项目中的「批量测试-测试套件管理」页面，你可以直接从本地选择配置文件上传或者在线编写配置文件：
+On the "Batch Testing - Test Suite Management" page within the project, you can directly select and upload a configuration file from your local device or write one online:
 
 ![config-management-1](../img/upload-config.png)
 
 <br />
 
-你可以在「批量测试-测试套件管理」页面右上角点击下载/编辑/上传配置文件
+You can click on the top right corner of the "Batch Testing - Test Suite Management" page to download/edit/upload configuration files.
 
 ![config-management-2](../img/manage-config.png)
 
 <br />
 
-其中你可以点击「编辑」在线编辑配置文件，在修改配置文件内容后点击「保存编辑」以更新配置文件：
+You can click "Edit" to edit the configuration file online. After modifying the content of the configuration file, click "Save Edits" to update it:
 
 ![config-management-3](../img/update-config.png)
 
 <br />
 
-## 3. 查看测试套件信息
+## 3. View Test Suite Information
 
-格式与内容符合规范的配置文件解析完毕后，测试套件管理页面会显示解析出的测试套件及相关信息。
+After parsing a configuration file that adheres to the format and content standards, the test suite management page will display the parsed test suites and related information.
 
-你可以点击某些列内容查看详细信息，例如你可以点击「测试类型与镜像」列查看与复制镜像地址，点击「查看触发条件」查看该测试套件对应的自动触发条件，点击「查看通知配置」查看该测试套件对应的通知模版内容等：
+You can click on some column content to view detailed information. For example, you can click on the "Test Type and Image" column to view and copy the image address, click "View Trigger Conditions" to view the automatic trigger conditions for that test suite, click "View Notification Configuration" to view the notification template content for that test suite, and more:
 
 ![config-management-4](../img/test-suite-info.png)
 

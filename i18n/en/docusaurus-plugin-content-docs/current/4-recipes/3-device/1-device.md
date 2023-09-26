@@ -4,13 +4,13 @@ sidebar_position: 1
 
 # About Devices
 
-设备主要用于两个方面：一是作为记录的基本信息，表示数据来源；二是作为数据自动采集的对象，和真实设备端实现连接。在记录中可附加设备信息，从而对设备的上传数据进行检索与统计。
+Devices serve two primary purposes: first, as a basic piece of information for records, indicating the source of the data; second, as an object for automatic data collection, connecting with the real device end. Device information can be attached to records, allowing for retrieval and statistics of data uploaded by the device.
 
-## 基本元素
+## Basic Elements
 
-设备主要包含 4 个基本元素：
+Devices mainly consist of 4 basic elements:
 
-- ID：设备的唯一标识
-- 名称：自定义设备的名称，例如比 ID 更容易辨别的别名
-- 门店：可以设置设备的工作地
-- 型号：设备的类型
+- ID: The unique identifier for the device.
+- Name: Custom name for the device, such as an alias that's easier to recognize than the ID.
+- Store: The location where the device operates.
+- Model: The type or model of the device.

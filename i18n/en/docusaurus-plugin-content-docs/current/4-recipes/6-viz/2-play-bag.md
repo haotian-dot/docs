@@ -4,54 +4,54 @@ sidebar_position: 2
 
 # Replay a ROS Bag
 
-可视化界面按 bag 文件的时间顺序，播放整条记录。本章节将介绍如何播放记录中的 bag，以及播放相关的设置。
+The visualization interface plays the entire record in the chronological order of the bag file. This section will introduce how to play the bag in the record and related settings.
 
-## 播放 bag
+## Playing the bag
 
-> 记录中的 bag 处理成功后，即可进行播放。
+> Once the bag in the record is successfully processed, it can be played.
 
-在可视化界面，点击「播放」图标开始播放 bag。
+In the visualization interface, click the "Play" icon to start playing the bag.
 
-若记录中有多个 bag，则可切换播放：点击左侧「数据源」-「播放列表」，选择目标 bag 即跳转到对应时间开始播放。
+If there are multiple bags in the record, you can switch between them: Click on "Data Source" on the left, then "Play List", and choose the target bag to start playing from the corresponding time.
 
 <video src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/docs/4-recipes/viz/play-viz-and-playlist.mp4" controls="controls" width="700" height="400"></video>
 
-**循环播放与倍速播放**
+**Looping and Speed Control**
 
 <video src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/docs/4-recipes/viz/loop-play-and-speed.mp4" controls="controls" width="700" height="400"></video>
 
-**跳帧播放**
+**Skipping Frames**
 
 <video src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/docs/4-recipes/viz/seek-forward.mp4" controls="controls" width="700" height="400"></video>
 
-## 查看时间轴详情
+## View Timeline Details
 
-> 展示当前播放的时间，以及标记的时间段。
+> Displays the current playback time and marked time segments.
 
-黑色竖线表示当前播放时间，橙色竖线表示光标在时间轴上移动时对应的时间，蓝色线段表示标记 (即「一刻」) 的时间，紫色区域表示记录中所有可播 bag 文件。
+A black vertical line indicates the current playback time, an orange vertical line shows the time corresponding to the cursor moving on the timeline, a blue line segment represents the time of a mark (i.e., "moment"), and the purple area signifies all playable bag files in the record.
 
 <img alt="honeybee-6" src={require('../img/honeybee-6.png').default} width="1200" />
 
 <br />
 
-## 切换播放视角
+## Switch Playback Perspective
 
-可视化界面支持多角度查看 bag 中的可视化内容。
+The visualization interface supports viewing visual content in the bag from multiple angles.
 
-### 回到画面中心
+### Return to the Center of the Screen
 
-在播放过程中，可使用按钮或滚轮调整画面大小，或一键回到预设的画面中心。
+During playback, you can adjust the screen size using buttons or the scroll wheel, or return to the preset center of the screen with one click.
 
 <video src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/docs/4-recipes/viz/recenter.mp4" controls="controls" width="700" height="400"></video>
 
-### 切换 2D/3D 视角
+### Switch between 2D/3D Perspectives
 
-在 3D 视角下，通过【ctrl】+ 鼠标左键即可 360° 旋转查看视图；在 2D 视角下，可在俯视视角下旋转查看视图。
+In 3D perspective, use "ctrl" + left mouse button for a 360° rotational view; in 2D perspective, you can rotate the view in a top-down angle.
 
 <video src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/docs/4-recipes/viz/3d-and-zoom.mp4" controls="controls" width="700" height="400"></video>
 
 <br />
 
-## 查看当前视图中每个颜色对应的 topic
+## View the Corresponding Topic for Each Color in the Current View
 
 <video src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/docs/4-recipes/viz/3D-view-point-information.mp4" controls="controls" width="700" height="400"></video>

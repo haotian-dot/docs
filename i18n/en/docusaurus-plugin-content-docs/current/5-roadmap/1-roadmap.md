@@ -4,6 +4,6 @@ sidebar_position: 1
 
 # Roadmap
 
-刻行正在紧锣密鼓的对产品进行不断的开发，每周我们都会有新的功能上线，我们会在这里不断的更新我们的产品路线图，让大家了解我们的产品规划。
+coScene is actively developing its products at a rapid pace. Every week, we roll out new features. We will constantly update our product roadmap here to keep everyone informed about our product planning.
 
 ![123](img/roadmap.png)

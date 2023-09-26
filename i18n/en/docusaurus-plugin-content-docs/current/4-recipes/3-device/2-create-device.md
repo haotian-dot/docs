@@ -4,9 +4,9 @@ sidebar_position: 2
 
 # Create Devices
 
-## 在记录中添加设备
+## Add Device in Records
 
-创建记录后，在记录详情页的「设备」栏输入「设备 ID」，点击【创建设备】
+After creating a record, input the "Device ID" in the "Device" field on the record details page, and click [Create Device].
 
 ![create-device-r1](../img/create-device-r1.png)
 
@@ -14,13 +14,13 @@ sidebar_position: 2
 
 <br />
 
-## 在组织中创建设备
+## Create Device in Organization
 
-进入组织管理页面的「设备」分页
+Navigate to the "Devices" tab on the organization management page.
 
 ![org-device](../img/org-device.png)
 
-点击【创建设备】，输入基本信息后，点击【确认】
+Click [Create Device], input the basic information, and then click [Confirm].
 
 ![org-device-1](../img/create-device-o1.png)
 

@@ -18,7 +18,7 @@ sidebar_position: 6
 pytest --junitxml=path
 ```
 
-具体示例请参见 [配置文件格式与样例-输出测试结果文件](../8-regression/yaml-sample.md#输出测试结果文件)。
+具体示例请参见 [配置文件格式与样例-输出测试结果文件](../8-regression/9-yaml-sample.md#输出测试结果文件)。
 
 支持解析的 JUnit XML 格式的结果文件示例如下，其中结果数据到 JUnit XML 格式的映射请参考 [JUnit Mapping](https://www.ibm.com/docs/en/developer-for-zos/14.1?topic=formats-junit-xml-format#junitschema__table_junitmap)：
 
@@ -61,7 +61,7 @@ pytest --junitxml=path
 
 > 输出文件至指定目录作为测试输出，其中的.bag文件可与原记录中的文件在可视化界面中对比播放。
 
-你可以配置文件的「script」字段中使用命令将文件输出到 `/cos/outputs` 目录下作为测试输出，具体示例请参见 [配置文件格式与样例-输出影子模式文件](../8-regression/yaml-sample.md#输出影子模式文件)。
+你可以配置文件的「script」字段中使用命令将文件输出到 `/cos/outputs` 目录下作为测试输出，具体示例请参见 [配置文件格式与样例-输出影子模式文件](../8-regression/9-yaml-sample.md#输出影子模式文件)。
 
 测试输出将展示在测试详情页的「测试输出」栏，按照对应测试套件与记录分级展示。
 

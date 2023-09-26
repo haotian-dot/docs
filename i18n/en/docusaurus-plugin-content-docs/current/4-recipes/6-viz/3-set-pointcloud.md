@@ -4,42 +4,42 @@ sidebar_position: 3
 
 # View/Set Point Cloud and TF
 
-本章节将介绍如何进行点云 topic 、TF 的查看与设置。
+This chapter will introduce how to view and set point cloud topics and TF.
 
-## 查看/隐藏 topic
+## View/Hide Topics
 
-每个 topic 都可以选择打开或关闭。
+Each topic can be toggled on or off.
 
-### 查看/隐藏全部 topic
+### View/Hide All Topics
 
 <video src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/docs/4-recipes/viz/3D-showhide-all-topic.mp4" controls="controls" width="700" height="400"></video>
 
-### 查看/隐藏某个 topic
+### View/Hide a Specific Topic
 
 <video src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/docs/4-recipes/viz/3D-showhide-a-topic.mp4" controls="controls" width="700" height="400"></video>
 
-## 设置点云属性
+## Set Point Cloud Properties
 
-点云可设置点的大小、衰减时间、颜色等信息。
+You can set the point size, decay time, color, and other information for the point cloud.
 
-### 设置点的大小
+### Set Point Size
 
 <video src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/docs/4-recipes/viz/3D-setting-point-size.mp4" controls="controls" width="700" height="400"></video>
 
-### 设置点的衰减时间
+### Set Point Decay Time
 
 <video src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/docs/4-recipes/viz/3D-setting-decay-time.mp4" controls="controls" width="700" height="400"></video>
 
-### 设置点的颜色
+### Set Point Color
 
 <video src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/docs/4-recipes/viz/3D-setting-color.mp4" controls="controls" width="700" height="400"></video>
 
-## 导入静态 TF
+## Import Static TF
 
 <video src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/docs/4-recipes/viz/3D-input-static-TF.mp4" controls="controls" width="700" height="400"></video>
 
-## 设置 静态 Bag
+## Set Static Bag
 
-> 将带 TF 的 bag 设为「静态 Bag」，在播放时仅使用 bag 中的 TF 而不播放该 bag
+> Set a bag with TF as a "Static Bag". When playing, only the TF from the bag will be used, and the bag itself won't be played.
 
 <video src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/docs/4-recipes/viz/set-static-bag.mp4" controls="controls" width="700" height="400"></video>

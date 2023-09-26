@@ -2,17 +2,17 @@
 sidebar_position: 3
 ---
 
-# Rule Based Collection and Diagnose
+# Rule-Based Collection and Diagnosis
 
-> 每个项目规则单独配置，仅项目管理员可编辑
+> Rules are configured individually for each project, and only project administrators can edit.
 
-数采与诊断规则定义触发数据采集与诊断的条件，以及触发后的操作。例如：当设备日志中发生某个事件时，自动采集指定目录下的数据，存储为一条记录，并在该时间点创建一刻。规则的基本结构与标准格式参见后续章节。
+Data collection and diagnosis rules define the conditions to trigger data collection and diagnosis, as well as the actions taken after the trigger. For example: when a certain event occurs in the device log, it automatically collects data from a specified directory, stores it as a record, and creates a moment at that point in time. The basic structure and standard format of the rules are discussed in the subsequent sections.
 
-在项目中，进入「管理项目-数采与诊断规则」页面，点击【添加规则组】。
+In the project, go to the "Manage Project - Data Collection and Diagnosis Rules" page and click on "Add Rule Group".
 ![pro-rule-1](../img/pro-rule-1.png)
 
-在线编辑规则组，在完成配置后点击【保存】。
+Edit the rule group online. After completing the configuration, click "Save".
 ![pro-rule-2](../img/pro-rule-2.png)
 
-保存成功后，即可查看配置完成的规则组。
+After successfully saving, you can view the configured rule group.
 ![pro-rule-3](../img/pro-rule-3.png)

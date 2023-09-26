@@ -2,224 +2,225 @@
 sidebar_position: 2
 ---
 
-# Device Authorizations
+## Device Authorizations
 
-> 准入的设备可按数据采集规则，将数据自动上传到项目中
+> Authorized devices can automatically upload data to projects based on data collection rules.
 
-设备准入包含三个步骤：配置数采规则、设备注册、设备审核。
-
-<br />
-
-## 配置数采规则
-
-> 数采规则应用于组织中的全部设备，仅组织管理员可编辑
-
-数采规则定义需要监控的设备日志所在目录、设备信息文件的存放目录等。数采规则的结构格式参见下文。
+Device authorization consists of three steps: configuring data collection rules, device registration, and device review.
 
 <br />
 
-进入组织管理页面的「设备」分页，点击【编辑数采规则】按钮。
+## Configure Data Collection Rules
+
+> Data collection rules apply to all devices within the organization and can only be edited by organization administrators.
+
+Data collection rules define directories for monitored device logs, directories for device information files, etc. The structure format of the data collection rules is described below.
+
+<br />
+
+Navigate to the "Devices" tab on the organization management page and click [Edit Data Collection Rules].
 
 ![org-device-1](../img/org-device-1.png)
 
-在线编辑数采规则，在完成配置后点击【保存编辑】。
+Edit the data collection rules online, and click [Save Edits] after completing the configuration.
 
 ![org-device-2](../img/org-device-2.png)
 
 <br />
 
-## 数采规则格式
+## Data Collection Rule Format
 
-数采规则主要对三个模块进行设置：
+Data collection rules primarily set up three modules:
 
-- **数据收集器设置（collector）**：完成数据采集后，是否删除设备端数据
-- **存储设置 （mod）**：设备端数据的存储目录；设备标识文件的地址
-- **事件设置（event_code）**：事件错误码的上传规则地址以及是否上传条件限制
-- **更新设置（updater）**：当前程序是否开启自动更新
+- **Data Collector Settings (collector)**: Whether to delete data on the device after data collection.
+- **Storage Settings (mod)**: Directory for data storage on the device; address for the device identifier file.
+- **Event Settings (event_code)**: Upload rule addresses for event error codes and upload condition restrictions.
+- **Update Settings (updater)**: Whether the current program enables automatic updates.
 
 <br />
 
-示例数采设备信息文件如下:
+Example data collection device information file:
 
-```yaml
+````yaml
 collector:
-  delete_after_upload: true # 默认值为 False
-  delete_after_interval_in_hours: 48 # 默认值为 -1，即不删除文件
-  scan_interval_in_secs: 60 # 默认值：60，即 60s 对文件夹扫描一次
+  delete_after_upload: true # Default value is False
+  delete_after_interval_in_hours: 48 # Default is -1, meaning files won't be deleted
+  scan_interval_in_secs: 60 # Default is 60, meaning folders are scanned every 60s
 
 mod:
-  name: 'default' # mod 名称，默认 default，定制版请联系刻行产品了解详细信息
+  name: 'default' # mod name, default is "default". For custom versions, please contact coScene for more information.
   conf:
-    enabled: true # 是否启用，默认为 true
-    robot_file: '/root/.ros/sn.txt' # 设备标识文件，用于存放设备唯一标识码，如 sn
-    base_dir: '/root/.ros/auto-upload/' # 数据监听目录
+    enabled: true # Whether it's enabled, default is true
+    robot_file: '/root/.ros/sn.txt' # Device identifier file, used to store unique device identifiers like sn
+    base_dir: '/root/.ros/auto-upload/' # Directory for data monitoring
 
-event_code: # 错误码功能
-  enabled: false # 错误码白名单配置，默认 False
+event_code: # Error code feature
+  enabled: false # Configuration for error code whitelist, default is False
   whitelist:
-    '1001': 8 # key 为错误码，字符串类型；value 为次数，表示在 reset_interval_in_sec 周期内只上传规定次数，多余数据会忽略上传
-  reset_interval_in_sec: 86400 # 计算周期，默认为一天
-  code_json_url: cos://organizations/current/configMaps/device.errorCode # 默认采用云端配置模式，支持其他公开文件
+    '1001': 8 # Key is the error code (string type); value is the count, indicating the maximum number of uploads within the reset_interval_in_sec period. Excess data is ignored.
+  reset_interval_in_sec: 86400 # Calculation period, default is a day
+  code_json_url: cos://organizations/current/configMaps/device.errorCode # Default uses cloud configuration, supports other public files
 
 updater:
-  enabled: true # 自动升级配置，默认值：True
-```
+  enabled: true # Automatic update configuration, default is True
+
 
 <br />
 
-### 数据收集器设置
+### Data Collector Settings
 
-设置完成数据采集后，是否删除设备端数据，以释放设备端硬盘存储
+After completing data collection, settings decide whether to delete data on the device to free up device hard disk storage.
 
 ```yaml
-# 数据收集器设置
+# Data Collector Settings
 collector:
-  delete_after_upload: true # 默认值为 False
-  delete_after_interval_in_hours: 48 # 默认值为 -1，即不删除文件
-  scan_interval_in_secs: 60 # 默认值：60，即 60s 对文件夹扫描一次
-```
+  delete_after_upload: true # Default is False
+  delete_after_interval_in_hours: 48 # Default is -1, meaning files won't be deleted
+  scan_interval_in_secs: 60 # Default is 60s, meaning folders are scanned every 60s
+````
 
 <br />
 
-### 存储设置
+### Storage Settings
 
-设置设备端数据的存储地址
+Sets up storage addresses for data on the device.
 
 ```yaml
-# 数据处理设置，可定制，具体信息请咨询刻行产品了解详细过程
+# Data processing settings, can be customized. Please consult coScene for detailed processes.
 mod:
-  name: 'default' # mod 名称，默认 default，定制版请联系刻行产品了解详细信息
+  name: 'default' # mod name, default is "default". For custom versions, please contact coScene for more information.
   conf:
-    enabled: true # 是否启用，默认为 true
-    robot_file: '/root/.ros/sn.txt' # 设备标识文件，用于存放设备唯一标识码，如 sn
-    base_dir: '/root/.ros/auto-upload/' # 数据监听目录
+    enabled: true # Whether it's enabled, default is true
+    robot_file: '/root/.ros/sn.txt' # Device identifier file, used to store unique device identifiers like sn
+    base_dir: '/root/.ros/auto-upload/' # Directory for data monitoring
 ```
 
 <br />
 
-### 事件代码设置
+### Event Code Settings
 
-设置触发数据采集的事件错误码和条件
+Sets the event error codes and conditions that trigger data collection.
 
 ```yaml
-# 事件代码设置
-event_code: # 错误码功能
-  enabled: false # 错误码功能是否启用，默认 False
+# Event Code Settings
+event_code: # Error code feature
+  enabled: false # Whether the error code feature is enabled, default is False
   whitelist:
-    '1001': 8 # key 为错误码，字符串类型；value 为次数，表示在reset_interval_in_sec周期内只上传规定次数，多余数据会忽略上传
-  reset_interval_in_sec: 86400 # 计算周期，单位为秒，默认值为 86400s
-  code_json_url: cos://organizations/current/configMaps/device.errorCode # 默认采用云端配置
+    '1001': 8 # Key is the error code (string type); value is the count, indicating the number of uploads within the reset_interval_in_sec period. Excess data is ignored.
+  reset_interval_in_sec: 86400 # Calculation period in seconds, default is 86400s
+  code_json_url: cos://organizations/current/configMaps/device.errorCode # Default uses cloud configuration
 ```
 
-- **whitelist**：在白名单中的事件错误码发生时，会触发数据的自动上传。可设置该错误码发生后，最多上传的次数，防止同一问题多次重复上报
-- **reset_interval_in_sec**：重置关于错误码「最多上传的次数」的设置。例如 86400 表示 24 小时后，当同一错误码再次发生时，「上传次数」重新从 1 开始计数
-- **code_json_url**：事件代码的 JSON 数据源地址
+- **whitelist**：Events with error codes in the whitelist will trigger automatic data uploads. You can set the maximum number of uploads for a given error code, preventing the same issue from being reported multiple times.
+- **reset_interval_in_sec**：Resets the settings for the "maximum number of uploads" for an error code. For example, 86400 means that 24 hours later, when the same error code occurs again, the "number of uploads" starts counting from 1 again.
+- **code_json_url**：The JSON data source address for event codes.
 
 <br />
 
-### 更新设置
+### Update Settings
 
-设置是否自动更新数采程序
+Sets whether to automatically update the data collection program.
 
 ```yaml
-# 更新设置
+# Update Settings
+
 updater:
   enabled: true # 是否自动更新数采程序，默认值为 true
 ```
 
 <br />
 
-## 配置错误码对照表
+## Configure Error Code Lookup Table
 
-> 按需配置，仅存在事件错误码的设备可使用错误码对照表功能
+> Configure as needed. Only devices with event error codes can use the error code lookup table feature.
 
-错误码对照表管理错误码和错误信息的对应关系。主要用于：
+The error code lookup table manages the correspondence between error codes and error messages. It's primarily used to:
 
-- 辅助查看数采规则中关于事件白名单的设置
-- 在自动采集数据创建的记录中，将错误码和错误信息一一对应
+- Assist in viewing settings for the event whitelist in data collection rules.
+- In records created by automatic data collection, correlate error codes with error messages.
 
 <br />
 
-### 在组织中配置错误码
+### Configure Error Codes in the Organization
 
-在组织管理-设备页面，点击【错误码对照表】按钮。
+In the organization management - Devices page, click [Error Code Lookup Table].
 
 ![org-device-2](../img/org-device-3.png)
 
-在线编辑错误码对照表，在完成配置后点击【保存】。
+Edit the error code lookup table online and click [Save] after completing the configuration.
 
 <br />
 
-### 错误码对照表格式
+### Error Code Lookup Table Format
 
-错误码对照表格式如下：
+The format for the error code lookup table is as follows:
 
 ```yaml
-'1001': 机器无法移动 # 错误码：1001，错误信息：机器无法移动
-'1002': 任务异常结束 # 错误码：1002，错误信息：任务异常结束
+'1001': Machine cannot move # Error code: 1001, Error message: Machine cannot move
+'1002': Task ended abnormally # Error code: 1002, Error message: Task ended abnormally
 ```
 
-注意：当使用定制版本时，即 mod name 不是 “default”，错误码格式存在定制的情况，具体请和刻行联系。
+Note: When using a custom version, i.e., the mod name isn't "default", the error code format may be customized. Please contact coScene for details.
 
 <br />
 
-## 设备注册
+## Device Registration
 
-### 前提条件
+### Prerequisites
 
-设备数据默认上传到 auto-upload 项目。请确认项目是否存在；若不存在，需先创建名为 auto-upload 的项目，详情参见[创建项目](https://docs.coscene.cn/docs/get-started/create-project-flow#3-%E5%88%9B%E5%BB%BA%E9%A1%B9%E7%9B%AE)。当其他项目中配置数据自动采集与诊断规则时，设备数据也会根据规则将数据上传到对应项目。
+Device data is uploaded to the auto-upload project by default. Please make sure the project exists. If not, you need to create a project named "auto-upload" first. See [Creating a Project](https://docs.coscene.cn/en/docs/get-started/create-project-flow). When other projects configure rules for automatic data collection and diagnosis, device data will also be uploaded to the corresponding project based on these rules.
 
 <br />
 
-### Linux 设备
+### Linux Devices
 
-#### 联网安装注册
+#### Online Installation and Registration
 
-进入组织管理页面的「设备」分页
+Navigate to the "Devices" tab on the organization management page.
 
 ![org-device](../img/org-device.png)
 
-复制安装命令
+Copy the installation command.
 
 ![org-device-copy-command](../img/org-device-copy-command.png)
 
-打开终端窗口，进入设备端，粘贴安装命令
+Open a terminal window, access the device, and paste the installation command.
 
 ![org-device-paste-command](../img/org-device-paste-command.png)
 
-安装完成，注册成功
+Once the installation is complete, registration is successful.
 
 ![org-device-install](../img/org-device-install.png)
 
 <br />
 
-#### 离线安装注册
+#### Offline Installation and Registration
 
-1. 下载安装脚本 [install.sh](https://download.coscene.cn/coscout/install.sh)、离线二进制文件压缩包 [cos_binaries.tar.gz](https://download.coscene.cn/coscout/tar/latest/cos_binaries.tar.gz) 到设备端
+1. Download the installation script [install.sh](https://download.coscene.cn/coscout/install.sh) and the offline binary compressed package [cos_binaries.tar.gz](https://download.coscene.cn/coscout/tar/latest/cos_binaries.tar.gz) to the device.
 
-2. 程序需要安装 systemd service，**请使用 root 账户执行下列命令**
+2. The program requires the installation of a systemd service. **Please execute the following commands using the root account**.
 
-3. 给安装脚本赋权，在命令行执行
+3. Grant permissions to the installation script by executing the following command:
 
    ```
    chmod +x install.sh
    ```
 
-4. 在设备端执行本地安装命令
+4. Execute the local installation command on the device:
 
-   以离线二进制文件压缩包 `cos_binaries.tar.gz` 放置在设备的 `/root/cos_binaries.tar.gz` 位置为例
+Taking the offline binary compressed package `cos_binaries.tar.gz` located at `/root/cos_binaries.tar.gz` on the device as an example:
 
-   ```
-   $ ./install.sh --server_url=*** --project_slug=*** --use_local=/root/cos_binaries.tar.gz
-   ```
+```
+$ ./install.sh --server_url=*** --project_slug=*** --use_local=/root/cos_binaries.tar.gz
+```
 
-   其中，参数 `--server_url` 与 `--project_slug` 可参考上文「联网安装注册-复制安装命令」获取，参数 `--use_local` 为离线二进制文件压缩包的路径。
+For the parameters `--server_url` and `--project_slug`, refer to the previous section "Online Installation and Registration - Copy Installation Command". The parameter `--use_local` is the path to the offline binary compressed package.
 
 <br />
 
-#### 查看日志
+#### Viewing Logs
 
-在设备端执行以下命令，查看数据采集程序的日志信息
+Execute the following command on the device to view the logs of the data collection program:
 
 ```
 journalctl -fu cos
@@ -227,15 +228,15 @@ journalctl -fu cos
 
 <br />
 
-### Windows 设备
+### Windows Devices
 
-#### 联网安装注册
+#### Online Installation and Registration
 
-> 以下操作需在设备端执行
+> The following operations need to be executed on the device.
 
 <br />
 
-1. **管理员权限**打开 cmd
+1. Open cmd
 
 2. 在 cmd 中运行安装命令
 
@@ -243,23 +244,23 @@ journalctl -fu cos
    powershell -c "Set-ExecutionPolicy RemoteSigned; Invoke-WebRequest -Uri https://download.coscene.cn/coscout/install-beta.ps1 -OutFile install.ps1; ./install.ps1 --server_url=*** --project_slug=*** --beta"
    ```
 
-   其中，参数 `--server_url` 与 `--project_slug` 可参考上文「联网安装注册-复制安装命令」获取
+   Among them, the parameters `--server_url` and `--project_slug` can be referred to the above section '**Online Installation Registration - Copy Installation Command**' for reference.
 
 <br />
 
-#### 安装问题解答
+#### Installation FAQ
 
-1. 问题：安装过程中弹出 service 注册框
+1. **Question**: A service registration prompt pops up during installation.
 
-   解决方案：输入当前 windows 系统用户名及密码
+   **Solution**: Enter the current Windows system username and password.
 
    ![org-device-4](../img/org-device-4.png)
 
-2. 问题：识别为病毒，无法安装
+2. **Question**: Detected as a virus, cannot install.
 
-   解决方案1：关闭 windows defender
+   **Solution 1**: Disable Windows Defender.
 
-   解决方案2：windows defender 中添加 whitelist
+   **Solution 2**: Add to whitelist in Windows Defender.
 
    ![org-device-5](../img/org-device-5.png)
 
@@ -267,23 +268,23 @@ journalctl -fu cos
 
 <br />
 
-## 设备审核
+## Device Approval
 
-> 仅组织管理员可审核设备
+> Only organization administrators can approve devices.
 
-在设备端完成数采程序的安装后，刻行平台的组织管理-设备页中，就会增加该设备，且其对应的准入状态为「待审核」。审核通过的设备即为「已准入」状态，准入的设备可按规则，将数据自动上传到项目中。
+After completing the installation of the data collection program on the device, the organization management-device page on the engraving platform will add this device, and its corresponding admission status is "Pending Approval". Devices that pass the audit are in the "Approved" status, and approved devices can automatically upload data to the project according to the rules.
 
 <br />
 
-进入组织管理页面的「设备」分页
+Enter the "Device" tab of the organization management page.
 
 ![org-device](../img/org-device.png)
 
-找到需要审核的设备，点击【同意准入】
+Find the device that needs to be approved and click [Approve Access].
 
 ![org-device-authorize](../img/org-device-authorize.png)
 
-设备准入成功
+Device successfully authorized.
 
 ![org-device-authorized](../img/org-device-authorized.png)
 

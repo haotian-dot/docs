@@ -4,55 +4,55 @@ sidebar_position: 10
 
 # Create, Share, and View "Moments"
 
-你可以在记录的可视化页面内创建，编辑并分享该记录中的关键帧「一刻」，它们可以是记录中的标签、故障或有趣的画面。
+You can create, edit, and share keyframes called "Moments" within the visualization page of a record. They can be tags, faults, or interesting scenes from the record.
 
-观看本章节中提供的图文说明与视频教程，了解可视化界面中有关「一刻」的操作。
+Follow the pictorial explanations and video tutorials provided in this section to understand the operations related to "Moments" within the visualization interface.
 
-## 1. 创建「一刻」
+## 1. Create a "Moment"
 
-你可以在记录的可视化界面播放至某一时间点时，点击播放进度条上方的「创建一刻」按钮或使用相应快捷键，以创建从当前时间点开始的的「一刻」：
+While playing a record in the visualization interface, you can click the "Create Moment" button above the progress bar or use the corresponding shortcut key to create a "Moment" starting from the current time point:
 
 <video src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/docs/2-get-started/create-moment.mp4" controls="controls" width="700" height="400"></video>
 
 <br />
 
-在创建「一刻」时，你可以选择同时创建一条关联的任务：
+When creating a "Moment", you can choose to simultaneously create a related task:
 
 ![moment-1](../img/create-task-with-moment.png)
 
-该条「一刻」的链接会被自动添加至任务描述中。
+The link to this "Moment" will be automatically added to the task description.
 
 <br />
 
-## 2. 在可视化界面查看与编辑「一刻」
+## 2. View and Edit "Moments" in the Visualization Interface
 
-在时间轴上，可以看到蓝色高亮标记出的所有「一刻」。
+On the timeline, you can see all "Moments" highlighted in blue.
 
-你可以在可视化界面左侧的「一刻」列表中，查看该记录内已创建的「一刻」详情；点击某条「一刻」，播放进度会跳转到其起始时间。
+You can view the details of created "Moments" in the "Moments" list on the left side of the visualization interface. Clicking on a specific "Moment" will jump the playback to its starting time.
 
 <video src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/docs/2-get-started/click-moment.mp4" controls="controls" width="700" height="400"></video>
 
 <br />
 
-在「一刻」列表中，你可以点击某条「一刻」右上方的【删除】图标，删除该「一刻」：
+In the "Moments" list, you can click the delete icon on the top right of a "Moment" to delete it:
 
 ![moment-2](../img/delete-moment.png)
 
 <br />
 
-## 3. 查看记录中的所有「一刻」
+## 3. View All "Moments" in the Record
 
-在记录详情页右侧的「一刻」列表中，你可以查看记录中所有的「一刻」并点击跳转至可视化界面内对应「一刻」的起始时间：
+In the "Moments" list on the right side of the record details page, you can view all "Moments" in the record and click to jump to the corresponding "Moment" starting time in the visualization interface:
 
 ![moment-3](../img/related-moment.png)
 
 <br />
 
-## 4. 分享「一刻」链接
+## 4. Share "Moment" Link
 
-你可以在可视化界面左侧的「一刻」列表中，点击想要分享的「一刻」右上方的【复制链接】图标，即可一键复制该「一刻」的链接。
+In the "Moments" list on the left side of the visualization interface, you can click the copy link icon on the top right of a "Moment" you wish to share. This allows you to copy the link for that "Moment" instantly.
 
-将链接发送给协作伙伴，获得该链接且具有对应记录查看权限的用户，即可通过链接直接跳转到可视化页面中该「一刻」的起始时间。
+By sharing the link with collaborators, users who possess the link and have viewing permissions for the corresponding record can directly access the visualization page at the starting time of that "Moment".
 
 <video src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/docs/2-get-started/copy-moment-link.mp4" controls="controls" width="700" height="400"></video>
 

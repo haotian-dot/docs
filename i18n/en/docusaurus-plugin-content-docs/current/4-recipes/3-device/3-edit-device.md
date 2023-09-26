@@ -4,43 +4,43 @@ sidebar_position: 3
 
 # Manage Devices
 
-设备在组织层面进行管理，组织内的设备可应用于所有项目。
+Devices are managed at the organizational level, and devices within the organization can be applied to all projects.
 
-## 从记录中编辑设备
+## Edit Device from Records
 
-> 从记录中查看设备详情，编辑设备信息
+> View device details from records and edit device information.
 
-在记录详情页中，点击设备，跳转到设备管理页面。
+In the record detail page, click on the device to navigate to the device management page.
 
 ![manage-device-1](../img/manage-device-1.png)
 
-点击【编辑】图标，开始编辑设备。
+Click on the [Edit] icon to start editing the device.
 
 ![manage-device-2](../img/manage-device-2.png)
 
-输入设备信息后，点击【保存】按钮。
+After entering the device information, click the [Save] button.
 
 ![manage-device-3](../img/manage-device-3.png)
 
-设备信息被更新。
+The device information is updated.
 
 ![manage-device-4](../img/manage-device-4.png)
 
 <br />
 
-## 在组织中管理设备
+## Manage Devices within the Organization
 
-> 在组织中检索、编辑、删除设备
+> Search, edit, and delete devices within the organization.
 
-进入组织管理页面的「设备」分页
+Enter the "Device" tab of the organization management page.
 
 ![org-device](../img/org-device.png)
 
-在搜索框中输入「设备 ID」，检索出需要管理的设备。
+In the search box, enter the "Device ID" to retrieve the device you need to manage.
 
 ![device-3](../img/device-3.png)
 
-在操作栏选择编辑或删除设备。
+In the operation bar, choose to edit or delete the device.
 
 ![device-4](../img/device-4.png)
 

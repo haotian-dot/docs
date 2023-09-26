@@ -4,48 +4,41 @@ sidebar_position: 3
 
 # Workflow
 
-刻行的工作流是一个基于任务的工作流系统，作为刻行三大核心引擎的一部分，灵活而强大的工作流系统让您存储在刻行平台上的数据有了更多的可能。本文介绍了
-工作流的基本特点，关于工作流的具体用法和组成部分，
-[请参看操作指南中的工作流部分](../4-recipes/7-workflow/about-workflows.md)。
+coScene's workflow is a task-based workflow system. As one of the three core engines of coScene, the flexible and powerful workflow system brings more possibilities to the data stored on the coScene platform. This article introduces the basic features of the workflow. For details on the workflow's usage and components, please refer to the [workflow section in the operation guide](../4-recipes/7-workflow/1-about-workflows.md).
 
-## 和数据引擎无缝结合
+## Seamless Integration with the Data Engine
 
-AI 时代大量的数据，带来无限可能的的同时，也给我们带来了更多数据本身和数据应用的挑战。在实际的生产过程中，AI 工程师们需要对数据进行清洗、预处理、训练、测试、部署等一系列的工作，这些工作需要大量的人力和时间，而且往往是重复的。
-根据 IBM 的研究，AI 工程师每天花费 80% 的时间在数据的清洗和预处理上，而不是在 AI 模型的训练上。这个现象在没有完善的数据基础设施的公司中更加明显。
+The vast amount of data in the AI era brings endless possibilities, but it also poses challenges in data processing and application. In the actual production process, AI engineers need to go through a series of tasks such as data cleaning, preprocessing, training, testing, and deployment. These tasks require substantial human effort and time and are often repetitive. According to IBM research, AI engineers spend 80% of their time on data cleaning and preprocessing, rather than on AI model training. This phenomenon is more pronounced in companies without a solid data infrastructure.
 
-刻行的工作流系统依托于刻行的数据引擎，用户不再需要从头开始构建数据处理的流程，只需要在刻行平台上构建好数据处理的流程，然后在工作流中调用即可。这样，用户可以将更多的精力放在 AI 模型的训练上，而不是在数据的清洗和预处理上。
+coScene's workflow system is built upon coScene's data engine. Users no longer need to start from scratch to build data processing workflows. Instead, they can create data processing workflows on the coScene platform and invoke them within the workflow. In this way, users can focus more on AI model training rather than data cleaning and preprocessing.
 
-用户可以在刻行的数据引擎上自由的搜索，过滤，整理，沉淀数据，然后将这些数据的搜索标准作为工作流的输入，这样，工作流就可以根据用户的搜索标准，自动的从刻行的数据引擎中获取数据，然后进行后续的处理。
+Users can freely search, filter, organize, and consolidate data on coScene's data engine and then use these data search criteria as input for the workflow. The workflow can then automatically retrieve data from coScene's data engine based on user criteria and process it accordingly.
 
-## 灵活的模板
+## Flexible Templates
 
-刻行的工作流系统提供丰富的模板和灵活的自定义 DSL，即使是没有云原生相关经验的工程师，也可以很容易的在刻行工作流的模板上进行修改和定制，快速的构建出自己的工作流。
+coScene's workflow system offers a wealth of templates and a flexible custom DSL. Even engineers without cloud-native experience can easily modify and customize coScene's workflow templates, quickly constructing their workflows.
 
-DSL 采用 Yaml 的定义方式，兼容自定义的 Docker Image 输入和直接编写脚本的方式，可以很方便的将自己的工作流转换为刻行的工作流。
+The DSL uses a YAML definition method and is compatible with custom Docker Image inputs and direct scripting, making it easy to convert one's workflow to coScene's.
 
-## 轻松实现大规模调度
+## Easily Achieve Large-scale Scheduling
 
-刻行全面拥抱云原生，充分利用在云端灵活调度，按需扩容的特点，为用户提供高效、精准，不浪费的大规模调度能力。如果您选用了刻行的 SaaS 产品，刻行会根据您所在付费等级，
-自动调用匹配的计算资源。如果您选用了刻行的私有化部署产品产品，您可以选择任意多的计算节点加入刻行网络，并在需要时将计算任务调度到这些节点上。
+coScene fully embraces cloud-native, leveraging the flexibility of cloud-based scheduling and on-demand scaling to provide users with efficient, precise, and non-wasteful large-scale scheduling capabilities. If you choose coScene's SaaS product, coScene will automatically allocate computing resources based on your payment tier. If you opt for coScene's private deployment product, you can add any number of computing nodes to the coScene network and schedule computing tasks to these nodes as needed.
 
-## 丰富的 API 接口
+## Comprehensive API Interface
 
-刻行提供丰富的 API 接口来帮助您构建自动化的工作流程，您可以通过 API 来创建工作流，启动工作流，获取工作流的执行状态，获取工作流的执行日志，获取工作流的执行结果等。
-通过使用 API，您可以将刻行的工作流作为您已有 CI/CD 等内部流程的一个环节。想在代码合并前跑一次大规模的回归测试？想使用定时任务将每天新上传的数据自动发给标注公司？
-没问题！
+coScene provides a rich set of API interfaces to help you build automated workflows. You can use the API to create workflows, start workflows, check the status of a workflow, retrieve logs, obtain execution results, and more. By using the API, you can integrate coScene's workflow into your existing CI/CD or other internal processes. Want to run a large-scale regression test before merging code? Want to use scheduled tasks to automatically send newly uploaded data to an annotation company every day? No problem!
 
-关于 API 的详细信息，请参看我们的 [API 文档]
+For detailed information about the API, please refer to our [API documentation].
 
-## 强大的可观测性
+## Powerful Observability
 
-刻行的平台集成了您日常使用工作流系统所需要关注的所有状态和 Metrics，您可以在刻行的网页上方便的观察到您的工作流的执行状态、执行结果、日志、数据来源、执行时间、计算资源
-等一系列用户关心的指标和数据。这些信息同样会在刻行的 API 中返回，您可以通过 API 来获取这些信息，从而将这些信息集成到您的自动化流程中。
+coScene's platform integrates all the statuses and metrics you need to monitor when using the workflow system. You can easily observe your workflow's execution status, results, logs, data sources, execution time, computing resources, and other user-concerned indicators and data on coScene's website. This information will also be returned in coScene's API, allowing you to retrieve it and integrate it into your automated processes.
 
-## 通知系统
+## Notification System
 
-长时间的工作流执行可能会出现异常，刻行提供了通知系统来帮助您及时的发现异常并进行处理。您可以在刻行的网页上方便的配置通知规则，当工作流执行出现异常时，刻行会自动通过配置的渠道通知用户关于工作流的状态。
+Long-running workflows may encounter exceptions. coScene offers a notification system to help you detect anomalies in real-time and address them. You can easily configure notification rules on coScene's website. If a workflow encounters an exception, coScene will automatically notify users about the workflow's status through the configured channels.
 
-通知系统同时也适用于工作流**成功运行**、**超时**，**资源**受限等事件。关于工作流中可能出现的事件，请参阅[工作流相关 API 说明]。
+The notification system also applies to events where the workflow **runs successfully**, **times out**, or faces **resource** limitations. For events that might occur in the workflow, please refer to the [workflow-related API documentation].
 
 ## References
 

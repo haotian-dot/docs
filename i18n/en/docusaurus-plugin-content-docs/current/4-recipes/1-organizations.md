@@ -4,53 +4,53 @@ sidebar_position: 1
 
 # Organization
 
-您和您的团队将自动加入同一组织。在「组织管理」页面，可以查看组织的项目、成员、设备以及统计信息。
+You and your team will automatically join the same organization. On the "Organization Management" page, you can view the projects, members, devices, and statistics of the organization.
 
 ![org-1](./img/org-1.png)
 
 ![org-2](./img/org-2.png)
 
-## 在组织中添加项目
+## Adding Projects within the Organization
 
-请参见[操作指南中关于项目的部分](../4-recipes/2-project.md)
+Please refer to [the section about projects in the operation guide](../4-recipes/2-project.md).
 
-## 在组织中添加成员
+## Adding Members to the Organization
 
-> 以某钉钉公司成员登录为例
+> Taking logging in as a member of a certain DingTalk company as an example.
 
-某钉钉公司的用户登录后，自动加入公司的组织，成为组织的「成员」，拥有组织成员权限。
+After a user from a certain DingTalk company logs in, they automatically join the company's organization, becoming a "member" with organizational member permissions.
 
 ![org-3](./img/org-3.png)
 
-当用户离开公司，不再是钉钉公司的成员，则无法再进入原组织。但仍保留该用户的操作记录。
+When a user leaves the company and is no longer a member of the DingTalk company, they can no longer enter the original organization. However, the user's operation records are still retained.
 
-## 在组织中添加设备
+## Adding Devices to the Organization
 
-> 组织中的设备可以被各个项目调用。
+> Devices within the organization can be invoked by various projects.
 
-在「组织管理」页面的「设备」分页，点击【添加设备】按钮。
+On the "Organization Management" page's "Devices" tab, click the [Add Device] button.
 
 ![org-4](./img/org-4.png)
 
-在「添加设备」弹框中，输入设备 ID 及其他信息后，点击【确认】。其中，设备 ID 为唯一标识，不可重复。
+In the "Add Device" pop-up, enter the device ID and other information, then click [Confirm]. The device ID is a unique identifier and cannot be duplicated.
 
 ![org-5](./img/org-5.png)
 
-成功添加设备。
+The device is successfully added.
 
 ![org-6](./img/org-6.png)
 
-## 查看组织统计信息
+## Viewing Organization Statistics
 
-> 谁可以使用这个功能<br />
-> 仅组织管理员可查看组织统计信息
+> Who can use this feature<br />
+> Only organization administrators can view organizational statistics.
 
-组织统计信息包括：组织存储量、组织记录数量、组织项目数量、组织设备数量
+Organizational statistics include: organization storage capacity, number of organization records, number of organization projects, and number of organization devices.
 
-在「组织管理」页面的「设置」分页，可以查看组织存储量。
+On the "Organization Management" page's "Settings" tab, you can view the organization's storage capacity.
 
 ![org-7](./img/org-7.png)
 
-在主页，可以查看组织记录数量、项目数量以及设备数量。
+On the homepage, you can view the number of organization records, number of projects, and number of devices.
 
 ![org-8](./img/org-8.png)

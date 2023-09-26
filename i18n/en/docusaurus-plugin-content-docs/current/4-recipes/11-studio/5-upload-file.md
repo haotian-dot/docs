@@ -4,26 +4,26 @@ sidebar_position: 5
 
 # Upload Files
 
-## 1. 从本地上传文件
+## 1. Upload Files from Local
 
-您可以在设置的上传路径下创建多级分类目录，每个非空的末级文件夹会在云端对应创建一条记录；您可以将文件拖动到文件夹中，文件夹中的文件会自动上传至所属文件夹对应的记录中：
+You can create multi-level categorized directories under the specified upload path. Each non-empty end-level folder will correspond to a record created in the cloud. You can drag files into these folders, and the files in the folder will be automatically uploaded to the corresponding record of the folder:
 
 ![upload-file-1](../img/upload-file-1.png)
 
-## 2. 远程从设备拉取文件
+## 2. Remotely Fetch Files from Devices
 
-如果您使用向日葵等远程拉取文件的应用，可以直接在该应用中将数据从设备下的文件拖动到指定的上传路径下:
+If you use applications like Sunflower for remote file fetching, you can directly drag data from the device directory into the specified upload path within that application:
 
 ![upload-file-2](../img/upload-file-2.png)
 
-## 3. 查看文件上传信息
+## 3. View File Upload Information
 
-您可以通过 coScene Studio 界面查看上传的文件信息与上传状态等：
+You can view the uploaded file information and its upload status through the coScene Studio interface:
 
 ![upload-file-3](../img/upload-file-3.png)
 
-在「上传状态」栏显示「上传成功」后即完成文件上传。
+Once the "Upload Status" displays "Upload Successful", the file upload is complete.
 
-您可以在 coScene 网页端看到生成的记录与上传成功的设备文件：
+You can see the generated record and the successfully uploaded device files on the coScene web interface:
 
 ![upload-file-4](../img/upload-file-4.png)

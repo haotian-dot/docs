@@ -4,54 +4,54 @@ sidebar_position: 2
 
 # Upload Files
 
-在 coScene 中，文件的上传方式有两种：**本地上传、URL 上传**
+In coScene, there are two ways to upload files: **Local Upload and URL Upload**
 
-## 本地文件上传
+## Local File Upload
 
-用户在一条记录中，可以通过拖拽文件，或点击【上传文件】按钮，将本地的文件上传到记录中。
+Users can drag and drop files or click the [Upload File] button within a record to upload local files to the record.
 
-## URL 文件上传
+## URL File Upload
 
-用户在一条记录中，可以通过粘贴文件 URL 的方式，将远程文件导入到记录中。
+Within a record, users can paste the file URL to import the remote file into the record.
 
-第一步：在「记录详情页面」，点击【上传文件】按钮右侧的下拉按钮，展开【URL 上传】。
+Step 1: On the "Record Details Page", click the dropdown button next to the [Upload File] button to expand [URL Upload].
 
 ![upload-file-by-url-1](../img/upload-file-by-url-1.png)
 
-第二步：点击【URL 上传】按钮，粘贴需要上传的文件链接。
+Step 2: Click the [URL Upload] button and paste the link of the file you want to upload.
 
 <img alt="upload-file-by-url-2" src={require('../img/upload-file-by-url-2.png').default} width="600" />
 
-第三步：校验文件基本信息后，点击【确定】，即可将 URL 中的文件导入到记录中。
+Step 3: After verifying the basic file information, click [Confirm] to import the file from the URL into the record.
 
 <img alt="upload-file-by-url-3" src={require('../img/upload-file-by-url-3.png').default} width="600" />
 
-## 文件的可视化
+## File Visualization
 
-在「文件列表」中，选择文件并点击【查看】按钮，即跳转到「可视化界面」进行播放：
+In the "File List", select a file and click the [View] button to redirect to the "Visualization Interface" for playback:
 
-> 暂时只支持 Rosbag 文件的查看
+> Currently, only Rosbag files can be viewed.
 
 ![file-1](../img/file-1.png)
 
-## 文件的管理
+## File Management
 
-### 搜索
+### Search
 
-在「文件列表」中的搜索框中输入关键字，可以对文件名称进行搜索：
+Enter keywords in the search box within the "File List" to search for file names:
 
 ![file-2](../img/file-2.png)
 
-### 下载
+### Download
 
-在「文件列表」中，点击文件的【下载】按钮，可以将文件下载到本地：
+In the "File List", click the [Download] button of a file to download it to your local device:
 
 ![file-3](../img/file-3.png)
 
-### 删除
+### Delete
 
-在「文件列表」中，点击文件的【删除】按钮，可以将文件删除：
+In the "File List", click the [Delete] button of a file to remove it:
 
-> 删除的文件不可恢复；但可以通过回溯版本找到并下载
+> Deleted files cannot be restored; however, you can find and download them by tracing back versions.
 
 ![file-4](../img/file-4.png)
