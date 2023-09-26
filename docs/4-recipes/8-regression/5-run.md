@@ -8,13 +8,21 @@ sidebar_position: 5
 
 ## 网页端运行批量测试
 
-1. 在「批量测试」页面点击右上角「运行批量测试」：
+1. 点击进入「批量测试」页面：
 
-   ![run-1](../img/run-1.png)
+- 首次运行批量测试
+
+  ![run-1](../img/run-1.png)
+
+- 非首次运行批量测试
+
+  ![run-2](../img/run-2.png)
+
+<br />
 
 2. 选择测试包版本和需要执行的测试套件后，点击「确定」运行批量测试，会使用符合条件的关联记录作为测试数据执测试套件：
 
-   ![run-2](../img/run-2.png)
+   ![run-wfrun](../img/run-wfrun.png)
 
 <br />
 
@@ -26,11 +34,11 @@ sidebar_position: 5
 
 在「批量测试-测试套件管理」页面中，对于配置了自动触发条件的测试套件，其「关联触发条件」列会显示「查看触发条件」按钮：
 
-![run-3](../img/auto-trigger-1.png)
+![auto-trigger-1](../img/auto-trigger-1.png)
 
 你可以点击「查看触发条件」按钮，查看该测试套件自动触发对应的测试包条件：
 
-![run-4](../img/auto-trigger-2.png)
+![auto-trigger-2](../img/auto-trigger-2.png)
 
 <br />
 

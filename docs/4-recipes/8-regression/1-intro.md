@@ -26,7 +26,7 @@ sidebar_position: 1
 
 点击进入项目的「批量测试」页面，根据页面提示创建一个批量测试：
 
-![intro-1](../img/intro-1.png)
+![regression](../img/regression.png)
 
 以下步骤概述为你提供了使用批量测试功能的一个基本流程：
 
@@ -45,11 +45,3 @@ sidebar_position: 1
 更多具体步骤请参见后续章节的详细说明。
 
 <br />
-
-<br />
-
-:::success 
-
-批量测试功能正处于快速开发迭代过程中，您可以访问 [批量测试-用户使用文档](https://coscene0.feishu.cn/wiki/wikcnlpDwycH3hosPkuKqGdVkxf) 以查看当前最新操作指南。
-
-:::

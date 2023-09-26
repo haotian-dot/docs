@@ -8,9 +8,9 @@ sidebar_position: 2
 
 ## 1. 准备镜像文件
 
-**1. 运行 Docker**
+**1.1 运行 Docker**
 
-**2. 配置镜像**
+**1.2 配置镜像**
 
 新建一个文件夹，其中包含 dockerfile 和相关测试代码
 
@@ -58,7 +58,7 @@ sidebar_position: 2
 
   - 若需要在最终的测试结果中输出图型测试报告，请参见 [输出测试结果](../8-regression/6-status-and-output.md#输出图表) 章节。
 
-**3. build 镜像**
+**1.3 build 镜像**
 
 镜像文件准备完成后，打开终端，进入对应文件夹后执行命令 build 镜像，各操作系统对应命令如下（请根据实际替换镜像地址部分）：
 
@@ -78,13 +78,17 @@ sidebar_position: 2
 
 ## 2. 推送镜像
 
-登录刻行平台，在「我的设置 - 安全-访问刻行容器镜像仓库」中点击「生成访问命令」，获取刻行容器镜像仓库访问权限：
+登录刻行平台，在「我的设置 - 安全-访问刻行容器镜像仓库」中点击「生成访问命令」。
 
-![image-management-1](../img/generate-token.png)
+![generate-cr-token](../img/generate-cr-token.png)
 
-![image-management-2](../img/copy-cr-command.png)
+在终端粘贴用户名、密码，获取刻行容器镜像仓库访问权限。
 
-复制上述命令，在终端执行，以登录并推送镜像至刻行平台。
+![login-cr](../img/login-cr.png)
+
+在终端执行推送镜像命令，推送镜像至刻行平台。
+
+![push-image](../img/push-image.png)
 
   <br />
 
@@ -92,10 +96,10 @@ sidebar_position: 2
 
 在「我的 - 组织管理 - 镜像」页面，可以查看当前组织内的镜像列表：
 
-![image-management-3](../img/image-list.png)
+![image-list](../img/image-list.png)
 
 点击镜像名称，展示该镜像所有版本，可以点击「复制」按钮复制完整的镜像地址：
 
-![image-management-4](../img/tag-list.png)
+![tag-list](../img/tag-list.png)
 
   <br />

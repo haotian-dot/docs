@@ -32,17 +32,13 @@ sidebar_position: 4
 
 ### 基本信息
 
-工作流详情页的上方显示了基本信息，包括：工作流状态、触发者、触发时间、持续时间以及输入参数。
+工作流详情页的概览中显示了基本信息，包括：工作流状态、触发者、触发时间、持续时间以及输入参数等。
 
 ![workflow-base-info](../img/workflow-base-info.png)
 
 ### 各步骤的日志和信息
 
-当工作流运行完成后，在工作流的「步骤」分页，会以列表的形式展示工作流的运行步骤。
-
-![goto-step](../img/goto-step.png)
-
-点击待查看的步骤，展示该步骤的工作流日志。
+当工作流运行完成后，在工作流的「步骤」栏，会以列表的形式展示工作流的运行步骤。点击待查看的步骤，展示该步骤的工作流日志。
 
 ![click-stepname](../img/click-stepname.png)
 
@@ -50,7 +46,7 @@ sidebar_position: 4
 
 <img alt="search-log" src={require('../img/search-log.png').default} width="700" />
 
-点击【基本信息】，可以查看该步骤的主要信息：名称、ID、状态等。
+在「步骤详情」中，可查看该步骤的主要信息：名称、ID、状态等。
 
 ![workflow-step-detail](../img/workflow-step-detail.png)
 
@@ -58,16 +54,10 @@ sidebar_position: 4
 
 **切换到工作流的「输入记录版本」分页。**
 
-- 展示输入的记录名称和版本。点击「记录名称」，跳转到该记录；点击「版本链接」，跳转到对应的记录版本。
+- 展示输入的记录版本与文件信息。
 
   ![input-record-info](../img/input-record-info.png)
-
-- 下方列表中，展示了输入工作流的记录中，包含的文件信息。
-
-  ![input-record-file](../img/input-record-file.png)
 
 **切换到工作流的【输出】分页。**
 
 - 展示输出的信息。
-
-  ![workflow-output](../img/workflow-output.png)

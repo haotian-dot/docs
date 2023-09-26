@@ -16,12 +16,16 @@ sidebar_position: 2
 
 ## 在组织中创建设备
 
-进入组织管理页面的「设备」分页
+在「组织管理」页面的「设备」分页，点击【添加设备】按钮。
 
-![org-device](../img/org-device.png)
+![org-4](../img/org-4.png)
 
-点击【创建设备】，输入基本信息后，点击【确认】
+在「添加设备」弹框中，输入设备 ID 及其他信息后，点击【确认】。其中，设备 ID 为唯一标识，不可重复。
 
-![org-device-1](../img/create-device-o1.png)
+![org-5](../img/org-5.png)
+
+成功添加设备。
+
+![org-6](../img/org-6.png)
 
 <br />

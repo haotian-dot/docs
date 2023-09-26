@@ -14,7 +14,19 @@ sidebar_position: 3
 
 ## 2. 上传与编辑配置文件
 
-在项目中的「批量测试-测试套件管理」页面，你可以直接从本地选择配置文件上传或者在线编写配置文件：
+1. 点击进入「批量测试」-「测试套件管理」页面：
+
+- 首次上传测试套件
+
+  ![goto-config-1](../img/goto-config-1.png)
+
+- 非首次上传测试套件
+
+  ![goto-config-2](../img/goto-config-2.png)
+
+<br />
+
+2. 直接从本地选择配置文件上传或者在线编写配置文件：
 
 ![config-management-1](../img/upload-config.png)
 

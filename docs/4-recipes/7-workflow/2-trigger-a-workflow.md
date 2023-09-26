@@ -17,10 +17,6 @@ sidebar_position: 2
 
 ![workflow-status](../img/workflow-status.png)
 
-「生成 ROS bag 索引」工作流运行成功后，点击【文件】，查看输出的索引文件。
-
-![view-index](../img/view-index.png)
-
 ## 手动触发一个工作流
 
 **在记录详情页触发工作流**
@@ -35,16 +31,12 @@ sidebar_position: 2
 
 跳出「运行工作流」弹框。
 
-<img alt="run-workflow-modal" src={require('../img/run-workflow-modal.png').default} width="500" />
+![run-workflow-modal](../img/run-workflow-modal.png)
 
 在「运行工作流」弹框中，选择工作流模板。
 
-<img alt="select-workflow-template" src={require('../img/select-workflow-template.png').default} width="500" />
+![select-workflow-template](../img/select-workflow-template.png)
 
-在记录详情页，默认输入记录为当前记录，不可变更。
+在记录详情页，默认输入记录为当前记录，不可变更。点击【运行】按钮后，触发工作流。
 
-<img alt="default-record" src={require('../img/default-record.png').default} width="500" />
-
-点击【运行】按钮后，触发工作流。
-
-<img alt="trigger-workflow" src={require('../img/trigger-workflow.png').default} width="500" />
+![trigger-workflow](../img/trigger-workflow.png)

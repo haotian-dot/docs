@@ -34,4 +34,4 @@ Click the "Copy Link" icon to easily copy the "Moment" link and share it with co
 
 In the "Record Details Page" under "Related Events", it displays all the events marked in the bag of the record:
 
-![related-event-1](img/related-event-1.png)
+![related-event-1](img/related-moment-1.png)

@@ -1,5 +1,5 @@
 ---
-sidebar_position: 2
+sidebar_position: 3
 ---
 
 # 设备准入
@@ -16,13 +16,17 @@ sidebar_position: 2
 
 <br />
 
-进入组织管理页面的「设备」分页，点击【编辑数采规则】按钮。
+进入组织管理页面的「设备」分页。
 
-![org-device-1](../img/org-device-1.png)
+![org-device](../img/org-device.png)
+
+点击【编辑数采规则】按钮。
+
+![org-dev-rule](../img/org-dev-rule.png)
 
 在线编辑数采规则，在完成配置后点击【保存编辑】。
 
-![org-device-2](../img/org-device-2.png)
+![org-dev-rule-save](../img/org-dev-rule-save.png)
 
 <br />
 
@@ -139,9 +143,14 @@ updater:
 
 ### 在组织中配置错误码
 
-在组织管理-设备页面，点击【错误码对照表】按钮。
+进入组织管理页面的「设备」分页。
 
-![org-device-2](../img/org-device-3.png)
+![org-device](../img/org-device.png)
+
+
+点击【错误码对照表】按钮。
+
+![org-dev-code](../img/org-dev-code.png)
 
 在线编辑错误码对照表，在完成配置后点击【保存】。
 

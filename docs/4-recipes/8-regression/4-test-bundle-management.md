@@ -18,17 +18,23 @@ sidebar_position: 4
 
 1. 点击进入「批量测试」-「测试包管理」页面：
 
-![bundle-management-1](../img/bundle-management.png)
+- 首次上传测试包
+
+  ![goto-test-package-1](../img/goto-test-bundle-1.png)
+
+- 非首次上传测试包
+
+  ![goto-test-package-2](../img/goto-test-bundle-2.png)
 
 <br />
 
 2. 点击右上角「上传测试包」：
 
-![bundle-management-2](../img/upload-bundle.png)
+![upload-test-package](../img/upload-test-bundle.png)
 
 <br />
 
-3. 点击右上角「上传测试包」：
+3. 选择测试包上传：
 
 ![bundle-management-3](../img/choose-bundle.png)
 

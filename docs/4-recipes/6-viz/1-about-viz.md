@@ -6,7 +6,7 @@ sidebar_position: 1
 
 coScene 提供了高效的数据可视化界面，通过不同的调试面板将机器数据呈现为可视化数据。每条记录都能在可视化界面进行播放，从而处理各种常见的机器问题。
 
-<img alt="honeybee-start-1" src={require('../img/honeybee-start-1.png').default} />
+![honeybee-start-1](../img/honeybee-start-1.png)
 
 ## 可视化界面基本元素
 
