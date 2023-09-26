@@ -41,19 +41,19 @@ We suggest you review the following considerations before changing project visib
 
 - In the project, click [Manage Project].
 
-  ![image](https://user-images.githubusercontent.com/105594127/197425216-52b61e16-1ec3-46cf-acdf-9d56fa8991c7.png)
+  ![pro-manage](./img/pro-manage.png)
 
 - Under [Settings], click [Toggle Visibility].
 
-  ![image](https://user-images.githubusercontent.com/105594127/197425268-2a25f79c-5244-47b8-a7c9-ff8ebf1595f4.png)
+  ![pro-visibility](./img/pro-visibility.png)
 
 - Choose visibility, verify if the changed project visibility is correct.
 
-  ![image](https://user-images.githubusercontent.com/105594127/197425364-72635f56-cf1c-42ce-86a6-0560256c5eda.png)
+  ![pro-visibility-switch](./img/pro-visibility-switch.png)
 
 - After typing the name of the project whose visibility you want to change, click [Toggle Project Visibility].
 
-  ![image](https://user-images.githubusercontent.com/105594127/197425587-f87f1ca9-fac8-424f-bb06-d7d5fff35e59.png)
+  ![pro-visibility-confirm](./img/pro-visibility-confirm.png)
 
 ---
 
@@ -74,11 +74,11 @@ In coScene, you can archive projects to store data with low activity for others 
 
 - In the project, click [Manage Project].
 
-  ![image](https://user-images.githubusercontent.com/105594127/197172077-a2645985-6c0b-49e8-b924-178c564e4bca.png)
+  ![pro-manage](./img/pro-manage.png)
 
 - Under [Settings], click [Archive Project].
 
-  ![image](https://user-images.githubusercontent.com/105594127/197173493-2949ad4c-7dd9-45e3-859c-d2dc8b833bb2.png)
+  ![pro-archive](./img/pro-archive.png)
 
 ### 3.2 Unarchive Project
 
@@ -86,26 +86,26 @@ In coScene, you can archive projects to store data with low activity for others 
 
 - In the project, click [Manage Project].
 
-  ![image](https://user-images.githubusercontent.com/105594127/197172077-a2645985-6c0b-49e8-b924-178c564e4bca.png)
+  ![pro-manage](./img/pro-manage.png)
 
 - Under [Settings], click [Unarchive Project].
 
-  ![image](https://user-images.githubusercontent.com/105594127/197175752-5aa5fd03-f6fc-43bc-b358-0fbbc85cb9fb.png)
+  ![pro-unarchive](./img/pro-unarchive.png)
 
 ### 3.3 More Methods
 
 - Under "My Projects" on the homepage, click [View All Projects] to enter the default "Project List" page in the organization management page.
 
-  ![image](https://user-images.githubusercontent.com/105594127/197178989-66ccee21-3a30-49ea-a66a-5c478c9689cd.png)
+  ![org-manage](./img/org-manage.png)
 
 **Archive Project**
 
 - Under [Active], hover over the target project and click the [Archive] button.
 
-  ![image](https://user-images.githubusercontent.com/105594127/197180846-3232f01f-1e3f-4e32-a642-6ba61827e6bd.png)
+  ![org-pro-archive](./img/org-pro-archive.png)
 
 **Unarchive Project**
 
 - Under [Projects], click [Archived] to switch to the archived project list. Hover over the target project and click the [Unarchive] button.
 
-  ![image](https://user.com/105594127/197178306-3f9d187d-4f9f-4942-929a-119ddc44e69a.png)
+  ![org-pro-unarchive](./img/org-pro-unarchive.png)
