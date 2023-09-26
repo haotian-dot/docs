@@ -1,0 +1,2027 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+
+<style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color: #ffffff; --text-color: #333333; --select-text-bg-color: #B5D6FC; --select-text-font-color: auto; --monospace: "Lucida Console",Consolas,"Courier",monospace; --title-bar-height: 20px; }
+.mac-os-11 { --title-bar-height: 28px; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+h1, h2, h3, h4, h5 { white-space: pre-wrap; }
+body { margin: 0px; padding: 0px; height: auto; inset: 0px; font-size: 1rem; line-height: 1.428571; overflow-x: hidden; background: inherit; tab-size: 4; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+.typora-export .task-list-item input { pointer-events: none; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+button, input, select, textarea { color: inherit; font-style: inherit; font-variant-caps: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; font-size-adjust: inherit; font-kerning: inherit; font-variant-alternates: inherit; font-variant-ligatures: inherit; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-variant-position: inherit; font-feature-settings: inherit; font-optical-sizing: inherit; font-variation-settings: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px; }
+thead, tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right-width: 0px; border-right-style: none; border-right-color: currentcolor; background-color: inherit; }
+.CodeMirror-linenumber { -webkit-user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-fences-adv-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+svg { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li blockquote { margin: 1rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; border-color: transparent !important; padding-top: 0px !important; padding-bottom: 0px !important; }
+  .typora-export * { print-color-adjust: exact; }
+  .typora-export #write { break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+  #write > p:nth-child(1) { margin-top: 0px; }
+  .typora-export-show-outline .typora-export-sidebar { display: none; }
+  figure { overflow-x: visible; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+.MathJax_ref { fill: currentcolor; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: medium; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.reversefootnote { font-family: ui-monospace, sans-serif; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.6; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: medium !important; border-style: none !important; border-color: currentcolor !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom-width: 0px; border-bottom-style: none; border-bottom-color: currentcolor; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: medium; }
+.highlight td, .highlight tr { border: 0px; }
+mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+.md-expand mark .md-meta { opacity: 0.3 !important; }
+mark .md-meta { color: rgb(0, 0, 0); }
+@media print {
+  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
+}
+.md-diagram-panel .messageText { stroke: none !important; }
+.md-diagram-panel .start-state { fill: var(--node-fill); }
+.md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
+.md-fences.md-fences-math { font-size: 1em; }
+.md-fences-advanced:not(.md-focus) { padding: 0px; white-space: nowrap; border: 0px; }
+.md-fences-advanced:not(.md-focus) { background: inherit; }
+.typora-export-show-outline .typora-export-content { max-width: 1440px; margin: auto; display: flex; flex-direction: row; }
+.typora-export-sidebar { width: 300px; font-size: 0.8rem; margin-top: 80px; margin-right: 18px; }
+.typora-export-show-outline #write { --webkit-flex: 2; flex: 2 1 0%; }
+.typora-export-sidebar .outline-content { position: fixed; top: 0px; max-height: 100%; overflow: hidden auto; padding-bottom: 30px; padding-top: 60px; width: 300px; }
+@media screen and (max-width: 1024px) {
+  .typora-export-sidebar, .typora-export-sidebar .outline-content { width: 240px; }
+}
+@media screen and (max-width: 800px) {
+  .typora-export-sidebar { display: none; }
+}
+.outline-content li, .outline-content ul { margin-left: 0px; margin-right: 0px; padding-left: 0px; padding-right: 0px; list-style: none; overflow-wrap: anywhere; }
+.outline-content ul { margin-top: 0px; margin-bottom: 0px; }
+.outline-content strong { font-weight: 400; }
+.outline-expander { width: 1rem; height: 1.428571rem; position: relative; display: table-cell; vertical-align: middle; cursor: pointer; padding-left: 4px; }
+.outline-expander::before { content: ""; position: relative; font-family: Ionicons; display: inline-block; font-size: 8px; vertical-align: middle; }
+.outline-item { padding-top: 3px; padding-bottom: 3px; cursor: pointer; }
+.outline-expander:hover::before { content: ""; }
+.outline-h1 > .outline-item { padding-left: 0px; }
+.outline-h2 > .outline-item { padding-left: 1em; }
+.outline-h3 > .outline-item { padding-left: 2em; }
+.outline-h4 > .outline-item { padding-left: 3em; }
+.outline-h5 > .outline-item { padding-left: 4em; }
+.outline-h6 > .outline-item { padding-left: 5em; }
+.outline-label { cursor: pointer; display: table-cell; vertical-align: middle; text-decoration: none; color: inherit; }
+.outline-label:hover { text-decoration: underline; }
+.outline-item:hover { border-color: rgb(245, 245, 245); background-color: var(--item-hover-bg-color); }
+.outline-item:hover { margin-left: -28px; margin-right: -28px; border-left-width: 28px; border-left-style: solid; border-left-color: transparent; border-right-width: 28px; border-right-style: solid; border-right-color: transparent; }
+.outline-item-single .outline-expander::before, .outline-item-single .outline-expander:hover::before { display: none; }
+.outline-item-open > .outline-item > .outline-expander::before { content: ""; }
+.outline-children { display: none; }
+.info-panel-tab-wrapper { display: none; }
+.outline-item-open > .outline-children { display: block; }
+.typora-export .outline-item { padding-top: 1px; padding-bottom: 1px; }
+.typora-export .outline-item:hover { margin-right: -8px; border-right-width: 8px; border-right-style: solid; border-right-color: transparent; }
+.typora-export .outline-expander::before { content: "+"; font-family: inherit; top: -1px; }
+.typora-export .outline-expander:hover::before, .typora-export .outline-item-open > .outline-item > .outline-expander::before { content: "−"; }
+.typora-export-collapse-outline .outline-children { display: none; }
+.typora-export-collapse-outline .outline-item-open > .outline-children, .typora-export-no-collapse-outline .outline-children { display: block; }
+.typora-export-no-collapse-outline .outline-expander::before { content: "" !important; }
+.typora-export-show-outline .outline-item-active > .outline-item .outline-label { font-weight: 700; }
+.md-inline-math-container mjx-container { zoom: 0.95; }
+mjx-container { break-inside: avoid; }
+
+
+:root {
+  --mermaid-theme: night;
+}
+
+[lang='mermaid'] .label {
+  color: #333;
+}
+
+/* CSS Document */
+
+/** code highlight */
+
+.cm-s-inner .cm-variable,
+.cm-s-inner .cm-operator,
+.cm-s-inner .cm-property {
+    color: #b8bfc6;
+}
+
+.cm-s-inner .cm-keyword {
+    color: #C88FD0;
+}
+
+.cm-s-inner .cm-tag {
+    color: #7DF46A;
+}
+
+.cm-s-inner .cm-attribute {
+    color: #7575E4;
+}
+
+.CodeMirror div.CodeMirror-cursor {
+    border-left: 1px solid #b8bfc6;
+    z-index: 3;
+}
+
+.cm-s-inner .cm-string {
+    color: #D26B6B;
+}
+
+.cm-s-inner .cm-comment,
+.cm-s-inner.cm-comment {
+    color: #DA924A;
+}
+
+.cm-s-inner .cm-header,
+.cm-s-inner .cm-def,
+.cm-s-inner.cm-header,
+.cm-s-inner.cm-def {
+    color: #8d8df0;
+}
+
+.cm-s-inner .cm-quote,
+.cm-s-inner.cm-quote {
+    color: #57ac57;
+}
+
+.cm-s-inner .cm-hr {
+    color: #d8d5d5;
+}
+
+.cm-s-inner .cm-link {
+    color: #d3d3ef;
+}
+
+.cm-s-inner .cm-negative {
+    color: #d95050;
+}
+
+.cm-s-inner .cm-positive {
+    color: #50e650;
+}
+
+.cm-s-inner .cm-string-2 {
+    color: #f50;
+}
+
+.cm-s-inner .cm-meta,
+.cm-s-inner .cm-qualifier {
+    color: #b7b3b3;
+}
+
+.cm-s-inner .cm-builtin {
+    color: #f3b3f8;
+}
+
+.cm-s-inner .cm-bracket {
+    color: #997;
+}
+
+.cm-s-inner .cm-atom,
+.cm-s-inner.cm-atom {
+    color: #84B6CB;
+}
+
+.cm-s-inner .cm-number {
+    color: #64AB8F;
+}
+
+.cm-s-inner .cm-variable {
+    color: #b8bfc6;
+}
+
+.cm-s-inner .cm-variable-2 {
+    color: #9FBAD5;
+}
+
+.cm-s-inner .cm-variable-3 {
+    color: #1cc685;
+}
+
+.CodeMirror-selectedtext,
+.CodeMirror-selected {
+    background: #4a89dc;
+    color: #fff !important;
+    text-shadow: none;
+}
+
+.CodeMirror-gutters {
+    border-right: none;
+}
+
+/* CSS Document */
+
+/** markdown source **/
+.cm-s-typora-default .cm-header, 
+.cm-s-typora-default .cm-property
+{
+    color: #cebcca;
+}
+
+.CodeMirror.cm-s-typora-default div.CodeMirror-cursor{
+    border-left: 3px solid #b8bfc6;
+}
+
+.cm-s-typora-default .cm-comment {
+    color: #9FB1FF;
+}
+
+.cm-s-typora-default .cm-string {
+    color: #A7A7D9
+}
+
+.cm-s-typora-default .cm-atom, .cm-s-typora-default .cm-number {
+    color: #848695;
+    font-style: italic;
+}
+
+.cm-s-typora-default .cm-link {
+    color: #95B94B;
+}
+
+.cm-s-typora-default .CodeMirror-activeline-background {
+    background: rgba(51, 51, 51, 0.72);
+}
+
+.cm-s-typora-default .cm-comment, .cm-s-typora-default .cm-code {
+	color: #8aa1e1;
+}@import "";
+@import "";
+@import "";
+
+:root {
+    --bg-color:  #363B40;
+    --side-bar-bg-color: #2E3033;
+    --text-color: #b8bfc6;
+
+    --select-text-bg-color:#4a89dc;
+
+    --item-hover-bg-color: #0a0d16;
+    --control-text-color: #b7b7b7;
+    --control-text-hover-color: #eee;
+    --window-border: 1px solid #555;
+
+    --active-file-bg-color: rgb(34, 34, 34);
+    --active-file-border-color: #8d8df0;
+
+    --primary-color: #a3d5fe;
+
+    --active-file-text-color: white;
+    --item-hover-bg-color: #70717d;
+    --item-hover-text-color: white;
+    --primary-color: #6dc1e7;
+
+    --rawblock-edit-panel-bd: #333;
+
+    --search-select-bg-color: #428bca;
+}
+
+html {
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+}
+
+html,
+body {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    background: #363B40;
+    background: var(--bg-color);
+    fill: currentColor;
+    line-height: 1.625rem;
+}
+
+#write {
+    max-width: 914px;
+}
+
+
+@media only screen and (min-width: 1400px) {
+	#write {
+		max-width: 1024px;
+	}
+}
+
+@media only screen and (min-width: 1800px) {
+	#write {
+		max-width: 1200px;
+	}
+}
+
+html,
+body,
+button,
+input,
+select,
+textarea,
+div.code-tooltip-content {
+    color: #b8bfc6;
+    border-color: transparent;
+}
+
+div.code-tooltip,
+.md-hover-tip .md-arrow:after {
+    background: #333;
+}
+
+.native-window #md-notification {
+    border: 1px solid #70717d;
+}
+
+.popover.bottom > .arrow:after {
+    border-bottom-color: #333;
+}
+
+html,
+body,
+button,
+input,
+select,
+textarea {
+    font-family: "Helvetica Neue", Helvetica, Arial, 'Segoe UI Emoji', sans-serif;
+}
+
+hr {
+    height: 2px;
+    border: 0;
+    margin: 24px 0 !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Lucida Grande", "Corbel", sans-serif;
+    font-weight: normal;
+    clear: both;
+    -ms-word-wrap: break-word;
+    word-wrap: break-word;
+    margin: 0;
+    padding: 0;
+    color: #DEDEDE
+}
+
+h1 {
+    font-size: 2.5rem;
+    /* 36px */
+    line-height: 2.75rem;
+    /* 40px */
+    margin-bottom: 1.5rem;
+    /* 24px */
+    letter-spacing: -1.5px;
+}
+
+h2 {
+    font-size: 1.63rem;
+    /* 24px */
+    line-height: 1.875rem;
+    /* 30px */
+    margin-bottom: 1.5rem;
+    /* 24px */
+    letter-spacing: -1px;
+    font-weight: bold;
+}
+
+h3 {
+    font-size: 1.17rem;
+    /* 18px */
+    line-height: 1.5rem;
+    /* 24px */
+    margin-bottom: 1.5rem;
+    /* 24px */
+    letter-spacing: -1px;
+    font-weight: bold;
+}
+
+h4 {
+    font-size: 1.12rem;
+    /* 16px */
+    line-height: 1.375rem;
+    /* 22px */
+    margin-bottom: 1.5rem;
+    /* 24px */
+    color: white;
+}
+
+h5 {
+    font-size: 0.97rem;
+    /* 16px */
+    line-height: 1.25rem;
+    /* 22px */
+    margin-bottom: 1.5rem;
+    /* 24px */
+    font-weight: bold;
+}
+
+h6 {
+    font-size: 0.93rem;
+    /* 16px */
+    line-height: 1rem;
+    /* 16px */
+    margin-bottom: 0.75rem;
+    color: white;
+}
+
+@media (min-width: 980px) {
+    h3.md-focus:before,
+    h4.md-focus:before,
+    h5.md-focus:before,
+    h6.md-focus:before {
+        color: #ddd;
+        border: 1px solid #ddd;
+        border-radius: 3px;
+        position: absolute;
+        left: -1.642857143rem;
+        top: .357142857rem;
+        float: left;
+        font-size: 9px;
+        padding-left: 2px;
+        padding-right: 2px;
+        vertical-align: bottom;
+        font-weight: normal;
+        line-height: normal;
+    }
+
+    h3.md-focus:before {
+        content: 'h3';
+    }
+
+    h4.md-focus:before {
+        content: 'h4';
+    }
+
+    h5.md-focus:before {
+        content: 'h5';
+        top: 0px;
+    }
+
+    h6.md-focus:before {
+        content: 'h6';
+        top: 0px;
+    }
+}
+
+a {
+    text-decoration: none;
+    outline: 0;
+}
+
+a:hover {
+    outline: 0;
+}
+
+a:focus {
+    outline: thin dotted;
+}
+
+sup.md-footnote {
+    background-color: #555;
+    color: #ddd;
+}
+
+p {
+    -ms-word-wrap: break-word;
+    word-wrap: break-word;
+}
+
+p,
+ul,
+dd,
+ol,
+hr,
+address,
+pre,
+table,
+iframe,
+.wp-caption,
+.wp-audio-shortcode,
+.wp-video-shortcode {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    /* 24px */
+}
+
+audio:not([controls]) {
+    display: none;
+}
+
+[hidden] {
+    display: none;
+}
+
+::-moz-selection {
+    background: #4a89dc;
+    color: #fff;
+    text-shadow: none;
+}
+
+*.in-text-selection,
+::selection {
+    background: #4a89dc;
+    color: #fff;
+    text-shadow: none;
+}
+
+ul,
+ol {
+    padding: 0 0 0 1.875rem;
+    /* 30px */
+}
+
+ul {
+    list-style: square;
+}
+
+ol {
+    list-style: decimal;
+}
+
+ul ul,
+ol ol,
+ul ol,
+ol ul {
+    margin: 0;
+}
+
+b,
+th,
+dt,
+strong {
+    font-weight: bold;
+}
+
+i,
+em,
+dfn,
+cite {
+    font-style: italic;
+}
+
+blockquote {
+    padding-left: 1.875rem;
+    margin: 0 0 1.875rem 1.875rem;
+    border-left: solid 2px #474d54;
+    padding-left: 30px;
+    margin-top: 35px;
+}
+
+pre,
+code,
+kbd,
+tt,
+var {
+    font-size: 0.875em;
+    font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+}
+
+code,
+tt,
+var {
+    background: rgba(0, 0, 0, 0.05);
+}
+
+kbd {
+    padding: 2px 4px;
+    font-size: 90%;
+    color: #fff;
+    background-color: #333;
+    border-radius: 3px;
+    box-shadow: inset 0 -1px 0 rgba(0,0,0,.25);
+}
+
+pre.md-fences {
+    padding: 10px 10px 10px 30px;
+    margin-bottom: 20px;
+    background: #333;
+}
+
+.CodeMirror-gutters {
+    background: #333;
+    border-right: 1px solid transparent;
+}
+
+.enable-diagrams pre.md-fences[lang="sequence"] .code-tooltip,
+.enable-diagrams pre.md-fences[lang="flow"] .code-tooltip,
+.enable-diagrams pre.md-fences[lang="mermaid"] .code-tooltip {
+    bottom: -2.2em;
+    right: 4px;
+}
+
+code,
+kbd,
+tt,
+var {
+    padding: 2px 5px;
+}
+
+table {
+    max-width: 100%;
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+th,
+td {
+    padding: 5px 10px;
+    vertical-align: top;
+}
+
+a {
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
+
+hr {
+    background: #474d54;
+    /* variable */
+}
+
+h1 {
+    margin-top: 2em;
+}
+
+a {
+    color: #e0e0e0;
+    text-decoration: underline;
+}
+
+a:hover {
+    color: #fff;
+}
+
+.md-inline-math script {
+    color: #81b1db;
+}
+
+b,
+th,
+dt,
+strong {
+    color: #DEDEDE;
+    /* variable */
+}
+
+mark {
+    background: #D3D40E;
+}
+
+blockquote {
+    color: #9DA2A6;
+}
+
+table a {
+    color: #DEDEDE;
+    /* variable */
+}
+
+th,
+td {
+    border: solid 1px #474d54;
+    /* variable */
+}
+
+.task-list {
+    padding-left: 0;
+}
+
+.md-task-list-item {
+    padding-left: 1.25rem;
+}
+
+.md-task-list-item > input {
+    top: auto;
+}
+
+.md-task-list-item > input:before {
+    content: "";
+    display: inline-block;
+    width: 0.875rem;
+    height: 0.875rem;
+    vertical-align: middle;
+    text-align: center;
+    border: 1px solid #b8bfc6;
+    background-color: #363B40;
+    margin-top: -0.4rem;
+}
+
+.md-task-list-item > input:checked:before,
+.md-task-list-item > input[checked]:before {
+    content: '\221A';
+    /*◘*/
+    font-size: 0.625rem;
+    line-height: 0.625rem;
+    color: #DEDEDE;
+}
+
+/** quick open **/
+.auto-suggest-container {
+    border: 0px;
+    background-color: #525C65;
+}
+
+#typora-quick-open {
+    background-color: #525C65;
+}
+
+#typora-quick-open input{
+    background-color: #525C65;
+    border: 0;
+    border-bottom: 1px solid grey;
+}
+
+.typora-quick-open-item {
+    background-color: inherit;
+    color: inherit;
+}
+
+.typora-quick-open-item.active,
+.typora-quick-open-item:hover {
+    background-color: #4D8BDB;
+    color: white;
+}
+
+.typora-quick-open-item:hover {
+    background-color: rgba(77, 139, 219, 0.8);
+}
+
+.typora-search-spinner > div {
+  background-color: #fff;
+}
+
+#write pre.md-meta-block {
+    border-bottom: 1px dashed #ccc;
+    background: transparent;
+    padding-bottom: 0.6em;
+    line-height: 1.6em;
+}
+
+.btn,
+.btn .btn-default {
+    background: transparent;
+    color: #b8bfc6;
+}
+
+.ty-table-edit {
+    border-top: 1px solid gray;
+    background-color: #363B40;
+}
+
+.popover-title {
+    background: transparent;
+}
+
+.md-image>.md-meta {
+    color: #BBBBBB;
+    background: transparent;
+}
+
+.md-expand.md-image>.md-meta {
+    color: #DDD;
+}
+
+#write>h3:before,
+#write>h4:before,
+#write>h5:before,
+#write>h6:before {
+    border: none;
+    border-radius: 0px;
+    color: #888;
+    text-decoration: underline;
+    left: -1.4rem;
+    top: 0.2rem;
+}
+
+#write>h3.md-focus:before {
+    top: 2px;
+}
+
+#write>h4.md-focus:before {
+    top: 2px;
+}
+
+.md-toc-item {
+    color: #A8C2DC;
+}
+
+#write div.md-toc-tooltip {
+    background-color: #363B40;
+}
+
+.dropdown-menu .btn:hover,
+.dropdown-menu .btn:focus,
+.md-toc .btn:hover,
+.md-toc .btn:focus {
+    color: white;
+    background: black;
+}
+
+#toc-dropmenu {
+    background: rgba(50, 54, 59, 0.93);
+    border: 1px solid rgba(253, 253, 253, 0.15);
+}
+
+#toc-dropmenu .divider {
+    background-color: #9b9b9b;
+}
+
+.outline-expander:before {
+    top: 2px;
+}
+
+#typora-sidebar {
+    box-shadow: none;
+    border-right: 1px dashed;
+    border-right: none;
+}
+
+.sidebar-tabs {
+    border-bottom:0;
+}
+
+#typora-sidebar:hover .outline-title-wrapper {
+    border-left: 1px dashed;
+}
+
+.outline-title-wrapper .btn {
+    color: inherit;
+}
+
+.outline-item:hover {
+    border-color: #363B40;
+    background-color: #363B40;
+    color: white;
+}
+
+h1.md-focus .md-attr,
+h2.md-focus .md-attr,
+h3.md-focus .md-attr,
+h4.md-focus .md-attr,
+h5.md-focus .md-attr,
+h6.md-focus .md-attr,
+.md-header-span .md-attr {
+    color: #8C8E92;
+    display: inline;
+}
+
+.md-comment {
+    color: #5a95e3;
+    opacity: 0.8;
+}
+
+.md-inline-math svg {
+    color: #b8bfc6;
+}
+
+#math-inline-preview .md-arrow:after {
+    background: black;
+}
+
+.modal-content {
+    background: var(--bg-color);
+    border: 0;
+}
+
+.modal-title {
+    font-size: 1.5em;
+}
+
+.modal-content input {
+    background-color: rgba(26, 21, 21, 0.51);
+    color: white;
+}
+
+.modal-content .input-group-addon {
+    color: white;
+}
+
+.modal-backdrop {
+    background-color: rgba(174, 174, 174, 0.7);
+}
+
+.modal-content .btn-primary {
+    border-color: var(--primary-color);
+}
+
+.md-table-resize-popover {
+    background-color: #333;
+}
+
+.form-inline .input-group .input-group-addon {
+    color: white;
+}
+
+#md-searchpanel {
+    border-bottom: 1px dashed grey;
+}
+
+/** UI for electron */
+
+.context-menu,
+#spell-check-panel,
+#footer-word-count-info {
+    background-color: #42464A;
+}
+
+.context-menu.dropdown-menu .divider,
+.dropdown-menu .divider {
+    background-color: #777777;
+    opacity: 1;
+}
+
+footer {
+    color: inherit;
+}
+
+@media (max-width: 1000px) {
+    footer {
+        border-top: none;
+    }
+    footer:hover {
+        color: inherit;
+    }
+}
+
+#file-info-file-path .file-info-field-value:hover {
+    background-color: #555;
+    color: #dedede;
+}
+
+.megamenu-content,
+.megamenu-opened header {
+    background: var(--bg-color);
+}
+
+.megamenu-menu-panel h2,
+.megamenu-menu-panel h1,
+.long-btn {
+    color: inherit;
+}
+
+.megamenu-menu-panel input[type='text'] {
+    background: inherit;
+    border: 0;
+    border-bottom: 1px solid;
+}
+
+#recent-file-panel-action-btn {
+    background: inherit;
+    border: 1px grey solid;
+}
+
+.megamenu-menu-panel .dropdown-menu > li > a {
+    color: inherit;
+    background-color: #2F353A;
+    text-decoration: none;
+}
+
+.megamenu-menu-panel table td:nth-child(1) {
+    color: inherit;
+    font-weight: bold;
+}
+
+.megamenu-menu-panel tbody tr:hover td:nth-child(1) {
+    color: white;
+}
+
+.modal-footer .btn-default, 
+.modal-footer .btn-primary,
+.modal-footer .btn-default:not(:hover) {
+    border: 1px solid;
+    border-color: transparent;
+}
+
+.btn-primary {
+    color: white;
+}
+
+.btn-default:hover, .btn-default:focus, .btn-default.focus, .btn-default:active, .btn-default.active, .open > .dropdown-toggle.btn-default {
+    color: white;
+    border: 1px solid #ddd;
+    background-color: inherit;
+}
+
+.modal-header {
+    border-bottom: 0;
+}
+
+.modal-footer {
+    border-top: 0;
+}
+
+#recent-file-panel tbody tr:nth-child(2n-1) {
+    background-color: transparent !important;
+}
+
+.megamenu-menu-panel tbody tr:hover td:nth-child(2) {
+    color: inherit;
+}
+
+.megamenu-menu-panel .btn {
+    border: 1px solid #eee;
+    background: transparent;
+}
+
+.mouse-hover .toolbar-icon.btn:hover,
+#w-full.mouse-hover,
+#w-pin.mouse-hover {
+    background-color: inherit;
+}
+
+.typora-node::-webkit-scrollbar {
+    width: 5px;
+}
+
+.typora-node::-webkit-scrollbar-thumb:vertical {
+    background: rgba(250, 250, 250, 0.3);
+}
+
+.typora-node::-webkit-scrollbar-thumb:vertical:active {
+    background: rgba(250, 250, 250, 0.5);
+}
+
+#w-unpin {
+    background-color: #4182c4;
+}
+
+#top-titlebar, #top-titlebar * {
+    color: var(--item-hover-text-color);
+}
+
+.typora-sourceview-on #toggle-sourceview-btn,
+#footer-word-count:hover,
+.ty-show-word-count #footer-word-count {
+    background: #333333;
+}
+
+#toggle-sourceview-btn:hover {
+    color: #eee;
+    background: #333333;
+}
+
+/** focus mode */
+.on-focus-mode .md-end-block:not(.md-focus):not(.md-focus-container) * {
+    color: #686868 !important;
+}
+
+.on-focus-mode .md-end-block:not(.md-focus) img,
+.on-focus-mode .md-task-list-item:not(.md-focus-container)>input {
+    opacity: #686868 !important;
+}
+
+.on-focus-mode li[cid]:not(.md-focus-container){
+    color: #686868;
+}
+
+.on-focus-mode .md-fences.md-focus .CodeMirror-code>*:not(.CodeMirror-activeline) *,
+.on-focus-mode .CodeMirror.cm-s-inner:not(.CodeMirror-focused) * {
+    color: #686868 !important;
+}
+
+.on-focus-mode .md-focus,
+.on-focus-mode .md-focus-container {
+    color: #fff;
+}
+
+.on-focus-mode #typora-source .CodeMirror-code>*:not(.CodeMirror-activeline) * {
+    color: #686868 !important;
+}
+
+
+/*diagrams*/
+#write .md-focus .md-diagram-panel {
+    border: 1px solid #ddd;
+    margin-left: -1px;
+    width: calc(100% + 2px);
+}
+
+/*diagrams*/
+#write .md-focus.md-fences-with-lineno .md-diagram-panel {
+    margin-left: auto;
+}
+
+.md-diagram-panel-error {
+    color: #f1908e;
+}
+
+.active-tab-files #info-panel-tab-file,
+.active-tab-files #info-panel-tab-file:hover,
+.active-tab-outline #info-panel-tab-outline,
+.active-tab-outline #info-panel-tab-outline:hover {
+    color: #eee;
+}
+
+.sidebar-footer-item:hover,
+.footer-item:hover {
+    background: inherit;
+    color: white;
+}
+
+.ty-side-sort-btn.active,
+.ty-side-sort-btn:hover,
+.selected-folder-menu-item a:after {
+    color: white;
+}
+
+#sidebar-files-menu {
+    border:solid 1px;
+    box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.79);
+    background-color: var(--bg-color);
+}
+
+.file-list-item {
+    border-bottom:none;
+}
+
+.file-list-item-summary {
+    opacity: 1;
+}
+
+.file-list-item.active:first-child {
+    border-top: none;
+}
+
+.file-node-background {
+    height: 32px;
+}
+
+.file-library-node.active>.file-node-content,
+.file-list-item.active {
+    color: white;
+    color: var(--active-file-text-color);
+}
+
+.file-library-node.active>.file-node-background{
+    background-color: rgb(34, 34, 34);
+    background-color: var(--active-file-bg-color);
+}
+.file-list-item.active {
+    background-color: rgb(34, 34, 34);
+    background-color: var(--active-file-bg-color);
+}
+
+#ty-tooltip {
+    background-color: black;
+    color: #eee;
+}
+
+.md-task-list-item>input {
+    margin-left: -1.3em;
+    margin-top: 0.3rem;
+    -webkit-appearance: none;
+}
+
+.md-mathjax-midline {
+    background-color: #57616b;
+    border-bottom: none;
+}
+
+footer.ty-footer {
+    border-color: #656565;
+}
+
+.ty-preferences .btn-default {
+    background: transparent;
+}
+.ty-preferences .btn-default:hover {
+    background: #57616b;
+}
+
+.ty-preferences select {
+    border: 1px solid #989698;
+    height: 21px;
+}
+
+.ty-preferences .nav-group-item.active,
+.export-item.active,
+.export-items-list-control,
+.export-detail {
+    background: var(--item-hover-bg-color);
+}
+
+.ty-preferences input[type="search"] {
+    border-color: #333;
+    background: #333;
+    line-height: 22px;
+    border-radius: 6px;
+    color: white;
+}
+
+.ty-preferences input[type="search"]:focus {
+    box-shadow: none;
+}
+
+[data-is-directory="true"] .file-node-content {
+    margin-bottom: 0;
+}
+
+.file-node-title {
+    line-height: 22px;
+}
+
+.html-for-mac .file-node-open-state, .html-for-mac .file-node-icon {
+    line-height: 26px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(230, 230, 230, 0.30);
+}
+
+::-webkit-scrollbar-thumb:active {
+    background: rgba(230, 230, 230, 0.50);
+}
+
+#typora-sidebar:hover div.sidebar-content-content::-webkit-scrollbar-thumb:horizontal {
+    background: rgba(230, 230, 230, 0.30);
+}
+
+.nav-group-item:active {
+    background-color: #474d54 !important;
+}
+
+.md-search-hit {
+    background: rgba(199, 140, 60, 0.81);
+    color: #eee;
+}
+
+.md-search-hit * {
+    color: #eee;
+}
+
+#md-searchpanel input {
+    color: white;
+}
+
+.modal-backdrop.in {
+    opacity: 1;
+    backdrop-filter: blur(1px);
+}
+
+.clear-btn-icon {
+    top: 8px;
+}
+
+/* try fix https://github.com/typora/typora-issues/issues/5253 */
+.file-node-expanded>.file-node-children {
+    display: grid;
+  }
+
+ @media print { @page {margin: 0 0 0 0;} body.typora-export {padding-left: 0; padding-right: 0;} #write {padding:0;}}
+</style><title>moushi-manual-en.</title>
+</head>
+<body class='typora-export'><div class='typora-export-content'>
+<div id='write'  class=''><p><img src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/datasets/moushi/coscene-001.png" referrerpolicy="no-referrer" alt="manual-logo-elitenect-technologies"><a name="0"></a>
+<a name="1"></a></p><h1 id='inspection-robot-maintenance-manuala-name2a'><span>Inspection robot maintenance manual</span><a name="2"></a></h1><p><a name="3"></a></p><h2 id='version20a-name4a'><span>Version:2.0</span><a name="4"></a></h2><p><a name="5"></a></p><h2 id='beijing-moushi-technology-co-ltda-name6a'><span>Beijing Moushi Technology Co., Ltd.</span><a name="6"></a></h2><p><a name="7"></a></p><h1 id='table-of-contentsa-name8a'><span>Table of contents</span><a name="8"></a></h1><p><a name="9"></a></p><ol start='' ><li><p><span>Product Overview................................................ ................................................................. ................................................................. .. 4</span><a name="10"></a></p><ol start='' ><li><p><span>Product Overview................................................ ................................................................. ................................................. 4</span><a name="11"></a></p></li><li><p><span>Crawler robot........................................ ................................................................. .................................. 5</span><a name="12"></a></p></li><li><p><span>Wheeled robot........................................ ................................................................. ....................................5</span><a name="13"></a></p></li></ol></li><li><p><span>Power on the robot................................................ ................................................................. ................................................. 6</span><a name="14"></a></p><ol start='' ><li><p><span>Power on the robot................................................ ................................................................. ........................................ 6</span><a name="15"></a></p></li><li><p><span>Using the remote control................................................ ................................................................. ....................................6</span><a name="16"></a></p></li><li><p><span>Advanced use of remote control........................................ ................................................................. .................................. 7</span><a name="17"></a></p></li><li><p><span>Precautions................................................ ................................................................. ............................................ 9</span><a name="18"></a></p></li></ol></li><li><p><span>Tablet control................................................ ................................................................. ................................................................. 10</span><a name="19"></a></p><ol start='' ><li><p><span>Wifi connection................................................ ................................................................. .................................................10</span><a name="20"></a></p></li><li><p><span>Run the APP................................................ ................................................................. .................................................10</span><a name="21"></a></p></li><li><p><span>Self-start function........................................ ................................................................. .................................................10</span><a name="22"></a></p></li><li><p><span>License update function........................................ ................................................................. .............................11</span><a name="23"></a></p></li><li><p><span>Parameter configuration................................................ ................................................................. ................................................. 14</span><a name="24"></a></p></li><li><p><span>Status check................................................ ................................................................. ........................................ 15</span><a name="25"></a></p></li><li><p><span>Start inspection........................................ ................................................................. .................................................16</span><a name="26"></a></p></li></ol></li><li><p><span>Drawing................................................ ................................................................. ................................................................. ....... 17</span><a name="27"></a></p><ol start='' ><li><p><span>Drawing................................................ ................................................................. ................................................. 17</span><a name="28"></a></p></li><li><p><span>Map editing................................................ ................................................................. ........................................ 20</span><a name="29"></a></p></li><li><p><span>Map backup and switching........................................ ................................................................. .............................25</span><a name="30"></a></p></li><li><p><span>Precautions................................................ ................................................................. .................................................27</span><a name="31"></a></p><ol start='' ><li><p><span>Preparation before drawing...................................... ................................................................. ............................28</span><a name="32"></a></p></li><li><p><span>Principles of mapping operations........................................ ................................................................. ............................28</span><a name="33"></a></p></li><li><p><span>Checking the mapping results........................................ ................................................................. ............................30</span><a name="34"></a></p></li></ol></li></ol></li><li><p><span>Navigation................................................ ................................................................. ................................................................. ....... 31</span><a name="35"></a></p><ol start='' ><li><p><span>Navigate to a specified point........................................ ................................................................. .................................. 31</span><a name="36"></a></p></li><li><p><span>Navigate to specified coordinates........................................ ................................................................. .............................32</span><a name="37"></a></p></li><li><p><span>Cancel navigation........................................ ................................................................. .................................................32</span><a name="38"></a></p></li></ol></li><li><p><span>Cloud platform deployment................................................ ................................................................. ................................................. 34</span><a name="39"></a></p><ol start='' ><li><p><span>Preparation................................................ ................................................................. ................................................. 34</span><a name="40"></a></p></li><li><p><span>Tool installation................................................ ................................................................. ......................................34</span><a name="41"></a></p><ol start='' ><li><p><span>Enable root ssh permissions........................................ ................................................................. .............34</span><a name="42"></a></p></li><li><p><span>JDK installation................................................ ................................................................. .............................35</span><a name="43"></a></p></li><li><p><span>TOMCAT installation................................................ ................................................................. .............................35</span><a name="44"></a></p></li><li><p><span>MySQL database online installation................................................ ................................................................. .......36</span><a name="45"></a></p></li><li><p><span>Redis installation................................................ ................................................................. .............................37</span><a name="46"></a></p></li><li><p><span>Nginx installation................................................ ................................................................. .............................37</span><a name="47"></a></p></li></ol></li><li><p><span>Program deployment................................................ ................................................................. .................................................38</span><a name="48"></a></p><ol start='' ><li><p><span>Front-end web program deployment........................................ ................................................................. ............. 38</span><a name="49"></a></p></li><li><p><span>Back-end jar package deployment................................................ ................................................................. .............................39</span><a name="50"></a></p></li></ol></li><li><p><span>System parameter configuration...................................... ................................................................. ............................. 41</span><a name="51"></a></p><ol start='' ><li><p><span>Domain name address mapping........................................ ................................................................. .............................41</span><a name="52"></a></p></li><li><p><span>/etc/profile confirmation...................................... ................................................................. ........................41</span><a name="53"></a></p></li></ol></li><li><p><span>Start the management cloud platform system program...................................... ................................................................. .............41</span><a name="54"></a></p><ol start='' ><li><p><span>Start the background java program................................................ ................................................................. .............42</span><a name="55"></a></p></li><li><p><span>Start tomcat in the frontend...................................... ................................................................. .............42</span><a name="56"></a></p></li><li><p><span>Confirm whether the background program is started successfully...................................... ................................................................. ...... 42</span><a name="57"></a></p></li><li><p><span>Access the system url........................................ ................................................................. .............................42</span><a name="58"></a></p></li></ol></li></ol></li><li><p><span>Use of cloud platform........................................ ................................................................. ................................................. 43</span><a name="59"></a></p><ol start='' ><li><p><span>System login................................................ ................................................................. ................................................. 43</span><a name="60"></a></p><ol start='' ><li><p><span>System home page................................................ ................................................................. ..................................44</span><a name="61"></a></p></li><li><p><span>Personal Center................................................ ................................................................. ..................................45</span><a name="62"></a></p></li></ol></li><li><p><span>Real-time monitoring................................................ ................................................................. .................................................45</span><a name="63"></a></p></li><li><p><span>Data query................................................ ................................................................. .................................................47</span><a name="64"></a></p><ol start='' ><li><p><span>Inspection report................................................ ................................................................. ............................. 47</span><a name="65"></a></p></li><li><p><span>Inspection points................................................ ................................................................. .................................................48</span><a name="66"></a></p></li><li><p><span>Environmental data................................................ ................................................................. ..................................48</span><a name="67"></a></p></li></ol></li><li><p><span>Inspection tasks........................................ ................................................................. .................................................49</span><a name="68"></a></p><ol start='' ><li><p><span>Task management................................................ ................................................................. ..................................49</span><a name="69"></a></p></li><li><p><span>Task Calendar................................................ ................................................................. ..................................51</span><a name="70"></a></p></li></ol></li><li><p><span>Configuration management................................................ ................................................................. ................................................. 52</span><a name="71"></a></p><ol start='' ><li><p><span>Inspection point management...................................... ................................................................. .............................52</span><a name="72"></a></p></li><li><p><span>Map management................................................ ................................................................. ..................................53</span><a name="73"></a></p></li><li><p><span>Robot management................................................ ................................................................. ............................. 54</span><a name="74"></a></p></li><li><p><span>Alarm settings................................................ ................................................................. ..................................55</span><a name="75"></a>
+<span>1.System Management................................................ ................................................................. ........................................ 56</span><a name="76"></a></p></li><li><p><span>User management................................................ ................................................................. .................................. 56</span><a name="77"></a></p></li><li><p><span>Role management................................................ ................................................................. ..................................57</span><a name="78"></a></p></li><li><p><span>Menu management................................................ ................................................................. ..................................59</span><a name="79"></a></p></li><li><p><span>Site management................................................ ................................................................. .............................59</span><a name="80"></a></p></li><li><p><span>Dictionary management................................................ ................................................................. .................................. 60</span><a name="81"></a></p></li><li><p><span>Vehicle body condition........................................ ................................................................. .............................61</span><a name="82"></a></p></li><li><p><span>Version information................................................ ................................................................. .................................. 62</span><a name="83"></a></p></li></ol></li></ol></li><li><p><span>Inspection................................................ ................................................................. ................................................................. ........ 63</span><a name="84"></a></p><ol start='' ><li><p><span>Startup check........................................ ................................................................. ................................................. 63</span><a name="85"></a></p></li><li><p><span>Cloud platform operation................................................ ................................................................. ................................................. 64</span><a name="86"></a></p></li></ol></li><li><p><span>Precautions................................................ ................................................................. ................................................................. 66</span><a name="87"></a></p><ol start='' ><li><p><span>Routine inspection................................................ ................................................................. ................................................. 66</span><a name="88"></a></p></li><li><p><span>Maintenance................................................ ................................................................. ................................................. 66</span><a name="89"></a></p></li><li><p><span>Long-term storage................................................ ................................................................. ................................................. 67</span><a name="90"></a></p></li></ol></li><li><p><span>Quick troubleshooting........................................ ................................................................. ................................................. 69</span><a name="91"></a></p><ol start='' ><li><p><span>Robot troubleshooting........................................ ................................................................. .............................69</span><a name="92"></a></p></li><li><p><span>Cloud service troubleshooting................................................ ................................................................. ............................71</span><a name="93"></a></p></li><li><p><span>Troubleshooting on the remote control...................................... ................................................................. ............................72</span><a name="94"></a>
+<a name="95"></a>
+<span>Appendix 1: Charging pile installation instructions................................................ ................................................................. ..................................75</span><a name="96"></a>
+<a name="97"></a>
+<span>Appendix 2. Sensor cleaning................................................ ................................................................. ........................................76</span><a name="98"></a>
+<a name="99"></a>
+<span>Appendix 3. Product parameters................................................ ................................................................. .................................................77</span><a name="100"></a>
+<a name="101"></a></p></li></ol></li></ol><h1 id='1-product-overviewa-name102a'><span>1. Product Overview</span><a name="102"></a></h1><p><a name="103"></a></p><h2 id='11-product-overviewa-name104a'><span>1.1 Product Overview</span><a name="104"></a></h2><p><a name="105"></a>
+<span>The Moosu robot positioning and navigation system is a positioning and navigation system that integrates laser radar, vision (binocular camera, depth camera), ultrasonic, inertial measurement unit (IMU) and other sensors. It integrates sensor technology, data processing, visual processing, automation control and other technologies,</span><a name="106"></a>
+<span>It solves the problems of robot perception of the environment, positioning, navigation, and obstacle avoidance.</span><a name="107"></a>
+<a name="108"></a>
+<span>Machine vision based on deep learning can enable robots to detect and track pedestrians and moving targets. Combined with traditional image recognition, it can also help robots accurately and efficiently identify the status of field equipment and meter readings in real time, which is beneficial to security/logistics/power inspection robots. Complete tasks efficiently and accurately.</span><a name="109"></a>
+<a name="110"></a>
+<span>In conjunction with the inspection robot solution, Mooshi Technology provides a management and monitoring platform as well as PC clients and Android clients, which have been developed specifically for gas, electricity, oil fields, chemical and other industries.</span><a name="111"></a>
+<a name="112"></a>
+<span>The visual processing, positioning and navigation system of the eyesight robot has been adapted to various types of wheeled and tracked robot chassis, EAI, KOBUKI and other robot cars, as well as various types of radars such as Shenzhen Leishen, Silan RPLIDAR, German SICK, American Velodyne and so on. Equipped, it can be easily used in logistics/security/</span><a name="113"></a>
+<span>In the electric power/gas/oil field/chemical industry, related products have been commercially deployed in oil fields, gas, electric power, chemical industry, etc.</span><a name="114"></a>
+<a name="115"></a>
+<span>The eyesight robot has the following characteristics: vision processing, positioning and navigation system:</span><a name="116"></a>
+<a name="117"></a></p><ol start='' ><li><p><span>Good modularity and easy to integrate with existing mobile robot systems;</span><a name="118"></a></p></li><li><p><span>Low cost and high accuracy (relative error 0.3%, absolute error plus or minus 1 cm);</span><a name="119"></a></p></li><li><p><span>Supports dynamic environments and can intelligently avoid obstacles and pedestrians;</span><a name="120"></a></p></li><li><p><span>Precise remote control, supporting mobile client and Web client;</span><a name="121"></a></p></li><li><p><span>A complete management and monitoring platform to support customers’ cloud platform management;</span><a name="122"></a></p></li><li><p><span>Support various mobile robot chassis;</span><a name="123"></a></p></li><li><p><span>Supports various sensors and the fusion of multiple sensors (IMU+vision, IMU+lidar, lidar+vision, etc.);</span><a name="124"></a></p></li><li><p><span>Supports commercial embedded hardware and has good compatibility;</span><a name="125"></a></p></li><li><p><span>Provide overall solutions including chassis, embedded hardware, SLAM software, machine vision software, management and monitoring platform, Web client, and Android client.</span><a name="126"></a>
+<a name="127"></a></p></li></ol><h2 id='12-crawler-robota-name128a'><span>1.2 Crawler robot</span><a name="128"></a></h2><p><a name="129"></a></p><ol start='' ><li><p><span>The support area is large, the ratio of the 150mm wide crawler track to the ground length and the length of the entire vehicle reaches 75%, and the grounding specific pressure is 12KPa (full load). It is suitable for working in complex environments such as soft and muddy environments. It has small sag, small rolling resistance and good off-road maneuverability.</span><a name="130"></a></p></li><li><p><span>The turning radius is extremely small and can be turned in place.</span><a name="131"></a></p></li><li><p><span>There are crawler teeth on the support surface of the crawler track, which are not easy to slip and have good traction adhesion performance, which is conducive to exerting greater traction force.</span><a name="132"></a></p></li><li><p><span>The chassis height exceeds 130mm and has super strong climbing and obstacle climbing capabilities.</span><a name="133"></a></p></li><li><p><span>The car body shell is made of 304 stainless steel, which is strong and durable and has good overall protective performance.</span><a name="134"></a>
+<a name="135"></a></p></li></ol><h2 id='13-wheeled-robota-name136a'><span>1.3 Wheeled robot</span><a name="136"></a></h2><p><a name="137"></a></p><ol start='' ><li><p><span>Using brushless DC motor + reducer + solid rubber wheel, it has strong power and good passability.</span><a name="138"></a></p></li><li><p><span>Four-wheel differential steering, capable of turning 360 degrees on the spot, with flexible maneuverability and small turning space.</span><a name="139"></a></p></li><li><p><span>Same-side co-drive, when one wheel on one side is suspended in the air, all power is output to the other wheel on the same side to avoid insufficient power in the suspension.</span><a name="140"></a></p></li><li><p><span>Optional large-capacity lithium battery has a maximum battery life of more than 4 hours and a maximum charging time of 2 hours (fully charged).</span><a name="141"></a></p></li><li><p><span>Travel speed 0-4.5Km/h adjustable, precise control.</span><a name="142"></a>
+<a name="143"></a></p></li></ol><h1 id='2-start-the-robota-name144a'><span>2. Start the robot</span><a name="144"></a></h1><p><a name="145"></a></p><h2 id='21-start-the-robota-name146a'><span>2.1 Start the robot</span><a name="146"></a></h2><p><a name="147"></a>
+<span>Press the button in the middle of the picture control panel. After powering on, the button indicator lights up and the power display panel displays the current power level.</span><a name="148"></a>
+<a name="149"></a>
+<img src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/datasets/moushi/coscene-005.png" referrerpolicy="no-referrer" alt="Displayed on the front panel after booting"><a name="150"></a>
+<a name="151"></a>
+<span>Before starting up</span><a name="152"></a>
+<a name="153"></a>
+<img src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/datasets/moushi/coscene-006.png" referrerpolicy="no-referrer" alt="Panel display after booting"><a name="154"></a>
+<a name="155"></a>
+<span>After booting</span><a name="156"></a>
+<a name="157"></a></p><h2 id='22-remote-control-usea-name158a'><span>2.2 Remote control use</span><a name="158"></a></h2><p><a name="159"></a>
+<span>After the robot is powered on, push up the switch in the middle of the remote control, turn on the remote control, and automatically connect to the robot. Push the right joystick up and down to control forward and backward movement, and push left and right to control left and right movement. See the figure below for details.</span><a name="160"></a>
+<a name="161"></a>
+<img src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/datasets/moushi/coscene-007.png" referrerpolicy="no-referrer" alt="Remote control operating instructions - front"><a name="162"></a>
+<img src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/datasets/moushi/coscene-008.jpeg" referrerpolicy="no-referrer" alt="Remote control operating instructions - reverse side"><a name="163"></a>
+<a name="164"></a>
+<span>Remote control operation button instructions</span><a name="165"></a>
+<a name="166"></a>
+<strong><span>Note: When starting to control the car, use less force on the remote control to prevent the robot from moving too fast. </span></strong><a name="167"></a>
+<a name="168"></a></p><h2 id='23-advanced-use-of-remote-controla-name169a'><span>2.3 Advanced use of remote control</span><a name="169"></a></h2><p><a name="170"></a>
+<span>For advanced users, other buttons on the remote control are described as follows:</span><a name="171"></a>
+<a name="172"></a>
+<img src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/datasets/moushi/coscene-009.jpeg" referrerpolicy="no-referrer" alt="Advanced Remote Control Operation Instructions - Front"><a name="173"></a>
+<a name="174"></a></p><ul><li><p><span>Green on the left: Throttle control, the default is down and low</span><a name="175"></a></p></li><li><p><span>Green on the right: Direction control, which controls the forward, backward, left and right movements of the robot respectively.</span><a name="176"></a></p></li><li><p><span>Red in the middle: power switch, push it up to power on;</span><a name="177"></a></p></li><li><p><span>Blue on both sides of the middle: respectively throttle and direction control trim switches, used to control signal balance adjustment</span><a name="178"></a></p></li><li><p><span>Yellow on both sides of the middle: respectively the throttle and directional motion compensation switches, used to control signal balance adjustment</span><a name="179"></a></p></li><li><p><span>Blue below: Controller and robot connection status display</span><a name="180"></a>
+<a name="181"></a></p></li></ul><h2 id='24-notesa-name182a'><span>2.4 Notes</span><a name="182"></a></h2><p><a name="183"></a></p><ol start='' ><li><p><span>If the car is non-waterproof and dustproof, it is prohibited to use it in harsh environments with moisture, rain, and lots of dust. The working environment temperature should be within the range of -20℃ ~ 55℃.</span><a name="184"></a></p></li><li><p><span>The robot should avoid contact with flammable, explosive, corrosive liquids and gases.</span><a name="185"></a></p></li><li><p><span>It is necessary to understand the vehicle body’s load-carrying, hill-climbing, obstacle-crossing and other performance, and use it within the design parameters. Otherwise, the service life of the machine will be reduced and there will be a risk of overturning.</span><a name="186"></a></p></li><li><p><span>Before starting the car, you should conduct a test run to check the battery power, whether the emergency stop switch, instruments, etc. can work normally, whether the car&#39;s steering is flexible, whether the steering handle is normal, and whether the brakes are normal.</span><a name="187"></a></p></li><li><p><span>The starting speed should not be too fast. Make sure that there are no people or obstacles within the moving range of the car. Gradually adjust the speed from slow to fast to avoid injuries or losses caused by sudden changes in speed.</span><a name="188"></a></p></li><li><p><span>When the car is climbing a slope or moving forward with a load, the speed should be reduced as much as possible to prevent the motor from overloading.</span><a name="189"></a>
+<a name="190"></a></p></li></ol><h1 id='3-tablet-controla-name191a'><span>3. Tablet Control</span><a name="191"></a></h1><p><a name="192"></a></p><h2 id='31-wifi-connectiona-name193a'><span>3.1 Wifi connection</span><a name="193"></a></h2><p><a name="194"></a></p><ul><li><p><span>wifi name: Robot-XXXX</span><a name="195"></a></p></li><li><p><span>Password: xxxx1234 (lowercase letters +1234). Among them: XXXX is the abbreviation of the project customer&#39;s name; (If XXXX is less than four digits, the password must be completed with 8 digits;)</span><a name="196"></a>
+<a name="197"></a></p></li></ul><h2 id='32-run-appa-name198a'><span>3.2 Run APP</span><a name="198"></a></h2><p><a name="199"></a>
+<span>Click on the inspection control terminal APP on the tablet, as shown in the figure below:</span><a name="200"></a>
+<a name="201"></a>
+<strong><span>Note: Do not modify the parameter configuration on the tablet, otherwise it will affect the use of the robot. </span></strong><a name="202"></a>
+<a name="203"></a>
+<span>After the car is powered on, &quot;connect&quot; at the robot control endpoint. After the system program prompts that the connection is successful, it means that the car&#39;s hardware has started normally and the next step can be carried out.</span><a name="204"></a>
+<a name="205"></a>
+<img src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/datasets/moushi/coscene-011.png" referrerpolicy="no-referrer" alt="Tablet control software connection diagram"><a name="206"></a>
+<a name="207"></a>
+<strong><span>Note: If you control the robot through the tablet APP, the remote control will not work at the same time;</span></strong><a name="208"></a>
+<a name="209"></a></p><h2 id='33-self-start-functiona-name210a'><span>3.3 Self-start function</span><a name="210"></a></h2><p><a name="211"></a>
+<span>Auto-start function enable button:</span><a name="212"></a>
+<a name="213"></a>
+<img src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/datasets/moushi/coscene-012.jpeg" referrerpolicy="no-referrer" alt="Tablet control software self-start function enable button"><a name="214"></a>
+<a name="215"></a>
+<span>After the inspection system is deployed, set the auto-start option to on to realize the function of automatically entering the inspection after booting. There is no need to connect to the app and manually enter the inspection interface to turn on the inspection function.</span><a name="216"></a>
+<a name="217"></a>
+<span>When the auto-start option is on, the user can only use the remote control function, and other functions are unavailable. When the auto-start option is turned off, users can perform common operations such as mapping, navigation, switching maps, and starting inspections.</span><a name="218"></a>
+<a name="219"></a></p><h2 id='34-license-update-functiona-name220a'><span>3.4 License update function</span><a name="220"></a></h2><p><a name="221"></a>
+<span>If the robot license expires, the inspection function cannot be controlled and the license needs to be updated. The specific operations are as follows:</span><a name="222"></a>
+<a name="223"></a></p><ol start='' ><li><p><span>Turn on the robot and click Connect in the Android app</span><a name="224"></a>
+<a name="225"></a>
+<img src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/datasets/moushi/coscene-013.jpeg" referrerpolicy="no-referrer" alt="Tablet control software connection button diagram"><a name="226"></a>
+<a name="227"></a></p></li><li><p><span>If the license expires, the following prompt will pop up, click Replace</span><a name="228"></a>
+<a name="229"></a>
+<img src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/datasets/moushi/coscene-014.jpeg" referrerpolicy="no-referrer" alt="License expiry reminder"><a name="230"></a>
+<a name="231"></a></p></li><li><p><span>The blank box below pops up</span><a name="232"></a>
+<a name="233"></a>
+<img src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/datasets/moushi/coscene-015.jpeg" referrerpolicy="no-referrer" alt="White box pops up when license expires"><a name="234"></a>
+<a name="235"></a></p></li><li><p><span>Open the example.lic file of the newly generated license and paste the content into the white box</span><a name="236"></a>
+<a name="237"></a>
+<img src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/datasets/moushi/coscene-016.png" referrerpolicy="no-referrer" alt="Example of filling in the license replacement interface"><a name="238"></a>
+<a name="239"></a></p></li><li><p><span>Finally click OK and then restart the robot.</span><a name="240"></a>
+<a name="241"></a></p></li></ol><h2 id='35-parameter-configurationa-name242a'><span>3.5 Parameter configuration</span><a name="242"></a></h2><p><a name="243"></a>
+<span>If the robot equipment is replaced, the parameters need to be reconfigured. Under normal circumstances, please do not modify them at will. Click on the icon in the upper right corner to see the configured parameters, do not modify them.</span><a name="244"></a>
+<a name="245"></a>
+<img src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/datasets/moushi/coscene-017.png" referrerpolicy="no-referrer" alt="Schematic diagram of the main interface for viewing parameters of tablet control software"><a name="246"></a>
+<a name="247"></a>
+<img src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/datasets/moushi/coscene-018.jpeg" referrerpolicy="no-referrer" alt="View parameter details page of tablet control software"><a name="248"></a>
+<a name="249"></a></p><h2 id='36-status-checka-name250a'><span>3.6 Status Check</span><a name="250"></a></h2><p><a name="251"></a>
+<span>After the robot is powered on, &quot;connect&quot; at the robot control endpoint. After the system program prompts that the connection is successful, it means that the car&#39;s hardware has started normally and the next step can be carried out.</span><a name="252"></a>
+<a name="253"></a>
+<span>To check the specific device status, you can enter status detection from the main menu interface to check the startup status of each hardware driver. If the camera driver status is false, return to exit the Android client on the Android device, wait for a while and click again. &quot;connect&quot;.</span><a name="254"></a>
+<a name="255"></a>
+<img src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/datasets/moushi/coscene-019.jpeg" referrerpolicy="no-referrer"><a name="256"></a>
+<a name="257"></a>
+<img src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/datasets/moushi/coscene-020.jpeg" referrerpolicy="no-referrer"><a name="258"></a>
+<a name="259"></a></p><h2 id='37-start-inspectiona-name260a'><span>3.7 Start inspection</span><a name="260"></a></h2><p><a name="261"></a>
+<span>When the system completes all configurations and the cloud platform is deployed, users can click the inspection function to issue inspection tasks controlled by the APP.</span><a name="262"></a>
+<a name="263"></a>
+<span>For specific inspection operations, see Chapter 8 &quot;Inspection&quot;.</span><a name="264"></a>
+<a name="265"></a></p><h1 id='4-drawinga-name266a'><span>4. Drawing</span><a name="266"></a></h1><p><a name="267"></a>
+<span>Preparation: Select the initial position of the drawing and paste the QR code (QR code with any ID other than 6/18) at the same height as the visible light camera.</span><a name="268"></a>
+<a name="269"></a></p><h2 id='41-drawinga-name270a'><span>4.1 Drawing</span><a name="270"></a></h2><p><a name="271"></a></p><ol start='' ><li><p><span>After connecting the Android tablet, click &quot;Remote Control Function&quot; on the main menu interface. It is recommended that the linear speed is not greater than 0.3m/s and the angular speed is not greater than 0.3m/s.</span><a name="272"></a>
+<a name="273"></a>
+<span>Not greater than 0.3rad/s. By going up, down, left and right, the remote control car goes directly in front of the QR code.</span><a name="274"></a>
+<a name="275"></a>
+<img src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/datasets/moushi/coscene-021.jpeg" referrerpolicy="no-referrer"><a name="276"></a>
+<a name="277"></a></p></li><li><p><span>For Android tablets, return to the main menu -&gt; Cartography navigation function -&gt; Cartography function -&gt; Create a new map and enter remote control</span><a name="278"></a>
+<a name="279"></a>
+<span>Graph mode interface.</span><a name="280"></a>
+<a name="281"></a>
+<img src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/datasets/moushi/coscene-022.jpeg" referrerpolicy="no-referrer"><a name="282"></a>
+<a name="283"></a></p></li><li><p><span>After waiting for the coordinates to be displayed, remote control the car. It is recommended that the linear speed is 0.3m/s and the angular speed is 0.3rad/s. Control the car first.</span><a name="284"></a>
+<a name="285"></a>
+<span>Spin in place. Within the route that needs to be mapped, the car makes a round trip. After covering the map, the car is moved to the front of the QR code again at the end of the cartography, and the distance from the QR code is farther than when the cartography started.</span><a name="286"></a>
+<a name="287"></a></p></li><li><p><span>Click &quot;Drawing&quot; in the lower right corner of the &quot;Remote Control Drawing Mode&quot; interface to complete drawing.</span><a name="288"></a>
+<a name="289"></a>
+<img src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/datasets/moushi/coscene-023.jpeg" referrerpolicy="no-referrer"><a name="290"></a>
+<a name="291"></a>
+<span>After the mapping is completed, enter the map editing interface, enter 0.5 for the trajectory expansion radius, and click &quot;Execute trajectory editing&quot;</span><a name="292"></a>
+<a name="293"></a>
+<img src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/datasets/moushi/coscene-024.png" referrerpolicy="no-referrer"><a name="294"></a>
+<a name="295"></a></p></li></ol><h2 id='42-map-editinga-name296a'><span>4.2 Map editing</span><a name="296"></a></h2><p><a name="297"></a></p><ol start='' ><li><p><span>Click Connect. After successful entry, enter the mapping navigation function =&gt; Map processing interface, click Map Edit.</span><a name="298"></a>
+<a name="299"></a>
+<img src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/datasets/moushi/coscene-025.png" referrerpolicy="no-referrer"><a name="300"></a>
+<a name="301"></a></p></li><li><p><span>Click Manual Edit</span><a name="302"></a>
+<a name="303"></a>
+<img src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/datasets/moushi/coscene-026.jpeg" referrerpolicy="no-referrer"><a name="304"></a>
+<a name="305"></a></p></li><li><p><span>Select the map to edit and click OK</span><a name="306"></a>
+<a name="307"></a>
+<img src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/datasets/moushi/coscene-027.png" referrerpolicy="no-referrer"><a name="308"></a>
+<a name="309"></a></p></li><li><p><span>You can choose to edit the color of the reading questions by clicking on the box on the middle right.</span><a name="310"></a>
+<a name="311"></a>
+<img src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/datasets/moushi/coscene-028.png" referrerpolicy="no-referrer"><a name="312"></a>
+<a name="313"></a></p></li><li><p><span>Select green to represent the new passable area, red to represent the new virtual wall, and the car-inaccessible area.</span><a name="314"></a>
+<a name="315"></a>
+<span>area. (The number 6 below is the thickness of the line)</span><a name="316"></a>
+<a name="317"></a>
+<img src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/datasets/moushi/coscene-029.jpeg" referrerpolicy="no-referrer"><span> </span><img src="https://coscene-artifacts-prod.oss- cn-hangzhou.aliyuncs.com/datasets/moushi/coscene-030.jpeg" referrerpolicy="no-referrer"><a name="318"></a>
+<a name="319"></a></p></li><li><p><span>After editing, select the check mark in the upper right corner</span><a name="320"></a>
+<a name="321"></a>
+<img src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/datasets/moushi/coscene-031.png" referrerpolicy="no-referrer"><a name="322"></a>
+<a name="323"></a></p></li><li><p><span>Finally click &quot;Upload&quot; to complete map editing.</span><a name="324"></a>
+<a name="325"></a>
+<img src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/datasets/moushi/coscene-032.png" referrerpolicy="no-referrer"><a name="326"></a>
+<a name="327"></a></p></li><li><p><span>Edit the generated map</span><a name="328"></a>
+<a name="329"></a>
+<img src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/datasets/moushi/coscene-033.jpeg" referrerpolicy="no-referrer"><a name="330"></a>
+<a name="331"></a></p></li></ol><h2 id='43-map-backup-and-switchinga-name332a'><span>4.3 Map backup and switching</span><a name="332"></a></h2><p><a name="333"></a>
+<span>In the map editing interface, click Backup to open the settings interface and configure parameters. The QR code ID needs to be configured as the ID number of the currently used QR code. Others can be letters, text or symbols. After configuration, click &quot;Backup&quot; to complete the map backup.</span><a name="334"></a>
+<a name="335"></a>
+<strong><span>Note:</span></strong><span> Only the QR code ID can be empty, and nothing else can be empty.</span><a name="336"></a>
+<a name="337"></a>
+<img src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/datasets/moushi/coscene-034.jpeg" referrerpolicy="no-referrer"><a name="338"></a>
+<a name="339"></a>
+<span>Android client main interface - &quot;Cartography navigation function -&quot; Map processing - &quot;Map switching&quot;, you can see the backup map.</span><a name="340"></a>
+<a name="341"></a>
+<img src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/datasets/moushi/coscene-035.png" referrerpolicy="no-referrer"><a name="342"></a>
+<a name="343"></a>
+<span>Select a map, the return interface will pop up, click &quot;Send&quot;, and the map in the robot will switch to the selected map. If you need to delete the backed up map, click &quot;Delete&quot; on the return interface to delete the map.</span><a name="344"></a>
+<a name="345"></a>
+<img src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/datasets/moushi/coscene-036.jpeg" referrerpolicy="no-referrer"><a name="346"></a>
+<a name="347"></a></p><h2 id='44-notesa-name348a'><span>4.4 Notes</span><a name="348"></a></h2><p><a name="349"></a></p><h3 id='441-preparation-before-drawinga-name350a'><span>4.4.1 Preparation before drawing</span><a name="350"></a></h3><p><a name="351"></a></p><ol start='' ><li><p><span>Before mapping, you should determine whether the previous map is still needed and whether it needs to be backed up.</span><a name="352"></a></p></li><li><p><span>Try to scan when there are no people in the area to be scanned, or when there are fewer people.</span><a name="353"></a></p></li><li><p><span>Try to remove frequently moving objects in the area to be scanned.</span><a name="354"></a></p></li><li><p><span>Paste the QR code in places where you pass it frequently.</span><a name="355"></a></p></li><li><p><span>For reflective, light-transmitting, light-absorbing and other objects in the scene, try to place them on the robot when conditions permit.</span><a name="356"></a>
+<a name="357"></a>
+<span>Attach other materials that do not affect the normal scanning of the radar to the radar scanning plane (within 4cm above and below the radar height). (Objects with low reflectivity, such as black light-absorbing walls, furniture, etc. Glass mirrors, stainless steel and other specular reflective objects)</span><a name="358"></a>
+<a name="359"></a></p></li></ol><h3 id='442-principles-of-mapping-operationa-name360a'><span>4.4.2 Principles of mapping operation</span><a name="360"></a></h3><p><a name="361"></a>
+<span>Use rviz during the mapping process, roslaunch rcp_slam carto_rviz.launch, to view the mapping effect. During the mapping process, it is recommended to follow the following principles:</span><a name="362"></a>
+<a name="363"></a></p><ol start='' ><li><p><span>When drawing, try to ask the robot to walk in the middle of the road. On straight roads, try to ask the robot to make fewer turns and walk less close to obstacles.</span><a name="364"></a>
+<a name="365"></a></p></li><li><p><span>When the robot turns or turns around a corner, it does not complete the turn at once. You can turn 30 degrees and walk a little forward, turn another 30 degrees and walk a little forward. (</span><strong><span>Note:</span></strong><span> Especially when the road roughness is large and the angular velocity is small)</span><a name="366"></a>
+<a name="367"></a></p></li><li><p><span>For linear maps, use a 360-degree laser and make one trip (if the mapping effect is not good, you will go back and forth during the drawing); use a non-360-degree laser to make the same journey.</span><a name="368"></a>
+<a name="369"></a></p></li><li><p><span>The operator stands directly behind the robot.</span><a name="370"></a></p></li><li><p><span>When drawing starts, make one turn at the origin (one turn is recommended for both 360-degree and non-360-degree drawings).</span><a name="371"></a></p></li><li><p><span>When passing the QR code for the first time, the robot will be closer to the QR code, and when it encounters the QR code for the second time, it will be farther away from the QR code. When the car passes the QR code, ask the robot to look at the QR code</span><a name="372"></a>
+<a name="373"></a></p></li><li><p><span>Use a lower speed, it is recommended to be less than 0.5m/s. The speed depends on the current platform performance.</span><a name="374"></a></p></li><li><p><span>Take more loops that create closed loops.</span><a name="375"></a></p></li><li><p><span>After the loop returns to the origin, keep the robot moving and take more overlapping paths. Do not stop moving immediately.</span><a name="376"></a></p></li><li><p><span>After the loop returns to the origin, if the map is not closed (view RVIZ during the mapping process, as shown below), continue walking (using a smaller driving speed, such as 0.3m/s) until it is closed.</span><a name="377"></a>
+<a name="378"></a>
+<img src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/datasets/moushi/coscene-037.jpeg" referrerpolicy="no-referrer"><a name="379"></a>
+<a name="380"></a></p></li><li><p><span>For closed areas, avoid taking the same old path and reduce memory consumption.</span><a name="381"></a>
+<a name="382"></a>
+<img src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/datasets/moushi/coscene-038.png" referrerpolicy="no-referrer"><a name="383"></a>
+<a name="384"></a></p></li></ol><h3 id='443-checking-the-mapping-resultsa-name385a'><span>4.4.3 Checking the mapping results</span><a name="385"></a></h3><p><a name="386"></a>
+<span>After the map construction is completed, it is necessary to judge whether the built map meets the requirements. Here&#39;s how to do it:</span><a name="387"></a>
+<a name="388"></a></p><ol start='' ><li><p><span>Restart the machine;</span><a name="389"></a></p></li><li><p><span>Use RVIZ, command: roslaunch rcp_slam nav_rviz.launch, to view the map;</span><a name="390"></a></p></li><li><p><span>There are the following inspection principles:</span><a name="391"></a></p><ol start='' ><li><p><span>Are the edges of obstacles in the map clear? </span><img src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/datasets/moushi/coscene-039.png" referrerpolicy="no-referrer"><a name="392"></a></p></li><li><p><span>Are there areas in the map that are inconsistent with the actual environment (whether there are closed loops).</span><a name="393"></a></p></li><li><p><span>Is there a gray area within the robot’s action area on the map?</span><a name="394"></a></p></li><li><p><span>Whether there are obstacles in the map that will not exist during subsequent positioning (people walking when scanning the map, moving objects).</span><a name="395"></a></p></li><li><p><span>Whether it can be ensured that the robot has a 360-degree field of view at any position within the activity area.</span><a name="396"></a>
+<a name="397"></a></p></li></ol></li></ol><h1 id='5-navigationa-name398a'><span>5. Navigation</span><a name="398"></a></h1><p><a name="399"></a>
+<span>In the main interface of the robot control terminal, go to Cartography Navigation Mode -&gt; Navigation/Visual Tracking -&gt; Navigation Function, and wait for the map to be loaded. After loading the map, the map is gray until the relocation is successful. Through the control function of this interface, you can control the robot to the initial drawing position, rotate the robot, and quickly reposition it.</span><a name="400"></a>
+<span>Success, after the relocation is successful, there will no longer be a gray layer on the map.</span><a name="401"></a>
+<a name="402"></a>
+<span>You can see that the location on the map where the robot walked while drawing is white.</span><a name="403"></a>
+<a name="404"></a></p><h2 id='51-navigate-to-a-specified-pointa-name405a'><span>5.1 Navigate to a specified point</span><a name="405"></a></h2><p><a name="406"></a>
+<span>At any point on the road that the robot has walked (white area), long press and select &quot;Start&quot;, and the robot can navigate to this point autonomously.</span><a name="407"></a>
+<a name="408"></a>
+<span>If the robot does not move after clicking on the target location, it means that the location cannot be reached due to physical restrictions. The specific reasons are:</span><a name="409"></a>
+<a name="410"></a></p><ol start='' ><li><p><span>The target space is too small, causing the robot to be unable to approach the location;</span><a name="411"></a></p></li><li><p><span>The target point is very close to the obstacle;</span><a name="412"></a></p></li><li><p><span>Impossible to walk due to roadblocks;</span><a name="413"></a></p></li><li><p><span>Ultrasonic obstacle stop: Ultrasonic waves detect obstacles at close range;</span><a name="414"></a></p></li><li><p><span>The robot is surrounded by obstacles;</span><a name="415"></a>
+<a name="416"></a>
+<img src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/datasets/moushi/coscene-040.jpeg" referrerpolicy="no-referrer"><a name="417"></a>
+<a name="418"></a></p></li></ol><h2 id='52-navigate-to-specified-coordinatesa-name419a'><span>5.2 Navigate to specified coordinates</span><a name="419"></a></h2><p><a name="420"></a>
+<span>On the main interface of the robot control terminal, go to Cartography Navigation Mode -&gt; Navigation/Visual Tracking -&gt; Navigation Function. After the relocation is successful, click &quot;Set Target&quot;. After setting the coordinates of the target point, click &quot;Confirm&quot; and the robot will automatically navigate to Target.</span><a name="421"></a>
+<a name="422"></a>
+<img src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/datasets/moushi/coscene-041.jpeg" referrerpolicy="no-referrer"><a name="423"></a>
+<a name="424"></a></p><h2 id='53-cancel-navigationa-name425a'><span>5.3 Cancel navigation</span><a name="425"></a></h2><p><a name="426"></a>
+<span>During the navigation process, click &quot;Cancel Navigation&quot; on the map information interface, and the robot will stop moving immediately.</span><a name="427"></a>
+<a name="428"></a>
+<img src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/datasets/moushi/coscene-042.jpeg" referrerpolicy="no-referrer"><a name="429"></a>
+<a name="430"></a></p><h1 id='6-cloud-platform-deploymenta-name431a'><span>6. Cloud platform deployment</span><a name="431"></a></h1><p><a name="432"></a></p><h2 id='61-preparationa-name433a'><span>6.1 Preparation</span><a name="433"></a></h2><p><a name="434"></a></p><ol start='' ><li><p><span>Apply for a domain name.</span><a name="435"></a></p></li><li><p><span>Apply for https protocol usage certificate.</span><a name="436"></a></p></li><li><p><span>Either public cloud or private cloud can be used. Under 4G/5G communication mode, the fixed IP address of the server needs to be accessible. The configuration is as follows:</span><a name="437"></a>
+<a name="438"></a></p></li></ol><ul><li><p><span>Server operating system Ubuntu18.04;</span><a name="439"></a></p></li><li><p><span>Recommended configuration requirements: 8-core CPU, 16G memory, 1T data disk storage;</span><a name="440"></a></p></li><li><p><span>According to the simultaneous operation of three robots, the recommended bandwidth is ≥50Mbps;</span><a name="441"></a>
+<a name="442"></a></p></li></ul><h2 id='62-tool-installationa-name443a'><span>6.2 Tool installation</span><a name="443"></a></h2><p><a name="444"></a></p><h3 id='621-enable-root-ssh-permissionsa-name445a'><span>6.2.1 Enable root ssh permissions</span><a name="445"></a></h3><p><a name="446"></a></p><ul><li><p><span>By default, the ubuntu user is used to log in. The password is the password set during server configuration. It can be modified in the reset password.</span><a name="447"></a></p></li><li><p><span>Modify root password: sudo passwd root</span><a name="448"></a></p></li><li><p><span>Modify the configuration file: sudo vi /etc/ssh/sshd_config</span><a name="449"></a>
+<a name="450"></a>
+<span>Find the following relevant configuration:</span><a name="451"></a>
+<a name="452"></a></p></li><li><p><span>#Authentication:LoginGraceTime 120</span><a name="453"></a></p></li><li><p><span>PermitRootLogin prohibit-password</span><a name="454"></a>
+<span>-StrictModes yes</span><a name="455"></a>
+<a name="456"></a>
+<span>change to:</span><a name="457"></a>
+<a name="458"></a></p></li><li><p><span>#Authentication:LoginGraceTime 120</span><a name="459"></a></p></li><li><p><span>#PermitRootLogin prohibit-password</span><a name="460"></a></p></li><li><p><span>PermitRootLogin yes</span><a name="461"></a>
+<span>-StrictModes yes</span><a name="462"></a>
+<a name="463"></a></p></li><li><p><span>Restart ssh: sudo service ssh restart</span><a name="464"></a>
+<a name="465"></a></p></li></ul><h3 id='622-jdk-installationa-name466a'><span>6.2.2 JDK installation</span><a name="466"></a></h3><p><a name="467"></a></p><ol start='' ><li><p><span>Place jdk-8u161-linux-x64.tar.gz in the /root/java directory and decompress it using tar -xpf jdk-8u161-linux-x64.tar.gz</span><a name="468"></a></p></li><li><p><span>Configure environment changes for all users:</span><a name="469"></a>
+<a name="470"></a><a name="471"></a><a name="472"></a><a name="473"></a></p></li></ol><pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false" lang="bash"><div class="CodeMirror cm-s-inner cm-s-null-scroll CodeMirror-wrap" lang="bash"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 11px; left: 4px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: currentcolor;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: currentcolor;"><div class="CodeMirror-measure"></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-builtin">sudo</span> <span class="cm-builtin">vi</span> /etc/profile</span></pre></div></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom-width: 0px; border-bottom-style: solid; border-bottom-color: transparent; top: 26px;"></div><div class="CodeMirror-gutters" style="display: none; height: 26px;"></div></div></div></pre><p><a name="474"></a>
+<span>Add the following content at the end of the file:</span><a name="475"></a>
+<a name="476"></a><a name="477"></a><a name="478"></a><a name="479"></a><a name="480"></a><a name="481"></a><a name="482"></a><a name="483"></a><a name="484"></a><a name="485"></a></p><pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false" lang="bash"><div class="CodeMirror cm-s-inner cm-s-null-scroll CodeMirror-wrap" lang="bash"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 11px; left: 4px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: currentcolor;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: currentcolor;"><div class="CodeMirror-measure"><span><span>​</span>x</span></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation" style=""><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">#setJavaenvironment</span></span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="" cm-zwsp="">
+</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">export</span> <span class="cm-def">JAVA_HOME</span><span class="cm-operator">=</span>/root/java/jdk1.8.0_161</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="" cm-zwsp="">
+</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">export</span> <span class="cm-def">JRE_HOME</span><span class="cm-operator">=</span><span class="cm-def">$JAVA_HOME</span>/jre</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="" cm-zwsp="">
+</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">export</span> <span class="cm-def">CLASSPATH</span><span class="cm-operator">=</span>.:<span class="cm-def">$JAVA</span>\_HOME/lib:<span class="cm-def">$JRE_HOME</span>/lib:<span class="cm-def">$CLASSPATH</span> <span class="cm-keyword">export</span> <span class="cm-def">PATH</span><span class="cm-operator">=</span><span class="cm-def">$JAVA_HOME</span>/bin:<span class="cm-def">$JRE</span>\_HOME/bin:<span class="cm-def">$PATH</span></span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom-width: 0px; border-bottom-style: solid; border-bottom-color: transparent; top: 182px;"></div><div class="CodeMirror-gutters" style="display: none; height: 182px;"></div></div></div></pre><p><a name="486"></a></p><ol start='3' ><li><p><span>source /etc/profile</span><a name="487"></a></p></li><li><p><span>java -version to check whether the installation is successful</span><a name="488"></a>
+<a name="489"></a></p></li></ol><h3 id='623-tomcat-installationa-name490a'><span>6.2.3 TOMCAT installation</span><a name="490"></a></h3><p><a name="491"></a></p><ol start='' ><li><p><span>The prerequisite is to install jdk first.</span><a name="492"></a></p></li><li><p><span>Place the tomcat tar package in /usr/local:mv and decompress it: tar -xpf apache-tomcat-8.5.4.tar.gz.</span><a name="493"></a>
+<a name="494"></a></p></li><li><p><span>The home directory is /home/apache-tomcat-8.5.4/ (in some systems, the home directory is /usr/local/apache-tomcat-8.5.4/</span><a name="495"></a>
+<a name="496"></a></p></li><li><p><span>https protocol modified with certificate</span><a name="497"></a>
+<a name="498"></a>
+<span> Modify the file /home/apache-tomcat-8.5.4/conf/server.xml, and the certificate file xxx.pfx should be stored in the conf directory:</span><a name="499"></a>
+<a name="500"></a>
+<img src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/datasets/moushi/coscene-046.jpeg" referrerpolicy="no-referrer"><a name="501"></a>
+<a name="502"></a></p></li></ol><h3 id='624-mysql-database-online-installationa-name503a'><span>6.2.4 MySQL database online installation</span><a name="503"></a></h3><p><a name="504"></a></p><ul><li><p><span>Install mysql: apt-get install mysql-server mysql-client</span><a name="505"></a></p></li><li><p><span>mysql remote authorization login: GRANTALLPRIVILEGES ON </span><span>*</span><span>.</span><span>*</span><span>TO &#39;root&#39;@&#39;%&#39; IDENTIFIED BY&#39;root&#39; WITH GRANTOPTION;</span><a name="506"></a></p></li><li><p><span>vi /etc/mysql/mysql.conf.d/mysqld.cnf, comment out bind-address= 127.0.0.1</span><a name="507"></a></p></li><li><p><span>change Password:</span><a name="508"></a></p></li><li><p><span>update user set authentication_string=password(&quot;root&quot;) where user=&#39;root&#39;;</span><a name="509"></a></p></li><li><p><span>update user set plugin=&quot;mysql_native_password&quot;;</span><a name="510"></a></p></li><li><p><span>flush privileges;</span><a name="511"></a></p></li><li><p><span>The password modification result is shown in the figure below:</span><a name="512"></a>
+<a name="513"></a>
+<img src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/datasets/moushi/coscene-047.jpeg" referrerpolicy="no-referrer"><a name="514"></a>
+<a name="515"></a></p></li><li><p><span>Restart mysql: service mysql restart</span><a name="516"></a>
+<a name="517"></a>
+<span>At this time, mysql is accessed externally. If the access is normal, the steps to install the firewall are ignored. If normal access is not possible, you need to install a firewall: apt install firewalld, then close the firewall systemctl stop firewalld.service</span><a name="518"></a>
+<a name="519"></a></p></li></ul><h3 id='625-redis-installationa-name520a'><span>6.2.5 Redis installation</span><a name="520"></a></h3><p><a name="521"></a></p><ul><li><p><span>sudo add-apt-repository universe</span><a name="522"></a></p></li><li><p><span>sudo apt-get update</span><a name="523"></a></p></li><li><p><span>sudo apt-get install redis-server</span><a name="524"></a>
+<a name="525"></a>
+<span>Configuration file path: vim /etc/redis/redis.conf</span><a name="526"></a>
+<a name="527"></a>
+<span>Find the place containing the word requirepass, add a line, enter requirepass 123456 to restart redis: service redis-server restart</span><a name="528"></a>
+<a name="529"></a></p></li></ul><h3 id='626-nginx-installationa-name530a'><span>6.2.6 Nginx installation</span><a name="530"></a></h3><p><a name="531"></a></p><ul><li><p><span>New path: /var/www/html/Tools/</span><a name="532"></a></p></li><li><p><span>apt-get install nginx</span><a name="533"></a></p></li><li><p><span>Modify the configuration file, path: /etc/nginx/nginx.conf, in include /etc/nAdd the following configuration under ginx/sites-enabled/</span><span>*</span><span>;.</span><a name="534"></a>
+<a name="535"></a><a name="536"></a><a name="537"></a><a name="538"></a><a name="539"></a><a name="540"></a><a name="541"></a><a name="542"></a><a name="543"></a><a name="544"></a><a name="545"></a><a name="546"></a><a name="547"></a><a name="548"></a><a name="549"></a><a name="550"></a><a name="551"></a><a name="552"></a><a name="553"></a></p></li></ul><pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false" lang="" style="break-inside: unset;"><div class="CodeMirror cm-s-inner cm-s-null-scroll CodeMirror-wrap" lang=""><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 11px; left: 4px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: currentcolor;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: currentcolor;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation" style=""><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">server{</span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;  listen 80;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;  server_name localhost;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;  location/{</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; root /var/www/html;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; index index.html;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; allow all;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; autoindex on;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;  }</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="" cm-zwsp="">
+</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;  location/tools{</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; alias/Tools;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; allow all;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; autoindex on;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;  }</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">}</span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom-width: 0px; border-bottom-style: solid; border-bottom-color: transparent; top: 416px;"></div><div class="CodeMirror-gutters" style="display: none; height: 416px;"></div></div></div></pre><p><a name="554"></a>
+<span>Then restart service nginx restart</span><a name="555"></a>
+<a name="556"></a></p><h2 id='63-program-deploymenta-name557a'><span>6.3 Program deployment</span><a name="557"></a></h2><p><a name="558"></a></p><h3 id='631-front-end-web-program-deploymenta-name559a'><span>6.3.1 Front-end web program deployment</span><a name="559"></a></h3><p><a name="560"></a>
+<span>Unzip the front-end web program and place it in the /home/apache-tomcat-8.5.4/webapps/ROOT/ directory:</span><a name="561"></a>
+<a name="562"></a>
+<img src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/datasets/moushi/coscene-048.jpeg" referrerpolicy="no-referrer"><a name="563"></a>
+<a name="564"></a>
+<span>As needed, modify the address (domain name applied by the customer) and port in config.js to connect to the server:</span><a name="565"></a>
+<a name="566"></a><a name="567"></a><a name="568"></a><a name="569"></a><a name="570"></a><a name="571"></a><a name="572"></a></p><pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false" lang="javascript"><div class="CodeMirror cm-s-inner cm-s-null-scroll CodeMirror-wrap" lang="javascript"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 11px; left: 4px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: currentcolor;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: currentcolor;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">//For example, public network address:</span></span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">let</span> <span class="cm-def">cbaseUrl</span> <span class="cm-operator">=</span> <span class="cm-string">'https://**robot.patrol.com:8080**'</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">let</span> <span class="cm-def">nginxUrl</span> <span class="cm-operator">=</span> <span class="cm-string">'https://**robot.patrol.com:80'</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">let</span> <span class="cm-def">wssUrl</span> <span class="cm-operator">=</span> <span class="cm-string">'wss://**robot.patrol.com:8080**'</span></span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom-width: 0px; border-bottom-style: solid; border-bottom-color: transparent; top: 104px;"></div><div class="CodeMirror-gutters" style="display: none; height: 104px;"></div></div></div></pre><p><a name="573"></a></p><h3 id='632-backend-jar-package-deploymenta-name574a'><span>6.3.2 Backend jar package deployment</span><a name="574"></a></h3><p><a name="575"></a>
+<span>The backend program is deployed in the /home/eladmin/ directory:</span><a name="576"></a>
+<a name="577"></a></p><ul><li><p><span>eladmin-system-1.0.jar: program jar package</span><a name="578"></a></p></li><li><p><span>start_eladmin.sh: launcher script</span><a name="579"></a></p></li><li><p><span>stop_eladmin.sh: shutdown program script</span><a name="580"></a>
+<a name="581"></a>
+<img src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/datasets/moushi/coscene-049.png" referrerpolicy="no-referrer"><a name="582"></a>
+<a name="583"></a>
+<span>Confirm the configuration file application-htian.yml and modify it as needed. (Use the decompression tool to open eladmin-system-1.0.jar, copy the application-htian.yml file to the local disk and edit it. After modification, use the yml file to overwrite the corresponding file in the jar, and copy the jar package to</span><a name="584"></a>
+<span>/home/eladmin/ directory):</span><a name="585"></a>
+<a name="586"></a>
+<span>Configuration file application-htian.yml:</span><a name="587"></a>
+<a name="588"></a>
+<img src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/datasets/moushi/coscene-050.jpeg" referrerpolicy="no-referrer"><a name="589"></a>
+<a name="590"></a>
+<span>Edit application-htian.yml: Database settings:</span><a name="591"></a>
+<a name="592"></a>
+<img src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/datasets/moushi/coscene-051.jpeg" referrerpolicy="no-referrer"><a name="593"></a>
+<a name="594"></a></p></li><li><p><span>File storage path </span><strong><span>file</span></strong><span>:</span><a name="595"></a>
+<a name="596"></a>
+<strong><span>mac</span></strong><span>:</span><a name="597"></a>
+<a name="598"></a>
+<strong><span>path</span></strong><span>: ~/file/</span><a name="599"></a>
+<a name="600"></a>
+<strong><span>avatar</span></strong><span>: ~/avatar/</span><a name="601"></a>
+<a name="602"></a>
+<strong><span>linux</span></strong><span>:</span><a name="603"></a>
+<a name="604"></a>
+<strong><span>path</span></strong><span>: /home/eladmin/file/ </span><strong><span>avatar</span></strong><span>: /home/eladmin/avatar/</span><a name="605"></a>
+<a name="606"></a>
+<span>#Streaming media url</span><a name="607"></a>
+<a name="608"></a>
+<strong><span>kmsSocketUrl</span></strong><span>: ws://192.168.0.6:8888/kurento</span><a name="609"></a>
+<a name="610"></a></p></li></ul><h2 id='64-system-parameter-configurationa-name611a'><span>6.4. System parameter configuration</span><a name="611"></a></h2><p><a name="612"></a></p><h3 id='641-domain-name-address-mappinga-name613a'><span>6.4.1 Domain name address mapping</span><a name="613"></a></h3><p><a name="614"></a>
+<span>If the server program is deployed on the LAN, you need to map the domain name robot.patrol.com to the server address (please ignore this step if deployed on the public network).</span><a name="615"></a>
+<a name="616"></a>
+<span>1 Modify /etc/hosts of the Linux server address, xxx.xxx.xxx.xxx is the actual IP address of the server</span><a name="617"></a>
+<a name="618"></a>
+<span>xxx.xxx.xxx.xxx robot.patrol.com</span><a name="619"></a>
+<a name="620"></a>
+<span>2 Modify the hosts under Windows where the browser is located</span><a name="621"></a>
+<a name="622"></a>
+<span>xxx.xxx.xxx.xxx robot.patrol.com</span><a name="623"></a>
+<a name="624"></a></p><h3 id='642-etcprofile-confirmationa-name625a'><span>6.4.2 /etc/profile confirmation</span><a name="625"></a></h3><p><a name="626"></a>
+<span>Confirm whether the configuration of tomcat home directory and Java directory is correct, modify it as needed, and execute source /etc/profile after modification to make the modification take effect:</span><a name="627"></a>
+<a name="628"></a><a name="629"></a><a name="630"></a><a name="631"></a><a name="632"></a><a name="633"></a><a name="634"></a><a name="635"></a><a name="636"></a></p><pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false" lang="bash"><div class="CodeMirror cm-s-inner cm-s-null-scroll CodeMirror-wrap" lang="bash"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 11px; left: 4px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: currentcolor;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: currentcolor;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation" style=""><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">export</span> <span class="cm-def">JAVA_HOME</span><span class="cm-operator">=</span>/root/java/jdk1.8.0_161</span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">export</span> <span class="cm-def">JRE_HOME</span><span class="cm-operator">=</span><span class="cm-def">$JAVA_HOME</span>/jre</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">export</span> <span class="cm-def">CLASSPATH</span><span class="cm-operator">=</span>.:<span class="cm-def">$JAVA</span>\_HOME/lib:<span class="cm-def">$JRE_HOME</span>/lib:<span class="cm-def">$CLASSPATH</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">export</span> <span class="cm-def">PATH</span><span class="cm-operator">=</span><span class="cm-def">$JAVA_HOME</span>/bin:<span class="cm-def">$JRE</span>\_HOME/bin:<span class="cm-def">$PATH</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">export</span> <span class="cm-def">CATALINA_HOME</span><span class="cm-operator">=</span>/usr/local/apache-tomcat-8.5.4</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">export</span> <span class="cm-def">CATALINA_BASE</span><span class="cm-operator">=</span>/usr/local/apache-tomcat-8.5.4</span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom-width: 0px; border-bottom-style: solid; border-bottom-color: transparent; top: 156px;"></div><div class="CodeMirror-gutters" style="display: none; height: 156px;"></div></div></div></pre><p><a name="637"></a></p><h2 id='65-start-the-management-cloud-platform-system-programa-name638a'><span>6.5 Start the management cloud platform system program</span><a name="638"></a></h2><p><a name="639"></a></p><h3 id='651-background-java-program-startupa-name640a'><span>6.5.1. Background java program startup</span><a name="640"></a></h3><p><a name="641"></a></p><ol start='' ><li><p><span>Enter the /home/eladmin/ directory and enter ./start_eladmin.sh to start the background program</span><a name="642"></a></p></li><li><p><span>Enter ./stop_eladmin.sh to close the background program</span><a name="643"></a>
+<a name="644"></a></p></li></ol><h3 id='652-front-end-tomcat-startupa-name645a'><span>6.5.2 Front-end tomcat startup</span><a name="645"></a></h3><p><a name="646"></a></p><ol start='' ><li><p><span>Start:/home/apache-tomcat-8.5.4/bin# ./startup.sh</span><a name="647"></a></p></li><li><p><span>Shutdown:/home/apache-tomcat-8.5.4/bin# ./shutdown.sh</span><a name="648"></a>
+<a name="649"></a></p></li></ol><h3 id='653-confirm-whether-the-background-program-is-started-successfullya-name650a'><span>6.5.3 Confirm whether the background program is started successfully</span><a name="650"></a></h3><p><a name="651"></a>
+<span>Use the command line ps -ef | grep java to view</span><a name="652"></a>
+<a name="653"></a>
+<img src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/datasets/moushi/coscene-052.jpeg" referrerpolicy="no-referrer"><a name="654"></a>
+<a name="655"></a></p><h3 id='654-access-system-urla-name656a'><span>6.5.4 Access system url</span><a name="656"></a></h3><p><a name="657"></a>
+<span>Visit </span><a href='https://robot.patrol.com:8013' target='_blank' class='url'>https://robot.patrol.com:8013</a><span> via chrome browser</span><a name="658"></a>
+<a name="659"></a></p><h1 id='7-cloud-platform-usagea-name660a'><span>7. Cloud platform usage</span><a name="660"></a></h1><p><a name="661"></a></p><h2 id='71-system-logina-name662a'><span>7.1 System login</span><a name="662"></a></h2><p><a name="663"></a>
+<span>This system has three user roles, namely ordinary user, administrator and super administrator. After successful login, different users will have different functional permissions.</span><a name="664"></a>
+<a name="665"></a>
+<span>| User Role | User Description |</span><a name="666"></a>
+<span>| ---------- | ------------------------------------------ -------------------------------------------------- ------------------------------------------------ |</span><a name="667"></a>
+<span>| Ordinary users | Can use the functions of task management, real-time monitoring, inspection reports, equipment alarm query, inspection result analysis, system alarm query and other modules, as well as modify personal user information in the user setting module |</span><a name="668"></a>
+<span>| Administrator | On the basis of ordinary users, you can maintain the user information of ordinary users and administrators in the user setting module |</span><a name="669"></a>
+<span>| Super administrator | On the basis of ordinary users, can perform maintenance of various modules and functions of the system settings |</span><a name="670"></a>
+<a name="671"></a>
+<span>The login page is a username and password login, and a verification code.</span><a name="672"></a>
+<a name="673"></a>
+<img src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/datasets/moushi/coscene-053.jpeg" referrerpolicy="no-referrer"><a name="674"></a>
+<a name="675"></a></p><h2 id='711-system-homepagea-name676a'><span>7.1.1 System homepage</span><a name="676"></a></h2><p><a name="677"></a>
+<span>The main interface content of the system is: menu, selectable controlled robot, power, robot charging control, visible light/heat</span><a name="678"></a>
+<a name="679"></a>
+<span>Infrared video, PTZ/car body control, electronic map, real-time messages, mission status, inspection chart information (last seven days), real-time gas concentration information, inspection report (last three items).</span><a name="680"></a>
+<a name="681"></a></p><ol start='' ><li><p><span>Menu: Different menus are displayed according to roles. Menu permissions can be assigned to the corresponding roles in System Management-Role Management, and menus can be added, modified, and deleted in System Management-Menu Management;</span><a name="682"></a>
+<a name="683"></a></p></li><li><p><span>Optional controlled robot;</span><a name="684"></a>
+<a name="685"></a></p></li><li><p><span>Robot charging/stop charging control, and battery information is displayed during charging;</span><a name="686"></a>
+<a name="687"></a></p></li><li><p><span>Real-time video, real-time control view 1.3 real-time monitoring;](file:///C:/Users/yanlw/Downloads/æ°çwebç®¡çå¹³å°ç¨æ ·æå.docx)</span><a name="688"></a>
+<a name="689"></a></p></li><li><p><span>Electronic map (2D):</span><a name="690"></a>
+<a name="691"></a></p></li></ol><ul><li><p><span>Display the current position of the robot, real-time movement trajectory, and map name</span><a name="692"></a></p></li><li><p><span>Inspect current inspection points, display historical data, display alarm information, hide/show idle inspection points;</span><a name="693"></a>
+<a name="694"></a></p></li></ul><ol start='6' ><li><p><span>Real-time news:</span><a name="695"></a>
+<a name="696"></a></p></li></ol><ul><li><p><span>Inspection messages: data messages for each inspection point in the task: such as instrument values, temperature values, and equipment status.</span><a name="697"></a></p></li><li><p><span>Alarm messages: car body alarm messages, program alarm messages, environment alarm messages</span><a name="698"></a></p></li><li><p><span>System messages: Classify and summarize various messages generated during the inspection process.</span><a name="699"></a>
+<a name="700"></a></p></li></ul><ol start='7' ><li><p><span>Task status: current task name, task status.</span><a name="701"></a>
+<a name="702"></a></p></li><li><p><span>Robot status: current robot name, vehicle body status (idle, performing tasks, returning to charge, charging, not online), time, relocation status (not positioned, positioned successfully).</span><a name="703"></a>
+<a name="704"></a>
+<img src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/datasets/moushi/coscene-054.jpeg" referrerpolicy="no-referrer"><a name="705"></a>
+<a name="706"></a></p></li></ol><h3 id='712-personal-centera-name707a'><span>7.1.2 Personal Center</span><a name="707"></a></h3><p><a name="708"></a>
+<span>Click the user&#39;s avatar to display the drop-down box, where you can choose to enter the personal center or log out.</span><a name="709"></a>
+<a name="710"></a>
+<img src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/datasets/moushi/coscene-055.jpeg" referrerpolicy="no-referrer"><a name="711"></a>
+<a name="712"></a>
+<span>In the personal center, you can change your password and basic personal information, and you can view the current account operation log.</span><a name="713"></a>
+<a name="714"></a></p><h2 id='72-real-time-monitoringa-name715a'><span>7.2 Real-time monitoring</span><a name="715"></a></h2><p><a name="716"></a>
+<span>Real-time monitoring is used for visible light, thermal infrared video live broadcast and remote control operation of the currently operating robot, including visible light and pan/tilt operations (rotation control, aperture, focus, zoom operation, wiper control, fill light control, etc.), robot body Operation (movement control, robot speed setting, etc.).</span><a name="717"></a>
+<a name="718"></a></p><ol start='' ><li><p><span>Video live broadcast: It has a visible light video live broadcast window, a thermal infrared video live broadcast window and related live broadcast switch buttons.</span><a name="719"></a>
+<a name="720"></a></p></li><li><p><span>PTZ control:</span><a name="721"></a>
+<a name="722"></a></p></li></ol><ul><li><p><span>Click the direction arrow to raise, lower, turn left, turn right and other operations of the gimbal;</span><a name="723"></a></p></li><li><p><span>Click the &quot;-&quot; and &quot;+&quot; buttons on both sides of &quot;Focus&quot; to control visible light focus adjustment;</span><a name="724"></a></p></li><li><p><span>Click the &quot;-&quot; and &quot;+&quot; buttons on both sides of &quot;Aperture&quot; to control visible light aperture adjustment;</span><a name="725"></a></p></li><li><p><span>Click the &quot;-&quot; and &quot;+&quot; buttons on both sides of &quot;Zoom&quot; to control the visible light zoom adjustment;</span><a name="726"></a></p></li><li><p><span>Click the &quot;Brush&quot; icon to turn on the visible light and thermal infrared wipers. Click the icon again to stop the wipers;</span><a name="727"></a></p></li><li><p><span>Click the &quot;sun&quot; icon to turn on the fill light of visible light and thermal infrared equipment. Click the icon again to turn off the fill light.</span><a name="728"></a>
+<a name="729"></a></p></li></ul><ol start='3' ><li><p><span>Car body control:</span><a name="730"></a>
+<a name="731"></a></p></li></ol><ul><li><p><span>The main function of the vehicle body control is to control the inspection robot to move and walk. By clicking on different areas in the control, the inspection robot can be controlled to move forward, backward, turn left, and turn right;</span><a name="732"></a></p></li><li><p><span>Click the direction arrow or use the up, down, left and right keys on the keyboard to move the robot forward, backward, turn left, and turn right;</span><a name="733"></a></p></li><li><p><span>Click the &quot;-&quot; and &quot;+&quot; buttons on both sides of &quot;Height&quot; to select the lifting height of the robot&#39;s neck, and click the bottom button to control the robot&#39;s neck to adjust to the selected height;</span><a name="734"></a></p></li><li><p><span>Supports robot traveling speed setting. Before moving, set the speed value. The system defaults to the robot’s maximum traveling speed of 1M/S. After sending the movement command, you can press the set speed value.Speed moves.</span><a name="735"></a>
+<a name="736"></a></p></li></ul><h2 id='73-data-querya-name737a'><span>7.3 Data query</span><a name="737"></a></h2><p><a name="738"></a></p><h3 id='731-inspection-reporta-name739a'><span>7.3.1. Inspection report</span><a name="739"></a></h3><p><a name="740"></a>
+<span>Inspection report query is used to summarize the inspection data reports automatically generated after the inspection task is completed, and supports report query, preview, printing and export functions.</span><a name="741"></a>
+<a name="742"></a>
+<img src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/datasets/moushi/coscene-056.jpeg" referrerpolicy="no-referrer"><a name="743"></a>
+<a name="744"></a>
+<span>Inspection tasks can be queried by date. Select an inspection task to view the inspection report on the right. Zooming and printing are supported. Click the export button to export the inspection report into word and save it locally.</span><a name="745"></a>
+<a name="746"></a>
+<img src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/datasets/moushi/coscene-057.jpeg" referrerpolicy="no-referrer"><a name="747"></a>
+<a name="748"></a></p><h3 id='732-inspection-pointsa-name749a'><span>7.3.2. Inspection points</span><a name="749"></a></h3><p><a name="750"></a>
+<span>Inspection point query is used to display the inspection data information of each inspection point during the inspection task, including visible light images,</span><a name="751"></a>
+<a name="752"></a>
+<span>Thermal infrared image data analysis, instrument image data analysis, video, audio, historical data display, historical curve display, report output, etc.</span><a name="753"></a>
+<a name="754"></a>
+<img src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/datasets/moushi/coscene-058.jpeg" referrerpolicy="no-referrer"><a name="755"></a>
+<a name="756"></a>
+<span>You can query a certain type of equipment inspected within a specified date range by equipment type and date. The input box below can further filter the query results based on the device name. Click on a device to view the inspection information of the device at that time, including visible light pictures, thermal infrared pictures, video and audio information (reports</span><a name="757"></a>
+<span>Video and audio information will only be available during police calls). The right side displays the device&#39;s history, and the bottom displays the device&#39;s historical curve.</span><a name="758"></a>
+<a name="759"></a></p><h3 id='733-environmental-dataa-name760a'><span>7.3.3 Environmental data</span><a name="760"></a></h3><p><a name="761"></a>
+<span>Environmental data query is used to display the temperature, humidity, smoke, PM2.5 and other data curves collected by the corresponding sensors during the inspection task. Click on the temperature, temperature, smoke, PM2.5 at the top to generate the corresponding curves. The temperature curve is displayed by default.</span><a name="762"></a>
+<a name="763"></a>
+<img src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/datasets/moushi/coscene-059.jpeg" referrerpolicy="no-referrer"><a name="764"></a>
+<a name="765"></a></p><h2 id='74-inspection-tasksa-name766a'><span>7.4 Inspection tasks</span><a name="766"></a></h2><p><a name="767"></a></p><h3 id='741-task-managementa-name768a'><span>7.4.1 Task Management</span><a name="768"></a></h3><p><a name="769"></a>
+<span>The task management function is mainly used for daily management operations of inspection tasks in the intelligent inspection robot monitoring platform, including task creation, editing, copying, deletion, query, task execution, task suspension, task termination, etc.</span><a name="770"></a>
+<a name="771"></a>
+<span>Main task functions include the following:</span><a name="772"></a>
+<a name="773"></a></p><ul><li><p><span>Click the query button to query based on a combination of conditions such as date, task name, task type, task status, etc.;</span><a name="774"></a></p></li><li><p><span>Click the New button to open the new task window;</span><a name="775"></a></p></li><li><p><span>Click the copy button to copy the selected task, and re-enter the task name to create a new task; click the edit button to edit the selected task and open the edit task window;</span><a name="776"></a></p></li><li><p><span>Click the Execute button to send the specified task to the server for execution (only tasks for immediate execution need to be sent manually, scheduled and periodic tasks are sent regularly by the server based on time);</span><a name="777"></a>
+<a name="778"></a>
+<span>Subtask functions include pause or resume, terminate, and delete.</span><a name="779"></a>
+<a name="780"></a>
+<img src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/datasets/moushi/coscene-060.jpeg" referrerpolicy="no-referrer"><a name="781"></a>
+<a name="782"></a>
+<span>Click the pause or resume button to pause or resume the task being executed or suspended; click Terminate Task to terminate the task being executed in advance; click Delete Task to delete the task that has not been executed.</span><a name="783"></a>
+<a name="784"></a>
+<span>The operation logic is as follows:</span><a name="785"></a>
+<a name="786"></a>
+<img src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/datasets/moushi/coscene-061.jpeg" referrerpolicy="no-referrer"><a name="787"></a>
+<a name="788"></a>
+<span>In the new task window, enter the basic information of the task, check the devices that need to be inspected, and finally specify the execution method of the task. Click the Save button to create a task.</span><a name="789"></a>
+<a name="790"></a>
+<img src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/datasets/moushi/coscene-062.jpeg" referrerpolicy="no-referrer"><a name="791"></a>
+<a name="792"></a></p></li></ul><h3 id='742-task-calendara-name793a'><span>7.4.2 Task Calendar</span><a name="793"></a></h3><p><a name="794"></a>
+<span>The task calendar is used for the calendar style display and related operation management of inspection tasks in the intelligent inspection robot monitoring platform.</span><a name="795"></a>
+<a name="796"></a>
+<span>Management, including task query and display by month and day, single-day task execution status display and editing operations.</span><a name="797"></a>
+<a name="798"></a>
+<img src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/datasets/moushi/coscene-063.jpeg" referrerpolicy="no-referrer"><a name="799"></a>
+<a name="800"></a>
+<span>This function displays the tasks performed and the tasks to be performed every day in the month in a calendar format. For executed tasks, you can view task reports.</span><a name="801"></a>
+<a name="802"></a></p><h2 id='75-configuration-managementa-name803a'><span>7.5 Configuration Management</span><a name="803"></a></h2><p><a name="804"></a></p><h3 id='751-inspection-point-managementa-name805a'><span>7.5.1 Inspection point management</span><a name="805"></a></h3><p><a name="806"></a>
+<span>Inspection point settings are mainly used to set information about relevant inspection points in the intelligent inspection robot monitoring platform, and support the addition, modification, and deletion of inspection point data parameters.</span><a name="807"></a>
+<a name="808"></a>
+<img src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/datasets/moushi/coscene-064.jpeg" referrerpolicy="no-referrer"><a name="809"></a>
+<a name="810"></a>
+<span>Adding and modifying operations are the same:</span><a name="811"></a>
+<a name="812"></a></p><ul><li><p><span>Map coordinates cannot be entered manually;</span><a name="813"></a></p></li><li><p><span>Equipment type, identification type, meter type, defect type, whether to repair, and the parameters in the drop-down box can be set to show/hide in the data dictionary (not completed);</span><a name="814"></a></p></li><li><p><span>When the recognition type is meter recognition, the meter type drop-down box is displayed (usually hidden), and the upper and lower limit input boxes of the meter are displayed. If it is a liquid crystal meter, the remark information needs to be parsed;</span><a name="815"></a></p></li><li><p><span>When the identification type is temperature detection, the upper temperature limit and lower temperature limit input boxes are displayed (manual input); when the identification type is meter identification, the upper/lower threshold value is displayed, which is required.</span><a name="816"></a>
+<a name="817"></a>
+<img src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/datasets/moushi/coscene-065.jpeg" referrerpolicy="no-referrer"><a name="818"></a>
+<a name="819"></a></p></li></ul><h3 id='752-map-managementa-name820a'><span>7.5.2 Map Management</span><a name="820"></a></h3><p><a name="821"></a>
+<span>Map settings include uploading the current map of the robot and downloading the map to the current robot, and identifying the current robot map.</span><a name="822"></a>
+<a name="823"></a>
+<img src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/datasets/moushi/coscene-066.jpeg" referrerpolicy="no-referrer"><a name="824"></a>
+<a name="825"></a></p><h3 id='753-robot-managementa-name826a'><span>7.5.3 Robot Management</span><a name="826"></a></h3><p><a name="827"></a>
+<span>The basic information of the robot includes the name of the current robot, body IP, visible light video IP, visible light video channel, thermal infrared video IP, thermal infrared video channel, and currently controlled objects (including adding, modifying, and deleting robots).</span><a name="828"></a>
+<a name="829"></a>
+<img src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/datasets/moushi/coscene-067.jpeg" referrerpolicy="no-referrer"><a name="830"></a>
+<a name="831"></a>
+<img src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/datasets/moushi/coscene-068.jpeg" referrerpolicy="no-referrer"><a name="832"></a>
+<a name="833"></a></p><h3 id='754-alarm-settingsa-name834a'><span>7.5.4 Alarm settings</span><a name="834"></a></h3><p><a name="835"></a>
+<span>Alarm settings are used to set relevant inspection points and status alarm information in the intelligent inspection robot monitoring platform (alarm items, alarm upper and lower limits, whether to enable audible and visual alarms and SMS alarms, etc.), and support the addition, modification, and delete.</span><a name="836"></a>
+<a name="837"></a>
+<img src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/datasets/moushi/coscene-069.jpeg" referrerpolicy="no-referrer"><a name="838"></a>
+<a name="839"></a>
+<span>Click the Add button, enter the alarm item information in the input box, and then click the Save button to add a new alarm item information; select an alarm information, change the value of the input box, and click the Save button to modify the alarm item information; Click the Delete button to delete the selected alarm item.</span><a name="840"></a>
+<a name="841"></a>
+<img src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/datasets/moushi/coscene-070.jpeg" referrerpolicy="no-referrer"><a name="842"></a>
+<a name="843"></a></p><h2 id='76-system-managementa-name844a'><span>7.6 System Management</span><a name="844"></a></h2><p><a name="845"></a>
+<span>System management functions require the logged-in user to have administrator rights.</span><a name="846"></a>
+<a name="847"></a></p><h3 id='761-user-managementa-name848a'><span>7.6.1 User Management</span><a name="848"></a></h3><p><a name="849"></a>
+<span>All user information includes: login name, user name, user permissions, account status, mobile phone number, last login IP, last login time and other elements.</span><a name="850"></a>
+<a name="851"></a>
+<span>This page provides the functions of adding, searching, deleting, modifying, and viewing. Different users have different permissions according to their roles.</span><a name="852"></a>
+<a name="853"></a>
+<img src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/datasets/moushi/coscene-071.jpeg" referrerpolicy="no-referrer"><a name="854"></a>
+<a name="855"></a>
+<img src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/datasets/moushi/coscene-072.jpeg" referrerpolicy="no-referrer"><a name="856"></a>
+<a name="857"></a></p><h3 id='762-role-managementa-name858a'><span>7.6.2 Role Management</span><a name="858"></a></h3><p><a name="859"></a>
+<span>Role management is divided into ordinary user roles, ordinary administrators, and super administrators;</span><a name="860"></a>
+<a name="861"></a></p><ul><li><p><span>Ordinary user roles can only view their own information, and support users to modify their usernames and passwords;</span><a name="862"></a></p></li><li><p><span>Ordinary administrators can view and modify the information of all ordinary users and ordinary administrators;</span><a name="863"></a></p></li><li><p><span>Super administrator can view and modify all user information;</span><a name="864"></a></p></li><li><p><span>(4) All roles include role name, role permissions, creation time, specific description, addition, deletion, modification and query functions;</span><a name="865"></a></p></li><li><p><span>(5) Select role assignment menu permissions.</span><a name="866"></a>
+<a name="867"></a>
+<img src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/datasets/moushi/coscene-073.jpeg" referrerpolicy="no-referrer"><a name="868"></a>
+<a name="869"></a>
+<img src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/datasets/moushi/coscene-074.jpeg" referrerpolicy="no-referrer"><a name="870"></a>
+<a name="871"></a></p></li></ul><h3 id='763-menu-managementa-name872a'><span>7.6.3 Menu management</span><a name="872"></a></h3><p><a name="873"></a>
+<span>Used to manage different page configurations for different projects. Additions are divided into three categories: directories, menus, and buttons. Adding functions requires developers to operate and develop corresponding pages, otherwise the additions will be invalid; </span><strong><span>Non-developers should not modify other information of the menu except the icon and title at will. </span></strong><a name="874"></a>
+<a name="875"></a>
+<img src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/datasets/moushi/coscene-075.jpeg" referrerpolicy="no-referrer"><a name="876"></a>
+<a name="877"></a>
+<img src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/datasets/moushi/coscene-076.jpeg" referrerpolicy="no-referrer"><a name="878"></a>
+<a name="879"></a></p><h3 id='764-site-managementa-name880a'><span>7.6.4. Site management</span><a name="880"></a></h3><p><a name="881"></a>
+<span>Including adding, searching, deleting, modifying, and viewing functions.</span><a name="882"></a>
+<a name="883"></a>
+<img src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/datasets/moushi/coscene-077.jpeg" referrerpolicy="no-referrer"><a name="884"></a>
+<a name="885"></a>
+<img src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/datasets/moushi/coscene-078.jpeg" referrerpolicy="no-referrer"><a name="886"></a>
+<a name="887"></a></p><h3 id='765a-name888a'><span>7.6.5</span><a name="888"></a></h3><p><a name="889"></a>
+<span>Dictionary management includes the functions of adding, searching, deleting, modifying, viewing and exporting dictionary data. Click on a row in the table on the left to view the dictionary details and add, delete, and modify the subcategories under the dictionary.</span><a name="890"></a>
+<a name="891"></a>
+<img src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/datasets/moushi/coscene-079.jpeg" referrerpolicy="no-referrer"><a name="892"></a>
+<a name="893"></a>
+<img src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/datasets/moushi/coscene-080.jpeg" referrerpolicy="no-referrer"><a name="894"></a>
+<a name="895"></a></p><h3 id='766-car-body-statusa-name896a'><span>7.6.6 Car body status</span><a name="896"></a></h3><p><a name="897"></a>
+<span>Push robot body status information in real time: electronic control equipment status, program status.</span><a name="898"></a>
+<a name="899"></a>
+<img src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/datasets/moushi/coscene-081.jpeg" referrerpolicy="no-referrer"><a name="900"></a>
+<a name="901"></a></p><h3 id='767-version-informationa-name902a'><span>7.6.7 version information</span><a name="902"></a></h3><p><a name="903"></a>
+<span>Front-end and back-end code version information.</span><a name="904"></a>
+<a name="905"></a>
+<img src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/datasets/moushi/coscene-082.jpeg" referrerpolicy="no-referrer"><a name="906"></a>
+<a name="907"></a></p><h1 id='8-inspectiona-name908a'><span>8. Inspection</span><a name="908"></a></h1><p><a name="909"></a>
+<strong><span>Note: Prerequisites for use:</span></strong><a name="910"></a>
+<a name="911"></a></p><ol start='' ><li><p><span>The monitoring platform has been deployed and connected to the robot host.</span><a name="912"></a></p></li><li><p><span>The client installation is completed.</span><a name="913"></a></p></li><li><p><span>The robot has completed the mapping function and the navigation function is normal.</span><a name="914"></a>
+<a name="915"></a></p></li></ol><h2 id='81-startup-checka-name916a'><span>8.1 Startup check</span><a name="916"></a></h2><p><a name="917"></a>
+<span>Open the corresponding APP program of the Android device, and operate in the following order: Main menu-&quot;Inspection function-&quot;Switch inspection to enter the inspection setting interface.</span><a name="918"></a>
+<a name="919"></a>
+<img src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/datasets/moushi/coscene-083.png" referrerpolicy="no-referrer"><a name="920"></a>
+<a name="921"></a>
+<span>Follow these steps to configure:</span><a name="922"></a>
+<a name="923"></a></p><ol start='' ><li><p><span>Check the IP address of the computer on the computer where the monitoring platform is located.</span><a name="924"></a></p></li><li><p><span>Both the service IP and the streaming IP are configured as the cloud platform IP address queried in the previous step.</span><a name="925"></a></p></li><li><p><span>Click &quot;Enable Inspection&quot;. After the inspection is successfully enabled, the server status is Connection Successful.</span><a name="926"></a></p></li><li><p><span>Remote control the robot to near the initial position when drawing, rotate the robot, and you can see that the relocation status is relocation successful.</span><a name="927"></a></p></li><li><p><span>At this time, the tablet screen can be locked to save power. You can unlock the screen again when using it again.</span><a name="928"></a>
+<a name="929"></a></p></li></ol><h2 id='82-cloud-platform-operationa-name930a'><span>8.2 Cloud platform operation</span><a name="930"></a></h2><p><a name="931"></a>
+<span>The main interface content of the cloud platform system is: menu, selectable controlled robot, battery, robot charging control, visible light/thermal infrared video, PTZ/car body control, electronic map, real-time message, task status, inspection point inspection chart Information (last seven days), real-time gas concentration information, inspection report (last</span><a name="932"></a>
+<span>Three items).</span><a name="933"></a>
+<a name="934"></a></p><ol start='' ><li><p><span>Menu: Different menus are displayed according to roles. You can assign menu permissions to the corresponding roles in System Management-Role Management, and add, modify, and delete menus in System Management-Menu Management;</span><a name="935"></a></p></li><li><p><span>Controlled robots can be selected;</span><a name="936"></a></p></li><li><p><span>Robot charging/stop charging control, and battery information is displayed during charging;</span><a name="937"></a></p></li><li><p><span>Real-time video, real-time control and viewing 1.3 Real-time monitoring</span><a name="938"></a></p></li><li><p><span>Electronic map (2D):</span><a name="939"></a></p><ul><li><p><span>Display the current position of the robot, real-time movement trajectory, and map name</span><a name="940"></a></p></li><li><p><span>Inspect current inspection points, display historical data, display alarm information, hide/show idle inspection points;</span><a name="941"></a></p></li></ul></li><li><p><span>Real-time news:</span><a name="942"></a></p><ul><li><p><span>Inspection messages: data messages for each inspection point in the task: such as instrument values, temperature values, and equipment status.</span><a name="943"></a></p></li><li><p><span>Alarm messages: car body alarm messages, program alarm messages, environment alarm messages</span><a name="944"></a></p></li><li><p><span>System messages: Classify and summarize various messages generated during the inspection process.</span><a name="945"></a></p></li></ul></li><li><p><span>Task status: current task name, task status.</span><a name="946"></a></p></li><li><p><span>Robot status: current robot name, vehicle body status (idle, performing tasks, returning to charge, charging, not online), time, relocation status (not positioned, positioned successfully).</span><a name="947"></a>
+<a name="948"></a>
+<img src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/datasets/moushi/coscene-054.jpeg" referrerpolicy="no-referrer"><a name="949"></a>
+<a name="950"></a>
+<span>For the use of the cloud platform system during the inspection process, see &quot;Real-time Monitoring&quot;, &quot;Data Query&quot;, and &quot;Inspection Tasks&quot; in the previous chapter &quot;Cloud Platform Use&quot;.</span><a name="951"></a>
+<a name="952"></a></p></li></ol><h1 id='9-precautionsa-name953a'><span>9. Precautions</span><a name="953"></a></h1><p><a name="954"></a>
+<span>Inspection robots often work in harsh environments, so regular inspection and maintenance of the robots can not only extend the service life of the robots, but also detect potential faults early, deal with them early, and reduce maintenance time and costs.</span><a name="955"></a>
+<a name="956"></a></p><h2 id='91-routine-inspectiona-name957a'><span>9.1 Routine inspection</span><a name="957"></a></h2><p><a name="958"></a></p><ol start='' ><li><p><span>Before the robot starts working, you should check the battery power of the robot to ensure that the charging function is normal. Start working after the battery is full to avoid being unable to complete the entire inspection process due to low battery power.</span><a name="959"></a></p></li><li><p><span>When maintenance of production equipment is required on site, stop the inspection robot from performing tasks and handle the steps of normal shutdown and startup:</span><a name="960"></a></p><ol start='' ><li><p><span>The robot returns to the charging station and is fully charged</span><a name="961"></a></p></li><li><p><span>Terminate all inspection tasks on the monitoring and management platform</span><a name="962"></a></p></li><li><p><span>Manually shut down the robot to perform on-site operations</span><a name="963"></a></p></li><li><p><span>When inspection is needed, manually turn on the robot</span><a name="964"></a></p></li><li><p><span>On the monitoring and management platform, open the live broadcast, and the remote control robot moves forward about 30~50cm, resets the periodic tasks, and performs inspection tasks.</span><a name="965"></a></p></li></ol></li><li><p><span>After the inspection robot is used in an environment contaminated with sand, gravel, oil or chemicals, it should promptly clean the wheels and check and clean up any stuck foreign objects to avoid damage to the tire life and chassis moving parts.</span><a name="966"></a></p></li><li><p><span>During normal operation, the bolts and nuts of each part of the robot should be checked at least once a month. If there is any looseness, tighten it in time. The bolts of chassis moving parts should be inspected with emphasis. The movable hinge points, bearings and connections of the entire vehicle need to be lubricated in time and the working conditions must be checked. When you find paint peeling, bruises, etc., you should promptly</span><a name="967"></a>
+<span>Touch up the paint to prevent rust and affect the structural strength.</span><a name="968"></a>
+<a name="969"></a></p></li></ol><h2 id='92-maintenancea-name970a'><span>9.2 Maintenance</span><a name="970"></a></h2><p><a name="971"></a></p><ol start='' ><li><p><span>The robot should be inspected every 100km it travels. </span><img src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/datasets/moushi/coscene-084.png" referrerpolicy="no-referrer"><a name="972"></a></p></li><li><p><span>When the operator is maintaining or inspecting the robot, other personnel are prohibited from operating the remote control. Otherwise, serious personal injury or equipment damage may occur.</span><a name="973"></a></p></li><li><p><span>Before carrying out maintenance work, the commander of the operation should be determined, the operation process should be formulated, and the operation should be carried out in a planned and step-by-step manner.</span><a name="974"></a></p></li><li><p><span>Please use correct and qualified maintenance tools. Do not use damaged or inferior tools to repair the robot.</span><a name="975"></a></p></li><li><p><span>When disassembling the robot shell for maintenance, do not drop foreign objects inside the machine, otherwise it may cause machine damage, operating errors or other malfunctions.</span><a name="976"></a></p></li><li><p><span>Maintenance of electrical systems should be performed by personnel with professional qualifications in low-voltage electrical</span><img src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/datasets/moushi/coscene-085.png" referrerpolicy="no-referrer"><span> .</span><a name="977"></a></p></li><li><p><span>If you need to perform electric welding on the robot, you need to disconnect the external power supply and the battery, and have it performed by personnel with welding qualifications. Otherwise, the robot&#39;s electrical system may be damaged.</span><a name="978"></a>
+<a name="979"></a></p></li></ol><h2 id='93-long-term-storagea-name980a'><span>9.3 Long-term storage</span><a name="980"></a></h2><p><a name="981"></a></p><ol start='' ><li><p><span>When the robot stops working for a long time, it should be stored in a dry, clean, and ventilated indoor environment to avoid being exposed to moisture, high heat, or exposure to the sun for a long time to avoid accelerated aging of the equipment.</span><a name="982"></a>
+<a name="983"></a>
+<img src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/datasets/moushi/coscene-086.png" referrerpolicy="no-referrer"><a name="984"></a>
+<a name="985"></a></p></li><li><p><span>Before stopping work, the battery should be fully charged and then turned off and stored. The battery power should be checked at least once a month. If the power is less than 30%, it should be charged in time to avoid damage to the battery due to long-term over-discharge.</span><a name="986"></a>
+<a name="987"></a>
+<img src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/datasets/moushi/coscene-087.png" referrerpolicy="no-referrer"><a name="988"></a>
+<a name="989"></a></p></li><li><p><span>When parking the robot, avoid parking on slopes or obstacles. The wheels on both sides should be stressed at the same time and land evenly to extend the service life of the tires.</span><a name="990"></a>
+<a name="991"></a>
+<img src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/datasets/moushi/coscene-088.jpeg" referrerpolicy="no-referrer"><a name="992"></a>
+<a name="993"></a></p></li></ol><h1 id='10-quick-troubleshootinga-name994a'><span>10. Quick Troubleshooting</span><a name="994"></a></h1><p><a name="995"></a></p><h2 id='101-robot-troubleshootinga-name996a'><span>10.1 Robot troubleshooting</span><a name="996"></a></h2><p><a name="997"></a>
+<strong><span>Problem: The robot shows that the battery level is 0 and cannot be turned on</span></strong><a name="998"></a>
+<a name="999"></a>
+<strong><span>Solution</span></strong><span>: When the robot is not used for a long time, it should be charged regularly to avoid over-discharging the battery and affecting its service life. If you encounter a situation where the battery is exhausted, please handle it as follows:</span><a name="1000"></a>
+<a name="1001"></a></p><ol start='' ><li><p><span>Push the robot to the charging pile on a cart.</span><a name="1002"></a></p></li><li><p><span>Connect the charger to the power supply and manually insert it into the charging port of the robot (the robot remains powered off);</span><a name="1003"></a></p></li><li><p><span>Charge the robot for 3~4 hours, then press the power button to power on;</span><a name="1004"></a></p></li><li><p><span>After confirming that the battery power is within the normal range, insert the charging plug back into the charging pile. The remote-controlled robot returns to the charging pile and waits for the robot to perform its tasks normally.</span><a name="1005"></a>
+<a name="1006"></a>
+<strong><span>Problem: Bot is not online</span></strong><a name="1007"></a>
+<a name="1008"></a>
+<strong><span>Solution:</span></strong><span> There may be the following situations:</span><a name="1009"></a>
+<a name="1010"></a></p></li></ol><ul><li><p><span>Whether the cloud server has expired due to arrears, please renew in time.</span><a name="1011"></a></p></li><li><p><span>Whether the robot&#39;s communication module 5G card is in arrears and is out of service, please renew it in time.</span><a name="1012"></a></p></li><li><p><span>Check whether the LAN is working properly.</span><a name="1013"></a>
+<a name="1014"></a>
+<strong><span>Problem: The robot did not follow the scheduled inspection route, but finally arrived at the inspection point</span></strong><a name="1015"></a>
+<a name="1016"></a>
+<strong><span>Solution:</span></strong><span> When the scheduled inspection route is blocked by obstacles, the robot will automatically plan a new route to bypass the obstacles. At this time, you should check whether there are any subtle obstacles on the scheduled inspection route, such as smooth and reflective water surfaces, oil stains, deep cracks and other obstacles that may interfere with the robot&#39;s progress.</span><a name="1017"></a>
+<a name="1018"></a>
+<strong><span>Problem: The robot rotates in place when it leaves the charging pile</span></strong><a name="1019"></a>
+<a name="1020"></a>
+<strong><span>Solution:</span></strong><span> When the local area environment changes, the robot easily loses positioning information near this area. At this time, the robot will automatically start the relocation function, rotate in place, collect more location information, and help rematch the map location information. In most cases, the robot can rotate in place</span><a name="1021"></a>
+<span>Relocation successful. If the robot is unsuccessful in positioning for a long time, or if the robot often rotates and repositions in place even when the environment does not change significantly, please contact our technicians to assist in analysis and resolution.</span><a name="1022"></a>
+<a name="1023"></a>
+<strong><span>Problem: The robot cannot charge normally and automatically, and the charger indicator light does not light up</span></strong><a name="1024"></a>
+<a name="1025"></a>
+<strong><span>solution:</span></strong><a name="1026"></a>
+<a name="1027"></a></p></li><li><p><span>Please check whether the charging pile is powered on (mains 200v, power 5000+W).</span><a name="1028"></a>
+<a name="1029"></a>
+<strong><span>Problem: The robot was out of service for a long time during inspection, and the monitoring and management platform gave an alarm indicating that charging failed</span></strong><a name="1030"></a>
+<a name="1031"></a>
+<strong><span>solution:</span></strong><a name="1032"></a>
+<a name="1033"></a></p></li><li><p><span>If the robot enters an obstacle or is too close to an obstacle and cannot move, slowly move the robot in reverse direction through the monitoring and management platform to an open inspection route, and click one button to charge.</span><a name="1034"></a></p></li><li><p><span>If the battery is too low, please use the remote control to move the robot near the charging pile, shut down the robot for manual charging, and turn it on after it is fully charged. (Refer to &quot;Question 1&quot; for operation)</span><a name="1035"></a>
+<a name="1036"></a>
+<strong><span>Problem: Robot not moving in tight spots</span></strong><a name="1037"></a>
+<a name="1038"></a>
+<strong><span>Solution:</span></strong><span> When the robot is too close to an obstacle and triggers a stop, and the robot attempts to escape from the obstacle but fails, the robot will stop traveling and sound an alarm.</span><a name="1039"></a>
+<a name="1040"></a>
+<span>Solution:</span><a name="1041"></a>
+<a name="1042"></a></p></li></ul><ol start='' ><li><p><span>Through the monitoring and management platform, the remote control robot leaves this narrow space</span><a name="1043"></a></p></li><li><p><span>If the robot can continue to perform the task after successful relocation.</span><a name="1044"></a></p></li><li><p><span>If the task has timed out, the task cannot be continued. At this time, after the robot is successfully repositioned, a one-click charging task can be issued on the monitoring and management platform, so that the robot can autonomously return to the charging pile to wait for the next task execution.</span><a name="1045"></a>
+<a name="1046"></a>
+<strong><span>Problem:</span></strong><span> When logging in to the monitoring and management cloud platform, it prompts that the websocket connection failed</span><span>*</span><span>*</span><a name="1047"></a>
+<a name="1048"></a>
+<strong><span>Solution:</span></strong><span> Check whether the computer network is normal.</span><a name="1049"></a>
+<a name="1050"></a>
+<strong><span>Problem: The robot does not move when performing tasks</span></strong><a name="1051"></a>
+<a name="1052"></a>
+<strong><span>solution:</span></strong><a name="1053"></a>
+<a name="1054"></a></p></li><li><p><span>Confirm the network connection, such as trying to control the PTZ</span><a name="1055"></a></p></li><li><p><span>Through the monitoring and management platform, click on the vehicle body status to confirm the status of each sensor, whether the status of radar, imu, odometer, camera, gimbal, lifting rod, etc. is normal.</span><a name="1056"></a></p></li><li><p><span>Make sure there are no obstacles near the robot and try to perform tasks in a relatively open area.</span><a name="1057"></a>
+<a name="1058"></a>
+<strong><span>Problem: After the robot leaves the charging pile, the repositioning time is too long, causing the task to time out</span></strong><a name="1059"></a>
+<a name="1060"></a>
+<strong><span>Solution:</span></strong><span>This problem is usually caused by frequent changes in the environment surrounding the charging pile. When selecting the location of charging piles, consideration should be given to places with a fixed environment, prominent feature points, and a sufficiently large barrier-free space. If this problem occurs frequently, please contact the manufacturer for assistance in analysis and resolution.</span><a name="1061"></a>
+<a name="1062"></a></p></li></ol><h2 id='102-cloud-service-troubleshootinga-name1063a'><span>10.2 Cloud service troubleshooting</span><a name="1063"></a></h2><p><a name="1064"></a>
+<strong><span>Problem: No report is generated for the task at a certain moment. Solution:</span></strong><span> During the execution of the task, the task status is set to stopped or canceled, then the report will not be generated for this inspection task.</span><a name="1065"></a>
+<a name="1066"></a>
+<strong><span>Problem: The monitoring and management cloud platform system operation does not respond</span></strong><a name="1067"></a>
+<a name="1068"></a>
+<strong><span>Solution:</span></strong><span>You need to restart the cloud server (see also Chapter 6.5)</span><a name="1069"></a>
+<a name="1070"></a></p><ol start='' ><li><p><span>Start the background java program</span><a name="1071"></a></p><ol start='' ><li><p><span>Enter the /home/eladmin/ directory and enter ./stop_eladmin.sh to start the shutdown program</span><a name="1072"></a></p></li><li><p><span>Enter ./start_eladmin.sh to start the background program</span><a name="1073"></a></p></li></ol></li><li><p><span>Start tomcat in the foreground</span><a name="1074"></a></p><ol start='' ><li><p><span>Shut down: /home/apache-tomcat-8.5.4/bin# ./ shutdown.sh</span><a name="1075"></a></p></li><li><p><span>Start:/home/apache-tomcat-8.5.4/bin# ./startup.sh</span><a name="1076"></a></p></li></ol></li><li><p><span>If you still cannot control it after restarting the cloud server, please shut down and restart the robot again.</span><a name="1077"></a>
+<a name="1078"></a>
+<strong><span>Problem: There is no detection result for a certain inspection point task in the report</span></strong><a name="1079"></a>
+<a name="1080"></a>
+<strong><span>Solution:</span></strong><span> There are obstacles near the inspection point, which prevents the robot from reaching the inspection point and the inspection task times out. Please clear the obstacles on the inspection route in time.</span><a name="1081"></a>
+<a name="1082"></a></p></li><li><p><span>Remote control troubleshooting</span><a name="1083"></a>
+<a name="1084"></a>
+<strong><span>Question:</span></strong><span>Low voltage alarm</span><a name="1085"></a>
+<a name="1086"></a>
+<strong><span>Solution:</span></strong><span>As shown in the figure below, the remote control voltage is too low (less than 11.5V), causing it to fail to work properly. Just replace 8 AA batteries.</span><a name="1087"></a>
+<a name="1088"></a>
+<img src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/datasets/moushi/coscene-089.png" referrerpolicy="no-referrer"><a name="1089"></a>
+<a name="1090"></a>
+<strong><span>Question:</span></strong><span> Mixed control alarm</span><a name="1091"></a>
+<a name="1092"></a>
+<strong><span>Solution:</span></strong><span> As shown in the figure below, the throttle lever position is not set to the lowest position. The system prompts &quot;Warning Mixing is On&quot; and the red light continues to flash to indicate an alarm. You need to pull the left throttle lever to the lowest position.</span><a name="1093"></a>
+<a name="1094"></a>
+<img src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/datasets/moushi/coscene-090.jpeg" referrerpolicy="no-referrer"><a name="1095"></a>
+<a name="1096"></a>
+<strong><span>Problem:</span></strong><span>Remote control failure </span><strong><span>Solution:</span></strong><span>Adjust the throttle and direction trim switches and motion compensation switches to ensure they are set to the neutral position.</span><a name="1097"></a>
+<a name="1098"></a>
+<strong><span>Problem:</span></strong><span>Other alarms </span><strong><span>Solution:</span></strong><span>The remote control is faulty and you need to contact the original factory technical service support.</span><a name="1099"></a>
+<a name="1100"></a></p></li></ol><h1 id='appendix-1-charging-pile-installation-instructionsa-name1101a'><span>Appendix 1: Charging pile installation instructions</span><a name="1101"></a></h1><p><a name="1102"></a></p><ol start='' ><li><p><span>The QR code IDs used for charging are fixed at 6 and 18 (left 6 and right 18), and the side length of the QR code is fixed at 0.1 meters.</span><a name="1103"></a></p></li><li><p><span>QR code height: at the same height as the visible light camera</span><a name="1104"></a></p></li><li><p><span>The QR code location of id6:</span><a name="1105"></a>
+<a name="1106"></a>
+<span>First, you need to determine the offset of the visible light camera relative to the center point of the robot. The car coordinate system is as follows, with the x-axis pointing directly in front of the robot:</span><a name="1107"></a>
+<a name="1108"></a>
+<img src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/datasets/moushi/coscene-091.png" referrerpolicy="no-referrer"><a name="1109"></a>
+<a name="1110"></a>
+<span>If the value of the visible light camera on the y-axis is 0, then the QR code should be posted directly above the charging pile;</span><a name="1111"></a>
+<a name="1112"></a>
+<span>If the value of the visible light camera on the y-axis is not 0, then the QR code should be affixed directly above the charging pile at an offset distance of y (positive y should be offset to the left, and negative y should be offset to the right).</span><a name="1113"></a>
+<a name="1114"></a></p></li><li><p><span>ID6 location verification:</span><a name="1115"></a>
+<a name="1116"></a>
+<span> When the robot is charging at the charging station, it should ensure that the visible light camera is facing the QR code of id6</span><a name="1117"></a>
+<a name="1118"></a></p></li><li><p><span>The QR code location of id18:</span><a name="1119"></a>
+<a name="1120"></a>
+<span> At the same height as id6, 0.31 meters to the right of id6 (this position needs to be accurate to 0.1 cm);</span><a name="1121"></a>
+<a name="1122"></a></p></li><li><p><span>After docking</span><a name="1123"></a>
+<a name="1124"></a>
+<span> The distance between the QR code and visible light should be &gt;=0.2 meters (the calculation method is the distance when the pan/tilt looks back).</span><a name="1125"></a>
+<a name="1126"></a></p></li><li><p><span>Add the location of the inspection point in front of the charging pile:</span><a name="1127"></a>
+<a name="1128"></a>
+<span> The distance between the inspection point and the charging pile should be slightly greater than: 4x robot radius.</span><a name="1129"></a>
+<a name="1130"></a>
+<span>#Appendix 2. Sensor cleaning</span><a name="1131"></a>
+<a name="1132"></a>
+<span>In order to accurately sense the surrounding environment, each sensor configured on the robot needs to be kept clean, especially the annular protective cover of the lidar.</span><a name="1133"></a>
+<a name="1134"></a></p></li></ol><h2 id='21-notesa-name1135a'><span>2.1 Notes</span><a name="1135"></a></h2><p><a name="1136"></a>
+<span>Please read the contents of this appendix carefully and completely before cleaning the lidar and each sensor, otherwise improper operation may damage the equipment.</span><a name="1137"></a>
+<a name="1138"></a>
+<span>Since lidar and various sensors need to be used in relatively harsh environments, the dirt on the surface needs to be cleaned in time to keep the radar clean, otherwise it will affect the normal operation of the equipment.</span><a name="1139"></a>
+<a name="1140"></a></p><ol start='2' ><li><p><span>Required materials</span><a name="1141"></a>
+<a name="1142"></a></p><ol start='' ><li><p><span>Clean fiber cloth</span><a name="1143"></a></p></li><li><p><span>Spray filled with neutral, warm soap</span><a name="1144"></a></p></li><li><p><span>Spray filled with clean water</span><a name="1145"></a></p></li><li><p><span>Isopropyl alcohol solvent</span><a name="1146"></a></p></li><li><p><span>Clean gloves</span><a name="1147"></a>
+<a name="1148"></a></p></li></ol></li><li><p><span>Cleaning methods</span><a name="1149"></a>
+<a name="1150"></a>
+<span>If there is only some dust/dust adhered to the surface of the radar, you can directly use a clean fiber cloth to apply a small amount of isopropyl alcohol solution, then gently wipe the surface of the radar to clean, and then wipe it with a dry and clean fiber cloth. Dry.</span><a name="1151"></a>
+<a name="1152"></a>
+<span>If the surface of the radar is stained with lumps of foreign matter such as mud, clean water should first be sprayed on the surface of the dirty parts of the radar to remove the mud and other foreign matter (Note: Do not wipe off the mud directly with a fiber cloth, as this may scratch the surface, especially is the protective cover surface). Next, spray warm soapy water on the dirty area.</span><a name="1153"></a>
+<span>The lubricating effect of water can accelerate the detachment of foreign matter. Use fiber cloth to gently wipe the surface of the radar again, but be careful not to scratch the surface. Finally, clean the soap residue on the radar surface with clean water (if there is still residue on the surface, clean it again with isopropyl alcohol solution), and wipe it dry with a dry microfiber cloth.</span><a name="1154"></a>
+<a name="1155"></a>
+<span>#Appendix 3. Product parameters</span><a name="1156"></a>
+<a name="1157"></a>
+<span>| Type | Performance Index | Detailed Parameters | Performance Index | Detailed Parameters |</span><a name="1158"></a>
+<span>| ---------------- | -------- | -------------------- | -- ------ | --------- |</span><a name="1159"></a>
+<span>| Four-wheel differential robot | Overall dimensions | 920</span><span>*</span><span>700</span><span>*</span><span>900mm | Maximum obstacle clearance | 80mm |</span><a name="1160"></a>
+<span>| Four-wheel differential robot | Chassis weight | 120kg | Maximum speed | 1.26m/s |</span><a name="1161"></a>
+<span>| Four-wheel differential robot | Design load | 50kg | Battery capacity | 48V 30AH |</span><a name="1162"></a>
+<span>| Four-wheel differential robot | Wading depth | 80mm | Endurance time | 4h |</span><a name="1163"></a>
+<span>| Four-wheel differential robot | Maximum climbing grade | 15° | Protection level | IP54 |</span><a name="1164"></a>
+<span>| Crawler robot | Overall dimensions | 1370</span><span>*</span><span>862</span><span>*</span><span>1300mm | Maximum obstacle clearance | 175mm |</span><a name="1165"></a>
+<span>| Crawler robot | Chassis weight | 400kg | Maximum speed | 1.26m/s |</span><a name="1166"></a>
+<span>| Crawler robot | Design load | 100kg | Battery capacity | 48V 120AH |</span><a name="1167"></a>
+<span>| Crawler robot | Wading depth | 135mm | Endurance time | 4h |</span><a name="1168"></a>
+<span>| Crawler robot | Maximum climbing grade | 35° | Protection level | IP55 |</span><a name="1169"></a>
+<span>| Explosion-proof robot I generation | Dimensions | 1600</span><span>*</span><span>980</span><span>*</span><span>940mm | Maximum obstacle clearance | 100mm |</span><a name="1170"></a>
+<span>| Explosion-proof robot I generation | Chassis weight | 460kg | Maximum speed | 1.26m/s |</span><a name="1171"></a>
+<span>| Explosion-proof robot I generation | Design load capacity | 100kg | Battery capacity | 48V 80AH |</span><a name="1172"></a>
+<span>| Explosion-proof robot I generation | Water wading depth | Ex d ib IIB T4 Gb | Battery life | 5h |</span><a name="1173"></a>
+<span>| Explosion-proof robot I generation | Maximum climbing angle | 20° | Protection level | IP65 |</span><a name="1174"></a>
+<span>| Explosion-proof robot II generation | Dimensions | 1385</span><span>*</span><span>850</span><span>*</span><span>900mm | Maximum obstacle clearance | 80mm |</span><a name="1175"></a>
+<span>| Explosion-proof robot II generation | Chassis weight | 310kg | Maximum speed | 1.0m/s |</span><a name="1176"></a>
+<span>| Explosion-proof robot II generation | Design load | 100kg | Battery capacity | 48V 50AH |</span><a name="1177"></a>
+<span>| Explosion-proof robot II generation | Water wading depth | EX d e mb II B T4 Gb | Battery life | 5h |</span><a name="1178"></a>
+<span>| Explosion-proof robot II generation | Maximum climbing grade | 20° | Protection level | IP65 |</span><a name="1179"></a>
+<span>| Six-wheeled robot | Dimensions | 800</span><span>*</span><span>700</span><span>*</span><span>1000mm | Maximum obstacle clearance | 50mm |</span><a name="1180"></a>
+<span>| Six-wheeled robot | Chassis weight | 120kg | Maximum speed | 1.5m/s |</span><a name="1181"></a>
+<span>| Six-wheel robot | Design load | 50kg | Battery capacity | 48V 35AH |</span><a name="1182"></a>
+<span>| Six-wheeled robot | Wading depth | 80mm | Endurance time | 5h |</span><a name="1183"></a>
+<span>| Six-wheeled robot | Maximum climbing angle | 15° | Protection level | IP55 |</span><a name="1184"></a></p></li></ol></div></div>
+</body>
+</html>
