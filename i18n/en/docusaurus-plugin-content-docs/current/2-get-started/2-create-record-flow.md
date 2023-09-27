@@ -10,7 +10,7 @@ After creating a project, you can create and manage records within the project. 
 
 After entering the project, click "Create Record" to start the record creation process. For a detailed operation guide on records, please refer to [the section about records in the operation guide](../4-recipes/4-record/3-manage-records.md).
 
-<video src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/docs/2-get-started/create-new-record.mp4" controls="controls" width="700" height="400"></video>
+<video src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/docs/en/2-get-started/creating-a-record.mp4" controls="controls" width="700" height="400"></video>
 
 <br />
 
@@ -20,7 +20,7 @@ After entering the project, click "Create Record" to start the record creation p
 
 The newly created record does not have any files yet. You can add files by uploading them from your local machine. Click the "Upload File" button in the middle of the screen, select a file, and upload it. Here, we choose a ROS Bag file.
 
-<video src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/docs/2-get-started/upload-files.mp4" controls="controls" width="700" height="400"></video>
+<video src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/docs/en/2-get-started/upload-files.mp4" controls="controls" width="700" height="400"></video>
 
 After the file has been successfully uploaded, we can see the uploaded file in the file list. In addition to basic information like file size, you might also notice some data version and history information. You can find more about data versions and history in [the section about records in the operation guide](../4-recipes/4-record/3-manage-records.md) and [the section about records in the data model](../3-concepts/1-data-models.md#record-record).
 
@@ -30,7 +30,7 @@ After the file has been successfully uploaded, we can see the uploaded file in t
 
 For robot data like ROS Bag, the coScene platform supports online visualization of data using cloud-based streaming. Click the "Play Record" button to enter the visualization page.
 
-<video src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/docs/2-get-started/play-record.mp4" controls="controls" width="700" height="400"></video>
+<video src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/docs/en/2-get-started/play-record.mp4" controls="controls" width="700" height="400"></video>
 
 <br />
 

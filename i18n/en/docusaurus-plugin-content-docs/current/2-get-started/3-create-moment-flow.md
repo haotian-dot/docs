@@ -10,7 +10,7 @@ After creating a record and uploading the BAG file, you can play it on the visua
 
 On the visualization page, click the "create moment" button above the playback progress bar to start the process of creating a "Moment". This allows you to mark the bag file.
 
-<video src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/docs/2-get-started/create-moment.mp4" controls="controls" width="700" height="400"></video>
+<video src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/docs/en/2-get-started/create-moment.mp4" controls="controls" width="700" height="400"></video>
 
 <br />
 
@@ -18,7 +18,7 @@ On the visualization page, click the "create moment" button above the playback p
 
 On the timeline, you can see all marked "Moments". In the "Moment" tab, you can view the details of the created "Moments". By clicking on a "Moment", the playback will automatically jump to the corresponding time point.
 
-<video src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/docs/2-get-started/click-moment.mp4" controls="controls" width="700" height="400"></video>
+<video src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/docs/en/2-get-started/view-moment.mp4" controls="controls" width="700" height="400"></video>
 
 <br />
 
@@ -26,12 +26,12 @@ On the timeline, you can see all marked "Moments". In the "Moment" tab, you can 
 
 Click the "Copy Link" icon to easily copy the "Moment" link and share it with collaborators. Users who receive this link can directly jump to the specific frame of that "Moment" in the visualization page.
 
-<video src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/docs/2-get-started/copy-moment-link.mp4" controls="controls" width="700" height="400"></video>
+<video src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/docs/en/2-get-started/share-moment.mp4" controls="controls" width="700" height="400"></video>
 
 <br />
 
 ## 4. View All "Moments" in the Record
 
-In the "Record Details Page" under "Related Events", it displays all the events marked in the bag of the record:
+In the "Record Details Page" under "Moment", it displays all the moments marked in the bag of the record:
 
-![related-event-1](img/related-moment-1.png)
+![record-moment](img/record-moment.png)
