@@ -2,7 +2,7 @@
 sidebar_position: 12
 ---
 
-# Chrome 浏览器的下载与安装
+# 浏览器支持
 
 刻行平台目前仅支持 Chrome 104+，为了更好的产品使用体验，推荐升级到 Chrome 浏览器最新版本。以下为在 Windows 系统和 Linux 系统中安装 Chrome 浏览器的详细教程。
 

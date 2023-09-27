@@ -6,21 +6,19 @@ sidebar_position: 1
 
 Integrate with Jira to synchronize tasks as issues in Jira.
 
-<br />
+## Initial Configuration
 
-## Configuration Integration
+> Each project is configured independently, and only the project administrator can edit the config.
 
-> Each project is configured separately, and only the project administrator can edit.
-
-In the project, go to the "Manage Project - Service Integration" page and click "Add Configuration".
+In the project, go to the "Manage Project - Service Integration" page and click "Add Config".
 
 ![integration-1](../img/integration-1.png)
 
-Edit the configuration online. Once done, click "Save".
+Edit the configuration as needed. Once done, click "Save".
 
 ![integration-2](../img/integration-2.png)
 
-After successful saving, the configuration is automatically enabled.
+The configuration will take effect immediately.
 
 ![integration-3](../img/integration-3.png)
 
@@ -95,28 +93,10 @@ Edit the configuration online. Once done, click "Save".
 
 ![integration-2](../img/integration-2.png)
 
-<br />
-
 ### Disable Integration
 
-In the project, go to the "Manage Project - Service Integration" page and click "Edit Configuration".
-
-![integration-4](../img/integration-4.png)
-
-Change the `enabled: true` in the configuration to `enabled: false`, then click "Save".
-
-![integration-2](../img/integration-2.png)
-
-<br />
+Follow the Edit Integration Step and change the enabled configuration to false and save.
 
 ### Delete Integration
 
-In the project, go to the "Manage Project - Service Integration" page and click "Edit Configuration".
-
-![integration-4](../img/integration-4.png)
-
-Delete all the content in the configuration and then click "Save".
-
-![integration-2](../img/integration-2.png)
-
-<br />
+Follow the Edit Integration Step, delete all the configurations and save.

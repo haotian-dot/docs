@@ -6,6 +6,8 @@ sidebar_position: 1
 
 Automatic Data Collection and Diagnosis is an operational service provided for device data. By predefined rules, through real-time monitoring of device logs, collecting target data, and performing automatic diagnosis, it achieves automatic analysis of device failures and early detection of potential risks.
 
+Automatic Data Collection and Diagnosis is a remote operation service for data
+
 ## Basic Elements
 
 The process of automatic data collection and diagnosis has three basic elements: trigger object, trigger condition, and post-trigger actions.

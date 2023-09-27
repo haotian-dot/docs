@@ -61,7 +61,7 @@ You can use a custom chart name starting with "cos\_" in the relevant test code 
 
 > Output files to the specified directory as test output, where the .bag files can be compared with the files in the original record to be played in the visualization interface.
 
-You can configure the "script" field in the file to use commands to output files to the `/cos/outputs` directory as test output. For specific examples, please refer to [Configuration File Format and Examples - Output Shadow Mode Files](../8-regression/9-yaml-sample.md#Output-Shadow-Mode-Files).
+You can configure the "script" field in the file to use commands to output files to the `/cos/outputs` directory as test output. For specific examples, please refer to [Configuration File Format and Examples - Output Shadow Mode Files](../8-regression/9-yaml-sample.md#generate-shadow-mode)
 
 Test outputs will be displayed in the "Test Output" column of the test details page, displayed hierarchically according to the corresponding test suite and record.
 
