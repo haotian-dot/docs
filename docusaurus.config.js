@@ -20,8 +20,8 @@ const config = {
   themes: ['@docusaurus/theme-mermaid'],
 
   i18n: {
-    // defaultLocale: 'en',
-    localeS: ['zh', 'en'],
+    defaultLocale: 'zh',
+    locales: ['zh', 'en'],
   },
 
   scripts: [{ src: 'https://plausible.io/js/script.js', defer: true, 'data-domain': 'docs.coscene.cn' }],
@@ -44,14 +44,6 @@ const config = {
       };
     },
   ],
-
-  // Even if you don't use internalization, you can use this field to set useful
-  // metadata like html lang. For example, if your site is Chinese, you may want
-  // to replace "en" with "zh-Hans".
-  i18n: {
-    defaultLocale: 'zh',
-    locales: ['zh', 'en'],
-  },
 
   presets: [
     [
