@@ -12,7 +12,7 @@ This section will start with creating a task, helping you understand how to use 
 
 You can go to the "Comments & Tasks" module on the task details page to create a task associated with a record. When creating a task, specify the handler and add a description of the task so that relevant users can complete the task process with effective information.
 
-<video src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/docs/4-recipes/task/create-task-in-record.mp4" controls="controls" width="700" height="400"></video>
+<video src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/docs/en/4-recipes/5-task-and-comment/create-task.mp4" controls="controls" width="700" height="400"></video>
 
 <br />
 
@@ -20,14 +20,12 @@ You can go to the "Comments & Tasks" module on the task details page to create a
 
 While playing the content of a record in the visualization interface, you can create a "moment" to mark a keyframe and check the "create an associated task" option for convenient work progression. This eliminates the need to navigate to the record details page to create a task and reference the "moment."
 
-<video src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/docs/4-recipes/task/create-task-with-moment.mp4" controls="controls" width="700" height="400"></video>
-
-<br />
+<video src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/docs/en/4-recipes/5-task-and-comment/create-task-from-moment.mp4" controls="controls" width="700" height="400"></video>
 
 <br />
 
 The created task will automatically reference the "moment" in the description, helping relevant members quickly locate it.
 
-![create-a-task-1](../img/create-a-task-1.png)
+![task-moment](../img/task-moment.png)
 
 <br />

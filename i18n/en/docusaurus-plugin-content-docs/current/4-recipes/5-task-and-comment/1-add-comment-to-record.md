@@ -14,7 +14,7 @@ You can view comments related to a record in the "Comments & Tasks" section of t
 
 Watch the video below to learn basic operations about creating, editing, and deleting comments.
 
-<video src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/docs/4-recipes/task/manage-a-comment.mp4" controls="controls" width="700" height="400"></video>
+<video src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/docs/en/4-recipes/5-task-and-comment/manage-a-comment.mp4" controls="controls" width="700" height="400"></video>
 
 <br />
 
@@ -24,7 +24,7 @@ In addition to text descriptions, comments also support mentioning other users w
 
 You can mention other members of the organization in your comments; mentioned users will receive notifications within the organization's communication platform.
 
-<video src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/docs/4-recipes/task/at-user.mp4" controls="controls" width="700" height="400"></video>
+<video src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/docs/en/4-recipes/5-task-and-comment/comment-user.mp4" controls="controls" width="700" height="400"></video>
 
 <br />
 
@@ -32,7 +32,7 @@ You can mention other members of the organization in your comments; mentioned us
 
 You can add links to relevant "Moments" within the comments; members can click on the link to directly jump to the marked keyframe in the visualization interface, quickly accessing and integrating effective information for work.
 
-<video src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/docs/4-recipes/task/add-moment-to-comment.mp4" controls="controls" width="700" height="400"></video>
+<video src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/docs/en/4-recipes/5-task-and-comment/comment-insert-moment.mp4" controls="controls" width="700" height="400"></video>
 
 <br />
 
@@ -42,6 +42,6 @@ For more about "Tasks," you can refer to the following section: [Create a Task](
 
 You can add links to relevant tasks within the comments; organization members can click the link to jump directly to the task details page.
 
-<video src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/docs/4-recipes/task/add-task-to-comment.mp4" controls="controls" width="700" height="400"></video>
+<video src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/docs/en/4-recipes/5-task-and-comment/comment-insert-task.mp4" controls="controls" width="700" height="400"></video>
 
 <br />

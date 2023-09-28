@@ -26,7 +26,7 @@ A task can have three statuses: "Pending," "In Progress," and "Completed." By de
 
 You can click on the task's "Status" on the task page to change its status.
 
-<video src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/docs/4-recipes/task/change-task-status.mp4" controls="controls" width="700" height="400"></video>
+<video src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/docs/en/4-recipes/5-task-and-comment/task-change-state.mp4" controls="controls" width="700" height="400"></video>
 
 Once a task is completed and its status changes to "Processed," it will no longer appear in the task list on the assignee's homepage.
 
@@ -36,7 +36,7 @@ Once a task is completed and its status changes to "Processed," it will no longe
 
 On the task details page, you can modify the task title and description.
 
-<video src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/docs/4-recipes/task/edit-task.mp4" controls="controls" width="700" height="400"></video>
+<video src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/docs/en/4-recipes/5-task-and-comment/edit-task.mp4" controls="controls" width="700" height="400"></video>
 
 <br />
 
@@ -46,7 +46,7 @@ Once the current assignee completes the part of the task within their scope of w
 
 You can change the "Assignee" to delegate the task to another relevant user. The designated assignee will receive a notification.
 
-<video src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/docs/4-recipes/task/change-assignee.mp4" controls="controls" width="700" height="400"></video>
+<video src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/docs/en/4-recipes/5-task-and-comment/edit-task-assignee.mp4" controls="controls" width="700" height="400"></video>
 
 <br />
 
@@ -56,7 +56,7 @@ Similar to records, users can also comment on a specific task to retrieve and ad
 
 You can add comments in the task details interface, mention other users, add relevant links, and other information to enhance task efficiency.
 
-<video src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/docs/4-recipes/task/add-comment-to-task.mp4" controls="controls" width="700" height="400"></video>
+<video src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/docs/en/4-recipes/5-task-and-comment/add-comment-to-task.mp4" controls="controls" width="700" height="400"></video>
 
 <br />
 
@@ -66,7 +66,7 @@ You can add comments in the task details interface, mention other users, add rel
 
 Click the action button in the top right corner of the task details page to delete the task:
 
-<video src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/docs/4-recipes/task/delete-task.mp4" controls="controls" width="700" height="400"></video>
+<video src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/docs/en/4-recipes/5-task-and-comment/delete-task-1.mp4" controls="controls" width="700" height="400"></video>
 
 <br />
 
@@ -74,6 +74,6 @@ Click the action button in the top right corner of the task details page to dele
 
 You can also delete tasks from the "Tasks" list
 
-<video src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/docs/4-recipes/task/delete-task-in-list.mp4" controls="controls" width="700" height="400"></video>
+<video src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/docs/en/4-recipes/5-task-and-comment/delete-task-2.mp4" controls="controls" width="700" height="400"></video>
 
 <br />
