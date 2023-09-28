@@ -14,13 +14,15 @@ sidebar_position: 2
 
 若记录中有多个 bag，则可切换播放：点击左侧「数据源」-「播放列表」，选择目标 bag 即跳转到对应时间开始播放。
 
+### 可视化 Bag
+
 <video src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/docs/4-recipes/viz/play-viz-and-playlist.mp4" controls="controls" width="700" height="400"></video>
 
-**循环播放与倍速播放**
+### 循环播放与倍速播放
 
 <video src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/docs/4-recipes/viz/loop-play-and-speed.mp4" controls="controls" width="700" height="400"></video>
 
-**跳帧播放**
+### 跳帧播放
 
 <video src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/docs/4-recipes/viz/seek-forward.mp4" controls="controls" width="700" height="400"></video>
 

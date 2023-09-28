@@ -14,15 +14,21 @@ In the visualization interface, click the "Play" icon to start playing the bag.
 
 If there are multiple bags in the record, you can switch between them: Click on "Data Source" on the left, then "Play List", and choose the target bag to start playing from the corresponding time.
 
-<video src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/docs/4-recipes/viz/play-viz-and-playlist.mp4" controls="controls" width="700" height="400"></video>
+### Replay a Bag
 
-**Looping and Speed Control**
+<video src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/docs/en/4-recipes/6-viz/play-viz-and-playlist.mp4" controls="controls" width="100%"></video>
 
-<video src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/docs/4-recipes/viz/loop-play-and-speed.mp4" controls="controls" width="700" height="400"></video>
+### Looping and Speed Control
 
-**Skipping Frames**
+Click on the Looping Option and Speed Multiplier to change the looping and playback speed.
 
-<video src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/docs/4-recipes/viz/seek-forward.mp4" controls="controls" width="700" height="400"></video>
+![viz-loopback-and-playback-speed](../img/viz-loop-and-playback-speed.png)
+
+### Skipping Frames
+
+Click on the Forward/Backward icons to skip frames on either directions or use the shortcut Left Arrow/Right Arrow
+
+![viz-skipping-frames](../img/viz-skipping-frames.png)
 
 ## View Timeline Details
 
@@ -40,18 +46,18 @@ The visualization interface supports viewing visual content in the bag from mult
 
 ### Return to the Center of the Screen
 
-During playback, you can adjust the screen size using buttons or the scroll wheel, or return to the preset center of the screen with one click.
+You can always use the Recenter button to get back to the pre-set viewport center point.
 
-<video src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/docs/4-recipes/viz/recenter.mp4" controls="controls" width="700" height="400"></video>
+![viz-recenter](../img/viz-recenter.png)
 
 ### Switch between 2D/3D Perspectives
 
-In 3D perspective, use "ctrl" + left mouse button for a 360° rotational view; in 2D perspective, you can rotate the view in a top-down angle.
+In 3D perspective, use "ctrl" + left mouse button for a 360° rotational view. In 2D perspective, you can rotate the panel while in the top-down view.
 
-<video src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/docs/4-recipes/viz/3d-and-zoom.mp4" controls="controls" width="700" height="400"></video>
+![viz-switch-2d-3d](../img/viz-switch-2d-3d.png)
 
 <br />
 
 ## View the Corresponding Topic for Each Color in the Current View
 
-<video src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/docs/4-recipes/viz/3D-view-point-information.mp4" controls="controls" width="700" height="400"></video>
+<video src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/docs/4-recipes/viz/3D-view-point-information.mp4" controls="controls" width="100%"></video>

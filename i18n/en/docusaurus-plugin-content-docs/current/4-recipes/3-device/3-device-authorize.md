@@ -2,7 +2,7 @@
 sidebar_position: 3
 ---
 
-## Device Authorizations
+# Device Authorizations
 
 > Authorized devices can automatically upload data to projects based on data collection rules.
 

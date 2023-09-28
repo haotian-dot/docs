@@ -4,7 +4,7 @@ sidebar_position: 10
 
 # Create, Share, and View "Moments"
 
-You can create, edit, and share keyframes called "Moments" within the visualization page of a record. They can be tags, faults, or interesting scenes from the record.
+You can create, edit, and share keyframes called "Moments" within the visualization page. They can be tags, issues, accidents, mis-behaviors, or interesting scenes from the record.
 
 Follow the pictorial explanations and video tutorials provided in this section to understand the operations related to "Moments" within the visualization interface.
 
