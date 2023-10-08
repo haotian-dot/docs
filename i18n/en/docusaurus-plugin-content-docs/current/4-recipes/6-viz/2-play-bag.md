@@ -60,4 +60,4 @@ In 3D perspective, use "ctrl" + left mouse button for a 360° rotational view. I
 
 ## View the Corresponding Topic for Each Color in the Current View
 
-<video src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/docs/4-recipes/viz/3D-view-point-information.mp4" controls="controls" width="100%"></video>
+<video src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/docs/en/4-recipes/6-viz/3D-view-point-information.mp4" controls="controls" width="100%"></video>

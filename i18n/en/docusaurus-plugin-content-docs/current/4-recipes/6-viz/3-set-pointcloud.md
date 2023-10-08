@@ -12,11 +12,11 @@ Each topic can be toggled on or off.
 
 ### View/Hide All Topics
 
-<video src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/docs/4-recipes/viz/3D-showhide-all-topic.mp4" controls="controls" width="700" height="400"></video>
+![viz-topics-show](../img/viz-topics-show.png)
 
 ### View/Hide a Specific Topic
 
-<video src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/docs/4-recipes/viz/3D-showhide-a-topic.mp4" controls="controls" width="700" height="400"></video>
+![viz-topic-show](../img/viz-topic-show.png)
 
 ## Set Point Cloud Properties
 
@@ -24,19 +24,19 @@ You can set the point size, decay time, color, and other information for the poi
 
 ### Set Point Size
 
-<video src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/docs/4-recipes/viz/3D-setting-point-size.mp4" controls="controls" width="700" height="400"></video>
+<video src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/docs/en/4-recipes/6-viz/3D-setting-point-size.mp4" controls="controls" width="700" height="400"></video>
 
 ### Set Point Decay Time
 
-<video src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/docs/4-recipes/viz/3D-setting-decay-time.mp4" controls="controls" width="700" height="400"></video>
+<video src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/docs/en/4-recipes/6-viz/3D-setting-decay-time.mp4" controls="controls" width="700" height="400"></video>
 
 ### Set Point Color
 
-<video src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/docs/4-recipes/viz/3D-setting-color.mp4" controls="controls" width="700" height="400"></video>
+<video src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/docs/en/4-recipes/6-viz/3D-setting-color.mp4" controls="controls" width="700" height="400"></video>
 
 ## Import Static TF
 
-<video src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/docs/4-recipes/viz/3D-input-static-TF.mp4" controls="controls" width="700" height="400"></video>
+<video src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/docs/en/4-recipes/6-viz/3D-input-static-TF.mp4" controls="controls" width="700" height="400"></video>
 
 ## Set Static Bag
 
