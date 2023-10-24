@@ -85,7 +85,7 @@ sidebar_position: 5
 
    其中各参数说明如下：
 
-   - `endpoint` 中 `${YOUR_DOMAIN}` 需替换成实际的网站地址：
+   - `endpoint` 中 `${YOUR_DOMAIN}` 需替换成实际的网站地址。如下图的网址，`${YOUR_DOMAIN}` 为 `api.coscene.cn`
 
      ![run-5](../img/cli-1.png)
 
