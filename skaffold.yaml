@@ -1,0 +1,33 @@
+# since skaffold v2.0.3
+apiVersion: skaffold/v4beta1
+kind: Config
+build:
+  tagPolicy:
+    # e.g: 2022-12-05_v22.48.0-8-g295c572a
+    # e.g: 2022-12-05-78c7d2b
+    customTemplate:
+      template: '{{.FOO}}-{{.BAR}}'
+      components:
+        - name: FOO
+          dateTime:
+            format: '2006-01-02'
+            timezone: 'UTC'
+        - name: BAR
+          gitCommit:
+            ignoreChanges: true
+  artifacts:
+    # Will copy from Azure to AliCloud
+    - image: coseus.azurecr.io/docs
+      context: .
+      docker:
+        dockerfile: Dockerfile
+        buildArgs:
+          GH_PACKAGES_ORG_TOKEN: '{{.GH_PACKAGES_ORG_TOKEN}}'
+  local:
+    useBuildkit: true
+profiles:
+  - name: local
+    build:
+      local:
+        push: false
+        useBuildkit: false
