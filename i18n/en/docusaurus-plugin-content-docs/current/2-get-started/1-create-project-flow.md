@@ -6,8 +6,9 @@ sidebar_position: 1
 
 ## 1. Log In
 
-coScene currently does not require account registration. You can log in using Feishu or DingTalk. Please visit [coScene's data platform website](https://home.coscene.cn) to start your first step.
-<video src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/docs/en/2-get-started/coscene-login.mp4" controls="controls" width="700" height="400"></video>
+You can log in on the homepage using DingTalk or email. Please visit the coScene Data Platform website [https://coscene.cn](https://coscene.cn) to get started.
+
+![homepage-login](img/homepage-login.png)
 
 ## 2. Access Projects
 

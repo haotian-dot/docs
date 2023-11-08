@@ -6,8 +6,9 @@ sidebar_position: 1
 
 ## 1. 登录
 
-刻行目前无需注册账号，使用飞书和钉钉即可登录。请访问[刻行数据平台的网站](https://home.coscene.cn)开始你的第一步。
-<video src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/docs/2-get-started/coscene-login.mp4" controls="controls" width="700" height="400"></video>
+您可以在刻行主页使用钉钉或是邮箱的方式直接进行登陆，请访问刻行数据平台网站 [https://coscene.cn](https://coscene.cn) 开始你的第一步。
+
+![homepage-login](img/homepage-login.png)
 
 ## 2. 访问项目
 
