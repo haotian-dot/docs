@@ -14,7 +14,7 @@ sidebar_position: 1
 
 项目是刻行中管理数据的基本类型，项目可以是**一个部门、一个小组或一个专项课题**。在首页，可以查看组织中您有访问权限的项目。点击进入一个项目，即可访问项目中的数据。
 
-<video src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/docs/2-get-started/visit-project.mp4" controls="controls" width="700" height="400"></video>
+![homepage-available-projects](img/homepage-available-projects.png)
 
 ## 3. 创建项目
 
