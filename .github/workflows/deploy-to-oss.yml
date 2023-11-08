@@ -60,7 +60,7 @@ jobs:
           url: ${{ secrets.FEISHU_BOT_WEBHOOK_URL_RHODE_ISLAND }}
           msg_type: text
           content: |
-            text: |
-              A new version of coScene Docs site has been deployed
+            text: |i18n/en/docusaurus-p
+              A new version of coScene Docs site has been deployed at the bucket ${{ secrets.OSS_TARGET_BUCKET }}
               committer: ${{ github.actor }}
               URL: https://docs.coscene.cn
