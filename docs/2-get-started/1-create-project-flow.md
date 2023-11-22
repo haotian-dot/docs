@@ -18,8 +18,12 @@ sidebar_position: 1
 
 ## 3. 创建项目
 
-如您登录后，组织中没有可访问的项目，可以创建一个新的项目。在组织内，默认创建的项目皆为组织内可见，可以被组织内的成员访问。
+如您登录后，组织中没有可访问的项目，可以创建一个新的项目。请注意，在组织内，创建的项目默认为组织内可见，可以被组织内的成员访问。您可以在创建时的向导中更改该选项，或者是项目创建后的项目设定内，更改项目的可见性。
 
-<video src="https://coscene-artifacts-prod.oss-cn-hangzhou.aliyuncs.com/docs/2-get-started/create-new-project.mp4" controls="controls" width="700" height="400"></video>
+![create-new-project-1](img/create-new-project-1.png)
+
+您可以在项目创建的过程中，跟随项目创建向导更改不同的项目设置。
+
+![create-new-project-2](img/create-new-project-2.png)
 
 恭喜你！你已经完成了刻行数据平台的第一步，接下来我们将会介绍如何使用记录功能，上传并可视化你的机器人数据！
