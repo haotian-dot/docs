@@ -11,7 +11,7 @@ sidebar_position: 1
 在登录刻行平台时，如果你是所选择组织中第一个登录刻行平台的用户，你会成为该组织的管理员，并进行组织的初始化设置。
 如果你不是第一个登录的用户，你将会成为该组织的普通成员。
 
-![org-first-user](img/org-first-user.jpg)
+![org-first-user](img/org-first-user.png)
 
 ## 设备 Device
 
