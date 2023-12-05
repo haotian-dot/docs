@@ -3,7 +3,6 @@
   "position": 9,
   "collapsible": true,
   "link": {
-    "type": "generated-index",
-    "slug": "/category/data-collection-and-diagnose"
+    "type": "generated-index"
   }
 }
