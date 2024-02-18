@@ -40,4 +40,3 @@ In the "Run Workflow" modal, select the workflow template.
 On the record details page, the default input record is the current record and cannot be changed. After clicking the【Run】button, the workflow will be triggered.
 
 ![trigger-workflow](../img/trigger-workflow.png)
-

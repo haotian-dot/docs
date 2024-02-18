@@ -41,8 +41,6 @@ sidebar_position: 1
 
 ![create-record-4](../img/create-record-4.png)
 
-
 - 缩略图：您可以上传一张现场照片或关键帧，帮助识别记录
 
 ![create-record-5](../img/create-record-5.png)
-

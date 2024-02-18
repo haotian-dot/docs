@@ -71,7 +71,7 @@ You can archive records to store low-activity data for others to view and refere
 - Select the records you wish to archive, then click [Archive Record].
 
   ![records-archive](../img/records-archive.png)
-  
+
 ### Unarchiving Records
 
 > Once a record is unarchived, it is restored to a readable and writable state.
@@ -95,5 +95,5 @@ You can archive records to store low-activity data for others to view and refere
   ![pro-record-archived](../img/pro-record-archived.png)
 
 - Select the records you wish to unarchive, then click [Unarchived Record].
-  
+
   ![records-unarchive](../img/records-unarchive.png)

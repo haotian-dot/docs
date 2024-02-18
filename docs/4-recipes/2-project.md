@@ -4,7 +4,6 @@ sidebar_position: 2
 
 # 项目
 
-
 ## 1. 创建项目
 
 ### 1.1 创建项目的权限
@@ -14,7 +13,6 @@ sidebar_position: 2
 ### 1.2 如何创建一个新项目
 
 - 点击首页左上角的【创建项目】按钮，即可开始创建
-
 
 ---
 
@@ -62,7 +60,6 @@ sidebar_position: 2
 ---
 
 ## 3.项目成员的权限
-
 
 ---
 
@@ -114,4 +111,3 @@ sidebar_position: 2
 - 在【项目】下，点击【已归档】，切换到已归档的项目列表。鼠标悬停在目标项目，点击【取消归档】按钮。
 
 ![image](https://user-images.githubusercontent.com/105594127/197178306-3f9d187d-4f9f-4942-929a-119ddc44e69a.png)
-

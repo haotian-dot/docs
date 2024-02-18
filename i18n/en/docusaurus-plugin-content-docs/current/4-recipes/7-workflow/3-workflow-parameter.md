@@ -25,7 +25,7 @@ On the "Static TF Extraction" workflow page, click the 【Run Workflow】button.
 The "Run Workflow" pop-up appears, where you can customize the values of input parameters. These include:
 
 - **filename**: The file that need to extract Static TF.
-  
+
 ![input-workflow-parameters](../img/input-workflow-parameters.png)
 
 After editing the input parameters as needed, click the 【Run】 button to trigger the workflow.
