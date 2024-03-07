@@ -43,3 +43,9 @@ The docusaurus-plugin-content-docs plugin always divides its content by versions
 ### Everything else
 
 See [contribute guide](https://docs.coscene.cn/docs/contribute)
+
+### Known Bugs
+
+There's a bug that prevents the translation of the nav button from showing up correctly when transitioning between chapters/categories. The official team is still working on this issue:
+
+[GitHub Issue #8123](https://github.com/facebook/docusaurus/pull/8123)
