@@ -38,7 +38,7 @@ Using the following scenario as an example, let's setup your automatic data coll
    version: v1 # The current rule group version is only v1
    ```
 
-   \*For more rule styles, see [Structure and Examples of Rules](./4-rule-format.md).
+   \*For more rule styles, see [Structure and Examples of Rules](./4-manage-rule.md).
 
 4. Click the "Save" button.
 
@@ -66,7 +66,7 @@ Using the following scenario as an example, let's setup your automatic data coll
 
    ```
 
-   \*For more configurations, refer to [Data Collection Rule Format](./4-rule-format.md)
+   \*For more configurations, refer to [Data Collection Rule Format](./4-manage-rule.md)
 
 3. Click the "Save Changes" button.
 

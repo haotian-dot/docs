@@ -30,32 +30,43 @@ sidebar_position: 2
 
 2. 在项目中，进入「管理项目-数采与诊断规则」页面，点击【添加规则组】
 
-   ![pro-rule-1](../img/pro-rule-1.png)
+   ![pro-rule-add-rule-set](../img/pro-rule-add-rule-set.png)
 
-3. 清空规则中的默认内容后，复制下述规则，粘贴在编辑器中
+3. 更改规则组名称后，点击【添加规则】
 
-   ```yaml
-   name: error 系列 # 规则组名称
+   ![pro-rule-add-rule](../img/pro-rule-add-rule.png)
 
-   rules:
-     - when:
-         - has(msg.message, "error 1") # 规则触发条件：log 中包含字段 error 1
-       actions:
-         - upload(title="定位丢失 - error 1") # 创建名称为「定位丢失 - error 1」的记录，上传 log 文件到记录中
-         - create_moment(title="定位丢失") # 创建名称为「定位丢失」的一刻
+4. 更改规则名称，复制规则 `"error 1" in log` 到触发条件，保持触发操作部分生成记录的勾选框为勾选状态，点击【创建】
 
-   enabled: true # 规则组状态：启用
-
-   version: v1 # 当前规则组版本只有 v1
-   ```
-
-   \*更多规则样式参见[规则的结构与示例](./4-rule-format.md)
-
-4. 点击【保存】按钮
-
-   ![pro-rule-4](../img/pro-rule-4.png)
+   ![pro-rule-base-rule](../img/pro-rule-base-rule.png)
+   
+    \*更多规则条件样式参见[规则的结构与示例](./3-add-rule.md#常用规则条件示例)
 
 <br />
+
+## 在项目中添加数据诊断触发器
+
+1. 进入 auto-upload 项目
+
+   ![pro-1](../img/pro-1.png)
+
+2. 在项目中，进入「自动化-触发器」页面，点击【创建触发器】
+
+   ![pro-trigger-add](../img/pro-trigger-add.png)
+
+3. 编辑触发器内容
+
+- 编辑触发器名称为「数据诊断」，
+- 选择关联动作为「系统动作」，
+- 从系统动作下拉框中「数据诊断」
+- 编辑文件通配符模式为`**/*` (格式使用 Glob，详细可查看[参考文档](https://www.malikbrowne.com/blog/a-beginners-guide-glob-patterns/))
+- 点击【创建触发器】
+
+   ![pro-trigger-base](../img/pro-trigger-edit.png)
+
+<br />
+
+
 
 ## 配置数采设备信息
 
@@ -86,7 +97,7 @@ sidebar_position: 2
 
 ## 准入设备
 
-> 以 linux 设备为例，其他设备的注册方式参见[设备注册](https://docs.coscene.cn/docs/receipts/device/device-authorize#%E8%AE%BE%E5%A4%87%E6%B3%A8%E5%86%8C)
+> 以 linux 设备为例。
 
 <br />
 
@@ -102,11 +113,11 @@ sidebar_position: 2
    mkdir logs
    ```
 
-3. 在刻行平台，进入组织管理页面的「设备」分页
+3. 在刻行平台，进入组织管理页面的「设备」分页， 点击【添加设备】
 
-   ![org-device](../img/org-device.png)
+   ![org-device](../img/org-device-add.png)
 
-4. 复制安装命令，以 root 账户粘贴到设备终端
+4. 在弹窗中选择【从设备端添加】，复制安装命令，以 root 账户粘贴到设备终端
 
    ![org-device-copy-command](../img/org-device-copy-command.png)
 

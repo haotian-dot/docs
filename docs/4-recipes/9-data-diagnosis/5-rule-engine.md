@@ -10,12 +10,12 @@ sidebar_position: 5
 
 根据处理的文件类型，coScene agent 将会根据下列图表填充变量：
 
-|               | Bag file (ROS， Mcap，etc) | Log file                                                                                                                     |
-| ------------- | -------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
+|               | Bag file (ROS， Mcap，etc) | Log file                                                                                                        |
+|---------------|--------------------------|-----------------------------------------------------------------------------------------------------------------|
 | `msg: any`    | Message 数据               | 由log文件中的一行信息封装成的 [Foxglove.Log](https://github.com/foxglove/schemas/blob/main/schemas/proto/foxglove/Log.proto) |
-| `ts: float`   | 时间戳                     | 从单行log中解析出的时间戳                                                                                                    |
-| `topic: str`  | Topic 名称                 | log文件名                                                                                                                    |
-| `msgtype:str` | 消息类型                   | `Foxglove.Log`                                                                                                               |
+| `ts: float`   | 时间戳                      | 从单行log中解析出的时间戳                                                                                                  |
+| `topic: str`  | Topic 名称                 | log文件名                                                                                                          |
+| `msgtype:str` | 消息类型                     | `Foxglove.Log`                                                                                                  |
 
 注：
 
@@ -162,7 +162,7 @@ log_level == LogLevel.FATAL # 每当出现 FATAL 日志时触发
   # 当监测到‘Error 12345’时会被触发，‘Error 12345’在 2 秒内多次触发时，
   # 仅第一次监测到的‘Error 12345’会被触发
   debounce(
-    'Error 12345' in log_text,
+    'Error 12345' in log,
     2
   )
   ```
@@ -203,8 +203,8 @@ log_level == LogLevel.FATAL # 每当出现 FATAL 日志时触发
 # Triggers if a request completes within the given time.
 # Requests are matched by id
 sequential(
-  set_value('req_id', regex_search(log_text, 'Send request (\\d+)').group(1)),
-  regex_search(log_text, 'Request (\\d+) completed').group(1) == get_value('req_id'),
+  set_value('req_id', regex(log, 'Send request (\\d+)').group(1)),
+  regex(log, 'Request (\\d+) completed').group(1) == get_value('req_id'),
   duration=10
 )
 ```
@@ -221,10 +221,10 @@ sequential(
 
 <br />
 
-- **`regex_search(value, pattern)`: 监测 `value` 与 `pattern` 是否匹配**
+- **`regex(value, pattern)`: 监测 `value` 与 `pattern` 是否匹配**
 
   如果成功匹配，则返回 Python `Match` 对象
 
   ```python
-  regex_search('Current speed is 20', 'speed is (\\d+)').group(1) # 20
+  regex('Current speed is 20', 'speed is (\\d+)').group(1) # 20
   ```
