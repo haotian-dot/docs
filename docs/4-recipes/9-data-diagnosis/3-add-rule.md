@@ -106,6 +106,8 @@ sidebar_position: 3
 
 ![pro-rule-template](../img/pro-rule-template.png)
 
+\*更多模版化方案样例参见后续章节 [模版化方案](#模版化方案)
+
 <br />
 
 ### 触发条件
@@ -261,3 +263,82 @@ debounce(
   duration=10
 )
 ```
+
+## 模版化方案
+
+在实际使用规则的时候常常会遇到需要创建多个高度相似但部分信息不同的规则的场景，这时可以将信息不同的部分参数化，进而使用模版化操作来生成多条规则，而不需要手动创建多条规则。
+
+### 模版化场景示例
+考虑下面这样一个场景：我们需要对日志文件中出现的不同错误码进行监控，当出现错误码时，需要创建一刻。
+不同的错误码有不同的一刻名称和不同的一刻描述，如下表：
+
+<table>
+    <tr>
+        <th>错误码</th><th>一刻名称</th><th>一刻描述</th>
+    </tr>
+    <tr>
+        <td>123</td><td>Caught error 123</td><td>The robot fell and couldn't move.</td>
+    </tr>
+    <tr>
+        <td>456</td><td>Caught error 456</td><td>Fail to upload data to cloud.</td>
+    </tr>
+    <tr>
+        <td>789</td><td>Caught error 789</td><td>Error turning direction.</td>
+    </tr>
+</table>
+
+这时很容易发现，这些规则的触发条件和触发操作是高度相似的，如果手动创建这些规则，会非常繁琐。这时只需要将错误码和一刻描述用模版化操作来生成这些规则，就可以轻松完成这个任务。
+在触发条件和触发操作中可以使用代码变量的地方可以使用 `get_value('VARIABLE')` 来获取变量的值，这里注意 `VARIABLE` 是参数的 Key 值。
+
+具体的创建操作如下：
+
+- 填写「基础信息-规则名称」为 `错误码规则`
+
+![pro-rule-template-edit-rule-name](../img/pro-rule-template-edit-rule-name.png)
+
+- 填写「模版化」的参数组内容如下图所示
+
+![pro-rule-template-edit-template](../img/pro-rule-template-edit-template.png)
+
+- 利用参数填写规则的触发条件为 `get_value('ErrCode') in log`，这里使用了 `get_value` 函数来获取参数 `ErrCode` 的值。
+
+![pro-rule-template-edit-condition](../img/pro-rule-template-edit-condition.png)
+
+- 利用参数填写规则的触发操作
+  - 勾选 【创建一刻】
+  - 填写一刻名称为 `Caught error {get_value('ErrCode')}`，这里使用了 `get_value` 函数来获取参数 `ErrCode` 的值。
+  - 填写一刻描述为 `{get_value('momentDescription')}`，同上，这里使用了 `get_value` 函数来获取参数 `momentDescription` 的值。
+
+![pro-rule-template-edit-action-create-moment](../img/pro-rule-template-edit-action-create-moment.png)
+
+- 点击【创建】，即创建了一个模版化的规则。
+
+接下来，用上面创建的规则去诊断如下日志文件：（操作详见[数据诊断](./2-get-started.md)）
+
+```
+Log start at 2023-08-15 19:46:10
+INFO 0815 19:46:10.000000 Everything OK
+ERROR 0815 19:46:11.000000 code 123 happened
+INFO 0815 19:46:12.000000 Everything OK
+INFO 0815 19:46:12.000000 Everything OK
+ERROR 0815 19:46:13.500000 code 456 happened
+INFO 0815 19:46:14.000000 Everything OK
+INFO 0815 19:46:16.000000 Everything OK
+Error 0815 19:46:16.000000 code 789 happened
+INFO 0815 19:46:16.000000 Everything OK
+```
+
+等待规则诊断结束后，即可在规则的一刻中看到如下效果：
+
+![pro-rule-template-success-effect](../img/pro-rule-template-success-effect.png)
+
+如此，我们就完成了用一个模版化的规则来监控多个错误码的任务。
+
+### 代码变量的使用
+
+在规则的触发操作中部分文本输入框是可以使用代码变量来获取触发时的相关数据值的，比如在上面的模版化场景示例中，
+
+触发操作的一刻名称中使用了 `{get_value('ErrCode')}` 来获取参数 `ErrCode` 的值，这里的 `get_value('ErrCode')` 就是一个代码变量。
+
+想要使用代码变量， 在文本输入框中使用 `{}` 来包裹代码变量即可，常见的代码变量除了 `get_value('VARIABLE')` 还有 `msg`、`log`、`topic` 等，具体的代码变量可以参考 [规则引擎](./5-rule-engine.md)。
+
