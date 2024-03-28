@@ -2,9 +2,9 @@
 sidebar_position: 3
 ---
 
-# Workflow
+# Automation
 
-coScene's workflow is a task-based workflow system. As one of the three core engines of coScene, the flexible and powerful workflow system brings more possibilities to the data stored on the coScene platform. This article introduces the basic features of the workflow. For details on the workflow's usage and components, please refer to the [workflow section in the operation guide](../4-recipes/7-workflow/1-about-workflows.md).
+coScene's workflow is a task-based workflow system. As one of the three core engines of coScene, the flexible and powerful workflow system brings more possibilities to the data stored on the coScene platform. This article introduces the basic features of the workflow. For details on the workflow's usage and components, please refer to the workflow section in the operation guide.
 
 ## Seamless Integration with the Data Engine
 

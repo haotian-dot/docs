@@ -62,5 +62,9 @@
   "sidebar.tutorialSidebar.category.写作指南": {
     "message": "Writing Guide",
     "description": "The label for category 写作指南 in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.自动化": {
+    "message": "Automation",
+    "description": "The label for category 自动化 in sidebar tutorialSidebar"
   }
 }
