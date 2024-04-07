@@ -3,7 +3,28 @@ title: coScene Changelog
 id: changelog
 ---
 
-# Release Histories
+# Release History
+
+## [24.14.0] - 2024-04-03
+
+### [New]
+
+- Now "Action Run" can update the record files it ran against
+
+  - When defining an action and its artifacts, there are now two options
+    - If you want to save artifacts to the "Action Run" output, you can have the files saved to /cos/output folder. Files under this path will automatically be saved as the "Action Run" output.
+    - If you want to update the record the action ran against, like update the calibration files per the testing result, you can directly modify the original files under /cos/files. In order to use feature, you have to enable the "Modify Original Record Files" options in the action
+  - In the output of the "Action Run", users can manually select files from the output and save them to a new record or the record it ran against.
+
+- Added [Delete File Audition], in the `Organization Management` - `Audit` page, users can now see the audit events under `Change of record information` - `Delete file`
+- Added [coScene Service Status]: In the login page footer and the user menu, there's
+- Added [System Service Status]: Added a "System Service Status" shortcut at the login page and user dropdown menu of the platform once logged in, enabling monitoring of coScene platform service status
+
+### [Changes]
+
+- Updated the display style of the user dropdown menu, showing shortcuts for language switching and documentation
+
+---
 
 ## [24.12.0] - 2024-03-21
 
