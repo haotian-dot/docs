@@ -4,11 +4,9 @@ sidebar_position: 3
 
 # 添加规则
 
-> 每个项目规则单独配置，仅项目管理员可编辑
-
 数采与诊断规则定义触发数据采集与诊断的条件，以及触发后的操作。例如：当设备日志中发生某个事件时，自动采集指定目录下的数据，存储为一条记录，并在该时间点创建一刻。规则的基本结构与标准格式参见后续章节。
 
-<br />
+每个项目的规则单独配置，仅项目管理员可编辑。
 
 ## 使用前提
 
@@ -43,7 +41,7 @@ sidebar_position: 3
     </tr>
 </table>
 
-若有其他格式的时间戳，请联系刻行。
+若有其他格式的时间戳需要支持的，请联系刻行的技术支持。
 
 <br />
 
@@ -52,13 +50,12 @@ sidebar_position: 3
 规则组是规则的集合，用于对规则进行分类管理。规则组的创建与编辑操作如下：
 
 - 在项目中，进入「管理项目-数采与诊断规则」页面，点击【添加规则组】。
-![pro-rule-add-rule-set](../img/pro-rule-add-rule-set.png)
+  ![pro-rule-add-rule-set](../img/pro-rule-add-rule-set.png)
 
 - 创建规则组（或点击进入已创建的规则组页面后），点击规则组名称即可编辑。点击【添加规则】可添加规则。
 
   详细添加规则的操作参见后续章节 [规则](#规则)。
-![pro-rule-add-rule](../img/pro-rule-add-rule.png)
-
+  ![pro-rule-add-rule](../img/pro-rule-add-rule.png)
 
 ## 规则
 
@@ -66,17 +63,17 @@ sidebar_position: 3
 
 (详细操作参见后续章节 [基础信息](#基础信息), [模版化](#模版化), [触发条件](#触发条件), [触发操作](#触发操作), [触发限制](#触发限制) ）
 
-- 进入已创建的规则组页面后（或创建规则组后），点击【添加规则】。
-![pro-rule-add-rule](../img/pro-rule-add-rule.png)
+1. 进入已创建的规则组页面后（或创建规则组后），点击【添加规则】。
+   ![pro-rule-add-rule](../img/pro-rule-add-rule.png)
 
-- 更改规则名称。
-- 编辑规则触发条件（可复制 `"error 1" in log` ）。
-- 保持触发操作部分生成记录的勾选框为勾选状态。
-- 点击【创建】。
-![pro-rule-base-rule](../img/pro-rule-base-rule.png)
+2. 更改规则名称。
+3. 编辑规则触发条件（可复制 `"error 1" in log` ）。
+4. 保持触发操作部分生成记录的勾选框为勾选状态。
+5. 点击【创建】。
+   ![pro-rule-base-rule](../img/pro-rule-base-rule.png)
 
-- 保存成功后，即可查看配置完成的规则。
-![pro-rule-save-success](../img/pro-rule-save-success.png)
+6. 保存成功后，即可查看配置完成的规则。
+   ![pro-rule-save-success](../img/pro-rule-save-success.png)
 
 <br />
 
@@ -115,6 +112,7 @@ sidebar_position: 3
 触发条件被满足时会触发规则的触发操作。这里可以添加多个触发条件，只要有一个条件满足即可触发。
 
 添加触发条件的基础编辑操作如下：
+
 - 直接编辑触发条件。（下图例：`"error 1" in log`）
 - 点击条件右侧的 `+` 按钮增加一个条件。
 - 编辑新增触发条件 （下图例：`topic == "/velocity" and 4 < msg.linear.x < 10`）
@@ -138,6 +136,7 @@ sidebar_position: 3
 <br />
 
 添加生成记录触发操作的基础编辑操作如下：
+
 - 勾选 【生成记录】
 - 编辑生成记录的所包含数据时间范围（下图例：在触发条件满足时，生成记录并上传`10`分钟以内的相关文件）
 - 编辑记录名称（下图例：`record name demo`）
@@ -150,6 +149,7 @@ sidebar_position: 3
 ![pro-rule-action-upload](../img/pro-rule-action-upload.png)
 
 添加创建一刻触发操作并创建任务与同步任务的基础编辑操作如下：
+
 - 勾选 【创建一刻】
 - 编辑一刻名称（下图例：`moment name demo`）
 - 编辑一刻描述（下图例：`moment description demo`）
@@ -158,8 +158,6 @@ sidebar_position: 3
 - 选择同步任务为【是】（同步任务参见[任务同步到-jira](../10-integration/1-jira-integration.md#任务同步到-jira)）
 
 ![pro-rule-action-create-moment](../img/pro-rule-action-create-moment.png)
-
-
 
 <br />
 
@@ -172,13 +170,13 @@ sidebar_position: 3
 限制分为单台设备限制和所有设备限制两种，若两种限制都设置了，则两种限制都满足时规则才会触发。
 
 添加包含两种触发限制的基础编辑操作如下：
+
 - 勾选 【单台设备】
 - 编辑单台设备的限制条件 （下图例：1 天内最多触发 10 次）
 - 勾选 【所有设备】
 - 编辑所有设备的限制条件 （下图例：1 天内最多触发 30 次）
 
 ![pro-rule-limit](../img/pro-rule-limit.png)
-
 
 <br />
 
@@ -269,6 +267,7 @@ debounce(
 在实际使用规则的时候常常会遇到需要创建多个高度相似但部分信息不同的规则的场景，这时可以将信息不同的部分参数化，进而使用模版化操作来生成多条规则，而不需要手动创建多条规则。
 
 ### 模版化场景示例
+
 考虑下面这样一个场景：我们需要对日志文件中出现的不同错误码进行监控，当出现错误码时，需要创建一刻。
 不同的错误码有不同的一刻名称和不同的一刻描述，如下表：
 
@@ -341,4 +340,3 @@ INFO 0815 19:46:16.000000 Everything OK
 触发操作的一刻名称中使用了 `{get_value('ErrCode')}` 来获取参数 `ErrCode` 的值，这里的 `get_value('ErrCode')` 就是一个代码变量。
 
 想要使用代码变量， 在文本输入框中使用 `{}` 来包裹代码变量即可，常见的代码变量除了 `get_value('VARIABLE')` 还有 `msg`、`log`、`topic` 等，具体的代码变量可以参考 [规则引擎](./5-rule-engine.md)。
-
