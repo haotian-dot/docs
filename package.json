@@ -14,10 +14,10 @@
     "format:write": "prettier --write --loglevel warn \"./**/*.{js,jsx,ts,tsx,css,md,json}\" "
   },
   "dependencies": {
-    "@docusaurus/core": "^3.1.1",
-    "@docusaurus/preset-classic": "^3.1.1",
-    "@docusaurus/theme-common": "^3.1.1",
-    "@docusaurus/theme-mermaid": "^3.1.1",
+    "@docusaurus/core": "^3.2.1",
+    "@docusaurus/preset-classic": "^3.2.1",
+    "@docusaurus/theme-common": "^3.2.1",
+    "@docusaurus/theme-mermaid": "^3.2.1",
     "@mdx-js/react": "^3.0.1",
     "autoprefixer": "^10.4.19",
     "postcss": "^8.4.38",
@@ -27,13 +27,13 @@
     "tailwindcss": "^3.4.3"
   },
   "devDependencies": {
-    "@docusaurus/module-type-aliases": "^3.1.1",
-    "@docusaurus/tsconfig": "^3.1.1",
-    "@docusaurus/types": "^3.1.1",
+    "@docusaurus/module-type-aliases": "^3.2.1",
+    "@docusaurus/tsconfig": "^3.2.1",
+    "@docusaurus/types": "^3.2.1",
     "@tsconfig/docusaurus": "^2.0.3",
-    "@types/react": "^18.2.73",
+    "@types/react": "^18.2.79",
     "prettier": "^3.2.5",
-    "typescript": "^5.4.3"
+    "typescript": "^5.4.5"
   },
   "browserslist": {
     "production": [
