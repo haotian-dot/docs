@@ -2,93 +2,101 @@
 sidebar_position: 2
 ---
 
-# Learn More About Actions
+# Learn More About coScene Automation
 
-coScene core concepts and usage guides.
+## Preface
 
-## 概念介绍
+This article introduces the functionalities of the automation module provided by coScene, exploring the concepts and usage of related modules.
 
-自动化主要有三个子功能入口，动作、触发器和调用历史。触发器关联动作，文件的上传会触发触发器的运行，符合条件的触发器会触发动作运行，完成一次自动化的运行，展示在调用历史页面。
+## Introduction to Concepts
 
-### 动作
+Automation primarily includes three sub-functional entries: Actions, Triggers, and Invocation History. Triggers are linked to actions; the uploading of files will initiate the operation of triggers. Triggers that meet conditions will activate actions, completing an automation run displayed on the Invocation History page.
 
-定义了用户的行为，指想要执行的操作逻辑，主要是用户自己的业务代码逻辑。例如列举目录下所有文件 (`ls -al`)、运行特定的程序 (`python hello.py`) 等。
+### Actions
+
+Define user behavior, referring to the operational logic they wish to execute, mainly consisting of the user's own business code logic. For example, listing all files in a directory (`ls -al`) or running a specific program (`python hello.py`).
 
 ![create action](../img/action-create-action.png)
 
-#### 动作名称
+#### Action Name
 
-用户按照功能填写有含义的名称。
+Users should fill in a meaningful name based on the functionality.
 
-#### 描述
+#### Description
 
-详细的介绍动作的相关信息，可不填。
+Provides a detailed introduction to the action's related information, optional to fill.
 
-#### 镜像
+#### Image
 
-当前支持两种方式操作：
+Currently supports two methods of operation:
 
-1. 用户可以将自定义镜像上传至刻行平台，然后使用对应的镜像地址，具体查看[推送镜像](https://docs.coscene.cn/docs/recipes/regression/image-management#2-%E6%8E%A8%E9%80%81%E9%95%9C%E5%83%8F)
-2. 使用**公开可访问**的镜像地址，如 Docker Hub 上的各类开放镜像
+1. Users can upload a custom image to the coScene platform, then use the corresponding image URL. For more details, see [Pushing Images](https://docs.coscene.cn/docs/recipes/regression/image-management#2-%E6%8E%A8%E9%80%81%E9%95%9C%E5%83%8F)
+2. Use a **publicly accessible** image URL, such as various open images on Docker Hub
 
-#### 命令
+#### Command
 
-镜像运行之后执行的命令信息，请依据自定义镜像的实际需求修改，**请注意命令和相关的参数等均需要独立成行**。如 `ls -al` 的命令需要拆分为两行填写。
+The command information executed after the image runs. Please modify it according to the actual needs of your custom image. **Note that the command and related parameters should be written on separate lines**. For example, the `ls -al` command should be split into two lines:
 
-#### 环境变量
+```
+  ls
+  -al
+```
 
-用户可以预设相关的环境变量提供给程序读取使用，刻行预设了部分环境变量，在定义时请避免使用相关的名称，防止程序出现意料之外的错误。
+#### Environment Variables
 
-- `COS_CODE_VOLUME` 代码的挂载目录，值为 `/cos/codes`
-- `COS_BIN_VOLUME` 二进制文件的挂载目录，值为 `/cos/bins`
-- `COS_BUNDLE_VOLUME` 测试包文件的挂载目录，值为 `/cos/bundles`
-- `COS_FILE_VOLUME` 原始上传数据文件的挂载目录，值为`/cos/files`
-- `COS_ARTIFACT_VOLUME` 批量测试的 artifact 目录，用户可以在运行过程中将产出物写入到相关目录进行保存，值为 `/cos/artifacts`
-- `COS_OUTPUT_VOLUME` 输出文件的目录，用户可以将程序的输出数据写入到相关的目录进行保存，例如 bag 文件。后续可以与原始 bag 文件进行对比播放，具体值为 `/cos/outputs`
+Users can preset relevant environment variables for the program to use. coScene has predefined some environment variables. When defining, please avoid using these names to prevent unexpected program errors.
 
-下列的环境变量的值为可选项，当存在时为 uuid 格式的 id 信息，不存在时为空。
+- `COS_CODE_VOLUME` - Code mounting directory, value `/cos/codes`
+- `COS_BIN_VOLUME` - Binary files mounting directory, value `/cos/bins`
+- `COS_BUNDLE_VOLUME` - Test package files mounting directory, value `/cos/bundles`
+- `COS_FILE_VOLUME` - Original uploaded data files mounting directory, value `/cos/files`
+- `COS_ARTIFACT_VOLUME` - Batch test artifact directory, users can write output during the run for saving, value `/cos/artifacts`
+- `COS_OUTPUT_VOLUME` - Output files directory, users can save program output data here, such as bag files. It can be compared and played back with original bag files, specific value `/cos/outputs`
 
-- `COS_ORG_ID` 组织 ID
-- `COS_USER_ID` 用户 ID
-- `COS_WAREHOUSE_ID` warehouse ID
-- `COS_PROJECT_ID` 项目 ID
-- `COS_RECORD_ID` 记录 ID
+The following environment variable values are optional and consist of uuid-formatted IDs when present, otherwise, they are empty.
 
-#### 计算要求
+- `COS_ORG_ID` - Organization ID
+- `COS_USER_ID` - User ID
+- `COS_WAREHOUSE_ID` - Warehouse ID
+- `COS_PROJECT_ID` - Project ID
+- `COS_RECORD_ID` - Record ID
 
-限制了程序的 cpu 和内存的最大使用量，1 核代表最高可以使用 1 核的 cpu，2G 代表最大使用 2G 的内存。当程序使用超过配置的计算资源时，可能会导致程序被刻行系统终止导致程序非正常退出，请预估使用资源并配置合理的计算要求。
-默认提供了四种配置，`1核/2G`, `2核/4G`, `4核/8G`, `8核/16G` ，如果有更高的需求，请联系刻行团队。
+#### Compute Requirements
 
-### 触发器
+Limits the maximum CPU and memory usage of the program. 1 core means up to 1 virtual core of CPU can be used, 2G represents a maximum of 2G of memory. Exceeding configured resources might cause the program to be terminated abnormally by the coScene system. Estimate resource use and configure reasonable compute requirements.
 
-触发器定义了动作的触发时机，当新文件上传成功时，触发器会依据配置进行检查。文件通配符可以限制上传文件的名称格式等，条件组可以约束上传文件所属记录的范围，例如只允许有 `hello` 标签的记录在文件上传成功时触发运行。
+Actions offer four default configurations, `1 core/2G`, `2 cores/4G`, `4 cores/8G`, `8 cores/16G`. If higher requirements are needed, please contact the coScene team.
+
+### Triggers
+
+Triggers define the timing of actions. When a new file is successfully uploaded, the trigger checks based on the configuration. File wildcards can limit the name format of uploaded files, and condition groups can restrict the scope of records to which uploaded files belong, such as only allowing records with the `hello` label to trigger an action upon successful file upload.
 
 ![create trigger](../img/action-create-trigger.png)
 
-#### 触发器名称
+#### Trigger Name
 
-按照业务需求填写有含义的名称信息。
+Fill in a meaningful name based on business needs.
 
-#### 关联动作
+#### Associated Actions
 
-用户在动作页面创建的动作均为项目动作，可以选择使用。刻行依据客户的场景，内置开发了通用的一些系统动作，减少用户的开发量，如自动诊断功能等，如有相关通用需求，请联系刻行团队。
+Actions created on the action page are project actions, available for selection. coScene has developed some common system actions based on customer scenarios to reduce development effort, such as automatic diagnostic functions. For related common needs, please contact the coScene team.
 
-#### 文件通配符
+#### File Wildcards
 
-用于匹配上传的文件是否符合相关的格式定义，决定后续的触发器是否触发动作运行，具体的语法逻辑请参考页面介绍。
+Used to match whether uploaded files meet the format definition, determining whether subsequent triggers will activate actions. Refer to the page for specific syntax logic.
 
-#### 条件
+#### Conditions
 
-支持筛选关联记录的标签信息，当只有符合标签的要求记录才可以满足触发器条件。**请注意，记录标签的改变并不会触发刻行系统检验相关的触发器**，例如给记录打上一个新的标签，触发器并不会检验然后运行对应的动作，_当前只有上传文件才会触发触发器的运行_
+Supports filtering associated record tag information. Only records meeting the tag requirements can satisfy trigger conditions. **Note that changes in record tags will not trigger coScene system verification of related triggers**. For example, adding a new tag to a record will not trigger the trigger to check and then run the corresponding action. _Currently, only file uploads will trigger the operation of triggers._
 
-### 调用历史
+### Invocation History
 
-调用历史展示了项目内所有动作的执行历史，用户可以点击记录查看单条运行记录的详情信息，提供了状态、时间、操作用户等概览信息。另外也提供了具体的执行日志信息，用户可以查看日志来检测程序的运行情况，方便开发调试。
+Invocation history displays the execution history of all actions within the project. Users can click on a record to view detailed information about a single run, providing an overview of status, time, operating user, etc. It also provides specific execution log information, allowing users to check the running status of programs for easier development and debugging.
 
-#### 调用历史列表页面
+#### Invocation History List Page
 
 ![action runs](../img/action-runs.png)
 
-#### 单次运行详情页面
+#### Single Run Detail Page
 
 ![action run detail](../img/action-run-detail.png)
