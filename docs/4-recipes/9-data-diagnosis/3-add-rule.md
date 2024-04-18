@@ -77,9 +77,9 @@ sidebar_position: 3
 
 <br />
 
-### 基础信息
+### 编辑基础信息
 
-在该部分可编辑规则的基础信息，目前仅可编辑规则的名称。
+目前仅可编辑规则的名称。
 
 ![pro-rule-base-info](../img/pro-rule-base-info.png)
 

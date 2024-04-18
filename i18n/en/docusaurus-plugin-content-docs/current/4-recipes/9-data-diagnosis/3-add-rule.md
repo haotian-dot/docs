@@ -79,9 +79,9 @@ A rule is an individual rule within a rule group, defining the conditions for tr
 
 <br />
 
-### Basic Information
+### Edit Basic Information
 
-In this section, you can edit the basic information of the rule, currently, only the rule name can be edited.
+Currently, only the rule name can be edited.
 
 ![pro-rule-base-info](../img/pro-rule-base-info.png)
 
