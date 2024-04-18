@@ -39,8 +39,8 @@ sidebar_position: 2
 4. 更改规则名称，复制规则 `"error 1" in log` 到触发条件，保持触发操作部分生成记录的勾选框为勾选状态，点击【创建】
 
    ![pro-rule-base-rule](../img/pro-rule-base-rule.png)
-   
-    \*更多规则条件样式参见[规则的结构与示例](./3-add-rule.md#常用规则条件示例)
+
+   \*更多规则条件样式参见[规则的结构与示例](./3-add-rule.md#常用规则条件示例)
 
 <br />
 
@@ -62,11 +62,9 @@ sidebar_position: 2
 - 编辑文件通配符模式为`**/*` (格式使用 Glob，详细可查看[参考文档](https://www.malikbrowne.com/blog/a-beginners-guide-glob-patterns/))
 - 点击【创建触发器】
 
-   ![pro-trigger-base](../img/pro-trigger-edit.png)
+  ![pro-trigger-base](../img/pro-trigger-edit.png)
 
 <br />
-
-
 
 ## 配置数采设备信息
 
