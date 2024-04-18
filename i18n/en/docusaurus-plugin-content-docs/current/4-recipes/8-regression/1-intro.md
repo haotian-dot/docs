@@ -6,7 +6,7 @@ sidebar_position: 1
 
 Batch testing aims to meet users' needs for large-scale testing in a productized manner, with application scenarios including regression testing, simulation testing, etc.
 
-Users can upload and manage relevant images, test data, test suites, and test packages on the CoScene platform, run batch tests within the project scope, monitor progress, and obtain test results.
+Users can upload and manage relevant images, test data, test suites, and test packages on the coScene platform, run batch tests within the project scope, monitor progress, and obtain test results.
 
 <br />
 
@@ -30,8 +30,8 @@ Click to enter the project's "Batch Testing" page and create a batch test accord
 
 The following step-by-step overview provides you with a basic process for using the batch testing feature:
 
-1. Upload test data to the CoScene project and store it as a record.
-2. Ensure the organization has the appropriate available image or push images to the CoScene platform.
+1. Upload test data to the coScene project and store it as a record.
+2. Ensure the organization has the appropriate available image or push images to the coScene platform.
 3. Upload or edit the configuration file online on the "Test Suite Management" page to obtain the test suite and corresponding configuration parameters.
 4. Upload the test package file on the "Test Package Management" page to generate a test package version; if the uploaded test package meets the test suite association trigger condition, it will automatically trigger a batch test.
 5. On the "Batch Testing" page, click the button and select run parameters (test package version, test suite, etc.) to run the batch test; or run the batch test directly from the command line locally.

@@ -6,7 +6,7 @@ sidebar_position: 3
 
 ## View Tasks
 
-On the main page of CoScene, on the right under "My Tasks," you can see a list of tasks assigned to you that are not yet completed. Clicking on the task title will redirect you to the task's details page, where you can view task information and take action.
+On the main page of coScene, on the right under "My Tasks," you can see a list of tasks assigned to you that are not yet completed. Clicking on the task title will redirect you to the task's details page, where you can view task information and take action.
 
 ![process-a-task-1](../img/process-a-task-1.png)
 

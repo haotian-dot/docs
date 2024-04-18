@@ -4,7 +4,7 @@ sidebar_position: 4
 
 # Test Bundle Management
 
-> Understand the sample content of the test bundle file, and see how to upload the test bundle to the CoScene platform and manage its versions.
+> Understand the sample content of the test bundle file, and see how to upload the test bundle to the coScene platform and manage its versions.
 
 ## 1. Prepare Test Bundle File
 

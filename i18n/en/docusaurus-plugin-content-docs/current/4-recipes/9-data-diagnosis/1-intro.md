@@ -20,5 +20,5 @@ The process of automatic data collection and diagnosis has three basic elements:
 
 1. **Configure Rules**: Define conditions for triggering data collection and diagnosis, as well as actions after the trigger.
 2. **Configure Data Collection Device Information**: Define directories where the device logs to be monitored are located, directories where device information files are stored, etc.
-3. **Register Device**: Register the device on the CoScene platform. Once the device is admitted, it can collect data according to the rules.
+3. **Register Device**: Register the device on the coScene platform. Once the device is admitted, it can collect data according to the rules.
 4. **View Instances**: View automatically collected data in the project, as well as diagnosis results.

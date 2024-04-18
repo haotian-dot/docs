@@ -43,7 +43,7 @@ The supported timestamp formats in log text files are as follows ([Reference Doc
     </tr>
 </table>
 
-For other timestamp formats, please contact Keyline.
+For other timestamp formats, please contact coScene.
 
 <br />
 
