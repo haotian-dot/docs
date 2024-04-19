@@ -4,13 +4,31 @@ sidebar_position: 2
 
 # 推送与管理镜像
 
-> 了解如何配置镜像文件、推送镜像至刻行平台并进行管理。
+了解如何使用刻行的镜像仓库存储和管理用户自己构建的 Docker 镜像。
 
-## 1. 准备镜像文件
+## 前置条件
 
-**1.1 运行 Docker**
+本机已经安装并启动 Docker
 
-**1.2 配置镜像**
+## 1. 认证和登陆刻行的镜像仓库
+
+登陆刻行平台，在右上角用户设置下拉面板中，访问【个人设置】，在【个人设置】页面中，访问[【安全】](https://coscene.cn/profile?section=security)页面。
+
+点击生成访问命令，获取登陆刻行镜像仓库的命令和密码
+
+![generate-cr-token](../img/generate-cr-token.png)
+
+![login-cr](../img/login-cr.png)
+
+在命令行中输入包含用户名的登陆，使用之前获得的认证凭证进行认证
+
+![docker-login](../img/docker-login.png)
+
+## 2. 准备镜像文件
+
+**2.1 运行 Docker**
+
+**2.2 配置镜像**
 
 新建一个文件夹，其中包含 dockerfile 和相关测试代码
 
@@ -58,48 +76,29 @@ sidebar_position: 2
 
   - 若需要在最终的测试结果中输出图型测试报告，请参见 [输出测试结果](../8-regression/6-status-and-output.md#输出图表) 章节。
 
-**1.3 build 镜像**
+**2.3 build 镜像**
 
-镜像文件准备完成后，打开终端，进入对应文件夹后执行命令 build 镜像，各操作系统对应命令如下（请根据实际替换镜像地址部分）：
+镜像文件准备完成后，打开终端，进入对应文件夹后执行命令 build 镜像：
 
-- Linux
+:::warning
+请根据您在刻行的组织名称，替换镜像地址
+:::
 
-  ```bash
-  docker build -f dockerfile -t cr.coscene.cn/coscene-lark/image:latest .
-  ```
+```bash
+docker build -f dockerfile -t cr.coscene.cn/coscene/image:latest .
 
-- macOS
+# 如果在不同的系统中进行交叉构建
+docker build -f dockerfile -t cr.coscene.cn/coscene-lark/image:latest --platform linux/amd64 .
+```
 
-  ```bash
-  docker build -f dockerfile -t cr.coscene.cn/coscene-lark/image:latest --platform linux/amd64 .
-  ```
-
-<br />
-
-## 2. 推送镜像
-
-登录刻行平台，在「我的设置 - 安全-访问刻行容器镜像仓库」中点击「生成访问命令」。
-
-![generate-cr-token](../img/generate-cr-token.png)
-
-在终端粘贴用户名、密码，获取刻行容器镜像仓库访问权限。
-
-![login-cr](../img/login-cr.png)
-
-在终端执行推送镜像命令，推送镜像至刻行平台。
-
-![push-image](../img/push-image.png)
-
-  <br />
+完成构建之后，就可以使用 `docker push` 将镜像推送到刻行的镜像仓库了。
 
 ## 3. 查看组织镜像列表
 
-在「我的 - 组织管理 - 镜像」页面，可以查看当前组织内的镜像列表：
+在[「我的 - 组织管理 - 镜像」](https://coscene.cn/org/images)页面中，可以查看当前组织内的镜像列表：
 
 ![image-list](../img/image-list.png)
 
 点击镜像名称，展示该镜像所有版本，可以点击「复制」按钮复制完整的镜像地址：
 
 ![tag-list](../img/tag-list.png)
-
-  <br />
