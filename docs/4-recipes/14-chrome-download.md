@@ -1,5 +1,5 @@
 ---
-sidebar_position: 13
+sidebar_position: 14
 ---
 
 # 浏览器支持
@@ -14,7 +14,7 @@ sidebar_position: 13
 
 ![win-downloadchrome1](img/win-downloadchrome1.png)
 
-3. 下载成功后，在浏览器中点击【下载】按钮；若提示「ChromeSetup.exe可能会损害你的设备，是否仍要保留？」，选择【保留】。
+3. 下载成功后，在浏览器中点击【下载】按钮；若提示「ChromeSetup.exe 可能会损害你的设备，是否仍要保留？」，选择【保留】。
 
 ![win-downloadchrome2](img/win-downloadchrome2.png)
 
