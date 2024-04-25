@@ -62,7 +62,7 @@ coscli record download -r 5db755c0-8caa-4d90-9858-c80ba9932eb9 .
 
 命令行工具会将记录中的所有文件打包在以记录 ID 为名字的文件夹内，这个功能在您之后可能会遇到的下载多个记录中帮助您保持文件的独立性，方便管理。
 
-## 常见批量操作距离
+## 常见批量操作举例
 
 ### 上传同一个文件到项目中的所有记录中
 
@@ -73,3 +73,13 @@ coscli upload -r "$(coscli record list | grep -v 'ID' | cut -d ' ' -f1 | paste -
 ![coscli-upload-file-to-all-records](./img/coscli-upload-file-to-all-records.png)
 
 ### 为每一个当前目录下的文件夹建立一个记录
+
+假定我们有如下的 5 个文件夹，文件夹中包含若干个随机文件和文件夹，具体结构如下图所示。
+
+![list-folders-tree-view](./img/list-folders-tree-view.png)
+
+我们立刻利用刻行命令行工具和标准的 Linux 命令行工具来一次性完成所有文件记录的创建和文件上传。
+
+```
+for dir in */; do record_id=$(cos record create -t "${dir%/}" | cut -d " " -f3); cos upload -R -r "$record_id" "$dir"; done
+```
