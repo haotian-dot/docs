@@ -1,0 +1,10 @@
+{
+  "label": "命令行工具（CLI）",
+  "position": 5,
+  "collapsible": true,
+  "link": {
+    "type": "generated-index",
+    "slug": "/category/cli",
+    "description": "使用刻行命令行工具进行数据管理"
+  }
+}
