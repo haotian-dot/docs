@@ -34,5 +34,5 @@ coscli update
 ```Bash
 # -p 后填写 <项目 slug>
 # -t 后填写 <个人访问令牌>
-cos login set -p <项目 slug> -t <个人访问令牌>
+coscli login set -p <项目 slug> -t <个人访问令牌>
 ```

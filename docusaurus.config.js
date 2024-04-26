@@ -135,7 +135,7 @@ const config = {
         copyright: `Copyright © ${new Date().getFullYear()} coScene`,
       },
       prism: {
-        theme: themes.github,
+        theme: themes.oceanicNext,
         darkTheme: themes.dracula,
       },
       docs: {
