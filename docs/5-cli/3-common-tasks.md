@@ -1,0 +1,66 @@
+# 常见批量操作举例
+
+## 上传同一个文件到项目中的所有记录中
+
+```
+coscli record list | grep -v 'ID' | cut -d ' ' -f1 | xargs -I {} coscli record upload {} ./FILE_FLAG
+```
+
+![coscli-upload-file-to-all-records](./img/coscli-upload-file-to-all-records.png)
+
+## 为每一个当前目录下的文件夹建立一个记录
+
+假定我们有如下的 5 个文件夹，文件夹中包含若干个随机文件和文件夹，具体结构如下图所示。
+
+![list-folders-tree-view](./img/list-folders-tree-view.png)
+
+我们立刻利用刻行命令行工具和标准的 Linux 命令行工具来一次性完成所有文件记录的创建和文件上传。
+
+```bash
+# 遍历当前目录下的所有子目录
+for dir in */; do
+  # 去除目录名称末尾的斜杠，并创建一个新的记录，获取记录ID
+  record_id=$(coscli record create -t "${dir%/}" | head -n1 | cut -d " " -f3)
+
+  # 上传当前子目录的内容到创建的记录中
+  coscli record upload -R "$record_id" "$dir"
+done
+```
+
+![coscli-create-and-upload-multiple-folders](./img/coscli-create-and-upload-multiple-folders.png)
+
+打开网页端任意记录就可以看到，命令行将本地的文件夹内的所有文件和文件夹都上传到了对应记录
+
+![coscli-multiple-folders-uploaded](./img/coscli-multiple-folders-uploaded.png)
+
+## 找出所有不含任何文件的空记录
+
+```bash
+# 遍历每个记录ID
+for id in $(coscli record list | grep -v 'ID' | cut -d ' ' -f1); do
+    # 获取记录中的文件列表
+    files=$(coscli record list-files $id | tail -n +2)
+
+    # 检查文件列表是否为空
+    if [[ -z "$files" ]]; then
+        # 如果文件列表为空，则输出该记录ID
+        echo "Record $id has no files."
+    fi
+done
+```
+
+## 给所有空记录打上标签
+
+```bash
+# 遍历每个记录ID
+for id in $(coscli record list | grep -v 'ID' | cut -d ' ' -f1); do
+    # 获取记录中的文件列表
+    files=$(coscli record list-files $id | tail -n +2)
+
+    # 检查文件列表是否为空
+    if [[ -z "$files" ]]; then
+        # 给所有空的记录打上标签 empty-record
+        coscli record update $id -l empty-record
+    fi
+done
+```
