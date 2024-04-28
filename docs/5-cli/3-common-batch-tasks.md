@@ -44,6 +44,8 @@ for id in $(coscli record list | grep -v 'ID' | cut -d ' ' -f1); do
 done
 ```
 
+根据这个模式也可以举一反三，连接更复杂的批量操作。
+
 ### 找出所有不含任何文件的空记录
 
 ```bash
@@ -60,6 +62,25 @@ done
 ```
 
 ### 给所有空记录打上标签
+
+```bash
+for id in $(coscli record list | grep -v 'ID' | cut -d ' ' -f1); do
+    # 获取记录中的文件列表，去掉表头
+    files=$(coscli record list-files $id | tail -n +2)
+
+    # 检查文件列表是否为空
+    if [[ -z "$files" ]]; then
+        # 给所有空的记录打上标签 empty-record
+        coscli record update $id -l empty-record
+    fi
+done
+```
+
+### 删除所有空记录
+
+:::danger
+请非常小心`删除`操作，这可能会删除重要数据！！
+:::
 
 ```bash
 for id in $(coscli record list | grep -v 'ID' | cut -d ' ' -f1); do
