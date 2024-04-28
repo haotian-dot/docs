@@ -107,3 +107,15 @@ coscli record update d253523f-5a8a-40dd-8bd9-2d289367d6ff --delete-labels sunny
 通过命令行删除 `sunny` 标签，可以看到现在只剩下了 `morning` 的标签了
 
 ![coscli-record-delete-labels-list](./img/coscli-record-delete-labels-list.png)
+
+## 更新记录的原信息
+
+命令行也支持更改记录的名字和描述信息，下列的命令找出了记录中带有 `empty-record` 标签的第一个记录，更新了该记录的
+名字和描述，让用户更方便的理解这个记录的意思
+
+```bash
+RECORD_ID=$(coscli record list | grep 'empty-record' | head -n1 | cut -d ' ' -f1)
+coscli record update $RECORD_ID -t "Fancy Empty Record Title" -d "Do you really need a description for an empty record"
+```
+
+![update-record-title-and-description](./img/update-record-title-and-description.png)

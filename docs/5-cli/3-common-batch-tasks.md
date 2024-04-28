@@ -33,12 +33,22 @@ done
 
 ![coscli-multiple-folders-uploaded](./img/coscli-multiple-folders-uploaded.png)
 
-## 找出所有不含任何文件的空记录
+## 遍历所有记录并进行操作
+
+一种常见的命令行操作模式是遍历用户指定项目内的所有记录，并根据特定的模式进行操作
 
 ```bash
-# 遍历每个记录ID
+# 获取项目中的所有记录列表，遍历并提供 Record 的 ID 作为后续操作的依据
 for id in $(coscli record list | grep -v 'ID' | cut -d ' ' -f1); do
-    # 获取记录中的文件列表
+    # 使用 $id 进行后续的批量操作
+done
+```
+
+### 找出所有不含任何文件的空记录
+
+```bash
+for id in $(coscli record list | grep -v 'ID' | cut -d ' ' -f1); do
+    # 获取记录中的文件列表，去掉表头
     files=$(coscli record list-files $id | tail -n +2)
 
     # 检查文件列表是否为空
@@ -49,12 +59,11 @@ for id in $(coscli record list | grep -v 'ID' | cut -d ' ' -f1); do
 done
 ```
 
-## 给所有空记录打上标签
+### 给所有空记录打上标签
 
 ```bash
-# 遍历每个记录ID
 for id in $(coscli record list | grep -v 'ID' | cut -d ' ' -f1); do
-    # 获取记录中的文件列表
+    # 获取记录中的文件列表，去掉表头
     files=$(coscli record list-files $id | tail -n +2)
 
     # 检查文件列表是否为空
