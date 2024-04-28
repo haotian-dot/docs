@@ -36,3 +36,22 @@ coscli update
 # -t 后填写 <个人访问令牌>
 coscli login set -p <项目 slug> -t <个人访问令牌>
 ```
+
+## 切换默认项目
+
+命令行成功认证之后，就可以使用命令行来切换默认的工作项目，我们可以首先列出组织中所有用户有权限访问的项目和对应的项目 Slug
+
+```
+coscli project list
+```
+
+![coscli-list-user-projects](./img/coscli-list-user-projects.png)
+
+找到目标项目之后，使用 `coscli login set` 来更新默认的工作项目， 如果需要，可以使用 `coscli login current` 来确认
+
+```bash
+coscli login set -p starbase
+coscli login current
+```
+
+![coscli-update-default-project-slug](./img/coscli-update-default-project-slug.png)
