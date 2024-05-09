@@ -15,7 +15,7 @@ curl -fL https://download.coscene.cn/coscli/install.sh | sh
 在命令行中可以使用 `coscli -h` 来确认命令行工具已经成功安装，并查看工具的基基本用法。
 ![coscli-help](./img/coscli-help.png)
 
-**更新至最新版本**
+### 更新至最新版本
 
 ```Bash
 coscli update

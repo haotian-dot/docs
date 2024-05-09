@@ -1,3 +1,7 @@
+---
+sidebar_position: 4
+---
+
 # 常见批量操作举例
 
 ## 上传同一个文件到项目中的所有记录中
@@ -8,7 +12,7 @@ coscli record list | grep -v 'ID' | cut -d ' ' -f1 | xargs -I {} coscli record u
 
 ![coscli-upload-file-to-all-records](./img/coscli-upload-file-to-all-records.png)
 
-## 为每一个当前目录下的文件夹建立一个记录
+## 为当前目录下的所有文件夹建立一个记录并上传文件
 
 假定我们有如下的 5 个文件夹，文件夹中包含若干个随机文件和文件夹，具体结构如下图所示。
 
@@ -89,8 +93,8 @@ for id in $(coscli record list | grep -v 'ID' | cut -d ' ' -f1); do
 
     # 检查文件列表是否为空
     if [[ -z "$files" ]]; then
-        # 给所有空的记录打上标签 empty-record
-        coscli record update $id -l empty-record
+        # 删除当前记录，使用 -f 标志来跳过手工确认的步骤
+        coscli record delete $id -f
     fi
 done
 ```
