@@ -30,7 +30,7 @@ sidebar_position: 2
 
 当前支持两种方式操作：
 
-1. 用户可以将自定义镜像上传至刻行平台，然后使用对应的镜像地址，具体查看[推送镜像](https://docs.coscene.cn/docs/recipes/regression/image-management#2-%E6%8E%A8%E9%80%81%E9%95%9C%E5%83%8F)
+1. 用户可以将自定义镜像上传至刻行平台，然后使用对应的镜像地址，具体查看[推送镜像](../8-regression/2-image-management.md)
 2. 使用**公开可访问**的镜像地址，如 Docker Hub 上的各类开放镜像
 
 #### 命令
