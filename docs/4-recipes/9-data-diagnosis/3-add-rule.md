@@ -68,9 +68,10 @@ sidebar_position: 3
 
 2. 更改规则名称。
 3. 编辑规则触发条件（可复制 `"error 1" in log` ）。
-4. 保持触发操作部分生成记录的勾选框为勾选状态。
+4. 勾选触发操作中的生成记录和创建一刻，更改一刻名称为`触发了 error 1`。
 5. 点击【创建】。
-   ![pro-rule-base-rule](../img/pro-rule-base-rule.png)
+   ![pro-rule-base-rule](../img/pro-rule-base-rule-1.png)
+   ![pro-rule-base-rule](../img/pro-rule-base-rule-2.png)
 
 6. 保存成功后，即可查看配置完成的规则。
    ![pro-rule-save-success](../img/pro-rule-save-success.png)
