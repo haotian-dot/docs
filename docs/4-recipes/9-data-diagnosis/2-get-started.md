@@ -36,9 +36,15 @@ sidebar_position: 2
 
    ![pro-rule-add-rule](../img/pro-rule-add-rule.png)
 
-4. 更改规则名称，复制规则 `"error 1" in log` 到触发条件，保持触发操作部分生成记录的勾选框为勾选状态，点击【创建】
+4. 更改规则名称，复制规则 `"error 1" in log` 到触发条件，勾选触发操作中的生成记录和创建一刻，更改一刻名称为 `触发了 error 1`，点击【创建】
 
-   ![pro-rule-base-rule](../img/pro-rule-base-rule.png)
+   ![pro-rule-base-rule](../img/pro-rule-base-rule-1.png)
+   
+   ![pro-rule-base-rule](../img/pro-rule-base-rule-2.png)
+
+5. 回到「管理项目-数采与诊断规则」页面，选择刚刚添加的规则组，点击启用按钮
+
+   ![pro-rule-enable-rule-set](../img/pro-rule-enable-rule-set.png)
 
    \*更多规则条件样式参见[规则的结构与示例](./3-add-rule.md#常用规则条件示例)
 
@@ -129,11 +135,23 @@ sidebar_position: 2
 
      ![dev-install-1](../img/dev-install-1.png)
 
-6. 在组织管理页面的「设备」分页，找到需要审核的设备，点击【同意准入】
+6. 在组织管理页面的「设备」分页，找到需要审核的设备，点击【准入数采】
 
    ![org-device-authorize](../img/org-device-authorize.png)
 
 <br />
+
+
+## 将设备添加到项目里
+
+1.  在项目的「项目设备」分页，点击【添加设备】
+
+    ![pro-device-add](../img/pro-device-add-1.png)
+
+2. 勾选需要添加的设备，点击【确定】
+
+    ![pro-device-add-2](../img/pro-device-add-2.png)
+
 
 ## 在设备监听目录中写入文件
 
