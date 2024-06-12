@@ -76,11 +76,13 @@ sidebar_position: 3
 6. 保存成功后，即可查看配置完成的规则。
    ![pro-rule-save-success](../img/pro-rule-save-success.png)
 
+\* [规则调试](./4-manage-rule-group.md#调试)
+
 <br />
 
-### 编辑基础信息
+### 基础信息
 
-目前仅可编辑规则的名称。
+目前仅可定义规则的名称。
 
 ![pro-rule-base-info](../img/pro-rule-base-info.png)
 
@@ -185,39 +187,51 @@ sidebar_position: 3
 
 > 以下展示了部分典型的规则触发条件
 
+* 触发了某个错误码
+
 ```yaml
-# 触发了某个错误码
 'Error code 123 happened' in log
+```
 
-# 检查 x 方向的速度是否在 4~10 之间
+* 检查 x 方向的速度是否在 4~10 之间 
+```yaml
 topic == '/velocity' and 4 < msg.linear.x < 10
+```
 
-# 分析日志中的值并检查它是否在 4~10 之间
+* 分析日志中的值并检查它是否在 4~10 之间
+```yaml
 4 < regex(log, 'X velocity is (\\d+)').group(1) < 10
+```
 
-# 机器人返回充电桩 30 秒后没有开始充电
+* 机器人返回充电桩 30 秒后没有开始充电
+```yaml
 timeout(
   'Returned to base' in log,
   'charging state: CHARGING' in log,
   duration=30
 )
+```
 
-# 命令没有在 10 秒内完成
+* 命令没有在 10 秒内完成
+```yaml
 timeout(
   set_value('cmd_id', regex(log, 'Sending command id (\\d+)').group(1)),
   regex(log, 'Command (\\d+) finished').group(1) == get_value('cmd_id'),
   duration=10
 )
+```
 
-# 如果温度在 60 秒内上升 5
-# 假设消息中存在字段 `value`
+* 如果温度在 60 秒内上升 5 (假设消息中存在字段 `value`)
+```yaml
 topic == '/temp' and sequential(
   set_value('start_temp', msg.value),
   msg.value - get_value('start_temp') > 5,
   duration=60
 )
+```
 
-# 检查初始化在 20 秒内完成
+* 检查初始化在 20 秒内完成
+```yaml
 timeout(
   'Initialization start' in log,
   # The three modules can finish init in any order
@@ -228,23 +242,28 @@ timeout(
   'Initialization finished' in log,
   duration=20
 )
+```
 
-# 检测到一个 topic 超过 20 秒未收到消息，
-# 例如，定位模块挂了
+* 检测到一个 topic 超过 20 秒未收到消息，例如，定位模块挂了
+```yaml
 timeout(
   topic == '/localization',
   topic == '/localization',
   duration=20
 )
+```
 
-# 温度高于 40 的时间超过 60 秒
+* 温度高于 40 的时间超过 60 秒
+```yaml
 sustained(
   topic == '/temp',
   msg.value > 40,
   duration=60
 )
+```
 
-# chassis 环路频繁超时：60 秒内超时次数大于 10 次
+* chassis 环路频繁超时：60 秒内超时次数大于 10 次
+```yaml
 repeated(
   timeout(
     'Send chassis command' in log,
@@ -254,9 +273,10 @@ repeated(
   times=10,
   duration=60
 )
+```
 
-# 触发错误，但如果发生以下情况，则忽略它们
-# 错误发生的时间间隔在 10 秒之内
+* 触发错误，但如果发生以下情况，则忽略它们，错误发生的时间间隔在 10 秒之内
+```yaml
 debounce(
   'Error 123' in log,
   duration=10
