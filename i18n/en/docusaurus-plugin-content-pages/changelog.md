@@ -5,6 +5,32 @@ id: changelog
 
 # Release History
 
+## [24.24.0] - 2024-6-14
+
+### 【New】
+
+- Added "Annotation Task Label" feature: When creating an annotation task, support using the labels of selected records as task labels.
+- Added "Test Suite Display" feature: Display the test suite used in this test on the batch test table page.
+- Added "File List Pagination" feature: Support pagination display of files on the record file list page.
+- Added "Task ID": Display the ID number of the task in the task table.
+
+### 【Changes】
+
+- Update the display of the "Records" page:
+  - Fix the record table name column and support horizontal scrolling.
+  - Move the batch operation location after multiple records are selected to below the list.
+  - Support cross-page record selection.
+- Update the display of "Last Online Time" in ‘Organizational Equipment’, and ‘Project Equipment’:
+  - Changed to display the online/offline status of the device.
+  - Mouse hover to display the last online time.
+- Update the interaction for creating/editing moments: On the timeline, support adjusting the start and end points of the moment by dragging.
+- Optimize the display style of the sidebar:
+  - Upgrade the sidebar navigation experience, with refreshed icons.
+  - Display module names when the sidebar is collapsed.
+  - Remember the user's state of expanding or collapsing.
+
+---
+
 ## [24.14.0] - 2024-04-03
 
 ### [New]
