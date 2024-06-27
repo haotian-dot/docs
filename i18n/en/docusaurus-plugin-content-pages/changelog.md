@@ -5,6 +5,29 @@ id: changelog
 
 # Release History
 
+## [24.26.0] - 2024-6-25
+
+### [New]
+
+- **New "Action Chain Processing" Feature**: Define multiple data processing steps within an action and execute them sequentially with a single click.
+- **New "Header Settings" Feature**: Configure the table display for "Organization Device List" and "Record List".
+  - **Configure Header Display Content**: Use the [Settings] button on the far right of the header to show/hide fields, adjust order, and restore defaults.
+  - **Set Table Column Width**: Drag the header to adjust column width.
+  - **Personalized Table Settings**: These settings are personalized and do not affect the view of other team members.
+- **New "Action Help Documentation"**: View help documentation on the right side of the page while creating or editing actions.
+- **New "Data Collection Client Version Information"**: Display the current version information of the data collection client in the "Device Details - Data Collection Program" section.
+
+### [Changes]
+
+- **Updated File Search Logic**: You can now search for all files related to a specific record on the record details page.
+- **Updated Record Details Page Layout**: Changed to a card-style layout.
+- **Updated "File Preview" Style on Record Details Page**:
+  - Display file list in the preview window, enabling quick file switching.
+  - Use keyboard arrow keys to conveniently switch between the previous and next files.
+- **Invocation History** ids are now easy to understand integer numbers.
+
+---
+
 ## [24.24.0] - 2024-6-14
 
 ### 【New】
