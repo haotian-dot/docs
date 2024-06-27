@@ -14,26 +14,26 @@
     "format:write": "prettier --write --loglevel warn \"./**/*.{js,jsx,ts,tsx,css,md,json}\" "
   },
   "dependencies": {
-    "@docusaurus/core": "^3.3.2",
-    "@docusaurus/preset-classic": "^3.3.2",
-    "@docusaurus/theme-common": "^3.3.2",
-    "@docusaurus/theme-mermaid": "^3.3.2",
+    "@docusaurus/core": "^3.4.0",
+    "@docusaurus/preset-classic": "^3.4.0",
+    "@docusaurus/theme-common": "^3.4.0",
+    "@docusaurus/theme-mermaid": "^3.4.0",
     "@mdx-js/react": "^3.0.1",
     "autoprefixer": "^10.4.19",
     "postcss": "^8.4.38",
     "prism-react-renderer": "^2.3.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "tailwindcss": "^3.4.3"
+    "tailwindcss": "^3.4.4"
   },
   "devDependencies": {
-    "@docusaurus/module-type-aliases": "^3.3.2",
-    "@docusaurus/tsconfig": "^3.3.2",
-    "@docusaurus/types": "^3.3.2",
+    "@docusaurus/module-type-aliases": "^3.4.0",
+    "@docusaurus/tsconfig": "^3.4.0",
+    "@docusaurus/types": "^3.4.0",
     "@tsconfig/docusaurus": "^2.0.3",
     "@types/react": "^18.3.3",
-    "prettier": "^3.2.5",
-    "typescript": "^5.4.5"
+    "prettier": "^3.3.2",
+    "typescript": "^5.5.2"
   },
   "browserslist": {
     "production": [

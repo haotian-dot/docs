@@ -8,8 +8,8 @@ sidebar_position: 6
 
 ## 前提条件
 
-1. 设备端已经安装刻行相关的设备端程序，具体请参考[设备端安装](./2-create-device.md#从设备端添加)。
-2. 组织管理员已经准入设备，允许进行远程控制设备。[设备准入](./3-manage-device.md#设备准入)请参考相关文档。
+1. 设备端已经安装刻行相关的设备端程序，具体请参考[设备端安装](./2-create-device.md#add-from-device-side)。
+2. 组织管理员已经准入设备，允许进行远程控制设备。[设备准入](./3-manage-device.md#device-access)请参考相关文档。
 
 ## 实时可视化
 
@@ -48,13 +48,13 @@ sidebar_position: 6
 我们这里操作一个简单的示例。通过【网页 SSH】功能我们连接到远端机器，在机器上执行命令 `python3 -m http.server 9000 -d ~` 运行一个简单的 HTTP Server，会将`~`目录下的文件作为静态文件可以直接访问。Server 监听了 9000 的端口，然后我们配置对机器端 9000 的端口进行转发。此时我们在本地浏览器请求映射后的地址，即可将请求转发至机器端。
 
 1. 网页端配置 9000 端口映射
-![device port demo](./img/device-port-demo-1.png)
+   ![device port demo](./img/device-port-demo-1.png)
 
 2. 通过网页 SSH 在机器端执行 `python3 -m http.server 9000 -d ~` 启动简易 HTTP Server
-![device port demo](./img/device-port-demo-3.png)
+   ![device port demo](./img/device-port-demo-3.png)
 
 3. 在浏览器中请求相关地址，发现列举了机器端 `~` 目录下的所有文件信息
-![device port demo](./img/device-port-demo-2.png)
+   ![device port demo](./img/device-port-demo-2.png)
 
 4. 查看机器端的日志信息，发现浏览器的请求已经转发到了机器端，并且返回了 200 标识请求成功。
-![device port demo](./img/device-port-demo-3.png)
+   ![device port demo](./img/device-port-demo-3.png)

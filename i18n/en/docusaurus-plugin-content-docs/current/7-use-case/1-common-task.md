@@ -2,13 +2,13 @@
 sidebar_position: 1
 ---
 
-# 通用数据采集
+# General Data Collection
 
-刻行平台提供了一种依据时间段对机器端数据进行上传的通用数据采集方案，方便用户快速的获取机器端数据。用户在平台侧创建采集任务，确认数据时间范围。机器端 Agent 获取到任务后依据配置的文件地址，扫描文件数据，将符合时间要求的文件上传至平台。
+The coScene platform provides a general data collection scheme for uploading machine-side data based on time periods, allowing users to quickly obtain machine-side data. Users create collection tasks on the platform, confirm the data time range, and the machine-side Agent scans the file data based on the configured file address and uploads the files that meet the time requirements to the platform.
 
-## 配置采集规则
+## Configure Collection Rules
 
-进入【组织管理】-【设备】-【编辑数采规则】，配置整体的数采规则信息。
+Go to [Organization Management] - [Device] - [Edit Collection Rules] to configure the overall collection rule information.
 
 ![device-collector](./img/common-task-1.png)
 
@@ -19,77 +19,76 @@ mod:
   conf:
     enabled: true
     upload_files:
-        - folder1_path // 需要扫描的文件夹
-        - folder2_path
-        - file_path // 需要额外上传的文件地址，请填写绝对路径
+      - folder1_path // Folder to scan
+      - folder2_path
+      - file_path // Additional file address to upload, please fill in the absolute path
   name: task
 ```
 
-具体的配置文件信息介绍，请查看文档[数采规则](../4-recipes/3-device/4-device-collector.md)
+For detailed information on the configuration file, please refer to the document [Collection Rules](../4-recipes/3-device/4-device-collector.md)
 
-## 设备安装 Agent
+## Install Agent on Device
 
-进入【组织管理】-【设备】-【添加设备】，获取设备 Agent 安装命令
+Go to [Organization Management] - [Device] - [Add Device] to get the Agent installation command for the device.
 ![device-command](./img/common-task-2.png)
 
-安装命令支持指定相关的设备 ID 文件路径以及关联字段名，若不设定则会随机生成 ID 绑定当前设备。
-![device-install-command](./img//device-install-command.png)
+The installation command supports specifying the relevant device ID file path and associated field name. If not set, a random ID will be generated to bind to the current device.
+![device-install-command](./img/device-install-command.png)
 
-在机器上打开命令行终端，粘贴上图复制的安装命令，在命令后面添加 `--mod=task` 参数，安装 cos Agent 至机器端。等待几分钟后即可在组织设备中查看到对应的设备信息。
+Open the command line terminal on the machine, paste the copied installation command from the above image, and add the `--mod=task` parameter at the end of the command to install the coScene Agent on the machine. After waiting for a few minutes, you can view the corresponding device information in the organization device list.
 
 ![device-install-command-2](./img/device-install-command-2.png)
 
-在网页端查看相关的设备，若未出现相关设备，第一次安装过程较慢，请耐心等待 1 分钟后刷新网页。找到对应的机器，点击【准入数采】准许设备进行数据采集操作。
+View the relevant device on the web page. If the device does not appear, the first installation process may be slow, so please wait patiently for 1 minute and then refresh the web page. Find the corresponding machine and click [Admit Collection] to allow the device to perform data collection operations.
 
-## 将设备添加至项目
+## Add Device to Project
 
-进入对应的项目，选择【项目设备】-【添加设备】-【从组织设备选择】，选择添加刚才安装的设备到当前项目。
+Enter the corresponding project, select [Project Device] - [Add Device] - [Select from Organization Devices], and select the device just installed to add it to the current project.
 ![project-devices](./img/project-devices.png)
 
-## 创建采集任务
+## Create Collection Task
 
-在项目中，通过【任务】-【自动采集任务】-【创建任务】，选择对应的设备，填写需要采集的时间段信息和相关的描述信息，点击创建任务。
+In the project, go to [Tasks] - [Auto Collection Task] - [Create Task], select the corresponding device, fill in the time period and related description for the collection, and click create task.
 
 ![create-upload-task](./img/upload-task.png)
 
-## 等待采集任务完成
+## Wait for Collection Task to Complete
 
-创建完任务后，机器端 Agent 获取对应的任务信息后依据任务的时间段和配置的文件地址信息进行处理，然后上传符合要求的文件至刻行平台。依据机器端的网络速度和上传文件的数量，单次任务完成时间长短不同，请耐心等待。
+After creating the task, the machine-side Agent will obtain the corresponding task information and process it according to the task's time period and configured file address information, then upload the files that meet the requirements to the coScene platform. Depending on the network speed of the machine side and the number of files being uploaded, the completion time of a single task varies. Please wait patiently.
 
-在任务采集完成之后，任务详情中关联了此次任务关联的 record 信息，点击查看 record 即可查看相关的文件信息。单次的数据采集任务就完成了，就是如此的简单。
+After the task collection is complete, the task details will link to the record information associated with this task. Click to view the record to see the related file information. A single data collection task is thus completed, and it's that simple.
 
 ![task-record](./img/task-record.png)
 
 ![task-record-detail](./img/task-record-detail.png)
 
+## Subsequent Data Processing
 
-## 数据的后续处理
+Once the data is uploaded to the coScene platform, users can leverage the platform's [automation](../4-recipes/12-action/1-quickstart.md) capabilities for subsequent processing to improve data flow speed and enhance development efficiency.
 
-当数据上传至刻行平台之后，用户可以结合刻行平台提供的[自动化](../4-recipes/12-action/1-quickstart.md)能力，对数据进行后续的处理，提升数据流转速度，提升研发效率。
+Here is an example of [automatic decompression]. When the uploaded data contains compressed packages, the automation capability automatically decompresses the compressed package files, avoiding the cumbersome process of downloading data, decompressing, and re-uploading the decompressed data.
 
-这里以【自动解压缩】为例，当上传的数据包含压缩包时，通过自动化的能力自动的将压缩包文件解压，避免了下载数据 - 解压 - 上传解压数据的繁琐流程。
+### Configure Decompression Trigger
 
-### 配置解压触发器
-
-在【自动化】-【触发器】-【创建触发器】中，创建新的触发器。文件通配符填写 `*.tar.gz` 和 `finish.flag`, 其中判断存在压缩包，而且文件上传结束后触发（Agent 在文件上传结束会上传 finish.flag 标记文件标识文件上传过程结束）。
+In [Automation] - [Trigger] - [Create Trigger], create a new trigger. Fill in the file wildcard with `*.tar.gz` and `finish.flag`, which determines the presence of a compressed package and triggers when the file upload is complete (the Agent will upload the finish.flag marker file to indicate the end of the file upload process).
 ![decompress](./img/decompress-files.png)
 
-### 触发解压
+### Trigger Decompression
 
-在刚才的 record 中手动上传一个压缩包文件，查看对应的解压工作流已经自动触发。
+Manually upload a compressed package file in the record created earlier, and observe that the corresponding decompression workflow has been automatically triggered.
 
 ![decompress-action](./img/decompress-action.png)
 
-等待解压操作执行完成，查看文件列表，已经存在一个对应的解压文件夹。
+Wait for the decompression operation to complete, and check the file list to see a corresponding decompressed folder.
 
 ![file-list](./img/files-list.png)
 
 ## Q&A
 
-### Q：机器端对应时间的文件没有采集
+### Q: The files corresponding to the time on the machine side are not collected.
 
-A: 数据采集的文件时间采用的是文件的最后修改时间，可以在机器端通过 `ls -l --time-style=+"%Y-%m-%d %H:%M:%S"` 查看文件对应的修改时间，确定文件的时间时候确实在任务的时间范围内。
+A: The file time for data collection uses the last modification time of the file. You can check the file's modification time on the machine side using `ls -l --time-style=+"%Y-%m-%d %H:%M:%S"` to ensure that the file's time is indeed within the task's time range.
 
-## 总结
+## Summary
 
-上面介绍了一个用户创建采集任务，机器端 Agent 依据任务信息自动上传相关的文件至刻行平台的场景流程。结合刻行平台的自动化能力，可以搭配创建数据诊断、数据处理等流程，快速的搭建一套符合自身业务的数据流转流程，大幅提升研发效率。
+The above introduced a scenario process where a user creates a collection task, and the machine-side Agent automatically uploads relevant files to the coScene platform based on the task information. By combining the platform's automation capabilities, you can create data diagnosis, data processing, and other processes to quickly build a data flow process that meets your business needs, greatly improving development efficiency.

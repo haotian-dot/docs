@@ -63,7 +63,7 @@ Rule groups are collections of rules used for classifying and managing rules. Th
 
 A rule is an individual rule within a rule group, defining the conditions for triggering data collection and diagnostics, as well as the actions taken afterward. The basic creation and editing operations of rules are as follows:
 
-(Detailed steps are seen in subsequent sections [Basic Information](#basic-information), [Templatization](#templatization), [Trigger Conditions](#trigger-conditions), [Trigger Actions](#trigger-actions), [Trigger Restrictions](#trigger-restrictions))
+(Detailed steps are seen in subsequent sections [Basic Information](#edit-basic-information), [Templatization](#templatization), [Trigger Conditions](#trigger-conditions), [Trigger Actions](#trigger-actions), [Trigger Restrictions](#trigger-restrictions))
 
 - After entering a created rule group page (or after creating a rule group), click 【Add Rule】.
   ![pro-rule-add-rule](../img/pro-rule-add-rule.png)
@@ -105,7 +105,7 @@ For the same reason, only the first parameter group can add or delete Key-Value 
 
 ![pro-rule-template](../img/pro-rule-template.png)
 
-\*More examples of templatization schemes can be found in the subsequent section [Templatization Schemes](#templatization-schemes)
+\*More examples of templatization schemes can be found in the subsequent section [Templatization Schemes](#templatization)
 
 <br />
 
@@ -157,7 +157,7 @@ Basic editing operations for adding the create a moment trigger action and creat
 - Edit the moment description (Example in image: `{get_value('momentDescription')}`, similarly, `{get_value('momentDescription')}` is used to obtain the value of the parameter `momentDescription` using the `get_value` function)
 - Choose to create a task as 【Yes】
 - Choose the task agent (Example in image: dropdown select `me`)
-- Choose to sync tasks as 【Yes】 (For task syncing, see [Task Sync to Jira](../10-integration/1-jira-integration.md#task-sync-to-jira))
+- Choose to sync tasks as 【Yes】 (For task syncing, see [Task Sync to Jira](../10-integration/1-jira-integration.md#synchronize-tasks-to-jira))
 
 ![pro-rule-action-create-moment](../img/pro-rule-action-create-moment.png)
 

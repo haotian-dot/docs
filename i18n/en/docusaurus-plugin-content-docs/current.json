@@ -66,5 +66,13 @@
   "sidebar.tutorialSidebar.category.自动化": {
     "message": "Automation",
     "description": "The label for category 自动化 in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.命令行工具 CLI - Beta": {
+    "message": "CLI(Beta)",
+    "description": "The label for category 命令行工具 in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.典型使用场景": {
+    "message": "Common Use Cases",
+    "description": "The label for category 典型使用场景 in sidebar tutorialSidebar"
   }
 }
