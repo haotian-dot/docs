@@ -5,17 +5,23 @@ id: intro
 
 # Overview
 
-Welcome to the coScene platform. coScene is an operational and development platform based on scene data, helping businesses and users manage complex device and behavior data. In today's era of explosive growth in multimodal data, coScene provides an open, instantly available, cloud-native, and neutral solution.
+Welcome to the coScene platform. coScene is an operational and development platform based on multimodal data, helping businesses and users manage complex device and behavior data. In today's era of explosive growth in multimodal data, coScene provides an open, instantly available, cloud-native, and neutral solution.
 
 ## Feature Overview
 
-### Scene Data Management and Visualization
+### Multimodal Data Management and Visualization
 
-Scene data is large in size, difficult to understand in its raw form, complex in format, and lacks a unified standard. The sources of this data are varied, making it challenging and high-threshold to handle. Addressing these challenges, coScene offers a complete set of scene data management and usage solutions. Users can efficiently utilize scene data through APIs, web applications, and desktop software.
+Multimodal data is large in size, difficult to understand in its raw form, complex in format, and lacks a unified standard. The sources of this data are varied, making it challenging and high-threshold to handle. Addressing these challenges, coScene offers a complete set of scene data management and usage solutions. Users can efficiently utilize scene data through APIs, web applications, and desktop software.
+
+### Cos Agent and Rule Engine
+
+coScene provides an out-of-the-box Cos Agent, to help your intelligent devices perform a series of actions such as data capture, compression, and upload based on events, environmental information, alarms, and other relevant information. Regardless of the host operating system and software you use, Cos Agent can always adapt to your runtime environment with simple configuration and quickly identify your devices to start working.
+
+Accompanying Cos Agent is a powerful cloud-based rule engine and its editor, allowing you to define complex event and alarm trigger conditions in the cloud and then deploy them to your selected devices. This enables you to adjust the behavior of the edge assistant and collect truly useful data without the need of redeployment or OTA updates.
 
 ### Customize Your Workflow
 
-With coScene's workflow engine, you can conveniently build large-scale workflow applications on scene data without worrying about data preparation and computing resource scheduling. In the workflow template management page, you can find workflow templates created by team members and also discover various data processing workflow templates provided officially by coScene.
+With coScene's workflow engine, you can conveniently build large-scale workflow applications on multimodal data without worrying about data preparation and computing resource scheduling. In the workflow template management page, you can find workflow templates created by team members and also discover various data processing workflow templates provided officially by coScene.
 
 ### Semantic Search Engine
 
