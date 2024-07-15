@@ -5,6 +5,18 @@ id: changelog
 
 # Release History
 
+### [New]
+
+- Added "Default Rule Template" feature: In "Data Collection and Rule Diagnostics", it supports adding rules from system-provided templates.
+- Added "Recent Actions of Records": In the record list, it displays the name and status of the most recently called actions.
+  
+### [Changed]
+
+- Updated information about "Moment" in "Data Collection and Diagnostics Rules", supporting custom attribute names and values for "Moment".
+- Updated the default status on the records page and tasks page.
+
+---
+
 ## [24.26.0] - 2024-6-25
 
 ### [New]
