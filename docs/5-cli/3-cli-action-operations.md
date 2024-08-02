@@ -8,7 +8,7 @@ sidebar_position: 3
 的提高实际工作流程中的自动化程度。关于使用命令行操作动作的详细帮助可以参考
 
 ```bash
-coscli action -h
+cocli action -h
 ```
 
 ![coscli-action-help](./img/coscli-action-help.png)
@@ -16,7 +16,7 @@ coscli action -h
 # 列出当前项目中的动作
 
 ```bash
-coscli action list
+cocli action list
 ```
 
 ![coscli-list-actions](./img/coscli-list-actions.png)
@@ -36,9 +36,9 @@ coscli action list
 动作需要记录的数据进行运行，我们先找到我们需要的动作 ID 和记录 ID，然后使用这两个 ID，触发动作。
 
 ```bash
-RECORD_ID=$(coscli record list | grep -v ID | cut -d ' ' -f1 | head -n1)
-ACTION_ID=$(coscli action list | grep 'coScene-test' | cut -d ' ' -f1)
-coscli action run $ACTION_ID $RECORD_ID
+RECORD_ID=$(cocli record list | grep -v ID | cut -d ' ' -f1 | head -n1)
+ACTION_ID=$(cocli action list | grep 'coScene-test' | cut -d ' ' -f1)
+cocli action run $ACTION_ID $RECORD_ID
 ```
 
 ![coscli-run-action-manual-confirm](./img/coscli-run-action-manual-confirm.png)
@@ -48,7 +48,7 @@ coscli action run $ACTION_ID $RECORD_ID
 处理大量数据的情况下非常实用。
 
 ```bash
-coscli action run $ACTION_ID $RECORD_ID -f
+cocli action run $ACTION_ID $RECORD_ID -f
 ```
 
 ![coscli-run-action-force](./img/coscli-run-action-force.png)
@@ -56,7 +56,7 @@ coscli action run $ACTION_ID $RECORD_ID -f
 较为复杂的动作可能会需要额外的参数对动作进行定制，您可以使用 `-p` 的标志位提供这些参数
 
 ```bash
-coscli action run $ACTION_ID $RECORD_ID -f -p 参数1=123 -p 参数2=456
+cocli action run $ACTION_ID $RECORD_ID -f -p 参数1=123 -p 参数2=456
 ```
 
 请注意在这种调用模式下，如果有 `参数1` 和 `参数2` 之外的参数，那么剩余的这些未提供明确数值的参数会使用动作中定义的默认值
