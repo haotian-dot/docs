@@ -22,7 +22,7 @@ pnpm build && pnpm serve
 
 Push the changes to the `master` branch.
 
-See the (action file)[.github/workflows/deploy-to-oss.yml] for details.
+See the [action file](.github/workflows/deploy-to-oss.yml) for details.
 
 ## Contact
 
