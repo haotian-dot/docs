@@ -1,6 +1,6 @@
 {
   "label": "命令行工具 CLI - Beta",
-  "position": 5,
+  "position": 6,
   "collapsible": true,
   "link": {
     "type": "generated-index",
