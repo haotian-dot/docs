@@ -22,7 +22,7 @@ mod:
         - folder1_path // 需要扫描的文件夹
         - folder2_path
         - file_path // 需要额外上传的文件地址，请填写绝对路径
-  name: task
+  name: 'default' # mod 名称
 ```
 
 具体的配置文件信息介绍，请查看文档[数采规则](../4-recipes/3-device/4-device-collector.md)
