@@ -8,7 +8,7 @@ sidebar_position: 3
 ![device-command](./img/common-task-2.png)
 
 安装命令支持指定相关的设备 ID 文件路径以及关联字段名，若不设定则会随机生成 ID 绑定当前设备。
-![device-install-command](./img//device-install-command.png)
+![device-install-command](./img/device-install-command.png)
 
 在机器上打开命令行终端，粘贴上图复制的安装命令，在命令后面添加 `--mod=task` 参数，安装 cos Agent 至机器端。等待几分钟后即可在组织设备中查看到对应的设备信息。
 
