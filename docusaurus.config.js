@@ -13,7 +13,7 @@ const config = {
   tagline: 'User Docs',
   url: 'https://docs.coscene.cn',
   baseUrl: '/',
-  onBrokenLinks: 'warn',
+  onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
   markdown: {

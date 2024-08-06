@@ -74,5 +74,9 @@
   "sidebar.tutorialSidebar.category.典型使用场景": {
     "message": "Common Use Cases",
     "description": "The label for category 典型使用场景 in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.开放平台 OpenAPI": {
+    "message": "OpenAPI",
+    "description": "The label for category 典型使用场景 in sidebar tutorialSidebar"
   }
 }

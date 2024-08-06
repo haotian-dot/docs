@@ -20,7 +20,7 @@
     "@docusaurus/theme-mermaid": "^3.4.0",
     "@mdx-js/react": "^3.0.1",
     "autoprefixer": "^10.4.20",
-    "postcss": "^8.4.40",
+    "postcss": "^8.4.41",
     "prism-react-renderer": "^2.3.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
