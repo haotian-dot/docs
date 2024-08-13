@@ -29,14 +29,14 @@ The "Log Panel" is used to display and manage machine-generated log information.
 
 1. In the **Filter List**, select to list visible.
 
-    ![viz-6-3-Eng](../img/viz-6-3-Eng.png)
+   ![viz-6-3-Eng](../img/viz-6-3-Eng.png)
 
 2. Hide other log modules.
 
-    ![viz-6-4-Eng](../img/viz-6-4-Eng.png)
+   ![viz-6-4-Eng](../img/viz-6-4-Eng.png)
 
 3. View the filtered logs.
 
-    ![viz-6-5-Eng](../img/viz-6-5-Eng.png)
+   ![viz-6-5-Eng](../img/viz-6-5-Eng.png)
 
-   ---
+   ***
