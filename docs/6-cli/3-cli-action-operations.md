@@ -1,4 +1,5 @@
 ---
+slug: action-operations
 sidebar_position: 3
 ---
 
@@ -11,7 +12,7 @@ sidebar_position: 3
 cocli action -h
 ```
 
-![coscli-action-help](./img/coscli-action-help.png)
+![cocli-action-help](./img/cocli-action-help.png)
 
 # 列出当前项目中的动作
 
@@ -19,13 +20,13 @@ cocli action -h
 cocli action list
 ```
 
-![coscli-list-actions](./img/coscli-list-actions.png)
+![cocli-list-actions](./img/cocli-list-actions.png)
 
 默认 List 下，命令行会将项目中所有的动作都列出来。通过 Category 类别以及 Author 作者，
 我们可以更好的区分想要的动作。
 
 当然我们也可以使用 `grep` 等标准命令来做进一步的筛选
-![coscli-list-actions-grep-system](./img/coscli-list-actions-grep-system.png)
+![cocli-list-actions-grep-system](./img/cocli-list-actions-grep-system.png)
 
 ## 触发动作
 
@@ -41,7 +42,7 @@ ACTION_ID=$(cocli action list | grep 'coScene-test' | cut -d ' ' -f1)
 cocli action run $ACTION_ID $RECORD_ID
 ```
 
-![coscli-run-action-manual-confirm](./img/coscli-run-action-manual-confirm.png)
+![cocli-run-action-manual-confirm](./img/cocli-run-action-manual-confirm.png)
 
 执行动作是一个比较消耗计算和存储资源的操作，在没有 `-f` 标识位的情况下，需要手动确认
 才会真正执行。如果对当前操作不需要进行手动确认的，可以使用 `-f` 标志直接跳过。这在批量
@@ -51,7 +52,7 @@ cocli action run $ACTION_ID $RECORD_ID
 cocli action run $ACTION_ID $RECORD_ID -f
 ```
 
-![coscli-run-action-force](./img/coscli-run-action-force.png)
+![cocli-run-action-force](./img/cocli-run-action-force.png)
 
 较为复杂的动作可能会需要额外的参数对动作进行定制，您可以使用 `-p` 的标志位提供这些参数
 

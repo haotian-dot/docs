@@ -1,4 +1,5 @@
 ---
+slug: advanced-features
 sidebar_position: 99
 ---
 
@@ -11,37 +12,37 @@ The cos command-line tool comes with a built-in credential management system, al
 Once you have your default credentials, you can add a new credential using the following command:
 
 ```bash
-coscli login add -n <credential name> -p <project Slug> -t <access token>
+cocli login add -n <credential name> -p <project Slug> -t <access token>
 ```
 
 The screenshot below shows how to add a credential named typ:
 
-![coscli-add-login-profile](./img/coscli-add-login-profile.png)
+![cocli-add-login-profile](./img/cocli-add-login-profile.png)
 
 You can list all available credentials using the following command:
 
 ```bash
-coscli login list
+cocli login list
 ```
 
-![coscli-list-login-profiles](./img/coscli-list-login-profiles.png)
+![cocli-list-login-profiles](./img/cocli-list-login-profiles.png)
 
 Switching between different credentials is also very easy:
 
 ```bash
-coscli login switch
+cocli login switch
 ```
 
-![coscli-login-switch-interactive](./img/coscli-login-switch-interactive.png)
+![cocli-login-switch-interactive](./img/cocli-login-switch-interactive.png)
 
 In the interactive prompt after running the command, use the arrow keys to select the credential you want to switch to and press Enter to confirm.
 
-![coscli-login-switch-confirm](./img/coscli-login-switch-confirm.png)
+![cocli-login-switch-confirm](./img/cocli-login-switch-confirm.png)
 
 After switching, it will prompt the currently active credential. You can also confirm it with the following command:
 
 ```bash
-coscli login current
+cocli login current
 ```
 
 ## Linking Local Folders and Cloud Records

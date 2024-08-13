@@ -1,10 +1,10 @@
 {
-  "label": "命令行工具 CLI - Beta",
+  "label": "命令行工具 coCLI - Beta",
   "position": 6,
   "collapsible": true,
   "link": {
     "type": "generated-index",
-    "slug": "/category/cli",
-    "description": "使用刻行命令行工具进行数据管理。请注意 CLI 工具正在积极开发和发布新版本。在这过程中可能会遇到一些 bug 或不稳定现象。我们正在努力修复这些问题，感谢您的理解和支持。"
+    "slug": "/category/cocli",
+    "description": "使用刻行命令行工具进行数据管理。请注意 coCLI 工具正在积极开发和发布新版本。在这过程中可能会遇到一些 bug 或不稳定现象。我们会努力修复这些问题，感谢您的理解和支持。"
   }
 }

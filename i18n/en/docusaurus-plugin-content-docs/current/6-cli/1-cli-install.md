@@ -1,4 +1,5 @@
 ---
+slug: install
 sidebar_position: 1
 ---
 
@@ -9,21 +10,30 @@ sidebar_position: 1
 Run the following command in the terminal to install the latest version of the Coscene CLI tool:
 
 ```Bash
-curl -fL https://download.coscene.cn/coscli/install.sh | sh
+curl -fL https://download.coscene.cn/cocli/install.sh | sh
 ```
 
-You can use `coscli -h` in the terminal to confirm that the CLI tool has been successfully installed and to see the basic usage of the tool.
-![coscli-help](./img/coscli-help.png)
+You can use `cocli -h` in the terminal to confirm that the CLI tool has been successfully installed and to see the basic usage of the tool.
+![cocli-help](./img/cocli-help.png)
 
 ### Update to the Latest Version
 
 ```Bash
-coscli update
+cocli update
 ```
+
+:::tip
+
+Login and initialize coCLI needs the following info:
+
+- A personal access token(Token):
+- A default working project's slug(Slug):
+
+:::
 
 ## Login
 
-The coScene CLI tool requires your personal access token to work. You can generate an access token on the [coScene - My Settings](https://coscene.cn/profile?section=security) page.
+You can generate your access token on the [coScene - My Settings](https://coscene.cn/profile?section=security) page.
 
 The CLI tool also requires you to specify a default project as the default environment for all operations. Please select the project you want to work on and get the project slug from the URL.
 
@@ -34,24 +44,36 @@ The CLI tool also requires you to specify a default project as the default envir
 ```Bash
 # Replace <project slug> after -p
 # Replace <personal access token> after -t
-coscli login set -p <project slug> -t <personal access token>
+cocli login set -p <PROJECT_SLUG> -t <TOKEN>
 ```
+
+:::info
+If your are an Enterprise user with a dedicated instance, you will have to
+specify your instance's endpoint
+
+eg. https://server2.coscene.cn -> https://openapi.server2.coscene.cn
+
+```bash
+cocli login set -p <PROJECT_SLUG> -t <TOKEN> -e <ENDPOINT>
+```
+
+:::
 
 ## Switch Default Project
 
 After successfully authenticating the CLI, you can use the command line to switch the default working project. First, we can list all the projects in the organization that the user has access to, along with their corresponding project slugs:
 
 ```
-coscli project list
+cocli project list
 ```
 
-![coscli-list-user-projects](./img/coscli-list-user-projects.png)
+![cocli-list-user-projects](./img/cocli-list-user-projects.png)
 
-After finding the target project, use `coscli login set` to update the default working project. If needed, you can use `coscli login current` to confirm.
+After finding the target project, use `cocli login set` to update the default working project. If needed, you can use `cocli login current` to confirm.
 
 ```bash
-coscli login set -p starbase
-coscli login current
+cocli login set -p starbase
+cocli login current
 ```
 
-![coscli-update-default-project-slug](./img/coscli-update-default-project-slug.png)
+![cocli-update-default-project-slug](./img/cocli-update-default-project-slug.png)

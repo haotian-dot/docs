@@ -1,4 +1,5 @@
 ---
+slug: common-batch-tasks
 sidebar_position: 4
 ---
 
@@ -10,7 +11,7 @@ sidebar_position: 4
 cocli record list | grep -v 'ID' | cut -d ' ' -f1 | xargs -I {} cocli record upload {} ./FILE_FLAG
 ```
 
-![coscli-upload-file-to-all-records](./img/coscli-upload-file-to-all-records.png)
+![cocli-upload-file-to-all-records](./img/cocli-upload-file-to-all-records.png)
 
 ## 为当前目录下的所有文件夹建立一个记录并上传文件
 
@@ -31,11 +32,11 @@ for dir in */; do
 done
 ```
 
-![coscli-create-and-upload-multiple-folders](./img/coscli-create-and-upload-multiple-folders.png)
+![cocli-create-and-upload-multiple-folders](./img/cocli-create-and-upload-multiple-folders.png)
 
 打开网页端任意记录就可以看到，命令行将本地的文件夹内的所有文件和文件夹都上传到了对应记录
 
-![coscli-multiple-folders-uploaded](./img/coscli-multiple-folders-uploaded.png)
+![cocli-multiple-folders-uploaded](./img/cocli-multiple-folders-uploaded.png)
 
 ## 遍历所有记录并进行操作
 

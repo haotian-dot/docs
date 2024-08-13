@@ -1,4 +1,5 @@
 ---
+slug: record-operations
 sidebar_position: 2
 ---
 
@@ -6,7 +7,7 @@ sidebar_position: 2
 
 关于刻行命令行中操作记录的详细信息，您可以使用 `cocli record -h` 来查看详细用法
 
-![cli-record-help](./img/coscli-record-help.png)
+![cli-record-help](./img/cocli-record-help.png)
 
 以下是一些常见操作的示例：
 
@@ -17,7 +18,7 @@ sidebar_position: 2
 cocli record create -t 预留文件
 ```
 
-![coscli-record-create](./img/coscli-record-create.png)
+![cocli-record-create](./img/cocli-record-create.png)
 
 您可以点击结果中的网址，在网页中查看刚创建的记录
 
@@ -27,7 +28,7 @@ cocli record create -t 预留文件
 cocli record list
 ```
 
-![coscli-record-list](./img/coscli-record-list.png)
+![cocli-record-list](./img/cocli-record-list.png)
 
 List 命令会将项目中的所有记录列出，我们可以通过串联`grep` 和 `cut` 等命令来获取某个记录的 ID
 
@@ -35,7 +36,7 @@ List 命令会将项目中的所有记录列出，我们可以通过串联`grep`
 cocli record list | grep '预留' | cut -d ' ' -f1
 ```
 
-![coscli-record-get-id](./img/coscli-record-get-id.png)
+![cocli-record-get-id](./img/cocli-record-get-id.png)
 
 ## 上传文件到记录
 
@@ -49,7 +50,7 @@ touch TEST_FILE
 cocli record upload acd706d9-0879-4d88-8550-e69bb8ff8f6b ./TEST_FILE
 ```
 
-![coscli-upload-file-to-record](./img/coscli-upload-file-to-record.png)
+![cocli-upload-file-to-record](./img/cocli-upload-file-to-record.png)
 
 此时再刷新网页中的记录，就可以看到我们刚上传的文件了
 
@@ -59,13 +60,13 @@ cocli record upload acd706d9-0879-4d88-8550-e69bb8ff8f6b ./TEST_FILE
 
 我们也可以将记录中的文件下载到本地，在`预留文件`这个记录中，我们又上传了一些随机文件作为示例。
 
-![coscli-record-download-prepare-files](./img/coscli-record-download-prepare-files.png)
+![cocli-record-download-prepare-files](./img/cocli-record-download-prepare-files.png)
 
 ```bash
 cocli record download acd706d9-0879-4d88-8550-e69bb8ff8f6b .
 ```
 
-![coscli-record-download-to-local](./img/coscli-record-download-to-local.png)
+![cocli-record-download-to-local](./img/cocli-record-download-to-local.png)
 
 命令行工具会将记录中的所有文件打包在以记录 ID 为名字的文件夹内，这个功能在您之后可能会遇到的下载多个记录中帮助您保持文件的独立性，方便管理。
 
@@ -80,7 +81,7 @@ cocli record download acd706d9-0879-4d88-8550-e69bb8ff8f6b .
 
 `cocli record list` 可以很方便的看到记录的标签，我们也可以对记录的标签进行更多的操作。我们以列表中的第一个记录举例。
 
-![coscli-labels-list-record](./img/coscli-labels-list-record.png)
+![cocli-labels-list-record](./img/cocli-labels-list-record.png)
 
 ### 给记录添加标签
 
@@ -90,7 +91,7 @@ cocli record update d253523f-5a8a-40dd-8bd9-2d289367d6ff -l afternoon,rainy
 
 记录成功的添加了 afternoon 和 rainy 的标签
 
-![coscli-record-append-labels](./img/coscli-record-append-labels.png)
+![cocli-record-append-labels](./img/cocli-record-append-labels.png)
 
 ### 替换记录的已有标签
 
@@ -100,7 +101,7 @@ cocli record update d253523f-5a8a-40dd-8bd9-2d289367d6ff --update-labels sunny,m
 
 可以看到现在的记录的标签已经从 afternoon, rainy 更新成了 sunny, morning
 
-![coscli-record-update-labels](./img/coscli-record-update-labels.png)
+![cocli-record-update-labels](./img/cocli-record-update-labels.png)
 
 ### 删除指定标签
 
@@ -110,7 +111,7 @@ cocli record update d253523f-5a8a-40dd-8bd9-2d289367d6ff --delete-labels sunny
 
 通过命令行删除 `sunny` 标签，可以看到现在只剩下了 `morning` 的标签了
 
-![coscli-record-delete-labels-list](./img/coscli-record-delete-labels-list.png)
+![cocli-record-delete-labels-list](./img/cocli-record-delete-labels-list.png)
 
 ## 更新记录的原信息
 

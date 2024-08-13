@@ -1,4 +1,5 @@
 ---
+slug: auto-complete
 sidebar_position: 98
 ---
 
