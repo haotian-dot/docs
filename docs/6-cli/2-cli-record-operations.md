@@ -7,18 +7,18 @@ sidebar_position: 2
 
 关于刻行命令行中操作记录的详细信息，您可以使用 `cocli record -h` 来查看详细用法
 
-![cli-record-help](./img/cocli-record-help.png)
+![cli-record-help](./img/2-cocli-record-help.png)
 
 以下是一些常见操作的示例：
 
 ## 创建记录
 
 ```bash
-# 创建一个叫做<预留文件>的记录
+# 创建一个叫做 <预留文件> 的记录
 cocli record create -t 预留文件
 ```
 
-![cocli-record-create](./img/cocli-record-create.png)
+![cocli-record-create](./img/2-cocli-record-create.png)
 
 您可以点击结果中的网址，在网页中查看刚创建的记录
 
@@ -28,7 +28,7 @@ cocli record create -t 预留文件
 cocli record list
 ```
 
-![cocli-record-list](./img/cocli-record-list.png)
+![cocli-record-list](./img/2-cocli-record-list.png)
 
 List 命令会将项目中的所有记录列出，我们可以通过串联`grep` 和 `cut` 等命令来获取某个记录的 ID
 
@@ -36,7 +36,7 @@ List 命令会将项目中的所有记录列出，我们可以通过串联`grep`
 cocli record list | grep '预留' | cut -d ' ' -f1
 ```
 
-![cocli-record-get-id](./img/cocli-record-get-id.png)
+![cocli-record-get-id](./img/2-cocli-record-get-id.png)
 
 ## 上传文件到记录
 
@@ -50,23 +50,23 @@ touch TEST_FILE
 cocli record upload acd706d9-0879-4d88-8550-e69bb8ff8f6b ./TEST_FILE
 ```
 
-![cocli-upload-file-to-record](./img/cocli-upload-file-to-record.png)
+![cocli-upload-file-to-record](./img/2-cocli-upload-file-to-record.png)
 
 此时再刷新网页中的记录，就可以看到我们刚上传的文件了
 
-![view-just-uploaded-file](./img/view-just-uploaded-file.png)
+![view-just-uploaded-file](./img/2-view-just-uploaded-file.png)
 
 ## 下载记录中的文件
 
 我们也可以将记录中的文件下载到本地，在`预留文件`这个记录中，我们又上传了一些随机文件作为示例。
 
-![cocli-record-download-prepare-files](./img/cocli-record-download-prepare-files.png)
+![cocli-record-download-prepare-files](./img/2-cocli-record-download-prepare-files.png)
 
 ```bash
 cocli record download acd706d9-0879-4d88-8550-e69bb8ff8f6b .
 ```
 
-![cocli-record-download-to-local](./img/cocli-record-download-to-local.png)
+![cocli-record-download-to-local](./img/2-cocli-record-download-to-local.png)
 
 命令行工具会将记录中的所有文件打包在以记录 ID 为名字的文件夹内，这个功能在您之后可能会遇到的下载多个记录中帮助您保持文件的独立性，方便管理。
 
@@ -75,43 +75,43 @@ cocli record download acd706d9-0879-4d88-8550-e69bb8ff8f6b .
 命令行工具也可以用来删除记录，删除记录是一个非常危险的操作，请在删除时手工确认是否真的需要
 删除记录，或者使用 `-f` 标记来强制删除。
 
-![delete-a-record](./img/delete-a-record.png)
+![delete-a-record](./img/2-delete-a-record.png)
 
 ## 管理记录的标签
 
 `cocli record list` 可以很方便的看到记录的标签，我们也可以对记录的标签进行更多的操作。我们以列表中的第一个记录举例。
 
-![cocli-labels-list-record](./img/cocli-labels-list-record.png)
+![cocli-labels-list-record](./img/2-cocli-labels-list-record.png)
 
 ### 给记录添加标签
 
 ```
-cocli record update d253523f-5a8a-40dd-8bd9-2d289367d6ff -l afternoon,rainy
+cocli record update f3cb29c5-4312-40b0-8fcd-1df4402824fc --append-labels afternoon,rainy
 ```
 
 记录成功的添加了 afternoon 和 rainy 的标签
 
-![cocli-record-append-labels](./img/cocli-record-append-labels.png)
+![cocli-record-append-labels](./img/2-cocli-record-append-labels.png)
 
 ### 替换记录的已有标签
 
 ```
-cocli record update d253523f-5a8a-40dd-8bd9-2d289367d6ff --update-labels sunny,morning
+cocli record update f3cb29c5-4312-40b0-8fcd-1df4402824fc --update-labels sunny,morning
 ```
 
 可以看到现在的记录的标签已经从 afternoon, rainy 更新成了 sunny, morning
 
-![cocli-record-update-labels](./img/cocli-record-update-labels.png)
+![cocli-record-update-labels](./img/2-cocli-record-update-labels.png)
 
 ### 删除指定标签
 
 ```
-cocli record update d253523f-5a8a-40dd-8bd9-2d289367d6ff --delete-labels sunny
+cocli record update f3cb29c5-4312-40b0-8fcd-1df4402824fc --delete-labels sunny
 ```
 
 通过命令行删除 `sunny` 标签，可以看到现在只剩下了 `morning` 的标签了
 
-![cocli-record-delete-labels-list](./img/cocli-record-delete-labels-list.png)
+![cocli-record-delete-labels-list](./img/2-cocli-record-delete-labels-list.png)
 
 ## 更新记录的原信息
 
@@ -120,7 +120,9 @@ cocli record update d253523f-5a8a-40dd-8bd9-2d289367d6ff --delete-labels sunny
 
 ```bash
 RECORD_ID=$(cocli record list | grep 'empty-record' | head -n1 | cut -d ' ' -f1)
-cocli record update $RECORD_ID -t "Fancy Empty Record Title" -d "Do you really need a description for an empty record"
+
+cocli record update $RECORD_ID -t "Fancy Empty Record Title" \n
+  -d "Do you really need a description for an empty record"
 ```
 
-![update-record-title-and-description](./img/update-record-title-and-description.png)
+![update-record-title-and-description](./img/2-update-record-title-and-description.png)

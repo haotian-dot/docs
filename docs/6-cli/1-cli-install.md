@@ -67,13 +67,13 @@ cocli login set -p <项目 slug> -t <个人访问令牌> -e <openapi 地址>
 cocli project list
 ```
 
-![cocli-list-user-projects](./img/cocli-list-user-projects.png)
+![cocli-list-user-projects](./img/1-cocli-list-user-projects.png)
 
 找到目标项目之后，使用 `cocli login set` 来更新默认的工作项目， 如果需要，可以使用 `cocli login current` 来确认
 
 ```bash
-cocli login set -p starbase
+cocli login set -p mcap
 cocli login current
 ```
 
-![cocli-update-default-project-slug](./img/cocli-update-default-project-slug.png)
+![cocli-update-default-project-slug](./img/1-cocli-update-default-project-slug.png)

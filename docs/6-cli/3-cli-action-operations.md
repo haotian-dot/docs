@@ -12,7 +12,7 @@ sidebar_position: 3
 cocli action -h
 ```
 
-![cocli-action-help](./img/cocli-action-help.png)
+![cocli-action-help](./img/3-cocli-action-help.png)
 
 # 列出当前项目中的动作
 
