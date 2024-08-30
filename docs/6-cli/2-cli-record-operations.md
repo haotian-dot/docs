@@ -5,7 +5,7 @@ sidebar_position: 2
 
 # 使用命令行操作记录（Records）
 
-关于刻行命令行中操作记录的详细信息，您可以使用 `cocli record -h` 来查看详细用法
+关于 coScene 命令行中操作记录的详细信息，您可以使用 `cocli record -h` 来查看详细用法
 
 ![cli-record-help](./img/2-cocli-record-help.png)
 

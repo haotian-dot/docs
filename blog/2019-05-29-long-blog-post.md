@@ -6,3 +6,5 @@ tags: [hello, coscene]
 ---
 
 Summary of a long blog
+
+<!-- truncate -->

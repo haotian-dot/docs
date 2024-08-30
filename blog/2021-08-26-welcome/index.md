@@ -6,3 +6,5 @@ tags: [hello, coscene]
 ---
 
 Placeholder
+
+<!-- truncate -->

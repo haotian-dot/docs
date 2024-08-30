@@ -4,7 +4,7 @@ sidebar_position: 2
 
 # 推送与管理镜像
 
-了解如何使用刻行的镜像仓库存储和管理用户自己构建的 Docker 镜像。
+了解如何使用 coScene 的镜像仓库存储和管理用户自己构建的 Docker 镜像。
 
 ## 前置条件
 
@@ -12,9 +12,9 @@ sidebar_position: 2
 
 ## 1. 认证和登陆刻行的镜像仓库
 
-登陆刻行平台，在右上角用户设置下拉面板中，访问【个人设置】，在【个人设置】页面中，访问[【安全】](https://coscene.cn/profile?section=security)页面。
+登陆刻行时空平台，在右上角用户设置下拉面板中，访问【个人设置】，在【个人设置】页面中，访问[【安全】](https://coscene.cn/profile?section=security)页面。
 
-点击生成访问命令，获取登陆刻行镜像仓库的命令和密码
+点击生成访问命令，获取登陆平台镜像仓库的命令和密码
 
 ![generate-cr-token](../img/generate-cr-token.png)
 
@@ -91,7 +91,7 @@ docker build -f dockerfile -t cr.coscene.cn/coscene/image:latest .
 docker build -f dockerfile -t cr.coscene.cn/coscene-lark/image:latest --platform linux/amd64 .
 ```
 
-完成构建之后，就可以使用 `docker push` 将镜像推送到刻行的镜像仓库了。
+完成构建之后，就可以使用 `docker push` 将镜像推送到平台的镜像仓库了。
 
 ## 3. 查看组织镜像列表
 

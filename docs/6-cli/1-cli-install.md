@@ -7,7 +7,7 @@ sidebar_position: 1
 
 ## 安装
 
-在命令行运行下面的命令安装最新版本的刻行命令行工具
+在命令行运行下面的命令安装最新版本的 coScene 命令行工具
 
 ```Bash
 curl -fL https://download.coscene.cn/cocli/install.sh | sh

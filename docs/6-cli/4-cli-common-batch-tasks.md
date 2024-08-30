@@ -19,7 +19,7 @@ cocli record list | grep -v 'ID' | cut -d ' ' -f1 | xargs -I {} cocli record upl
 
 ![list-folders-tree-view](./img/list-folders-tree-view.png)
 
-我们立刻利用刻行命令行工具和标准的 Linux 命令行工具来一次性完成所有文件记录的创建和文件上传。
+我们立刻利用 coScene 命令行工具和标准的 Linux 命令行工具来一次性完成所有文件记录的创建和文件上传。
 
 ```bash
 # 遍历当前目录下的所有子目录

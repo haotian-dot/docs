@@ -49,13 +49,13 @@ sidebar_position: 3
 
 规则组是规则的集合，用于对规则进行分类管理。规则组的创建与编辑操作如下：
 
-- 在项目中，进入「管理项目-数采与诊断规则」页面，点击【添加规则组】。
-  ![pro-rule-add-rule-set](../img/pro-rule-add-rule-set.png)
+- 在项目中，进入「数采&诊断规则」分页，点击【添加规则组】。
+  ![data-2-1](../img/9-add-rule-set.png)
 
-- 创建规则组（或点击进入已创建的规则组页面后），点击规则组名称即可编辑。点击【添加规则】可添加规则。
+- 创建规则组（或点击进入已创建的规则组页面后），点击规则组名称即可编辑。点击【添加空白规则】可添加规则。
 
   详细添加规则的操作参见后续章节 [规则](#规则)。
-  ![pro-rule-add-rule](../img/pro-rule-add-rule.png)
+  ![data-2-2](../img/9-add-rule.png)
 
 ## 规则
 
@@ -63,8 +63,8 @@ sidebar_position: 3
 
 (详细操作参见后续章节 [基础信息](#基础信息), [模版化](#模版化), [触发条件](#触发条件), [触发操作](#触发操作), [触发限制](#触发限制) ）
 
-1. 进入已创建的规则组页面后（或创建规则组后），点击【添加规则】。
-   ![pro-rule-add-rule](../img/pro-rule-add-rule.png)
+1. 进入已创建的规则组页面后（或创建规则组后），点击【添加空白规则】。
+   ![data-3-1](../img/9-enable-rule-set.png)
 
 2. 更改规则名称。
 3. 编辑规则触发条件（可复制 `"error 1" in log` ）。
@@ -187,23 +187,26 @@ sidebar_position: 3
 
 > 以下展示了部分典型的规则触发条件
 
-* 触发了某个错误码
+- 触发了某个错误码
 
 ```yaml
 'Error code 123 happened' in log
 ```
 
-* 检查 x 方向的速度是否在 4~10 之间 
+- 检查 x 方向的速度是否在 4~10 之间
+
 ```yaml
 topic == '/velocity' and 4 < msg.linear.x < 10
 ```
 
-* 分析日志中的值并检查它是否在 4~10 之间
+- 分析日志中的值并检查它是否在 4~10 之间
+
 ```yaml
 4 < regex(log, 'X velocity is (\\d+)').group(1) < 10
 ```
 
-* 机器人返回充电桩 30 秒后没有开始充电
+- 机器人返回充电桩 30 秒后没有开始充电
+
 ```yaml
 timeout(
   'Returned to base' in log,
@@ -212,25 +215,28 @@ timeout(
 )
 ```
 
-* 命令没有在 10 秒内完成
+- 命令没有在 10 秒内完成
+
 ```yaml
 timeout(
-  set_value('cmd_id', regex(log, 'Sending command id (\\d+)').group(1)),
-  regex(log, 'Command (\\d+) finished').group(1) == get_value('cmd_id'),
-  duration=10
+set_value('cmd_id', regex(log, 'Sending command id (\\d+)').group(1)),
+regex(log, 'Command (\\d+) finished').group(1) == get_value('cmd_id'),
+duration=10
 )
 ```
 
-* 如果温度在 60 秒内上升 5 (假设消息中存在字段 `value`)
+- 如果温度在 60 秒内上升 5 (假设消息中存在字段 `value`)
+
 ```yaml
 topic == '/temp' and sequential(
-  set_value('start_temp', msg.value),
-  msg.value - get_value('start_temp') > 5,
-  duration=60
+set_value('start_temp', msg.value),
+msg.value - get_value('start_temp') > 5,
+duration=60
 )
 ```
 
-* 检查初始化在 20 秒内完成
+- 检查初始化在 20 秒内完成
+
 ```yaml
 timeout(
   'Initialization start' in log,
@@ -244,42 +250,46 @@ timeout(
 )
 ```
 
-* 检测到一个 topic 超过 20 秒未收到消息，例如，定位模块挂了
+- 检测到一个 topic 超过 20 秒未收到消息，例如，定位模块挂了
+
 ```yaml
 timeout(
-  topic == '/localization',
-  topic == '/localization',
-  duration=20
+topic == '/localization',
+topic == '/localization',
+duration=20
 )
 ```
 
-* 温度高于 40 的时间超过 60 秒
+- 温度高于 40 的时间超过 60 秒
+
 ```yaml
 sustained(
-  topic == '/temp',
-  msg.value > 40,
-  duration=60
+topic == '/temp',
+msg.value > 40,
+duration=60
 )
 ```
 
-* chassis 环路频繁超时：60 秒内超时次数大于 10 次
+- chassis 环路频繁超时：60 秒内超时次数大于 10 次
+
 ```yaml
 repeated(
-  timeout(
-    'Send chassis command' in log,
-    'Chassis received' in log,
-    duration=1
-  ),
-  times=10,
-  duration=60
+timeout(
+'Send chassis command' in log,
+'Chassis received' in log,
+duration=1
+),
+times=10,
+duration=60
 )
 ```
 
-* 触发错误，但如果发生以下情况，则忽略它们，错误发生的时间间隔在 10 秒之内
+- 触发错误，但如果发生以下情况，则忽略它们，错误发生的时间间隔在 10 秒之内
+
 ```yaml
 debounce(
-  'Error 123' in log,
-  duration=10
+'Error 123' in log,
+duration=10
 )
 ```
 

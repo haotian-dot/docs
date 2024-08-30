@@ -1,8 +1,8 @@
 ---
 slug: first-blog-post
 title: First Blog Post
-authors:
-  name: Yangming Huang
-  title: Docusaurus Core Team
+authors: yangming
 tags: [hola, coscene]
 ---
+
+<!-- truncate -->
