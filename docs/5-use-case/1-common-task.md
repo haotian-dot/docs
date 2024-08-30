@@ -13,16 +13,21 @@ sidebar_position: 1
 ![device-collector](./img/common-task-1.png)
 
 ```yaml
-event_code:
-  enabled: false
 mod:
+  name: 'default'
+  # mod 名称，默认 default，支持监听设备端指定目录下的文件，定制版请联系刻行
   conf:
     enabled: true
-    upload_files:
-        - folder1_path // 需要扫描的文件夹
-        - folder2_path
-        - file_path // 需要额外上传的文件地址，请填写绝对路径
-  name: 'default' # mod 名称
+    # 启用开关，true/false，默认启用
+    base_dirs:
+      # 设备端的监听目录，作为项目中数据采集任务与规则采集的指定目录
+      - /home/bag/
+      - /home/log/
+
+updater:
+  # 自动更新
+  enabled: false
+  # 数采客户端自动更新开关，true/false，默认关闭
 ```
 
 具体的配置文件信息介绍，请查看文档[数采规则](../4-recipes/3-device/4-device-collector.md)
@@ -56,7 +61,6 @@ mod:
 
 ![task-record-detail](./img/task-record-detail.png)
 
-
 ## 数据的后续处理
 
 当数据上传至平台之后，用户可以结合平台提供的[自动化](../4-recipes/12-action/1-quickstart.md)能力，对数据进行后续的处理，提升数据流转速度，提升研发效率。
@@ -78,12 +82,11 @@ mod:
 
 ![file-list](./img/files-list.png)
 
-## Q&A
+## 可能会遇到的问题
 
 ### Q：机器端对应时间的文件没有采集
 
-A: 数据采集的文件时间采用的是文件的最后修改时间，可以在机器端通过 `ls -l --time-style=+"%Y-%m-%d %H:%M:%S"` 查看文件对应的修改时间，确定文件的时间时候确实在任务的时间范围内。
-
+数据采集的文件时间采用的是文件的最后修改时间，可以在机器端通过 `ls -l --time-style=+"%Y-%m-%d %H:%M:%S"` 查看文件对应的修改时间，确定文件的时间时候确实在任务的时间范围内。
 
 ## 总结
 

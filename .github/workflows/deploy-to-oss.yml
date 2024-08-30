@@ -42,8 +42,7 @@ jobs:
 
       - name: Deploy to OSS
         run: |
-          ossutil rm -rf oss://${{ secrets.OSS_TARGET_BUCKET }}/
-          ossutil cp -rf build/  oss://${{ secrets.OSS_TARGET_BUCKET }}/
+          ossutil sync build/ oss://${{ secrets.OSS_TARGET_BUCKET }}/ --delete
 
       - name: Notification to Feishu
         uses: foxundermoon/feishu-action@v2
