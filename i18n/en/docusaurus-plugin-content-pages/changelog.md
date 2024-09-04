@@ -5,11 +5,93 @@ id: changelog
 
 # Release History
 
+## [24.36.0] - 2024-9-04
+
+### [New]
+
+- Added "Batch Operations for Organization Devices" feature:
+  - Batch Data Collection Admission: Support selecting devices for batch admission to data collection, allowing devices to be added to the organization.
+  - Batch Project Association: Support selecting devices for batch association with projects, adding devices to projects for subsequent data collection and classification.
+- Added "Copy/Move Files" feature: In the file list of records, support selecting files to copy or move them to other records.
+- Added "Text Auto-wrap" feature: Support automatic text wrapping when previewing text files in records.
+- Added "Playable Time Range" field: Display the playable time range of bag, mcap, and other files in the basic information of records.
+- Added "Action Invocation Duration" field: Display the duration of action invocations in the action's invocation history.
+- Added "Workflow Diagrams for Various Roles": In the [Help] section at the top right of the navigation bar, display workflow diagrams for testers, operations, and development personnel.
+
+### [Changes]
+
+- Updated the display style of the "Data Collection & Diagnostics" page.
+- Updated the style of the "Add Organization Device" dialog.
+- Updated the style of the "Organization Device Details" page.
+- Updated the display style of the "Moment" list in the visualization page.
+
+### [Fixes]
+
+- Fixed an issue where record search results were not sorted by time.
+- Fixed an issue where the index generation status was not correctly displayed in the visualization page.
+- Fixed an issue with abnormal display of test suite lists in batch testing.
+- Fixed an issue with abnormal device traffic statistics. This can be resolved by updating the data collection client to version v1.0.2. [View update instructions](https://docs.coscene.cn/docs/recipes/device/device-collector#%E6%9B%B4%E6%96%B0%E8%AE%BE%E7%BD%AE)
+
+---
+
+## [24.34.0] - 2024-8-20
+
+### [New]
+
+- Added "Star Projects" feature: On the homepage, support starring projects to pin them to the top.
+- Added "Audio File Preview" feature: In the file list of records, support clicking to play audio files.
+
+### [Changes]
+
+- Updated the display style of the homepage.
+
+---
+
+## [24.32.0] - 2024-8-6
+
+### [New]
+
+- Added "Sample Project" feature: When creating a new project, support selecting to create a sample project.
+- Added open-source projects:
+  - Open-sourced the coBridge project related to real-time visualization and the coScout project related to data collection.
+- Added support for Ubuntu 14.04 version in the "Data Collection Client".
+
+### [Changes]
+
+- Updated the auto-disconnect logic for "Real-time Visualization":
+  - Automatically disconnect after 1 minute in an unfocused state.
+  - Disconnect after 10 minutes in a focused state.
+  - Support reconnection after returning to the page or refreshing.
+- Updated the display of Jira-linked information in tasks: Tasks now show the status of linked Jira issues.
+
+---
+
+## [24.30.0] - 2024-7-22
+
+### [New]
+
+- Added "Copy Action Steps" feature: When creating an action, support copying steps from existing actions.
+- Added usage introduction for "System Actions": When viewing system actions in the "Automation - Actions" page, support viewing the usage introduction of the action on the right side of the action details page.
+
+### [Changes]
+
+- Updated the entry point for "Data Collection & Diagnostics" feature: Moved the entry to the left navigation bar of the project.
+- Updated "Collection Tasks": Collection tasks now support cancellation and termination.
+- Updated tag filtering logic: Tag filtering now supports equals, contains, and does not contain operations.
+
+### [Fixes]
+
+- Fixed an issue with slow loading of visualization playback.
+
+---
+
+## [24.28.0] - 2024-7-9
+
 ### [New]
 
 - Added "Default Rule Template" feature: In "Data Collection and Rule Diagnostics", it supports adding rules from system-provided templates.
 - Added "Recent Actions of Records": In the record list, it displays the name and status of the most recently called actions.
-  
+
 ### [Changed]
 
 - Updated information about "Moment" in "Data Collection and Diagnostics Rules", supporting custom attribute names and values for "Moment".
@@ -42,20 +124,20 @@ id: changelog
 
 ## [24.24.0] - 2024-6-14
 
-### 【New】
+### [New]
 
 - Added "Annotation Task Label" feature: When creating an annotation task, support using the labels of selected records as task labels.
 - Added "Test Suite Display" feature: Display the test suite used in this test on the batch test table page.
 - Added "File List Pagination" feature: Support pagination display of files on the record file list page.
 - Added "Task ID": Display the ID number of the task in the task table.
 
-### 【Changes】
+### [Changes]
 
 - Update the display of the "Records" page:
   - Fix the record table name column and support horizontal scrolling.
   - Move the batch operation location after multiple records are selected to below the list.
   - Support cross-page record selection.
-- Update the display of "Last Online Time" in ‘Organizational Equipment’, and ‘Project Equipment’:
+- Update the display of "Last Online Time" in 'Organizational Equipment', and 'Project Equipment':
   - Changed to display the online/offline status of the device.
   - Mouse hover to display the last online time.
 - Update the interaction for creating/editing moments: On the timeline, support adjusting the start and end points of the moment by dragging.
