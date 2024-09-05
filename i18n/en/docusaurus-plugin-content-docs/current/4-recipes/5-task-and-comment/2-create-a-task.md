@@ -4,7 +4,7 @@ sidebar_position: 2
 
 # Create a Task
 
-The circulation of tasks is an essential way for users to collaborate on projects through the KeXing platform. Organization users can create, assign, and process several tasks for a record and collaborate with other members. Combining tasks, comments, and "moments" can enhance work quality and efficiency.
+The circulation of tasks is an essential way for users to collaborate on projects through the coScene platform. Organization users can create, assign, and process several tasks for a record and collaborate with other members. Combining tasks, comments, and "moments" can enhance work quality and efficiency.
 
 This section will start with creating a task, helping you understand how to use tasks for effective collaboration.
 

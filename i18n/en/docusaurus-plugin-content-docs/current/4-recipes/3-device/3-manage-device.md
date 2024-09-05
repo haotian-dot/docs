@@ -23,11 +23,12 @@ When you complete [Add from the device side](./2-create-device.md#Add from the d
 
 When "data collection" is allowed, the machine-side program will start collecting data according to the rules and automatically upload it to the corresponding project.
 
-After "remote control" is accessed, users can perform real-time operations on the machine through the Kexing platform, such as SSH connection, real-time visualization and other functions
+After "remote control" is accessed, users can perform real-time operations on the machine through the coScene platform, such as SSH connection, real-time visualization and other functions
 
 ## Delete device
 
 Select the device you want to delete in the device list, click [Delete Device], and confirm twice to delete the device. After deleting the device
+
 1. Accessed devices will be canceled and data cannot be uploaded automatically.
 2. The device and requests from the device will be cleared in the organization
 3. The device will not be added to the record

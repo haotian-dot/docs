@@ -24,9 +24,9 @@ Same as the above "Fill in information and add" entry, click [Add device] and th
 
 ![device add from device](../img/device-add-from-device.png)
 
-Currently, it only supports **Linux devices**, arm64 and x86_64 architectures, and does not currently support Windows devices. If you have relevant needs, please contact the Kexing team.
+Currently, it only supports **Linux devices**, arm64 and x86_64 architectures, and does not currently support Windows devices. If you have relevant needs, please contact the coScene team.
 
-*The current program requires systemd service to be installed. **Please use the root account to execute the following commands**. *
+_The current program requires systemd service to be installed. **Please use the root account to execute the following commands**. _
 
 ### Network installation
 
@@ -48,6 +48,7 @@ The following command assumes that the user is located in the `/root` directory.
 
 1. Download the installation script [coscene.sh](https://download.coscene.cn/coscout/coscene.sh), offline binary file compression package [cos_binaries.tar.gz](https://download.coscene.cn /coscout/tar/latest/cos_binaries.tar.gz) to the device, the storage locations are `/root/coscene.sh`, `/root/cos_binaries.tar.gz`
 2. In the root directory, grant execution permissions to the installation script.
+
 ```shell
 chmod +x /root/coscene.sh
 ```
@@ -57,6 +58,7 @@ chmod +x /root/coscene.sh
 ```shell
 ./coscene.sh --server_url=*** --project_slug=*** --virmesh_endpoint=*** --use_local=/root/cos_binaries.tar.gz
 ```
+
 Execute the above command in the root directory for offline installation. For the parameters `--server_url`, `--project_slug` and `--virmesh_endpoint`, please refer to the web page generation results. The parameter `--use_local` is for offline binary file compression. The path to the package. If the directory location of the binary file is modified, please modify the `--use_local` parameter to avoid installation errors.
 
 ### View log information

@@ -11,7 +11,7 @@ Using the following scenario as an example, let's setup your automatic data coll
 ## Prerequisites
 
 1. Have a device ready.
-2. Create a project named `auto-upload`. For more details, refer to [Creating a Project](../../2-get-started/1-create-project-flow.md).
+2. Create a project named `auto-upload`.
 3. Make sure your role in the coScene organization is "Administrator". If you're not an administrator, contact your organizational admin to update your role.
    ![org-role](../img/org-role.png)
 

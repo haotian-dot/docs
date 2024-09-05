@@ -76,7 +76,7 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: 'coScene',
+        // title: 'coScene',
         logo: {
           alt: 'coScene Logo',
           src: 'img/logo.svg',
