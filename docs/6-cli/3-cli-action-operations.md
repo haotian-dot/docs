@@ -12,7 +12,7 @@ coScene 的动作系统可以用来触发复杂的计算和处理过程，通过
 cocli action -h
 ```
 
-![cocli-action-help](./img/3-cocli-action-help.png)
+![cocli-action-help](./img/6-3-cocli-action-help.png)
 
 # 列出当前项目中的动作
 
@@ -20,13 +20,14 @@ cocli action -h
 cocli action list
 ```
 
-![cocli-list-actions](./img/cocli-list-actions.png)
+![cocli-list-actions](./img/6-3-cocli-list-actions.png)
 
 默认 List 下，命令行会将项目中所有的动作都列出来。通过 Category 类别以及 Author 作者，
 我们可以更好的区分想要的动作。
 
 当然我们也可以使用 `grep` 等标准命令来做进一步的筛选
-![cocli-list-actions-grep-system](./img/cocli-list-actions-grep-system.png)
+
+![cocli-list-actions-grep-system](./img/6-3-action-list-filtering.png)
 
 ## 触发动作
 
@@ -42,7 +43,7 @@ ACTION_ID=$(cocli action list | grep 'coScene-test' | cut -d ' ' -f1)
 cocli action run $ACTION_ID $RECORD_ID
 ```
 
-![cocli-run-action-manual-confirm](./img/cocli-run-action-manual-confirm.png)
+![cocli-run-action-manual-confirm](./img/6-3-run-action-confirm.png)
 
 执行动作是一个比较消耗计算和存储资源的操作，在没有 `-f` 标识位的情况下，需要手动确认
 才会真正执行。如果对当前操作不需要进行手动确认的，可以使用 `-f` 标志直接跳过。这在批量
@@ -52,7 +53,7 @@ cocli action run $ACTION_ID $RECORD_ID
 cocli action run $ACTION_ID $RECORD_ID -f
 ```
 
-![cocli-run-action-force](./img/cocli-run-action-force.png)
+![cocli-run-action-force](./img/6-3-run-action-force.png)
 
 较为复杂的动作可能会需要额外的参数对动作进行定制，您可以使用 `-p` 的标志位提供这些参数
 
@@ -66,6 +67,6 @@ cocli action run $ACTION_ID $RECORD_ID -f -p 参数1=123 -p 参数2=456
 
 成功触发之后，我们就可以在调用历史中查看我们触发的调用了。
 
-## 找出某个动作的所有调用记录
-
-## 根据状态过滤
+```bash
+cocli action list-run
+```

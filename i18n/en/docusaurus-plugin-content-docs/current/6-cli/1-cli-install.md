@@ -3,17 +3,18 @@ slug: install
 sidebar_position: 1
 ---
 
-# Installation and Initialization
+# Install and Init
 
 ## Installation
 
-Run the following command in the terminal to install the latest version of the Coscene CLI tool:
+Run the following command in the terminal to install the latest version of the coScene CLI tool:
 
 ```Bash
 curl -fL https://download.coscene.cn/cocli/install.sh | sh
 ```
 
 You can use `cocli -h` in the terminal to confirm that the CLI tool has been successfully installed and to see the basic usage of the tool.
+
 ![cocli-help](./img/cocli-help.png)
 
 ### Update to the Latest Version
@@ -48,7 +49,7 @@ cocli login set -p <PROJECT_SLUG> -t <TOKEN>
 ```
 
 :::info
-If your are an Enterprise user with a dedicated instance, you will have to
+If your are an Enterprise user with an on-premise instance, you will have to
 specify your instance's endpoint
 
 eg. https://server2.coscene.cn -> https://openapi.server2.coscene.cn
