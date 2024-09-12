@@ -4,7 +4,7 @@ sidebar_position: 2
 
 # Image Management
 
-> Learn how to configure image files, push images to the Coscene platform, and manage them.
+> Learn how to configure image files, push images to the coScene platform, and manage them.
 
 ## 1. Prepare Image Files
 
@@ -78,13 +78,13 @@ docker build -f dockerfile -t cr.coscene.cn/coscene-lark/image:latest --platform
 
 ## 2. Push the Image
 
-Log in to the Coscene platform. In "My Settings - Security - Access Coscene Container Image Repository", click "Generate Access Command" to obtain access rights to the Coscene container image repository:
+Log in to the coScene platform. In "My Settings - Security - Access coScene Container Image Repository", click "Generate Access Command" to obtain access rights to the coScene container image repository:
 
 ![generate-cr-token](../img/generate-cr-token.png)
 
 ![login-cr](../img/login-cr.png)
 
-Copy the above command and execute it in the terminal to log in and push the image to the Coscene platform.
+Copy the above command and execute it in the terminal to log in and push the image to the coScene platform.
 
   <br />
 

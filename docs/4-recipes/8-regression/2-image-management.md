@@ -10,17 +10,17 @@ sidebar_position: 2
 
 本机已经安装并启动 Docker
 
-## 1. 认证和登陆刻行的镜像仓库
+## 1. 认证和登录刻行的镜像仓库
 
-登陆刻行时空平台，在右上角用户设置下拉面板中，访问【个人设置】，在【个人设置】页面中，访问[【安全】](https://coscene.cn/profile?section=security)页面。
+登录刻行时空平台，在右上角用户设置下拉面板中，访问【个人设置】，在【个人设置】页面中，访问[【安全】](https://coscene.cn/profile?section=security)页面。
 
-点击生成访问命令，获取登陆平台镜像仓库的命令和密码
+点击生成访问命令，获取登录平台镜像仓库的命令和密码
 
 ![generate-cr-token](../img/generate-cr-token.png)
 
 ![login-cr](../img/login-cr.png)
 
-在命令行中输入包含用户名的登陆，使用之前获得的认证凭证进行认证
+在命令行中输入包含用户名的登录，使用之前获得的认证凭证进行认证
 
 ![docker-login](../img/docker-login.png)
 

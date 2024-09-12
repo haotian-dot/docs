@@ -5,7 +5,7 @@ sidebar_position: 3
 
 # Managing Actions with CLI Tools
 
-The Coscene action system can be used to trigger complex calculations and processing tasks. By scripting with the CLI tool, you can greatly enhance the automation in your workflow. For detailed help on using the CLI to operate actions, refer to
+The coScene action system can be used to trigger complex calculations and processing tasks. By scripting with the CLI tool, you can greatly enhance the automation in your workflow. For detailed help on using the CLI to operate actions, refer to
 
 ```bash
 cocli action -h

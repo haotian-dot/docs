@@ -4,108 +4,54 @@ sidebar_position: 2
 
 # Project
 
-## 1. Create Project
+## 1. Create New Project
 
-### 1.1 Permissions to Create a Project
+Click the "Create Project" button on the homepage, then follow the guided steps to complete project creation.
 
-- "Administrators" and "Members" in the organization have the authority to create new projects in the organization; "Read-only Members" can only join existing projects.
+![create-project](./img/4-2-create-project.png)
 
-### 1.2 How to Create a New Project
+## 2. Project Visibility Settings
 
-- Click the [Create Project] button in the top-left corner of the homepage to start creating.
+coScene offers two project visibility options that project administrators can set according to their needs:
 
----
+### 2.1 Visibility Types
 
-## 2. Project Visibility
+1. **Private Project**
 
-In coScene, you can choose who can access your project.
+   - Access restriction: Only organization administrators and project members can access
+   - Permission control: Project member permissions are determined by project roles
 
-> Who can use this feature<br />
-> Only organization administrators and project administrators can set project visibility.
+2. **Internal Project**
+   - Access scope: All users within the organization can access
+   - Permission control: Accessing users have project member permissions, specific permissions are determined by project roles
 
-### 2.1 About Project Visibility
+### 2.2 Modify Project Visibility
 
-We suggest you review the following considerations before changing project visibility.
+Project administrators can switch project visibility in the project settings.
 
-**Set the Project to Private**
+![setting-project-visibility](./img/4-2-setting-project-visibility.png)
 
-- Only organization administrators and internal project users can access.
-- The permissions of internal project users are controlled by project roles.
+## 3. Archive and Restore Projects
 
-**Set the Project to Internal**
+coScene supports project archiving functionality for managing historical data or low-activity projects.
 
-- Any user within the organization can access and will have project member permissions in internal projects.
-- The permissions of internal project users are controlled by project roles.
+Archiving effects:
 
-### 2.2 Change Project Visibility
-
-- In the project, click [Manage Project].
-
-  ![pro-manage](./img/pro-manage.png)
-
-- Under [Settings], click [Toggle Visibility].
-
-  ![pro-visibility](./img/pro-visibility.png)
-
-- Choose visibility, verify if the changed project visibility is correct.
-
-  ![pro-visibility-switch](./img/pro-visibility-switch.png)
-
-- After typing the name of the project whose visibility you want to change, click [Toggle Project Visibility].
-
-  ![pro-visibility-confirm](./img/pro-visibility-confirm.png)
-
----
-
-## 3. Project Member Permissions
-
----
-
-## 4. Archive and Unarchive Projects
-
-In coScene, you can archive projects to store data with low activity for others to view and reference.
-
-> Who can use this feature<br />
-> Only organization administrators and project administrators can archive projects.
+- After archiving: The project becomes read-only, and data updates stop
+- After restoration: The project returns to a readable and writable state, functioning normally
 
 ### 3.1 Archive Project
 
-> After a project is archived, it becomes read-only, and all data within the project will no longer be updated.
+Project administrators can perform archiving operations in the project settings.
 
-- In the project, click [Manage Project].
+![archive-project](./img/4-2-archive-project.png)
 
-  ![pro-manage](./img/pro-manage.png)
+### 3.2 Restore Archived Project
 
-- Under [Settings], click [Archive Project].
+Organization administrators can restore archived projects through the following steps:
 
-  ![pro-archive](./img/pro-archive.png)
+1. Switch to the archived projects view in the organization's project list
+2. Select the project that needs to be restored
+3. Click "Unarchive" to restore the project
 
-### 3.2 Unarchive Project
-
-> After unarchiving a project, it returns to a readable and writable state.
-
-- In the project, click [Manage Project].
-
-  ![pro-manage](./img/pro-manage.png)
-
-- Under [Settings], click [Unarchive Project].
-
-  ![pro-unarchive](./img/pro-unarchive.png)
-
-### 3.3 More Methods
-
-- Under "My Projects" on the homepage, click [View All Projects] to enter the default "Project List" page in the organization management page.
-
-  ![org-manage](./img/org-manage.png)
-
-**Archive Project**
-
-- Under [Active], hover over the target project and click the [Archive] button.
-
-  ![org-pro-archive](./img/org-pro-archive.png)
-
-**Unarchive Project**
-
-- Under [Projects], click [Archived] to switch to the archived project list. Hover over the target project and click the [Unarchive] button.
-
-  ![org-pro-unarchive](./img/org-pro-unarchive.png)
+![unarchive-project](./img/4-2-unarchive-project.png)

@@ -105,15 +105,15 @@ const config = {
       footer: {
         style: 'dark',
         links: [
-          {
-            title: 'Docs',
-            items: [
-              {
-                label: 'Docs',
-                to: '/docs/intro',
-              },
-            ],
-          },
+          // {
+          //   title: 'Docs',
+          //   items: [
+          //     {
+          //       label: 'Docs',
+          //       to: '/docs/intro',
+          //     },
+          //   ],
+          // },
           // {
           //   title: 'Community',
           //   items: [
@@ -124,15 +124,19 @@ const config = {
           //   ],
           // },
           {
-            title: 'More',
+            title: '更多相关链接',
             items: [
-              {
-                label: 'Blog',
-                to: '/blog',
-              },
+              // {
+              //   label: 'Blog',
+              //   to: '/blog',
+              // },
               {
                 label: 'GitHub',
                 href: 'https://github.com/coscene-io',
+              },
+              {
+                label: '刻行时空官网',
+                href: 'https://www.coscene.cn',
               },
             ],
           },

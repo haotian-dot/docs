@@ -54,16 +54,16 @@ Using the following scenario as an example, let's setup your automatic data coll
 
 2. Clear the default content in the rules, then copy and paste the following rule into the editor:
 
-   ```
+   ```yaml
    mod:
-     name: 'default' # mod name, default is "default". For custom versions, please contact Coscene product for more details.
+     name: 'default' # mod name, default is "default". For custom versions, please contact coScene product for more details.
      conf:
        enabled: true # Whether to enable, default is true.
-       base_dir: '/root/logs/' # Data monitoring directory.
 
-   event_code: # Error code feature
-     enabled: false # Whitelist configuration for error codes, default is False.
-
+       # Monitored directories on the device, specified for data collection tasks and rule collection in the project
+       base_dirs:
+         - /home/bag/
+         - /home/log/
    ```
 
    \*For more configurations, refer to [Data Collection Rule Format](./4-manage-rule-group.md)
@@ -159,7 +159,7 @@ Using the following scenario as an example, let's setup your automatic data coll
 
 4. Log Data Upload
 
-   - When the following entry appears in the logs, it indicates that the log data is being uploaded to the Coscene platform.
+   - When the following entry appears in the logs, it indicates that the log data is being uploaded to the coScene platform.
 
      ![rule-log-2](../img/rule-log-2.png)
 

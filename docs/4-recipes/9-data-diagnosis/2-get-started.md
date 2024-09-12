@@ -85,10 +85,10 @@ sidebar_position: 2
      name: 'default' # mod 名称，默认 default，定制版请联系刻行产品了解详细信息
      conf:
        enabled: true # 是否启用，默认为 true
-       base_dir: '/root/logs/' # 数据监听目录
-
-   event_code: # 错误码功能
-     enabled: false # 错误码白名单配置，默认 False
+       # 设备端的监听目录，作为项目中数据采集任务与规则采集的指定目录
+       base_dirs:
+         - /home/bag/
+         - /home/log/
    ```
 
    \*更多配置参见[数采规则格式](https://docs.coscene.cn/docs/receipts/device/device-authorize#%E6%95%B0%E9%87%87%E8%A7%84%E5%88%99%E6%A0%BC%E5%BC%8F)

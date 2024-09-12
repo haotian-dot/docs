@@ -5,7 +5,7 @@ sidebar_position: 2
 
 # Using CLI to Operate Records
 
-For detailed information on operating records in the Coscene CLI, you can use `cocli record -h` to see detailed usage.
+For detailed information on operating records in the coScene CLI, you can use `cocli record -h` to see detailed usage.
 
 ![cli-record-help](./img/cocli-record-help.png)
 

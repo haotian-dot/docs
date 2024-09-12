@@ -90,10 +90,10 @@ mod:
   name: 'default' # mod 名称，默认 default，定制版请联系刻行产品了解详细信息
   conf:
     enabled: true # 是否启用，默认为 true
-    base_dir: '/root/logs/' # 数据监听目录
-
-event_code: # 错误码功能
-  enabled: false # 错误码白名单配置，默认 False
+    # 设备端的监听目录，作为项目中数据采集任务与规则采集的指定目录
+    base_dirs:
+      - /home/bag/
+      - /home/log/
 ```
 
 ## 准入设备&添加设备

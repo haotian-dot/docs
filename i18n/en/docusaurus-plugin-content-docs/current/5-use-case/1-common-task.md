@@ -13,16 +13,22 @@ Go to [Organization Management] - [Device] - [Edit Collection Rules] to configur
 ![device-collector](./img/common-task-1.png)
 
 ```yaml
-event_code:
-  enabled: false
 mod:
+  # mod name, default is 'default', supports monitoring files in specified directories on the device side, contact Kexing for custom versions
+  name: 'default'
   conf:
+    # Enable switch, true/false, enabled by default
     enabled: true
-    upload_files:
-      - folder1_path // Folder to scan
-      - folder2_path
-      - file_path // Additional file address to upload, please fill in the absolute path
-  name: task
+
+    # Monitored directories on the device side, used as specified directories for data collection tasks and rule collection in the project
+    base_dirs:
+      - /home/bag/
+      - /home/log/
+
+# Automatic update
+updater:
+  # Auto-update switch for the data collection client, true/false, disabled by default
+  enabled: false
 ```
 
 For detailed information on the configuration file, please refer to the document [Collection Rules](../4-recipes/3-device/4-device-collector.md)

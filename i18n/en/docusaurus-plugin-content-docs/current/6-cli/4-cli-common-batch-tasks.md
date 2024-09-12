@@ -19,7 +19,7 @@ Assume we have the following 5 folders, each containing several random files and
 
 ![list-folders-tree-view](./img/list-folders-tree-view.png)
 
-We can use the Coscene CLI tool and standard Linux command line tools to create records and upload files all at once.
+We can use the coScene CLI tool and standard Linux command line tools to create records and upload files all at once.
 
 ```bash
 # Iterate through all subdirectories in the current directory

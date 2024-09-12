@@ -14,20 +14,21 @@ sidebar_position: 1
 
 ```yaml
 mod:
-  name: 'default'
   # mod 名称，默认 default，支持监听设备端指定目录下的文件，定制版请联系刻行
+  name: 'default'
   conf:
-    enabled: true
     # 启用开关，true/false，默认启用
+    enabled: true
+
+    # 设备端的监听目录，作为项目中数据采集任务与规则采集的指定目录
     base_dirs:
-      # 设备端的监听目录，作为项目中数据采集任务与规则采集的指定目录
       - /home/bag/
       - /home/log/
 
+# 自动更新
 updater:
-  # 自动更新
-  enabled: false
   # 数采客户端自动更新开关，true/false，默认关闭
+  enabled: false
 ```
 
 具体的配置文件信息介绍，请查看文档[数采规则](../4-recipes/3-device/4-device-collector.md)
