@@ -193,12 +193,16 @@ log_level == LogLevel.FATAL # 每当出现 FATAL 日志时触发
 
 - **any_order**
 
-  `any_order(condition1, condition2, ...)`
+  `any_order(condition1, condition2, ..., reset_time)`
 
   所有 condition 被触发，无视触发数顺序
+  
+  如果 `reset_time` 被设置，如果在第一个 `conditioni` 被触发后 `reset_time` 时间内没有触发所有的 `conditioni`，则状态被重置。
 
   ```python
   any_order("123" in log, "789" in log, "456" in log)
+  
+  any_order("123" in log, "789" in log, "456" in log, reset_time=10)
   ```
 
 <br />

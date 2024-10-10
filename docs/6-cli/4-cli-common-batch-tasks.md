@@ -84,6 +84,15 @@ for id in $(cocli record list | grep -v 'ID' | cut -d ' ' -f1); do
 done
 ```
 
+### 批量下载所有有特定标签的记录到文件夹
+
+```bash
+for id in $(cocli record list -v | grep 'test-label' | cut -d ' ' -f1); do
+    # 下载所有有 test-label 标签的记录
+    cocli record download $id download-folder
+done
+```
+
 ### 删除所有空记录
 
 :::danger
