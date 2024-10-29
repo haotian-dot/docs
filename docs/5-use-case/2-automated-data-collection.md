@@ -91,13 +91,17 @@ sidebar_position: 2
 
 ```yaml
 mod:
-  name: 'default' # mod 名称，默认 default，定制版请联系刻行产品了解详细信息
-  conf:
-    enabled: true # 是否启用，默认为 true
-    # 设备端的监听目录，作为项目中数据采集任务与规则采集的指定目录
-    base_dirs:
-      - /home/bag/
-      - /home/log/
+   name: 'default' # mod 名称，默认 default，定制版请联系刻行产品了解详细信息
+   conf:
+      enabled: true # 是否启用，默认为 true
+      # 设备端的监听目录列表，项目中规则诊断会监听这些目录下的新文件
+      listen_dirs:
+         - /home/bag/
+         - /home/log/
+      # 设备端的采集目录，项目中规则诊断会采集这些目录下的文件
+      collect_dirs:
+         - /home/bag/
+         - /home/log/
 ```
 
 ## 准入设备&添加设备
