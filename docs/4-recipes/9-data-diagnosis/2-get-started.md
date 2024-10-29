@@ -85,15 +85,23 @@ sidebar_position: 2
      name: 'default' # mod 名称，默认 default，定制版请联系刻行产品了解详细信息
      conf:
        enabled: true # 是否启用，默认为 true
-       # 设备端的监听目录，作为项目中数据采集任务与规则采集的指定目录
-       base_dirs:
+       # 设备端的监听目录列表，项目中规则诊断会监听这些目录下的新文件
+       listen_dirs:
          - /home/bag/
          - /home/log/
-   ```
+       # 设备端的采集目录，项目中规则诊断会采集这些目录下的文件
+       collect_dirs:
+         - /home/bag/
+         - /home/log/
+   # 设备端的话题配置, 所有项目关注的话题（例如 default mod 监听的 ros/mcap 话题）
+   topics:
+     - /rosout
+     - error_code 
+      ```
 
-   \*更多配置参见[数采规则格式](https://docs.coscene.cn/docs/receipts/device/device-authorize#%E6%95%B0%E9%87%87%E8%A7%84%E5%88%99%E6%A0%BC%E5%BC%8F)
+      \*更多配置参见[数采规则格式](https://docs.coscene.cn/docs/recipes/device/device-collector)
 
-3. 点击【保存编辑】按钮
+3. 点击【保存】按钮
 
    ![org-device-7](../img/org-device-7.png)
 

@@ -26,11 +26,12 @@ sidebar_position: 4
 
 ## 数采规则格式
 
-数采规则主要对三个模块进行设置：
+数采规则主要对四个模块进行设置：
 
 - **数据收集器设置（collector）**：完成数据采集后，是否删除设备端数据
 - **存储设置（mod）**：设备端数据的存储目录；设备标识文件的地址
 - **更新设置（updater）**：当前程序是否开启自动更新
+- **话题设置（topics）**：设备端采集关注的话题
 
 示例数采设备信息文件如下：
 
@@ -45,13 +46,21 @@ mod:
   conf:
     enabled: true # 是否启用，默认为 true
     robot_file: '/root/.ros/sn.txt' # 设备标识文件，用于存放设备唯一标识码，如 sn
-    base_dirs:
-      # 设备端的监听目录，作为项目中数据采集任务与规则采集的指定目录
+    # 设备端的监听目录列表，项目中规则诊断会监听这些目录下的新文件
+    listen_dirs:
+      - /home/bag/
+      - /home/log/
+    # 设备端的采集目录，项目中规则诊断会采集这些目录下的文件
+    collect_dirs:
       - /home/bag/
       - /home/log/
 
 updater:
-  enabled: false # 是否自动更新数采程序，默认值为 false
+  enabled: false # 是否自动更新数采程序，默认值为 false、
+
+topics:
+  - /rosout
+  - error_code
 ```
 
 ### 数据收集器设置
@@ -77,9 +86,12 @@ mod:
   conf:
     enabled: true # 是否启用，默认为 true
     robot_file: '/root/.ros/sn.txt' # 设备标识文件，用于存放设备唯一标识码，如 sn
-
-    # 设备端的监听目录，作为项目中数据采集任务与规则采集的指定目录
-    base_dirs:
+    # 设备端的监听目录列表，项目中规则诊断会监听这些目录下的新文件
+    listen_dirs:
+      - /home/bag/
+      - /home/log/
+    # 设备端的采集目录，项目中规则诊断会采集这些目录下的文件
+    collect_dirs:
       - /home/bag/
       - /home/log/
 ```
@@ -92,4 +104,15 @@ mod:
 # 更新设置
 updater:
   enabled: false # 是否自动更新数采程序，默认值为 false
+```
+
+### 话题设置
+
+设置设备端采集关注的话题
+
+```yaml
+# 话题设置
+topics:
+  - /rosout
+  - error_code
 ```
