@@ -1,0 +1,185 @@
+---
+slug: auto-complete
+sidebar_position: 98
+---
+
+import TabItem from '@theme/TabItem';
+import Tabs from '@theme/Tabs';
+
+# Auto-completion
+
+coCLI provides auto-completion functionality for Bash and Zsh, which can save you a lot of typing.
+
+<Tabs>
+  <TabItem value="macos" label="macOS" default>
+    <Tabs>
+      <TabItem value="zsh" label="Zsh" default>
+        cocli generates Zsh auto-completion script using the `cocli completion zsh` command. Sourcing this auto-completion script in your Shell will enable cocli auto-completion functionality.
+
+        To enable this feature in all Shell sessions, add the following content to your `~/.zshrc` file:
+
+        ```Bash
+        source <(cocli completion zsh)
+        ```
+
+        After reloading the Shell, cocli auto-completion will take effect immediately.
+
+        If you receive an error like `2: command not found: compdef`, add the following content to the beginning of your `~/.zshrc` file:
+
+        ```Bash
+        autoload -Uz compinit
+        compinit
+        ```
+
+      </TabItem>
+
+      <TabItem value="bash" label="Bash">
+
+        The Bash completion script for cocli can be generated using the `cocli completion bash` command. Sourcing this script in your Shell will enable the completion functionality.
+
+        Additionally, the cocli completion script depends on **[bash-completion](https://github.com/scop/bash-completion)**, so you must install it first.
+
+        **Warning:**
+
+        There are two versions of bash-completion: v1 and v2. v1 corresponds to Bash 3.2 (which is the default on macOS), while v2 corresponds to Bash 4.1+. cocli's completion script **does not work** with bash-completion v1 and Bash 3.2. It requires **bash-completion v2** and **Bash 4.1+**. Therefore, to use cocli completion on macOS, you must install and use Bash 4.1+. The following instructions assume you're using Bash 4.1+ (that is, Bash 4.1 or later).
+
+        #### Upgrading Bash
+
+        The following instructions assume you're using Bash 4.1+. You can check your Bash version by running:
+
+        ```Bash
+        echo $BASH_VERSION
+        ```
+
+        If the version is too old, you can install/upgrade using Homebrew:
+
+        ```Bash
+        brew install bash
+        ```
+
+        Reload your Shell and verify that the required version is in effect:
+
+        ```Bash
+        echo $BASH_VERSION $SHELL
+        ```
+
+        Homebrew typically installs it as `${brew --prefix}/bin/bash`.
+
+        #### Installing bash-completion
+
+        **Note:**
+
+        As mentioned earlier, these instructions assume you're using Bash 4.1+, which means you need to install bash-completion v2 (unlike Bash 3.2 and bash-completion v1, where cocli completion won't work).
+
+        You can test if bash-completion v2 is installed with `type _init_completion`. If not installed, install it using Homebrew:
+
+        ```Bash
+        brew install bash-completion@2
+        ```
+
+        As shown in the command output, add the following to your `~/.bash_profile`:
+
+        ```Bash
+        brew_etc="$(brew --prefix)/etc" && [[ -r "${brew_etc}/profile.d/bash_completion.sh" ]] && . "${brew_etc}/profile.d/bash_completion.sh"
+        ```
+
+        Reload your Shell and verify bash-completion v2 is properly installed using `type _init_completion`.
+
+        #### Enabling cocli auto-completion
+
+        You now need to ensure the cocli completion script is sourced in all Shell environments. There are several ways to do this:
+
+        - Source the completion script in `~/.bash_profile`:
+
+        ```Bash
+        echo 'source <(cocli completion bash)' >>~/.bash_profile
+        ```
+
+        - Add the completion script to `/usr/local/etc/bash_completion.d`:
+
+        After reloading the Shell, cocli auto-completion will take effect. To enable Bash completion in the current Shell session, source the `~/.bashrc` file:
+
+        ```Bash
+        source ~/.bashrc
+        ```
+
+      </TabItem>
+    </Tabs>
+
+  </TabItem>
+
+  <TabItem value="linux" label="Linux">
+    <Tabs>
+      <TabItem value="zsh" label="Zsh" default>
+        
+        cocli generates Zsh auto-completion script using the `cocli completion zsh` command. Sourcing this auto-completion script in your Shell will enable cocli auto-completion functionality.
+
+        To enable this feature in all Shell sessions, add the following content to your `~/.zshrc` file:
+
+        ```Bash
+        source <(cocli completion zsh)
+        ```
+
+        After reloading the Shell, cocli auto-completion will take effect immediately.
+
+        If you receive an error like `2: command not found: compdef`, add the following content to the beginning of your `~/.zshrc` file:
+
+        ```Bash
+        autoload -Uz compinit
+        compinit
+        ```
+
+      </TabItem>
+
+      <TabItem value="bash" label="Bash">
+
+        The Bash completion script for cocli can be generated using `cocli completion bash`. Sourcing the completion script in your Shell will enable cocli auto-completion functionality.
+
+        However, the completion script depends on **[bash-completion](https://github.com/scop/bash-completion)**, so you must install it first (you can check if bash-completion is installed using `type _init_completion`).
+
+        #### Installing bash-completion
+
+        Many package managers support bash-completion (see [here](https://github.com/scop/bash-completion#installation)). You can install it using `apt-get install bash-completion` or `yum install bash-completion`, etc.
+
+        These commands will create `/usr/share/bash-completion/bash_completion`, which is the main script for bash-completion. Depending on your package manager, you may need to manually source this file in your `~/.bashrc`.
+
+        To see the result, reload your Shell and run `type _init_completion`. If the command succeeds, you're done, otherwise add the following to your `~/.bashrc`:
+
+        ```Bash
+        source /usr/share/bash-completion/bash_completion
+        ```
+
+        Reload your Shell and run `type _init_completion` again to verify bash-completion installation.
+
+        #### Enabling cocli auto-completion
+
+        You now need to ensure that the cocli completion script is sourced in your Shell session. This can be done in two ways:
+
+        1. For current user
+
+        ```Bash
+        echo 'source <(cocli completion bash)' >>~/.bashrc
+        ```
+
+        2. System-wide
+
+        ```Bash
+        cocli completion bash | sudo tee /etc/bash_completion.d/cocli > /dev/null
+        sudo chmod a+r /etc/bash_completion.d/cocli
+        ```
+
+        **Note:**
+
+        bash-completion sources all completion scripts from the `/etc/bash_completion.d` directory.
+
+        Both methods have the same effect. After reloading the Shell, cocli auto-completion will take effect. To enable Bash completion in the current Shell session, source the `~/.bashrc` file:
+
+        ```Bash
+        source ~/.bashrc
+        ```
+
+      </TabItem>
+    </Tabs>
+
+  </TabItem>
+</Tabs>

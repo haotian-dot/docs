@@ -2,26 +2,26 @@
 sidebar_position: 1
 ---
 
-# 关于镜像
+# About Images
 
-Docker 镜像是轻量级的、可执行的软件包，包含了运行某个软件或应用所需的所有内容——代码、运行时环境、库、环境变量和配置文件。Docker 镜像是构建 Docker 容器的基础，每个镜像都是不可变的，当运行镜像时，它会变成一个容器。
+Docker images are lightweight, executable software packages that contain everything needed to run a piece of software or application—code, runtime environment, libraries, environment variables, and configuration files. Docker images are the foundation for building Docker containers, and each image is immutable; when you run an image, it becomes a container.
 
-Docker 镜像的特点包括：
+Docker images have the following characteristics:
 
-1. **分层存储**：Docker 镜像由多层构成，每一层代表镜像构建过程中的一个步骤。当修改镜像时，只需添加新的层，不需要更改既有层，这使得镜像的分发和更新非常高效。
+1. **Layered Storage**: Docker images are composed of multiple layers, with each layer representing a step in the image building process. When modifying an image, you only need to add new layers without changing existing ones, making image distribution and updates highly efficient.
 
-2. **共享与重用**：多个镜像可以共享相同的层，如果不同的镜像使用相同的基础层，那么这些层在机器上只需存储一份，可以节约空间并提高效率。
+2. **Sharing and Reuse**: Multiple images can share the same layers. If different images use the same base layers, these layers only need to be stored once on the machine, saving space and improving efficiency.
 
-3. **不可变性**：镜像一旦创建，其内容就不可更改。所有对容器的修改（如添加新文件或更改现有文件）都将发生在容器的可写层，而不影响底层镜像。
+3. **Immutability**: Once created, an image's content cannot be changed. All modifications to containers (such as adding new files or changing existing ones) occur in the container's writable layer without affecting the underlying image.
 
-4. **版本控制和回滚**：Docker 镜像可以通过标签进行版本控制，方便管理和回滚到特定的版本。
+4. **Version Control and Rollback**: Docker images can be version-controlled through tags, making it easy to manage and roll back to specific versions.
 
-5. **轻量级**：由于镜像是按需加载各个层，因此它们是轻量级的，启动速度快，便于快速扩展和分发。
+5. **Lightweight**: Since images load layers on demand, they are lightweight, start quickly, and are easy to scale and distribute.
 
-6. **可移植性**：镜像包含了运行应用所需的所有依赖，可以在任何支持 Docker 的平台上运行，确保了一致的运行环境。
+6. **Portability**: Images contain all dependencies needed to run applications and can be executed on any platform that supports Docker, ensuring consistent runtime environments.
 
-Docker 镜像通常从一个基础镜像开始构建，通过编写 Dockerfile（一个包含自定义指令集的文本文件）来定制镜像。这些自定义镜像可以存储在本地，也可以上传到公共或私有的镜像仓库（如 Docker Hub）中，供他人使用。使用 Docker 命令 `docker pull` 可以从仓库中拉取镜像到本地，`docker run` 命令则用于基于镜像启动一个新的容器。
+Docker images are typically built from a base image and customized through a Dockerfile (a text file containing custom instructions). These custom images can be stored locally or uploaded to public or private image registries (such as Docker Hub) for others to use. Docker images can be pulled from repositories to local machines using the `docker pull` command, and containers can be started from images using the `docker run` command.
 
-# 关于刻行镜像仓库
+# About coScene Image Registry
 
-刻行平台提供了一个私有的镜像仓库，让用户无须自行搭建，能够将现有的镜像快速的上传至刻行镜像仓库，从而立即可以在刻行平台使用相关的镜像，搭建业务流程，提升研发效率。如[自动化](../12-action/1-quickstart.md)和[批量测试](../8-regression/1-intro.md)中均支持使用刻行镜像仓库镜像。
+The coScene platform provides a private image registry, eliminating the need for users to set up their own. Users can quickly upload existing images to the coScene image registry, enabling immediate use of these images on the coScene platform to build business processes and improve development efficiency. The coScene image registry is supported in features such as [Automation](../12-action/1-quickstart.md) and [Batch Testing](../8-regression/1-intro.md).
