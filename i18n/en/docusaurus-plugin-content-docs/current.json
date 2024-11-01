@@ -43,6 +43,10 @@
     "message": "Cloud Test",
     "description": "The label for category 批量测试 in sidebar tutorialSidebar"
   },
+  "sidebar.tutorialSidebar.category.镜像": {
+    "message": "Images",
+    "description": "The label for category Images in sidebar tutorialSidebar"
+  },
   "sidebar.tutorialSidebar.category.数据自动采集与诊断": {
     "message": "Data Collection and Diagnose",
     "description": "The label for category 数据自动采集与诊断 in sidebar tutorialSidebar"

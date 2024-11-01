@@ -2,22 +2,21 @@
 sidebar_position: 2
 ---
 
-# 准备镜像
+# Preparing Images
 
-使用 Docker 构建自己的镜像。
+Using Docker to build your own images.
 
-## 前置条件
+## Prerequisites
 
-本机已经安装并启动 Docker。若本机需要安装 Docker，请参考对应的[安装文档](https://docs.docker.com/engine/install/)。
+Docker must be installed and running on your machine. If you need to install Docker, please refer to the corresponding [installation documentation](https://docs.docker.com/engine/install/).
 
-## 准备镜像文件
+## Preparing Image Files
 
-新建一个文件夹，其中包含 dockerfile 和相关的测试代码。下面以一个简单的名为 hello.py 的 Python 文件和 dockerfile 来进行演示。
+Create a new folder containing the dockerfile and related test code. Below is a demonstration using a simple Python file named hello.py and a dockerfile.
 
-- 示例 dockerfile
+- Example dockerfile
 
 ```bash
-
 FROM python:3.12 AS builder
 
 # copy files
@@ -27,37 +26,33 @@ WORKDIR /usr/src/app
 
 # set command/entrypoint, adapt to fit your needs
 CMD ["python", "hello.py"]
-
 ```
 
-- 示例测试代码
+- Example test code
 
 ```python
 if __name__ == "__main__":
     print("Hello, World!")
-
 ```
 
-## 打包镜像
+## Building the Image
 
-我们假设镜像名字为 `cr.coscene.cn/coscene/helloworld`, 标签为 `latest`
+Let's assume the image name is `cr.coscene.cn/coscene/helloworld` with the tag `latest`
 
 ```bash
 docker build -f dockerfile -t cr.coscene.cn/coscene/helloword:latest .
-
 ```
-如果需要镜像支持不同的平台而进行交叉编译，具体请查看[文档](https://docs.docker.com/build/building/multi-platform/)
 
-## 运行镜像
+If you need cross-compilation support for different platforms, please check the [documentation](https://docs.docker.com/build/building/multi-platform/)
 
-镜像打包完成之后，我们可以运行镜像来验证一下代码功能。
+## Running the Image
+
+After the image is built, we can run it to verify the code functionality.
 
 ```bash
-
-docker run cr.coscene.cn/coscene/helloword:latest  
-
+docker run cr.coscene.cn/coscene/helloword:latest
 ```
 
-查看输出，镜像的打包正确，输出了我们的预期结果。
+Check the output - if the image was built correctly, it should show our expected result.
 
 ![](./img/build-image-1.png)
