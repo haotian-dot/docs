@@ -4,7 +4,7 @@ sidebar_position: 1
 
 # Jira 集成
 
-通过集成 Jira，将任务作为故障同步到 Jira 中。
+通过集成 Jira，将任务作为故障同步到 Jira 中也一样。
 
 <br />
 
